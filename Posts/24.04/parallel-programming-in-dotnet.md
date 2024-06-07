@@ -475,6 +475,6 @@ But R was perfect for this. I sometimes needed to tweak benchmarks, if i had to 
 
 I found it impressive how well the .NET TPL performed with very high amounts of threads. 
 The Intel Xeon Platinum 8488C Dual-CPU setup i used in the last benchmark is currently the [most performant Intel server CPU setup](https://www.cpubenchmark.net/multi_cpu.html). 
-It is honestly still a bit ridiculous to me that i was allowed to use something like that. :­D
+It is honestly still a bit ridiculous to me that i was allowed to use something like that. :D
 
 Thanks for reading this post. It got a bit long. ^^

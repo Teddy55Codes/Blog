@@ -314,4 +314,4 @@ I really enjoyed delving into the topic of memory management. Even though i was 
 I have not yet decided on a topic for next month, but i would like to look at some other part of the inner workings of .NET. 
 Maybe something in the direction of Threading, Tasks and PLINQ.
 
-I hope this month's post was interesting again :­)
+I hope this month's post was interesting again :)

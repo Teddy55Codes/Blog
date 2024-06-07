@@ -139,4 +139,4 @@ It is used to make wasm packets smaller, which reduces website load times.
 I had to keep this post a bit shorter to catch back up with my monthly schedule. 
 I hope the post was still interesting to read. It was certainty interesting to research and find out where Mono is still used and why.
 
-I hope you enjoyed this shorter post and as always thanks for reading :­) 
+I hope you enjoyed this shorter post and as always thanks for reading :) 
