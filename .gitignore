@@ -1,0 +1,22 @@
+# IDEs
+.idea/
+.vscode/
+.vs/
+
+# .NET Build Output
+bin/
+obj/
+
+# Jeckyll
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata/
+vendor/
+
+# Gem
+Gemfile.lock
+
+# User Files
+*.user
+
