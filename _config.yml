@@ -22,7 +22,7 @@ title: Teddy's Developer Blog
 description: >- # this means to ignore newlines until "baseurl:"
   My dev blog where i mainly write about C# and .NET. 
 baseurl: "/blog" # the subpath of your site, e.g. /blog
-url: "teddy55.com" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://teddy55.com" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
 theme: minima
