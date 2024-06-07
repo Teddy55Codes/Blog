@@ -1,0 +1,3372 @@
+// Validating benchmarks:
+// ***** BenchmarkRunner: Start   *****
+// ***** Found 32 benchmark(s) in total *****
+// ***** Building 1 exe(s) in Parallel: Start   *****
+// start dotnet  restore /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true in /BenchmarkProj/bin/Release/net8.0/.NET 8.0
+// command took 0.82 sec and exited with 0
+// start dotnet  build -c Release --no-restore /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true in /BenchmarkProj/bin/Release/net8.0/.NET 8.0
+// command took 2.33 sec and exited with 0
+// ***** Done, took 00:00:03 (3.2 sec)   *****
+// Found 32 benchmarks:
+//   Benchmarks.BCryptWithLINQ: .NET 8.0(Runtime=.NET 8.0) [cost=4]
+//   Benchmarks.BCryptWithPLINQ: .NET 8.0(Runtime=.NET 8.0) [cost=4]
+//   Benchmarks.BCryptWithOrderedPLINQ: .NET 8.0(Runtime=.NET 8.0) [cost=4]
+//   Benchmarks.BCryptWithRegularFor: .NET 8.0(Runtime=.NET 8.0) [cost=4]
+//   Benchmarks.BCryptWithRegularForEach: .NET 8.0(Runtime=.NET 8.0) [cost=4]
+//   Benchmarks.BCryptWithParallelFor: .NET 8.0(Runtime=.NET 8.0) [cost=4]
+//   Benchmarks.BCryptWithParallelForEach: .NET 8.0(Runtime=.NET 8.0) [cost=4]
+//   Benchmarks.BCryptParallelOptimizedForSmallOperations: .NET 8.0(Runtime=.NET 8.0) [cost=4]
+//   Benchmarks.BCryptWithLINQ: .NET 8.0(Runtime=.NET 8.0) [cost=6]
+//   Benchmarks.BCryptWithPLINQ: .NET 8.0(Runtime=.NET 8.0) [cost=6]
+//   Benchmarks.BCryptWithOrderedPLINQ: .NET 8.0(Runtime=.NET 8.0) [cost=6]
+//   Benchmarks.BCryptWithRegularFor: .NET 8.0(Runtime=.NET 8.0) [cost=6]
+//   Benchmarks.BCryptWithRegularForEach: .NET 8.0(Runtime=.NET 8.0) [cost=6]
+//   Benchmarks.BCryptWithParallelFor: .NET 8.0(Runtime=.NET 8.0) [cost=6]
+//   Benchmarks.BCryptWithParallelForEach: .NET 8.0(Runtime=.NET 8.0) [cost=6]
+//   Benchmarks.BCryptParallelOptimizedForSmallOperations: .NET 8.0(Runtime=.NET 8.0) [cost=6]
+//   Benchmarks.BCryptWithLINQ: .NET 8.0(Runtime=.NET 8.0) [cost=8]
+//   Benchmarks.BCryptWithPLINQ: .NET 8.0(Runtime=.NET 8.0) [cost=8]
+//   Benchmarks.BCryptWithOrderedPLINQ: .NET 8.0(Runtime=.NET 8.0) [cost=8]
+//   Benchmarks.BCryptWithRegularFor: .NET 8.0(Runtime=.NET 8.0) [cost=8]
+//   Benchmarks.BCryptWithRegularForEach: .NET 8.0(Runtime=.NET 8.0) [cost=8]
+//   Benchmarks.BCryptWithParallelFor: .NET 8.0(Runtime=.NET 8.0) [cost=8]
+//   Benchmarks.BCryptWithParallelForEach: .NET 8.0(Runtime=.NET 8.0) [cost=8]
+//   Benchmarks.BCryptParallelOptimizedForSmallOperations: .NET 8.0(Runtime=.NET 8.0) [cost=8]
+//   Benchmarks.BCryptWithLINQ: .NET 8.0(Runtime=.NET 8.0) [cost=10]
+//   Benchmarks.BCryptWithPLINQ: .NET 8.0(Runtime=.NET 8.0) [cost=10]
+//   Benchmarks.BCryptWithOrderedPLINQ: .NET 8.0(Runtime=.NET 8.0) [cost=10]
+//   Benchmarks.BCryptWithRegularFor: .NET 8.0(Runtime=.NET 8.0) [cost=10]
+//   Benchmarks.BCryptWithRegularForEach: .NET 8.0(Runtime=.NET 8.0) [cost=10]
+//   Benchmarks.BCryptWithParallelFor: .NET 8.0(Runtime=.NET 8.0) [cost=10]
+//   Benchmarks.BCryptWithParallelForEach: .NET 8.0(Runtime=.NET 8.0) [cost=10]
+//   Benchmarks.BCryptParallelOptimizedForSmallOperations: .NET 8.0(Runtime=.NET 8.0) [cost=10]
+
+// **************************
+// Benchmark: Benchmarks.BCryptWithLINQ: .NET 8.0(Runtime=.NET 8.0) [cost=4]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet ".NET 8.0.dll" --anonymousPipes 113 114 --benchmarkName "TPLBenchmarks.Benchmarks.BCryptWithLINQ(cost: 4)" --job ".NET 8.0" --benchmarkId 0 in /BenchmarkProj/bin/Release/net8.0/.NET 8.0/bin/Release/net8.0
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.13.12
+// Runtime=.NET 8.0.5 (8.0.524.21615), X64 RyuJIT AVX-512F+CD+BW+DQ+VL+VBMI
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX-512F+CD+BW+DQ+VL+VBMI,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT,AvxVnni,SERIALIZE VectorSize=256
+// Job: .NET 8.0
+
+OverheadJitting  1: 1 op, 180045.00 ns, 180.0450 us/op
+WorkloadJitting  1: 1 op, 372776935.00 ns, 372.7769 ms/op
+
+OverheadJitting  2: 1 op, 340.00 ns, 340.0000 ns/op
+WorkloadJitting  2: 1 op, 318458222.00 ns, 318.4582 ms/op
+
+WorkloadPilot    1: 2 op, 636052795.00 ns, 318.0264 ms/op
+
+WorkloadWarmup   1: 2 op, 636059849.00 ns, 318.0299 ms/op
+WorkloadWarmup   2: 2 op, 635254991.00 ns, 317.6275 ms/op
+WorkloadWarmup   3: 2 op, 635032265.00 ns, 317.5161 ms/op
+WorkloadWarmup   4: 2 op, 635210911.00 ns, 317.6055 ms/op
+WorkloadWarmup   5: 2 op, 635203436.00 ns, 317.6017 ms/op
+WorkloadWarmup   6: 2 op, 635108886.00 ns, 317.5544 ms/op
+WorkloadWarmup   7: 2 op, 635183361.00 ns, 317.5917 ms/op
+WorkloadWarmup   8: 2 op, 635143258.00 ns, 317.5716 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 2 op, 635236316.00 ns, 317.6182 ms/op
+WorkloadActual   2: 2 op, 635186215.00 ns, 317.5931 ms/op
+WorkloadActual   3: 2 op, 635244639.00 ns, 317.6223 ms/op
+WorkloadActual   4: 2 op, 635263250.00 ns, 317.6316 ms/op
+WorkloadActual   5: 2 op, 635238984.00 ns, 317.6195 ms/op
+WorkloadActual   6: 2 op, 635165971.00 ns, 317.5830 ms/op
+WorkloadActual   7: 2 op, 635233958.00 ns, 317.6170 ms/op
+WorkloadActual   8: 2 op, 635224642.00 ns, 317.6123 ms/op
+WorkloadActual   9: 2 op, 635280959.00 ns, 317.6405 ms/op
+WorkloadActual  10: 2 op, 636342312.00 ns, 318.1712 ms/op
+WorkloadActual  11: 2 op, 635251590.00 ns, 317.6258 ms/op
+WorkloadActual  12: 2 op, 635163978.00 ns, 317.5820 ms/op
+WorkloadActual  13: 2 op, 635422095.00 ns, 317.7110 ms/op
+WorkloadActual  14: 2 op, 635254210.00 ns, 317.6271 ms/op
+WorkloadActual  15: 2 op, 635880753.00 ns, 317.9404 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 2 op, 635236316.00 ns, 317.6182 ms/op
+WorkloadResult   2: 2 op, 635186215.00 ns, 317.5931 ms/op
+WorkloadResult   3: 2 op, 635244639.00 ns, 317.6223 ms/op
+WorkloadResult   4: 2 op, 635263250.00 ns, 317.6316 ms/op
+WorkloadResult   5: 2 op, 635238984.00 ns, 317.6195 ms/op
+WorkloadResult   6: 2 op, 635165971.00 ns, 317.5830 ms/op
+WorkloadResult   7: 2 op, 635233958.00 ns, 317.6170 ms/op
+WorkloadResult   8: 2 op, 635224642.00 ns, 317.6123 ms/op
+WorkloadResult   9: 2 op, 635280959.00 ns, 317.6405 ms/op
+WorkloadResult  10: 2 op, 635251590.00 ns, 317.6258 ms/op
+WorkloadResult  11: 2 op, 635163978.00 ns, 317.5820 ms/op
+WorkloadResult  12: 2 op, 635254210.00 ns, 317.6271 ms/op
+
+// AfterAll
+// Benchmark Process 283 has exited with code 0.
+
+Mean = 317.614 ms, StdErr = 0.005 ms (0.00%), N = 12, StdDev = 0.019 ms
+Min = 317.582 ms, Q1 = 317.608 ms, Median = 317.619 ms, Q3 = 317.626 ms, Max = 317.640 ms
+IQR = 0.019 ms, LowerFence = 317.580 ms, UpperFence = 317.654 ms
+ConfidenceInterval = [317.590 ms; 317.638 ms] (CI 99.9%), Margin = 0.024 ms (0.01% of Mean)
+Skewness = -0.6, Kurtosis = 1.93, MValue = 2
+
+// ** Remained 31 (96.9 %) benchmark(s) to run. Estimated finish 2024-05-26 20:01 (0h 8m from now) **
+// **************************
+// Benchmark: Benchmarks.BCryptWithPLINQ: .NET 8.0(Runtime=.NET 8.0) [cost=4]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet ".NET 8.0.dll" --anonymousPipes 115 116 --benchmarkName "TPLBenchmarks.Benchmarks.BCryptWithPLINQ(cost: 4)" --job ".NET 8.0" --benchmarkId 1 in /BenchmarkProj/bin/Release/net8.0/.NET 8.0/bin/Release/net8.0
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.13.12
+// Runtime=.NET 8.0.5 (8.0.524.21615), X64 RyuJIT AVX-512F+CD+BW+DQ+VL+VBMI
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX-512F+CD+BW+DQ+VL+VBMI,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT,AvxVnni,SERIALIZE VectorSize=256
+// Job: .NET 8.0
+
+OverheadJitting  1: 1 op, 176483.00 ns, 176.4830 us/op
+WorkloadJitting  1: 1 op, 86706401.00 ns, 86.7064 ms/op
+
+WorkloadPilot    1: 2 op, 121167407.00 ns, 60.5837 ms/op
+WorkloadPilot    2: 3 op, 167285302.00 ns, 55.7618 ms/op
+WorkloadPilot    3: 4 op, 95640326.00 ns, 23.9101 ms/op
+WorkloadPilot    4: 5 op, 119189485.00 ns, 23.8379 ms/op
+WorkloadPilot    5: 6 op, 150953757.00 ns, 25.1590 ms/op
+WorkloadPilot    6: 7 op, 183534281.00 ns, 26.2192 ms/op
+WorkloadPilot    7: 8 op, 206579502.00 ns, 25.8224 ms/op
+WorkloadPilot    8: 9 op, 218197619.00 ns, 24.2442 ms/op
+WorkloadPilot    9: 10 op, 235469467.00 ns, 23.5469 ms/op
+WorkloadPilot   10: 11 op, 259293621.00 ns, 23.5721 ms/op
+WorkloadPilot   11: 12 op, 286889519.00 ns, 23.9075 ms/op
+WorkloadPilot   12: 13 op, 314697876.00 ns, 24.2075 ms/op
+WorkloadPilot   13: 14 op, 336866413.00 ns, 24.0619 ms/op
+WorkloadPilot   14: 15 op, 355791495.00 ns, 23.7194 ms/op
+WorkloadPilot   15: 16 op, 380119648.00 ns, 23.7575 ms/op
+WorkloadPilot   16: 32 op, 750472120.00 ns, 23.4523 ms/op
+
+WorkloadWarmup   1: 32 op, 757964958.00 ns, 23.6864 ms/op
+WorkloadWarmup   2: 32 op, 751586636.00 ns, 23.4871 ms/op
+WorkloadWarmup   3: 32 op, 756371867.00 ns, 23.6366 ms/op
+WorkloadWarmup   4: 32 op, 753286049.00 ns, 23.5402 ms/op
+WorkloadWarmup   5: 32 op, 758558748.00 ns, 23.7050 ms/op
+WorkloadWarmup   6: 32 op, 758327826.00 ns, 23.6977 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 32 op, 752674958.00 ns, 23.5211 ms/op
+WorkloadActual   2: 32 op, 775324451.00 ns, 24.2289 ms/op
+WorkloadActual   3: 32 op, 761786654.00 ns, 23.8058 ms/op
+WorkloadActual   4: 32 op, 762749378.00 ns, 23.8359 ms/op
+WorkloadActual   5: 32 op, 760638243.00 ns, 23.7699 ms/op
+WorkloadActual   6: 32 op, 753066843.00 ns, 23.5333 ms/op
+WorkloadActual   7: 32 op, 755672020.00 ns, 23.6148 ms/op
+WorkloadActual   8: 32 op, 754920213.00 ns, 23.5913 ms/op
+WorkloadActual   9: 32 op, 756239360.00 ns, 23.6325 ms/op
+WorkloadActual  10: 32 op, 770688841.00 ns, 24.0840 ms/op
+WorkloadActual  11: 32 op, 756112944.00 ns, 23.6285 ms/op
+WorkloadActual  12: 32 op, 755652845.00 ns, 23.6142 ms/op
+WorkloadActual  13: 32 op, 751977890.00 ns, 23.4993 ms/op
+WorkloadActual  14: 32 op, 752378299.00 ns, 23.5118 ms/op
+WorkloadActual  15: 32 op, 756452527.00 ns, 23.6391 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 32 op, 752674958.00 ns, 23.5211 ms/op
+WorkloadResult   2: 32 op, 761786654.00 ns, 23.8058 ms/op
+WorkloadResult   3: 32 op, 762749378.00 ns, 23.8359 ms/op
+WorkloadResult   4: 32 op, 760638243.00 ns, 23.7699 ms/op
+WorkloadResult   5: 32 op, 753066843.00 ns, 23.5333 ms/op
+WorkloadResult   6: 32 op, 755672020.00 ns, 23.6148 ms/op
+WorkloadResult   7: 32 op, 754920213.00 ns, 23.5913 ms/op
+WorkloadResult   8: 32 op, 756239360.00 ns, 23.6325 ms/op
+WorkloadResult   9: 32 op, 770688841.00 ns, 24.0840 ms/op
+WorkloadResult  10: 32 op, 756112944.00 ns, 23.6285 ms/op
+WorkloadResult  11: 32 op, 755652845.00 ns, 23.6142 ms/op
+WorkloadResult  12: 32 op, 751977890.00 ns, 23.4993 ms/op
+WorkloadResult  13: 32 op, 752378299.00 ns, 23.5118 ms/op
+WorkloadResult  14: 32 op, 756452527.00 ns, 23.6391 ms/op
+
+// AfterAll
+// Benchmark Process 294 has exited with code 0.
+
+Mean = 23.663 ms, StdErr = 0.043 ms (0.18%), N = 14, StdDev = 0.161 ms
+Min = 23.499 ms, Q1 = 23.548 ms, Median = 23.622 ms, Q3 = 23.737 ms, Max = 24.084 ms
+IQR = 0.189 ms, LowerFence = 23.264 ms, UpperFence = 24.021 ms
+ConfidenceInterval = [23.481 ms; 23.845 ms] (CI 99.9%), Margin = 0.182 ms (0.77% of Mean)
+Skewness = 1.2, Kurtosis = 3.68, MValue = 2
+
+// ** Remained 30 (93.8 %) benchmark(s) to run. Estimated finish 2024-05-26 20:02 (0h 9m from now) **
+// **************************
+// Benchmark: Benchmarks.BCryptWithOrderedPLINQ: .NET 8.0(Runtime=.NET 8.0) [cost=4]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet ".NET 8.0.dll" --anonymousPipes 115 116 --benchmarkName "TPLBenchmarks.Benchmarks.BCryptWithOrderedPLINQ(cost: 4)" --job ".NET 8.0" --benchmarkId 2 in /BenchmarkProj/bin/Release/net8.0/.NET 8.0/bin/Release/net8.0
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.13.12
+// Runtime=.NET 8.0.5 (8.0.524.21615), X64 RyuJIT AVX-512F+CD+BW+DQ+VL+VBMI
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX-512F+CD+BW+DQ+VL+VBMI,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT,AvxVnni,SERIALIZE VectorSize=256
+// Job: .NET 8.0
+
+OverheadJitting  1: 1 op, 176849.00 ns, 176.8490 us/op
+WorkloadJitting  1: 1 op, 80199113.00 ns, 80.1991 ms/op
+
+WorkloadPilot    1: 2 op, 130999945.00 ns, 65.5000 ms/op
+WorkloadPilot    2: 3 op, 157578904.00 ns, 52.5263 ms/op
+WorkloadPilot    3: 4 op, 103609867.00 ns, 25.9025 ms/op
+WorkloadPilot    4: 5 op, 127278839.00 ns, 25.4558 ms/op
+WorkloadPilot    5: 6 op, 149975210.00 ns, 24.9959 ms/op
+WorkloadPilot    6: 7 op, 185755278.00 ns, 26.5365 ms/op
+WorkloadPilot    7: 8 op, 197636848.00 ns, 24.7046 ms/op
+WorkloadPilot    8: 9 op, 216607373.00 ns, 24.0675 ms/op
+WorkloadPilot    9: 10 op, 237608305.00 ns, 23.7608 ms/op
+WorkloadPilot   10: 11 op, 256636211.00 ns, 23.3306 ms/op
+WorkloadPilot   11: 12 op, 294934598.00 ns, 24.5779 ms/op
+WorkloadPilot   12: 13 op, 305856577.00 ns, 23.5274 ms/op
+WorkloadPilot   13: 14 op, 329592930.00 ns, 23.5424 ms/op
+WorkloadPilot   14: 15 op, 354500456.00 ns, 23.6334 ms/op
+WorkloadPilot   15: 16 op, 380553732.00 ns, 23.7846 ms/op
+WorkloadPilot   16: 32 op, 751366483.00 ns, 23.4802 ms/op
+
+WorkloadWarmup   1: 32 op, 757512716.00 ns, 23.6723 ms/op
+WorkloadWarmup   2: 32 op, 757571412.00 ns, 23.6741 ms/op
+WorkloadWarmup   3: 32 op, 750097605.00 ns, 23.4406 ms/op
+WorkloadWarmup   4: 32 op, 752283864.00 ns, 23.5089 ms/op
+WorkloadWarmup   5: 32 op, 761475367.00 ns, 23.7961 ms/op
+WorkloadWarmup   6: 32 op, 748108313.00 ns, 23.3784 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 32 op, 747601656.00 ns, 23.3626 ms/op
+WorkloadActual   2: 32 op, 749653550.00 ns, 23.4267 ms/op
+WorkloadActual   3: 32 op, 750161383.00 ns, 23.4425 ms/op
+WorkloadActual   4: 32 op, 749802255.00 ns, 23.4313 ms/op
+WorkloadActual   5: 32 op, 750910839.00 ns, 23.4660 ms/op
+WorkloadActual   6: 32 op, 751889428.00 ns, 23.4965 ms/op
+WorkloadActual   7: 32 op, 753853491.00 ns, 23.5579 ms/op
+WorkloadActual   8: 32 op, 755518201.00 ns, 23.6099 ms/op
+WorkloadActual   9: 32 op, 756916605.00 ns, 23.6536 ms/op
+WorkloadActual  10: 32 op, 760663582.00 ns, 23.7707 ms/op
+WorkloadActual  11: 32 op, 754901948.00 ns, 23.5907 ms/op
+WorkloadActual  12: 32 op, 750697806.00 ns, 23.4593 ms/op
+WorkloadActual  13: 32 op, 749924981.00 ns, 23.4352 ms/op
+WorkloadActual  14: 32 op, 753141678.00 ns, 23.5357 ms/op
+WorkloadActual  15: 32 op, 753867505.00 ns, 23.5584 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 32 op, 747601656.00 ns, 23.3626 ms/op
+WorkloadResult   2: 32 op, 749653550.00 ns, 23.4267 ms/op
+WorkloadResult   3: 32 op, 750161383.00 ns, 23.4425 ms/op
+WorkloadResult   4: 32 op, 749802255.00 ns, 23.4313 ms/op
+WorkloadResult   5: 32 op, 750910839.00 ns, 23.4660 ms/op
+WorkloadResult   6: 32 op, 751889428.00 ns, 23.4965 ms/op
+WorkloadResult   7: 32 op, 753853491.00 ns, 23.5579 ms/op
+WorkloadResult   8: 32 op, 755518201.00 ns, 23.6099 ms/op
+WorkloadResult   9: 32 op, 756916605.00 ns, 23.6536 ms/op
+WorkloadResult  10: 32 op, 760663582.00 ns, 23.7707 ms/op
+WorkloadResult  11: 32 op, 754901948.00 ns, 23.5907 ms/op
+WorkloadResult  12: 32 op, 750697806.00 ns, 23.4593 ms/op
+WorkloadResult  13: 32 op, 749924981.00 ns, 23.4352 ms/op
+WorkloadResult  14: 32 op, 753141678.00 ns, 23.5357 ms/op
+WorkloadResult  15: 32 op, 753867505.00 ns, 23.5584 ms/op
+
+// AfterAll
+// Benchmark Process 327 has exited with code 0.
+
+Mean = 23.520 ms, StdErr = 0.027 ms (0.12%), N = 15, StdDev = 0.106 ms
+Min = 23.363 ms, Q1 = 23.439 ms, Median = 23.497 ms, Q3 = 23.575 ms, Max = 23.771 ms
+IQR = 0.136 ms, LowerFence = 23.235 ms, UpperFence = 23.778 ms
+ConfidenceInterval = [23.406 ms; 23.634 ms] (CI 99.9%), Margin = 0.114 ms (0.48% of Mean)
+Skewness = 0.69, Kurtosis = 2.72, MValue = 2
+
+// ** Remained 29 (90.6 %) benchmark(s) to run. Estimated finish 2024-05-26 20:02 (0h 9m from now) **
+// **************************
+// Benchmark: Benchmarks.BCryptWithRegularFor: .NET 8.0(Runtime=.NET 8.0) [cost=4]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet ".NET 8.0.dll" --anonymousPipes 115 116 --benchmarkName "TPLBenchmarks.Benchmarks.BCryptWithRegularFor(cost: 4)" --job ".NET 8.0" --benchmarkId 3 in /BenchmarkProj/bin/Release/net8.0/.NET 8.0/bin/Release/net8.0
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.13.12
+// Runtime=.NET 8.0.5 (8.0.524.21615), X64 RyuJIT AVX-512F+CD+BW+DQ+VL+VBMI
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX-512F+CD+BW+DQ+VL+VBMI,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT,AvxVnni,SERIALIZE VectorSize=256
+// Job: .NET 8.0
+
+OverheadJitting  1: 1 op, 174312.00 ns, 174.3120 us/op
+WorkloadJitting  1: 1 op, 374313486.00 ns, 374.3135 ms/op
+
+OverheadJitting  2: 1 op, 383.00 ns, 383.0000 ns/op
+WorkloadJitting  2: 1 op, 318818845.00 ns, 318.8188 ms/op
+
+WorkloadPilot    1: 2 op, 637135798.00 ns, 318.5679 ms/op
+
+WorkloadWarmup   1: 2 op, 637391207.00 ns, 318.6956 ms/op
+WorkloadWarmup   2: 2 op, 635850267.00 ns, 317.9251 ms/op
+WorkloadWarmup   3: 2 op, 635879206.00 ns, 317.9396 ms/op
+WorkloadWarmup   4: 2 op, 636231790.00 ns, 318.1159 ms/op
+WorkloadWarmup   5: 2 op, 635886296.00 ns, 317.9431 ms/op
+WorkloadWarmup   6: 2 op, 636037645.00 ns, 318.0188 ms/op
+WorkloadWarmup   7: 2 op, 635897534.00 ns, 317.9488 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 2 op, 635778467.00 ns, 317.8892 ms/op
+WorkloadActual   2: 2 op, 635903946.00 ns, 317.9520 ms/op
+WorkloadActual   3: 2 op, 635942988.00 ns, 317.9715 ms/op
+WorkloadActual   4: 2 op, 635904755.00 ns, 317.9524 ms/op
+WorkloadActual   5: 2 op, 635866657.00 ns, 317.9333 ms/op
+WorkloadActual   6: 2 op, 635907051.00 ns, 317.9535 ms/op
+WorkloadActual   7: 2 op, 635900261.00 ns, 317.9501 ms/op
+WorkloadActual   8: 2 op, 635962359.00 ns, 317.9812 ms/op
+WorkloadActual   9: 2 op, 637310937.00 ns, 318.6555 ms/op
+WorkloadActual  10: 2 op, 635921979.00 ns, 317.9610 ms/op
+WorkloadActual  11: 2 op, 635910542.00 ns, 317.9553 ms/op
+WorkloadActual  12: 2 op, 635912463.00 ns, 317.9562 ms/op
+WorkloadActual  13: 2 op, 635859122.00 ns, 317.9296 ms/op
+WorkloadActual  14: 2 op, 635932195.00 ns, 317.9661 ms/op
+WorkloadActual  15: 2 op, 635856146.00 ns, 317.9281 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 2 op, 635778467.00 ns, 317.8892 ms/op
+WorkloadResult   2: 2 op, 635903946.00 ns, 317.9520 ms/op
+WorkloadResult   3: 2 op, 635942988.00 ns, 317.9715 ms/op
+WorkloadResult   4: 2 op, 635904755.00 ns, 317.9524 ms/op
+WorkloadResult   5: 2 op, 635866657.00 ns, 317.9333 ms/op
+WorkloadResult   6: 2 op, 635907051.00 ns, 317.9535 ms/op
+WorkloadResult   7: 2 op, 635900261.00 ns, 317.9501 ms/op
+WorkloadResult   8: 2 op, 635962359.00 ns, 317.9812 ms/op
+WorkloadResult   9: 2 op, 635921979.00 ns, 317.9610 ms/op
+WorkloadResult  10: 2 op, 635910542.00 ns, 317.9553 ms/op
+WorkloadResult  11: 2 op, 635912463.00 ns, 317.9562 ms/op
+WorkloadResult  12: 2 op, 635859122.00 ns, 317.9296 ms/op
+WorkloadResult  13: 2 op, 635932195.00 ns, 317.9661 ms/op
+WorkloadResult  14: 2 op, 635856146.00 ns, 317.9281 ms/op
+
+// AfterAll
+// Benchmark Process 360 has exited with code 0.
+
+Mean = 317.949 ms, StdErr = 0.006 ms (0.00%), N = 14, StdDev = 0.023 ms
+Min = 317.889 ms, Q1 = 317.938 ms, Median = 317.953 ms, Q3 = 317.960 ms, Max = 317.981 ms
+IQR = 0.022 ms, LowerFence = 317.904 ms, UpperFence = 317.993 ms
+ConfidenceInterval = [317.923 ms; 317.974 ms] (CI 99.9%), Margin = 0.026 ms (0.01% of Mean)
+Skewness = -1.04, Kurtosis = 3.79, MValue = 2
+
+// ** Remained 28 (87.5 %) benchmark(s) to run. Estimated finish 2024-05-26 20:02 (0h 8m from now) **
+// **************************
+// Benchmark: Benchmarks.BCryptWithRegularForEach: .NET 8.0(Runtime=.NET 8.0) [cost=4]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet ".NET 8.0.dll" --anonymousPipes 115 116 --benchmarkName "TPLBenchmarks.Benchmarks.BCryptWithRegularForEach(cost: 4)" --job ".NET 8.0" --benchmarkId 4 in /BenchmarkProj/bin/Release/net8.0/.NET 8.0/bin/Release/net8.0
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.13.12
+// Runtime=.NET 8.0.5 (8.0.524.21615), X64 RyuJIT AVX-512F+CD+BW+DQ+VL+VBMI
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX-512F+CD+BW+DQ+VL+VBMI,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT,AvxVnni,SERIALIZE VectorSize=256
+// Job: .NET 8.0
+
+OverheadJitting  1: 1 op, 174460.00 ns, 174.4600 us/op
+WorkloadJitting  1: 1 op, 373654774.00 ns, 373.6548 ms/op
+
+OverheadJitting  2: 1 op, 294.00 ns, 294.0000 ns/op
+WorkloadJitting  2: 1 op, 318310117.00 ns, 318.3101 ms/op
+
+WorkloadPilot    1: 2 op, 635805338.00 ns, 317.9027 ms/op
+
+WorkloadWarmup   1: 2 op, 635904410.00 ns, 317.9522 ms/op
+WorkloadWarmup   2: 2 op, 635163543.00 ns, 317.5818 ms/op
+WorkloadWarmup   3: 2 op, 635079723.00 ns, 317.5399 ms/op
+WorkloadWarmup   4: 2 op, 635129349.00 ns, 317.5647 ms/op
+WorkloadWarmup   5: 2 op, 635135063.00 ns, 317.5675 ms/op
+WorkloadWarmup   6: 2 op, 635020612.00 ns, 317.5103 ms/op
+WorkloadWarmup   7: 2 op, 635139375.00 ns, 317.5697 ms/op
+WorkloadWarmup   8: 2 op, 635074308.00 ns, 317.5372 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 2 op, 635093604.00 ns, 317.5468 ms/op
+WorkloadActual   2: 2 op, 635209960.00 ns, 317.6050 ms/op
+WorkloadActual   3: 2 op, 635191660.00 ns, 317.5958 ms/op
+WorkloadActual   4: 2 op, 635222266.00 ns, 317.6111 ms/op
+WorkloadActual   5: 2 op, 635037079.00 ns, 317.5185 ms/op
+WorkloadActual   6: 2 op, 635136717.00 ns, 317.5684 ms/op
+WorkloadActual   7: 2 op, 635136327.00 ns, 317.5682 ms/op
+WorkloadActual   8: 2 op, 635053658.00 ns, 317.5268 ms/op
+WorkloadActual   9: 2 op, 635014151.00 ns, 317.5071 ms/op
+WorkloadActual  10: 2 op, 636385708.00 ns, 318.1929 ms/op
+WorkloadActual  11: 2 op, 635090003.00 ns, 317.5450 ms/op
+WorkloadActual  12: 2 op, 636997115.00 ns, 318.4986 ms/op
+WorkloadActual  13: 2 op, 635068492.00 ns, 317.5342 ms/op
+WorkloadActual  14: 2 op, 635045334.00 ns, 317.5227 ms/op
+WorkloadActual  15: 2 op, 635088992.00 ns, 317.5445 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 2 op, 635093604.00 ns, 317.5468 ms/op
+WorkloadResult   2: 2 op, 635209960.00 ns, 317.6050 ms/op
+WorkloadResult   3: 2 op, 635191660.00 ns, 317.5958 ms/op
+WorkloadResult   4: 2 op, 635222266.00 ns, 317.6111 ms/op
+WorkloadResult   5: 2 op, 635037079.00 ns, 317.5185 ms/op
+WorkloadResult   6: 2 op, 635136717.00 ns, 317.5684 ms/op
+WorkloadResult   7: 2 op, 635136327.00 ns, 317.5682 ms/op
+WorkloadResult   8: 2 op, 635053658.00 ns, 317.5268 ms/op
+WorkloadResult   9: 2 op, 635014151.00 ns, 317.5071 ms/op
+WorkloadResult  10: 2 op, 635090003.00 ns, 317.5450 ms/op
+WorkloadResult  11: 2 op, 635068492.00 ns, 317.5342 ms/op
+WorkloadResult  12: 2 op, 635045334.00 ns, 317.5227 ms/op
+WorkloadResult  13: 2 op, 635088992.00 ns, 317.5445 ms/op
+
+// AfterAll
+// Benchmark Process 371 has exited with code 0.
+
+Mean = 317.553 ms, StdErr = 0.009 ms (0.00%), N = 13, StdDev = 0.034 ms
+Min = 317.507 ms, Q1 = 317.527 ms, Median = 317.545 ms, Q3 = 317.568 ms, Max = 317.611 ms
+IQR = 0.042 ms, LowerFence = 317.465 ms, UpperFence = 317.631 ms
+ConfidenceInterval = [317.513 ms; 317.594 ms] (CI 99.9%), Margin = 0.041 ms (0.01% of Mean)
+Skewness = 0.42, Kurtosis = 1.69, MValue = 2
+
+// ** Remained 27 (84.4 %) benchmark(s) to run. Estimated finish 2024-05-26 20:02 (0h 7m from now) **
+// **************************
+// Benchmark: Benchmarks.BCryptWithParallelFor: .NET 8.0(Runtime=.NET 8.0) [cost=4]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet ".NET 8.0.dll" --anonymousPipes 115 116 --benchmarkName "TPLBenchmarks.Benchmarks.BCryptWithParallelFor(cost: 4)" --job ".NET 8.0" --benchmarkId 5 in /BenchmarkProj/bin/Release/net8.0/.NET 8.0/bin/Release/net8.0
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.13.12
+// Runtime=.NET 8.0.5 (8.0.524.21615), X64 RyuJIT AVX-512F+CD+BW+DQ+VL+VBMI
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX-512F+CD+BW+DQ+VL+VBMI,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT,AvxVnni,SERIALIZE VectorSize=256
+// Job: .NET 8.0
+
+OverheadJitting  1: 1 op, 183553.00 ns, 183.5530 us/op
+WorkloadJitting  1: 1 op, 91378713.00 ns, 91.3787 ms/op
+
+WorkloadPilot    1: 2 op, 126875248.00 ns, 63.4376 ms/op
+WorkloadPilot    2: 3 op, 153405093.00 ns, 51.1350 ms/op
+WorkloadPilot    3: 4 op, 112146285.00 ns, 28.0366 ms/op
+WorkloadPilot    4: 5 op, 137461955.00 ns, 27.4924 ms/op
+WorkloadPilot    5: 6 op, 165317414.00 ns, 27.5529 ms/op
+WorkloadPilot    6: 7 op, 196410868.00 ns, 28.0587 ms/op
+WorkloadPilot    7: 8 op, 231876863.00 ns, 28.9846 ms/op
+WorkloadPilot    8: 9 op, 253993300.00 ns, 28.2215 ms/op
+WorkloadPilot    9: 10 op, 284946300.00 ns, 28.4946 ms/op
+WorkloadPilot   10: 11 op, 307106914.00 ns, 27.9188 ms/op
+WorkloadPilot   11: 12 op, 337764522.00 ns, 28.1470 ms/op
+WorkloadPilot   12: 13 op, 364574807.00 ns, 28.0442 ms/op
+WorkloadPilot   13: 14 op, 400841113.00 ns, 28.6315 ms/op
+WorkloadPilot   14: 15 op, 434731891.00 ns, 28.9821 ms/op
+WorkloadPilot   15: 16 op, 456436593.00 ns, 28.5273 ms/op
+WorkloadPilot   16: 32 op, 907364491.00 ns, 28.3551 ms/op
+
+WorkloadWarmup   1: 32 op, 893303976.00 ns, 27.9157 ms/op
+WorkloadWarmup   2: 32 op, 916791193.00 ns, 28.6497 ms/op
+WorkloadWarmup   3: 32 op, 901905524.00 ns, 28.1845 ms/op
+WorkloadWarmup   4: 32 op, 923349230.00 ns, 28.8547 ms/op
+WorkloadWarmup   5: 32 op, 893457850.00 ns, 27.9206 ms/op
+WorkloadWarmup   6: 32 op, 909986530.00 ns, 28.4371 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 32 op, 914639019.00 ns, 28.5825 ms/op
+WorkloadActual   2: 32 op, 915030605.00 ns, 28.5947 ms/op
+WorkloadActual   3: 32 op, 906051325.00 ns, 28.3141 ms/op
+WorkloadActual   4: 32 op, 904685665.00 ns, 28.2714 ms/op
+WorkloadActual   5: 32 op, 919341865.00 ns, 28.7294 ms/op
+WorkloadActual   6: 32 op, 900746055.00 ns, 28.1483 ms/op
+WorkloadActual   7: 32 op, 907272494.00 ns, 28.3523 ms/op
+WorkloadActual   8: 32 op, 901624499.00 ns, 28.1758 ms/op
+WorkloadActual   9: 32 op, 924384638.00 ns, 28.8870 ms/op
+WorkloadActual  10: 32 op, 900845679.00 ns, 28.1514 ms/op
+WorkloadActual  11: 32 op, 907187907.00 ns, 28.3496 ms/op
+WorkloadActual  12: 32 op, 915247077.00 ns, 28.6015 ms/op
+WorkloadActual  13: 32 op, 906652441.00 ns, 28.3329 ms/op
+WorkloadActual  14: 32 op, 892778886.00 ns, 27.8993 ms/op
+WorkloadActual  15: 32 op, 924777461.00 ns, 28.8993 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 32 op, 914639019.00 ns, 28.5825 ms/op
+WorkloadResult   2: 32 op, 915030605.00 ns, 28.5947 ms/op
+WorkloadResult   3: 32 op, 906051325.00 ns, 28.3141 ms/op
+WorkloadResult   4: 32 op, 904685665.00 ns, 28.2714 ms/op
+WorkloadResult   5: 32 op, 919341865.00 ns, 28.7294 ms/op
+WorkloadResult   6: 32 op, 900746055.00 ns, 28.1483 ms/op
+WorkloadResult   7: 32 op, 907272494.00 ns, 28.3523 ms/op
+WorkloadResult   8: 32 op, 901624499.00 ns, 28.1758 ms/op
+WorkloadResult   9: 32 op, 924384638.00 ns, 28.8870 ms/op
+WorkloadResult  10: 32 op, 900845679.00 ns, 28.1514 ms/op
+WorkloadResult  11: 32 op, 907187907.00 ns, 28.3496 ms/op
+WorkloadResult  12: 32 op, 915247077.00 ns, 28.6015 ms/op
+WorkloadResult  13: 32 op, 906652441.00 ns, 28.3329 ms/op
+WorkloadResult  14: 32 op, 892778886.00 ns, 27.8993 ms/op
+WorkloadResult  15: 32 op, 924777461.00 ns, 28.8993 ms/op
+
+// AfterAll
+// Benchmark Process 384 has exited with code 0.
+
+Mean = 28.419 ms, StdErr = 0.074 ms (0.26%), N = 15, StdDev = 0.288 ms
+Min = 27.899 ms, Q1 = 28.224 ms, Median = 28.350 ms, Q3 = 28.598 ms, Max = 28.899 ms
+IQR = 0.374 ms, LowerFence = 27.662 ms, UpperFence = 29.160 ms
+ConfidenceInterval = [28.112 ms; 28.727 ms] (CI 99.9%), Margin = 0.308 ms (1.08% of Mean)
+Skewness = 0.16, Kurtosis = 1.95, MValue = 2
+
+// ** Remained 26 (81.2 %) benchmark(s) to run. Estimated finish 2024-05-26 20:02 (0h 8m from now) **
+// **************************
+// Benchmark: Benchmarks.BCryptWithParallelForEach: .NET 8.0(Runtime=.NET 8.0) [cost=4]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet ".NET 8.0.dll" --anonymousPipes 115 116 --benchmarkName "TPLBenchmarks.Benchmarks.BCryptWithParallelForEach(cost: 4)" --job ".NET 8.0" --benchmarkId 6 in /BenchmarkProj/bin/Release/net8.0/.NET 8.0/bin/Release/net8.0
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.13.12
+// Runtime=.NET 8.0.5 (8.0.524.21615), X64 RyuJIT AVX-512F+CD+BW+DQ+VL+VBMI
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX-512F+CD+BW+DQ+VL+VBMI,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT,AvxVnni,SERIALIZE VectorSize=256
+// Job: .NET 8.0
+
+OverheadJitting  1: 1 op, 176967.00 ns, 176.9670 us/op
+WorkloadJitting  1: 1 op, 87580362.00 ns, 87.5804 ms/op
+
+WorkloadPilot    1: 2 op, 128038829.00 ns, 64.0194 ms/op
+WorkloadPilot    2: 3 op, 156211954.00 ns, 52.0707 ms/op
+WorkloadPilot    3: 4 op, 111238961.00 ns, 27.8097 ms/op
+WorkloadPilot    4: 5 op, 142998973.00 ns, 28.5998 ms/op
+WorkloadPilot    5: 6 op, 166609809.00 ns, 27.7683 ms/op
+WorkloadPilot    6: 7 op, 196360612.00 ns, 28.0515 ms/op
+WorkloadPilot    7: 8 op, 226345003.00 ns, 28.2931 ms/op
+WorkloadPilot    8: 9 op, 258654509.00 ns, 28.7394 ms/op
+WorkloadPilot    9: 10 op, 284152074.00 ns, 28.4152 ms/op
+WorkloadPilot   10: 11 op, 316850813.00 ns, 28.8046 ms/op
+WorkloadPilot   11: 12 op, 339358808.00 ns, 28.2799 ms/op
+WorkloadPilot   12: 13 op, 375070113.00 ns, 28.8515 ms/op
+WorkloadPilot   13: 14 op, 390175520.00 ns, 27.8697 ms/op
+WorkloadPilot   14: 15 op, 423104670.00 ns, 28.2070 ms/op
+WorkloadPilot   15: 16 op, 447580385.00 ns, 27.9738 ms/op
+WorkloadPilot   16: 32 op, 908543418.00 ns, 28.3920 ms/op
+
+WorkloadWarmup   1: 32 op, 924022055.00 ns, 28.8757 ms/op
+WorkloadWarmup   2: 32 op, 901070269.00 ns, 28.1584 ms/op
+WorkloadWarmup   3: 32 op, 913329713.00 ns, 28.5416 ms/op
+WorkloadWarmup   4: 32 op, 914236327.00 ns, 28.5699 ms/op
+WorkloadWarmup   5: 32 op, 925057586.00 ns, 28.9080 ms/op
+WorkloadWarmup   6: 32 op, 892182589.00 ns, 27.8807 ms/op
+WorkloadWarmup   7: 32 op, 908713306.00 ns, 28.3973 ms/op
+WorkloadWarmup   8: 32 op, 903306040.00 ns, 28.2283 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 32 op, 917557965.00 ns, 28.6737 ms/op
+WorkloadActual   2: 32 op, 901984165.00 ns, 28.1870 ms/op
+WorkloadActual   3: 32 op, 917506663.00 ns, 28.6721 ms/op
+WorkloadActual   4: 32 op, 891507941.00 ns, 27.8596 ms/op
+WorkloadActual   5: 32 op, 908952343.00 ns, 28.4048 ms/op
+WorkloadActual   6: 32 op, 900068094.00 ns, 28.1271 ms/op
+WorkloadActual   7: 32 op, 910252327.00 ns, 28.4454 ms/op
+WorkloadActual   8: 32 op, 917450561.00 ns, 28.6703 ms/op
+WorkloadActual   9: 32 op, 928887281.00 ns, 29.0277 ms/op
+WorkloadActual  10: 32 op, 895120790.00 ns, 27.9725 ms/op
+WorkloadActual  11: 32 op, 902785026.00 ns, 28.2120 ms/op
+WorkloadActual  12: 32 op, 906073698.00 ns, 28.3148 ms/op
+WorkloadActual  13: 32 op, 905769383.00 ns, 28.3053 ms/op
+WorkloadActual  14: 32 op, 925006784.00 ns, 28.9065 ms/op
+WorkloadActual  15: 32 op, 880034555.00 ns, 27.5011 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 32 op, 917557965.00 ns, 28.6737 ms/op
+WorkloadResult   2: 32 op, 901984165.00 ns, 28.1870 ms/op
+WorkloadResult   3: 32 op, 917506663.00 ns, 28.6721 ms/op
+WorkloadResult   4: 32 op, 891507941.00 ns, 27.8596 ms/op
+WorkloadResult   5: 32 op, 908952343.00 ns, 28.4048 ms/op
+WorkloadResult   6: 32 op, 900068094.00 ns, 28.1271 ms/op
+WorkloadResult   7: 32 op, 910252327.00 ns, 28.4454 ms/op
+WorkloadResult   8: 32 op, 917450561.00 ns, 28.6703 ms/op
+WorkloadResult   9: 32 op, 928887281.00 ns, 29.0277 ms/op
+WorkloadResult  10: 32 op, 895120790.00 ns, 27.9725 ms/op
+WorkloadResult  11: 32 op, 902785026.00 ns, 28.2120 ms/op
+WorkloadResult  12: 32 op, 906073698.00 ns, 28.3148 ms/op
+WorkloadResult  13: 32 op, 905769383.00 ns, 28.3053 ms/op
+WorkloadResult  14: 32 op, 925006784.00 ns, 28.9065 ms/op
+WorkloadResult  15: 32 op, 880034555.00 ns, 27.5011 ms/op
+
+// AfterAll
+// Benchmark Process 425 has exited with code 0.
+
+Mean = 28.352 ms, StdErr = 0.105 ms (0.37%), N = 15, StdDev = 0.405 ms
+Min = 27.501 ms, Q1 = 28.157 ms, Median = 28.315 ms, Q3 = 28.671 ms, Max = 29.028 ms
+IQR = 0.514 ms, LowerFence = 27.386 ms, UpperFence = 29.442 ms
+ConfidenceInterval = [27.919 ms; 28.785 ms] (CI 99.9%), Margin = 0.433 ms (1.53% of Mean)
+Skewness = -0.23, Kurtosis = 2.34, MValue = 2
+
+// ** Remained 25 (78.1 %) benchmark(s) to run. Estimated finish 2024-05-26 20:03 (0h 8m from now) **
+// **************************
+// Benchmark: Benchmarks.BCryptParallelOptimizedForSmallOperations: .NET 8.0(Runtime=.NET 8.0) [cost=4]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet ".NET 8.0.dll" --anonymousPipes 115 116 --benchmarkName "TPLBenchmarks.Benchmarks.BCryptParallelOptimizedForSmallOperations(cost: 4)" --job ".NET 8.0" --benchmarkId 7 in /BenchmarkProj/bin/Release/net8.0/.NET 8.0/bin/Release/net8.0
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.13.12
+// Runtime=.NET 8.0.5 (8.0.524.21615), X64 RyuJIT AVX-512F+CD+BW+DQ+VL+VBMI
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX-512F+CD+BW+DQ+VL+VBMI,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT,AvxVnni,SERIALIZE VectorSize=256
+// Job: .NET 8.0
+
+OverheadJitting  1: 1 op, 170453.00 ns, 170.4530 us/op
+WorkloadJitting  1: 1 op, 85086861.00 ns, 85.0869 ms/op
+
+WorkloadPilot    1: 2 op, 131691059.00 ns, 65.8455 ms/op
+WorkloadPilot    2: 3 op, 154357226.00 ns, 51.4524 ms/op
+WorkloadPilot    3: 4 op, 110428909.00 ns, 27.6072 ms/op
+WorkloadPilot    4: 5 op, 138328849.00 ns, 27.6658 ms/op
+WorkloadPilot    5: 6 op, 163625458.00 ns, 27.2709 ms/op
+WorkloadPilot    6: 7 op, 195480677.00 ns, 27.9258 ms/op
+WorkloadPilot    7: 8 op, 221602973.00 ns, 27.7004 ms/op
+WorkloadPilot    8: 9 op, 247924696.00 ns, 27.5472 ms/op
+WorkloadPilot    9: 10 op, 280975307.00 ns, 28.0975 ms/op
+WorkloadPilot   10: 11 op, 291817014.00 ns, 26.5288 ms/op
+WorkloadPilot   11: 12 op, 327590956.00 ns, 27.2992 ms/op
+WorkloadPilot   12: 13 op, 349732176.00 ns, 26.9025 ms/op
+WorkloadPilot   13: 14 op, 386177705.00 ns, 27.5841 ms/op
+WorkloadPilot   14: 15 op, 400010735.00 ns, 26.6674 ms/op
+WorkloadPilot   15: 16 op, 439708332.00 ns, 27.4818 ms/op
+WorkloadPilot   16: 32 op, 854476777.00 ns, 26.7024 ms/op
+
+WorkloadWarmup   1: 32 op, 860110325.00 ns, 26.8784 ms/op
+WorkloadWarmup   2: 32 op, 861277468.00 ns, 26.9149 ms/op
+WorkloadWarmup   3: 32 op, 854057196.00 ns, 26.6893 ms/op
+WorkloadWarmup   4: 32 op, 857986764.00 ns, 26.8121 ms/op
+WorkloadWarmup   5: 32 op, 843795572.00 ns, 26.3686 ms/op
+WorkloadWarmup   6: 32 op, 836038188.00 ns, 26.1262 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 32 op, 850539839.00 ns, 26.5794 ms/op
+WorkloadActual   2: 32 op, 837954933.00 ns, 26.1861 ms/op
+WorkloadActual   3: 32 op, 843001485.00 ns, 26.3438 ms/op
+WorkloadActual   4: 32 op, 846278989.00 ns, 26.4462 ms/op
+WorkloadActual   5: 32 op, 851861144.00 ns, 26.6207 ms/op
+WorkloadActual   6: 32 op, 842721304.00 ns, 26.3350 ms/op
+WorkloadActual   7: 32 op, 830485124.00 ns, 25.9527 ms/op
+WorkloadActual   8: 32 op, 841185268.00 ns, 26.2870 ms/op
+WorkloadActual   9: 32 op, 847611173.00 ns, 26.4878 ms/op
+WorkloadActual  10: 32 op, 839478204.00 ns, 26.2337 ms/op
+WorkloadActual  11: 32 op, 836930838.00 ns, 26.1541 ms/op
+WorkloadActual  12: 32 op, 845045244.00 ns, 26.4077 ms/op
+WorkloadActual  13: 32 op, 839964887.00 ns, 26.2489 ms/op
+WorkloadActual  14: 32 op, 838734496.00 ns, 26.2105 ms/op
+WorkloadActual  15: 32 op, 841883452.00 ns, 26.3089 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 32 op, 850539839.00 ns, 26.5794 ms/op
+WorkloadResult   2: 32 op, 837954933.00 ns, 26.1861 ms/op
+WorkloadResult   3: 32 op, 843001485.00 ns, 26.3438 ms/op
+WorkloadResult   4: 32 op, 846278989.00 ns, 26.4462 ms/op
+WorkloadResult   5: 32 op, 851861144.00 ns, 26.6207 ms/op
+WorkloadResult   6: 32 op, 842721304.00 ns, 26.3350 ms/op
+WorkloadResult   7: 32 op, 830485124.00 ns, 25.9527 ms/op
+WorkloadResult   8: 32 op, 841185268.00 ns, 26.2870 ms/op
+WorkloadResult   9: 32 op, 847611173.00 ns, 26.4878 ms/op
+WorkloadResult  10: 32 op, 839478204.00 ns, 26.2337 ms/op
+WorkloadResult  11: 32 op, 836930838.00 ns, 26.1541 ms/op
+WorkloadResult  12: 32 op, 845045244.00 ns, 26.4077 ms/op
+WorkloadResult  13: 32 op, 839964887.00 ns, 26.2489 ms/op
+WorkloadResult  14: 32 op, 838734496.00 ns, 26.2105 ms/op
+WorkloadResult  15: 32 op, 841883452.00 ns, 26.3089 ms/op
+
+// AfterAll
+// Benchmark Process 471 has exited with code 0.
+
+Mean = 26.320 ms, StdErr = 0.045 ms (0.17%), N = 15, StdDev = 0.172 ms
+Min = 25.953 ms, Q1 = 26.222 ms, Median = 26.309 ms, Q3 = 26.427 ms, Max = 26.621 ms
+IQR = 0.205 ms, LowerFence = 25.915 ms, UpperFence = 26.734 ms
+ConfidenceInterval = [26.136 ms; 26.505 ms] (CI 99.9%), Margin = 0.184 ms (0.70% of Mean)
+Skewness = -0.09, Kurtosis = 2.51, MValue = 2
+
+// ** Remained 24 (75.0 %) benchmark(s) to run. Estimated finish 2024-05-26 20:03 (0h 8m from now) **
+// **************************
+// Benchmark: Benchmarks.BCryptWithLINQ: .NET 8.0(Runtime=.NET 8.0) [cost=6]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet ".NET 8.0.dll" --anonymousPipes 115 116 --benchmarkName "TPLBenchmarks.Benchmarks.BCryptWithLINQ(cost: 6)" --job ".NET 8.0" --benchmarkId 8 in /BenchmarkProj/bin/Release/net8.0/.NET 8.0/bin/Release/net8.0
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.13.12
+// Runtime=.NET 8.0.5 (8.0.524.21615), X64 RyuJIT AVX-512F+CD+BW+DQ+VL+VBMI
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX-512F+CD+BW+DQ+VL+VBMI,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT,AvxVnni,SERIALIZE VectorSize=256
+// Job: .NET 8.0
+
+OverheadJitting  1: 1 op, 202765.00 ns, 202.7650 us/op
+WorkloadJitting  1: 1 op, 1278171435.00 ns, 1.2782 s/op
+
+OverheadJitting  2: 1 op, 322.00 ns, 322.0000 ns/op
+WorkloadJitting  2: 1 op, 1223880183.00 ns, 1.2239 s/op
+
+WorkloadWarmup   1: 1 op, 1223129674.00 ns, 1.2231 s/op
+WorkloadWarmup   2: 1 op, 1222830467.00 ns, 1.2228 s/op
+WorkloadWarmup   3: 1 op, 1222354184.00 ns, 1.2224 s/op
+WorkloadWarmup   4: 1 op, 1222170213.00 ns, 1.2222 s/op
+WorkloadWarmup   5: 1 op, 1222079433.00 ns, 1.2221 s/op
+WorkloadWarmup   6: 1 op, 1222422253.00 ns, 1.2224 s/op
+WorkloadWarmup   7: 1 op, 1223312671.00 ns, 1.2233 s/op
+WorkloadWarmup   8: 1 op, 1223076007.00 ns, 1.2231 s/op
+WorkloadWarmup   9: 1 op, 1223122827.00 ns, 1.2231 s/op
+WorkloadWarmup  10: 1 op, 1223168605.00 ns, 1.2232 s/op
+WorkloadWarmup  11: 1 op, 1224082172.00 ns, 1.2241 s/op
+WorkloadWarmup  12: 1 op, 1222071985.00 ns, 1.2221 s/op
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 1222952449.00 ns, 1.2230 s/op
+WorkloadActual   2: 1 op, 1222541593.00 ns, 1.2225 s/op
+WorkloadActual   3: 1 op, 1222536371.00 ns, 1.2225 s/op
+WorkloadActual   4: 1 op, 1222567458.00 ns, 1.2226 s/op
+WorkloadActual   5: 1 op, 1222656421.00 ns, 1.2227 s/op
+WorkloadActual   6: 1 op, 1222681017.00 ns, 1.2227 s/op
+WorkloadActual   7: 1 op, 1222500507.00 ns, 1.2225 s/op
+WorkloadActual   8: 1 op, 1222518143.00 ns, 1.2225 s/op
+WorkloadActual   9: 1 op, 1222465516.00 ns, 1.2225 s/op
+WorkloadActual  10: 1 op, 1222346883.00 ns, 1.2223 s/op
+WorkloadActual  11: 1 op, 1222487551.00 ns, 1.2225 s/op
+WorkloadActual  12: 1 op, 1222442322.00 ns, 1.2224 s/op
+WorkloadActual  13: 1 op, 1222359536.00 ns, 1.2224 s/op
+WorkloadActual  14: 1 op, 1222538097.00 ns, 1.2225 s/op
+WorkloadActual  15: 1 op, 1222491511.00 ns, 1.2225 s/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 1222541593.00 ns, 1.2225 s/op
+WorkloadResult   2: 1 op, 1222536371.00 ns, 1.2225 s/op
+WorkloadResult   3: 1 op, 1222567458.00 ns, 1.2226 s/op
+WorkloadResult   4: 1 op, 1222656421.00 ns, 1.2227 s/op
+WorkloadResult   5: 1 op, 1222500507.00 ns, 1.2225 s/op
+WorkloadResult   6: 1 op, 1222518143.00 ns, 1.2225 s/op
+WorkloadResult   7: 1 op, 1222465516.00 ns, 1.2225 s/op
+WorkloadResult   8: 1 op, 1222346883.00 ns, 1.2223 s/op
+WorkloadResult   9: 1 op, 1222487551.00 ns, 1.2225 s/op
+WorkloadResult  10: 1 op, 1222442322.00 ns, 1.2224 s/op
+WorkloadResult  11: 1 op, 1222359536.00 ns, 1.2224 s/op
+WorkloadResult  12: 1 op, 1222538097.00 ns, 1.2225 s/op
+WorkloadResult  13: 1 op, 1222491511.00 ns, 1.2225 s/op
+
+// AfterAll
+// Benchmark Process 516 has exited with code 0.
+
+Mean = 1.222 s, StdErr = 0.000 s (0.00%), N = 13, StdDev = 0.000 s
+Min = 1.222 s, Q1 = 1.222 s, Median = 1.223 s, Q3 = 1.223 s, Max = 1.223 s
+IQR = 0.000 s, LowerFence = 1.222 s, UpperFence = 1.223 s
+ConfidenceInterval = [1.222 s; 1.223 s] (CI 99.9%), Margin = 0.000 s (0.01% of Mean)
+Skewness = -0.19, Kurtosis = 2.58, MValue = 2
+
+// ** Remained 23 (71.9 %) benchmark(s) to run. Estimated finish 2024-05-26 20:04 (0h 8m from now) **
+// **************************
+// Benchmark: Benchmarks.BCryptWithPLINQ: .NET 8.0(Runtime=.NET 8.0) [cost=6]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet ".NET 8.0.dll" --anonymousPipes 115 116 --benchmarkName "TPLBenchmarks.Benchmarks.BCryptWithPLINQ(cost: 6)" --job ".NET 8.0" --benchmarkId 9 in /BenchmarkProj/bin/Release/net8.0/.NET 8.0/bin/Release/net8.0
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.13.12
+// Runtime=.NET 8.0.5 (8.0.524.21615), X64 RyuJIT AVX-512F+CD+BW+DQ+VL+VBMI
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX-512F+CD+BW+DQ+VL+VBMI,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT,AvxVnni,SERIALIZE VectorSize=256
+// Job: .NET 8.0
+
+OverheadJitting  1: 1 op, 178858.00 ns, 178.8580 us/op
+WorkloadJitting  1: 1 op, 251427653.00 ns, 251.4277 ms/op
+
+WorkloadPilot    1: 2 op, 298567697.00 ns, 149.2838 ms/op
+WorkloadPilot    2: 3 op, 283380835.00 ns, 94.4603 ms/op
+WorkloadPilot    3: 4 op, 368211724.00 ns, 92.0529 ms/op
+WorkloadPilot    4: 5 op, 436823485.00 ns, 87.3647 ms/op
+WorkloadPilot    5: 6 op, 527795554.00 ns, 87.9659 ms/op
+
+WorkloadWarmup   1: 6 op, 525204730.00 ns, 87.5341 ms/op
+WorkloadWarmup   2: 6 op, 536273033.00 ns, 89.3788 ms/op
+WorkloadWarmup   3: 6 op, 523409288.00 ns, 87.2349 ms/op
+WorkloadWarmup   4: 6 op, 523637087.00 ns, 87.2728 ms/op
+WorkloadWarmup   5: 6 op, 523254077.00 ns, 87.2090 ms/op
+WorkloadWarmup   6: 6 op, 524207049.00 ns, 87.3678 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 6 op, 523965089.00 ns, 87.3275 ms/op
+WorkloadActual   2: 6 op, 540260691.00 ns, 90.0434 ms/op
+WorkloadActual   3: 6 op, 522936016.00 ns, 87.1560 ms/op
+WorkloadActual   4: 6 op, 527514317.00 ns, 87.9191 ms/op
+WorkloadActual   5: 6 op, 529541091.00 ns, 88.2568 ms/op
+WorkloadActual   6: 6 op, 523995311.00 ns, 87.3326 ms/op
+WorkloadActual   7: 6 op, 523820607.00 ns, 87.3034 ms/op
+WorkloadActual   8: 6 op, 525431384.00 ns, 87.5719 ms/op
+WorkloadActual   9: 6 op, 523030719.00 ns, 87.1718 ms/op
+WorkloadActual  10: 6 op, 522284950.00 ns, 87.0475 ms/op
+WorkloadActual  11: 6 op, 523636273.00 ns, 87.2727 ms/op
+WorkloadActual  12: 6 op, 530395754.00 ns, 88.3993 ms/op
+WorkloadActual  13: 6 op, 524030151.00 ns, 87.3384 ms/op
+WorkloadActual  14: 6 op, 523684031.00 ns, 87.2807 ms/op
+WorkloadActual  15: 6 op, 523387266.00 ns, 87.2312 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 6 op, 523965089.00 ns, 87.3275 ms/op
+WorkloadResult   2: 6 op, 522936016.00 ns, 87.1560 ms/op
+WorkloadResult   3: 6 op, 527514317.00 ns, 87.9191 ms/op
+WorkloadResult   4: 6 op, 529541091.00 ns, 88.2568 ms/op
+WorkloadResult   5: 6 op, 523995311.00 ns, 87.3326 ms/op
+WorkloadResult   6: 6 op, 523820607.00 ns, 87.3034 ms/op
+WorkloadResult   7: 6 op, 525431384.00 ns, 87.5719 ms/op
+WorkloadResult   8: 6 op, 523030719.00 ns, 87.1718 ms/op
+WorkloadResult   9: 6 op, 522284950.00 ns, 87.0475 ms/op
+WorkloadResult  10: 6 op, 523636273.00 ns, 87.2727 ms/op
+WorkloadResult  11: 6 op, 530395754.00 ns, 88.3993 ms/op
+WorkloadResult  12: 6 op, 524030151.00 ns, 87.3384 ms/op
+WorkloadResult  13: 6 op, 523684031.00 ns, 87.2807 ms/op
+WorkloadResult  14: 6 op, 523387266.00 ns, 87.2312 ms/op
+
+// AfterAll
+// Benchmark Process 534 has exited with code 0.
+
+Mean = 87.472 ms, StdErr = 0.112 ms (0.13%), N = 14, StdDev = 0.418 ms
+Min = 87.047 ms, Q1 = 87.242 ms, Median = 87.315 ms, Q3 = 87.514 ms, Max = 88.399 ms
+IQR = 0.272 ms, LowerFence = 86.834 ms, UpperFence = 87.921 ms
+ConfidenceInterval = [87.000 ms; 87.944 ms] (CI 99.9%), Margin = 0.472 ms (0.54% of Mean)
+Skewness = 1.16, Kurtosis = 2.83, MValue = 2
+
+// ** Remained 22 (68.8 %) benchmark(s) to run. Estimated finish 2024-05-26 20:04 (0h 7m from now) **
+// **************************
+// Benchmark: Benchmarks.BCryptWithOrderedPLINQ: .NET 8.0(Runtime=.NET 8.0) [cost=6]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet ".NET 8.0.dll" --anonymousPipes 115 116 --benchmarkName "TPLBenchmarks.Benchmarks.BCryptWithOrderedPLINQ(cost: 6)" --job ".NET 8.0" --benchmarkId 10 in /BenchmarkProj/bin/Release/net8.0/.NET 8.0/bin/Release/net8.0
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.13.12
+// Runtime=.NET 8.0.5 (8.0.524.21615), X64 RyuJIT AVX-512F+CD+BW+DQ+VL+VBMI
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX-512F+CD+BW+DQ+VL+VBMI,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT,AvxVnni,SERIALIZE VectorSize=256
+// Job: .NET 8.0
+
+OverheadJitting  1: 1 op, 174515.00 ns, 174.5150 us/op
+WorkloadJitting  1: 1 op, 191265512.00 ns, 191.2655 ms/op
+
+WorkloadPilot    1: 2 op, 173694880.00 ns, 86.8474 ms/op
+WorkloadPilot    2: 3 op, 282198831.00 ns, 94.0663 ms/op
+WorkloadPilot    3: 4 op, 368048945.00 ns, 92.0122 ms/op
+WorkloadPilot    4: 5 op, 436140467.00 ns, 87.2281 ms/op
+WorkloadPilot    5: 6 op, 521482361.00 ns, 86.9137 ms/op
+
+WorkloadWarmup   1: 6 op, 521487724.00 ns, 86.9146 ms/op
+WorkloadWarmup   2: 6 op, 526036696.00 ns, 87.6728 ms/op
+WorkloadWarmup   3: 6 op, 521248481.00 ns, 86.8747 ms/op
+WorkloadWarmup   4: 6 op, 521912546.00 ns, 86.9854 ms/op
+WorkloadWarmup   5: 6 op, 521696065.00 ns, 86.9493 ms/op
+WorkloadWarmup   6: 6 op, 521768412.00 ns, 86.9614 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 6 op, 526879837.00 ns, 87.8133 ms/op
+WorkloadActual   2: 6 op, 521180296.00 ns, 86.8634 ms/op
+WorkloadActual   3: 6 op, 521413959.00 ns, 86.9023 ms/op
+WorkloadActual   4: 6 op, 529106611.00 ns, 88.1844 ms/op
+WorkloadActual   5: 6 op, 522044939.00 ns, 87.0075 ms/op
+WorkloadActual   6: 6 op, 521334490.00 ns, 86.8891 ms/op
+WorkloadActual   7: 6 op, 521599747.00 ns, 86.9333 ms/op
+WorkloadActual   8: 6 op, 521363251.00 ns, 86.8939 ms/op
+WorkloadActual   9: 6 op, 521119237.00 ns, 86.8532 ms/op
+WorkloadActual  10: 6 op, 521623065.00 ns, 86.9372 ms/op
+WorkloadActual  11: 6 op, 521315080.00 ns, 86.8858 ms/op
+WorkloadActual  12: 6 op, 524634627.00 ns, 87.4391 ms/op
+WorkloadActual  13: 6 op, 520270097.00 ns, 86.7117 ms/op
+WorkloadActual  14: 6 op, 521525261.00 ns, 86.9209 ms/op
+WorkloadActual  15: 6 op, 521602921.00 ns, 86.9338 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 6 op, 521180296.00 ns, 86.8634 ms/op
+WorkloadResult   2: 6 op, 521413959.00 ns, 86.9023 ms/op
+WorkloadResult   3: 6 op, 522044939.00 ns, 87.0075 ms/op
+WorkloadResult   4: 6 op, 521334490.00 ns, 86.8891 ms/op
+WorkloadResult   5: 6 op, 521599747.00 ns, 86.9333 ms/op
+WorkloadResult   6: 6 op, 521363251.00 ns, 86.8939 ms/op
+WorkloadResult   7: 6 op, 521119237.00 ns, 86.8532 ms/op
+WorkloadResult   8: 6 op, 521623065.00 ns, 86.9372 ms/op
+WorkloadResult   9: 6 op, 521315080.00 ns, 86.8858 ms/op
+WorkloadResult  10: 6 op, 520270097.00 ns, 86.7117 ms/op
+WorkloadResult  11: 6 op, 521525261.00 ns, 86.9209 ms/op
+WorkloadResult  12: 6 op, 521602921.00 ns, 86.9338 ms/op
+
+// AfterAll
+// Benchmark Process 564 has exited with code 0.
+
+Mean = 86.894 ms, StdErr = 0.020 ms (0.02%), N = 12, StdDev = 0.070 ms
+Min = 86.712 ms, Q1 = 86.880 ms, Median = 86.898 ms, Q3 = 86.933 ms, Max = 87.007 ms
+IQR = 0.053 ms, LowerFence = 86.800 ms, UpperFence = 87.013 ms
+ConfidenceInterval = [86.804 ms; 86.985 ms] (CI 99.9%), Margin = 0.090 ms (0.10% of Mean)
+Skewness = -1.08, Kurtosis = 4.36, MValue = 2
+
+// ** Remained 21 (65.6 %) benchmark(s) to run. Estimated finish 2024-05-26 20:03 (0h 7m from now) **
+// **************************
+// Benchmark: Benchmarks.BCryptWithRegularFor: .NET 8.0(Runtime=.NET 8.0) [cost=6]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet ".NET 8.0.dll" --anonymousPipes 115 116 --benchmarkName "TPLBenchmarks.Benchmarks.BCryptWithRegularFor(cost: 6)" --job ".NET 8.0" --benchmarkId 11 in /BenchmarkProj/bin/Release/net8.0/.NET 8.0/bin/Release/net8.0
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.13.12
+// Runtime=.NET 8.0.5 (8.0.524.21615), X64 RyuJIT AVX-512F+CD+BW+DQ+VL+VBMI
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX-512F+CD+BW+DQ+VL+VBMI,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT,AvxVnni,SERIALIZE VectorSize=256
+// Job: .NET 8.0
+
+OverheadJitting  1: 1 op, 173252.00 ns, 173.2520 us/op
+WorkloadJitting  1: 1 op, 1280547492.00 ns, 1.2805 s/op
+
+OverheadJitting  2: 1 op, 282.00 ns, 282.0000 ns/op
+WorkloadJitting  2: 1 op, 1224379972.00 ns, 1.2244 s/op
+
+WorkloadWarmup   1: 1 op, 1223843172.00 ns, 1.2238 s/op
+WorkloadWarmup   2: 1 op, 1223609012.00 ns, 1.2236 s/op
+WorkloadWarmup   3: 1 op, 1223695286.00 ns, 1.2237 s/op
+WorkloadWarmup   4: 1 op, 1223669690.00 ns, 1.2237 s/op
+WorkloadWarmup   5: 1 op, 1223589913.00 ns, 1.2236 s/op
+WorkloadWarmup   6: 1 op, 1223309979.00 ns, 1.2233 s/op
+WorkloadWarmup   7: 1 op, 1223604654.00 ns, 1.2236 s/op
+WorkloadWarmup   8: 1 op, 1223634942.00 ns, 1.2236 s/op
+WorkloadWarmup   9: 1 op, 1226158831.00 ns, 1.2262 s/op
+WorkloadWarmup  10: 1 op, 1223722369.00 ns, 1.2237 s/op
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 1223610825.00 ns, 1.2236 s/op
+WorkloadActual   2: 1 op, 1223526983.00 ns, 1.2235 s/op
+WorkloadActual   3: 1 op, 1224214736.00 ns, 1.2242 s/op
+WorkloadActual   4: 1 op, 1223666784.00 ns, 1.2237 s/op
+WorkloadActual   5: 1 op, 1223548546.00 ns, 1.2235 s/op
+WorkloadActual   6: 1 op, 1223631899.00 ns, 1.2236 s/op
+WorkloadActual   7: 1 op, 1223666596.00 ns, 1.2237 s/op
+WorkloadActual   8: 1 op, 1223669344.00 ns, 1.2237 s/op
+WorkloadActual   9: 1 op, 1223658783.00 ns, 1.2237 s/op
+WorkloadActual  10: 1 op, 1223678173.00 ns, 1.2237 s/op
+WorkloadActual  11: 1 op, 1223510962.00 ns, 1.2235 s/op
+WorkloadActual  12: 1 op, 1223610354.00 ns, 1.2236 s/op
+WorkloadActual  13: 1 op, 1223633304.00 ns, 1.2236 s/op
+WorkloadActual  14: 1 op, 1223618651.00 ns, 1.2236 s/op
+WorkloadActual  15: 1 op, 1223605749.00 ns, 1.2236 s/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 1223610825.00 ns, 1.2236 s/op
+WorkloadResult   2: 1 op, 1223526983.00 ns, 1.2235 s/op
+WorkloadResult   3: 1 op, 1223666784.00 ns, 1.2237 s/op
+WorkloadResult   4: 1 op, 1223548546.00 ns, 1.2235 s/op
+WorkloadResult   5: 1 op, 1223631899.00 ns, 1.2236 s/op
+WorkloadResult   6: 1 op, 1223666596.00 ns, 1.2237 s/op
+WorkloadResult   7: 1 op, 1223669344.00 ns, 1.2237 s/op
+WorkloadResult   8: 1 op, 1223658783.00 ns, 1.2237 s/op
+WorkloadResult   9: 1 op, 1223678173.00 ns, 1.2237 s/op
+WorkloadResult  10: 1 op, 1223510962.00 ns, 1.2235 s/op
+WorkloadResult  11: 1 op, 1223610354.00 ns, 1.2236 s/op
+WorkloadResult  12: 1 op, 1223633304.00 ns, 1.2236 s/op
+WorkloadResult  13: 1 op, 1223618651.00 ns, 1.2236 s/op
+WorkloadResult  14: 1 op, 1223605749.00 ns, 1.2236 s/op
+
+// AfterAll
+// Benchmark Process 591 has exited with code 0.
+
+Mean = 1.224 s, StdErr = 0.000 s (0.00%), N = 14, StdDev = 0.000 s
+Min = 1.224 s, Q1 = 1.224 s, Median = 1.224 s, Q3 = 1.224 s, Max = 1.224 s
+IQR = 0.000 s, LowerFence = 1.224 s, UpperFence = 1.224 s
+ConfidenceInterval = [1.224 s; 1.224 s] (CI 99.9%), Margin = 0.000 s (0.00% of Mean)
+Skewness = -0.7, Kurtosis = 2.11, MValue = 2
+
+// ** Remained 20 (62.5 %) benchmark(s) to run. Estimated finish 2024-05-26 20:04 (0h 7m from now) **
+// **************************
+// Benchmark: Benchmarks.BCryptWithRegularForEach: .NET 8.0(Runtime=.NET 8.0) [cost=6]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet ".NET 8.0.dll" --anonymousPipes 115 116 --benchmarkName "TPLBenchmarks.Benchmarks.BCryptWithRegularForEach(cost: 6)" --job ".NET 8.0" --benchmarkId 12 in /BenchmarkProj/bin/Release/net8.0/.NET 8.0/bin/Release/net8.0
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.13.12
+// Runtime=.NET 8.0.5 (8.0.524.21615), X64 RyuJIT AVX-512F+CD+BW+DQ+VL+VBMI
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX-512F+CD+BW+DQ+VL+VBMI,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT,AvxVnni,SERIALIZE VectorSize=256
+// Job: .NET 8.0
+
+OverheadJitting  1: 1 op, 169570.00 ns, 169.5700 us/op
+WorkloadJitting  1: 1 op, 1276705051.00 ns, 1.2767 s/op
+
+OverheadJitting  2: 1 op, 421.00 ns, 421.0000 ns/op
+WorkloadJitting  2: 1 op, 1222740302.00 ns, 1.2227 s/op
+
+WorkloadWarmup   1: 1 op, 1221946123.00 ns, 1.2219 s/op
+WorkloadWarmup   2: 1 op, 1222286936.00 ns, 1.2223 s/op
+WorkloadWarmup   3: 1 op, 1222076535.00 ns, 1.2221 s/op
+WorkloadWarmup   4: 1 op, 1222092708.00 ns, 1.2221 s/op
+WorkloadWarmup   5: 1 op, 1222178284.00 ns, 1.2222 s/op
+WorkloadWarmup   6: 1 op, 1223976526.00 ns, 1.2240 s/op
+WorkloadWarmup   7: 1 op, 1222020437.00 ns, 1.2220 s/op
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 1222105047.00 ns, 1.2221 s/op
+WorkloadActual   2: 1 op, 1221882298.00 ns, 1.2219 s/op
+WorkloadActual   3: 1 op, 1222040885.00 ns, 1.2220 s/op
+WorkloadActual   4: 1 op, 1222320027.00 ns, 1.2223 s/op
+WorkloadActual   5: 1 op, 1222168085.00 ns, 1.2222 s/op
+WorkloadActual   6: 1 op, 1222032289.00 ns, 1.2220 s/op
+WorkloadActual   7: 1 op, 1222147151.00 ns, 1.2221 s/op
+WorkloadActual   8: 1 op, 1221966272.00 ns, 1.2220 s/op
+WorkloadActual   9: 1 op, 1222837837.00 ns, 1.2228 s/op
+WorkloadActual  10: 1 op, 1221934301.00 ns, 1.2219 s/op
+WorkloadActual  11: 1 op, 1222136982.00 ns, 1.2221 s/op
+WorkloadActual  12: 1 op, 1222077179.00 ns, 1.2221 s/op
+WorkloadActual  13: 1 op, 1221915125.00 ns, 1.2219 s/op
+WorkloadActual  14: 1 op, 1221881352.00 ns, 1.2219 s/op
+WorkloadActual  15: 1 op, 1222096887.00 ns, 1.2221 s/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 1222105047.00 ns, 1.2221 s/op
+WorkloadResult   2: 1 op, 1221882298.00 ns, 1.2219 s/op
+WorkloadResult   3: 1 op, 1222040885.00 ns, 1.2220 s/op
+WorkloadResult   4: 1 op, 1222320027.00 ns, 1.2223 s/op
+WorkloadResult   5: 1 op, 1222168085.00 ns, 1.2222 s/op
+WorkloadResult   6: 1 op, 1222032289.00 ns, 1.2220 s/op
+WorkloadResult   7: 1 op, 1222147151.00 ns, 1.2221 s/op
+WorkloadResult   8: 1 op, 1221966272.00 ns, 1.2220 s/op
+WorkloadResult   9: 1 op, 1221934301.00 ns, 1.2219 s/op
+WorkloadResult  10: 1 op, 1222136982.00 ns, 1.2221 s/op
+WorkloadResult  11: 1 op, 1222077179.00 ns, 1.2221 s/op
+WorkloadResult  12: 1 op, 1221915125.00 ns, 1.2219 s/op
+WorkloadResult  13: 1 op, 1221881352.00 ns, 1.2219 s/op
+WorkloadResult  14: 1 op, 1222096887.00 ns, 1.2221 s/op
+
+// AfterAll
+// Benchmark Process 611 has exited with code 0.
+
+Mean = 1.222 s, StdErr = 0.000 s (0.00%), N = 14, StdDev = 0.000 s
+Min = 1.222 s, Q1 = 1.222 s, Median = 1.222 s, Q3 = 1.222 s, Max = 1.222 s
+IQR = 0.000 s, LowerFence = 1.222 s, UpperFence = 1.222 s
+ConfidenceInterval = [1.222 s; 1.222 s] (CI 99.9%), Margin = 0.000 s (0.01% of Mean)
+Skewness = 0.32, Kurtosis = 2.24, MValue = 2
+
+// ** Remained 19 (59.4 %) benchmark(s) to run. Estimated finish 2024-05-26 20:04 (0h 6m from now) **
+// **************************
+// Benchmark: Benchmarks.BCryptWithParallelFor: .NET 8.0(Runtime=.NET 8.0) [cost=6]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet ".NET 8.0.dll" --anonymousPipes 115 116 --benchmarkName "TPLBenchmarks.Benchmarks.BCryptWithParallelFor(cost: 6)" --job ".NET 8.0" --benchmarkId 13 in /BenchmarkProj/bin/Release/net8.0/.NET 8.0/bin/Release/net8.0
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.13.12
+// Runtime=.NET 8.0.5 (8.0.524.21615), X64 RyuJIT AVX-512F+CD+BW+DQ+VL+VBMI
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX-512F+CD+BW+DQ+VL+VBMI,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT,AvxVnni,SERIALIZE VectorSize=256
+// Job: .NET 8.0
+
+OverheadJitting  1: 1 op, 170564.00 ns, 170.5640 us/op
+WorkloadJitting  1: 1 op, 204503978.00 ns, 204.5040 ms/op
+
+WorkloadPilot    1: 2 op, 210692981.00 ns, 105.3465 ms/op
+WorkloadPilot    2: 3 op, 319024561.00 ns, 106.3415 ms/op
+WorkloadPilot    3: 4 op, 438445596.00 ns, 109.6114 ms/op
+WorkloadPilot    4: 5 op, 518874101.00 ns, 103.7748 ms/op
+
+WorkloadWarmup   1: 5 op, 525991312.00 ns, 105.1983 ms/op
+WorkloadWarmup   2: 5 op, 527281648.00 ns, 105.4563 ms/op
+WorkloadWarmup   3: 5 op, 531962883.00 ns, 106.3926 ms/op
+WorkloadWarmup   4: 5 op, 530198620.00 ns, 106.0397 ms/op
+WorkloadWarmup   5: 5 op, 524991268.00 ns, 104.9983 ms/op
+WorkloadWarmup   6: 5 op, 511370074.00 ns, 102.2740 ms/op
+WorkloadWarmup   7: 5 op, 517742848.00 ns, 103.5486 ms/op
+WorkloadWarmup   8: 5 op, 534901269.00 ns, 106.9803 ms/op
+WorkloadWarmup   9: 5 op, 534746638.00 ns, 106.9493 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 5 op, 541245506.00 ns, 108.2491 ms/op
+WorkloadActual   2: 5 op, 507950544.00 ns, 101.5901 ms/op
+WorkloadActual   3: 5 op, 520781006.00 ns, 104.1562 ms/op
+WorkloadActual   4: 5 op, 527571495.00 ns, 105.5143 ms/op
+WorkloadActual   5: 5 op, 540380793.00 ns, 108.0762 ms/op
+WorkloadActual   6: 5 op, 533337679.00 ns, 106.6675 ms/op
+WorkloadActual   7: 5 op, 507828729.00 ns, 101.5657 ms/op
+WorkloadActual   8: 5 op, 521219787.00 ns, 104.2440 ms/op
+WorkloadActual   9: 5 op, 514970075.00 ns, 102.9940 ms/op
+WorkloadActual  10: 5 op, 539351017.00 ns, 107.8702 ms/op
+WorkloadActual  11: 5 op, 523996027.00 ns, 104.7992 ms/op
+WorkloadActual  12: 5 op, 510676529.00 ns, 102.1353 ms/op
+WorkloadActual  13: 5 op, 522515655.00 ns, 104.5031 ms/op
+WorkloadActual  14: 5 op, 515396631.00 ns, 103.0793 ms/op
+WorkloadActual  15: 5 op, 536952372.00 ns, 107.3905 ms/op
+WorkloadActual  16: 5 op, 526629458.00 ns, 105.3259 ms/op
+WorkloadActual  17: 5 op, 502337898.00 ns, 100.4676 ms/op
+WorkloadActual  18: 5 op, 505952762.00 ns, 101.1906 ms/op
+WorkloadActual  19: 5 op, 516417197.00 ns, 103.2834 ms/op
+WorkloadActual  20: 5 op, 527982670.00 ns, 105.5965 ms/op
+WorkloadActual  21: 5 op, 516915513.00 ns, 103.3831 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 5 op, 541245506.00 ns, 108.2491 ms/op
+WorkloadResult   2: 5 op, 507950544.00 ns, 101.5901 ms/op
+WorkloadResult   3: 5 op, 520781006.00 ns, 104.1562 ms/op
+WorkloadResult   4: 5 op, 527571495.00 ns, 105.5143 ms/op
+WorkloadResult   5: 5 op, 540380793.00 ns, 108.0762 ms/op
+WorkloadResult   6: 5 op, 533337679.00 ns, 106.6675 ms/op
+WorkloadResult   7: 5 op, 507828729.00 ns, 101.5657 ms/op
+WorkloadResult   8: 5 op, 521219787.00 ns, 104.2440 ms/op
+WorkloadResult   9: 5 op, 514970075.00 ns, 102.9940 ms/op
+WorkloadResult  10: 5 op, 539351017.00 ns, 107.8702 ms/op
+WorkloadResult  11: 5 op, 523996027.00 ns, 104.7992 ms/op
+WorkloadResult  12: 5 op, 510676529.00 ns, 102.1353 ms/op
+WorkloadResult  13: 5 op, 522515655.00 ns, 104.5031 ms/op
+WorkloadResult  14: 5 op, 515396631.00 ns, 103.0793 ms/op
+WorkloadResult  15: 5 op, 536952372.00 ns, 107.3905 ms/op
+WorkloadResult  16: 5 op, 526629458.00 ns, 105.3259 ms/op
+WorkloadResult  17: 5 op, 502337898.00 ns, 100.4676 ms/op
+WorkloadResult  18: 5 op, 505952762.00 ns, 101.1906 ms/op
+WorkloadResult  19: 5 op, 516417197.00 ns, 103.2834 ms/op
+WorkloadResult  20: 5 op, 527982670.00 ns, 105.5965 ms/op
+WorkloadResult  21: 5 op, 516915513.00 ns, 103.3831 ms/op
+
+// AfterAll
+// Benchmark Process 628 has exited with code 0.
+
+Mean = 104.385 ms, StdErr = 0.514 ms (0.49%), N = 21, StdDev = 2.356 ms
+Min = 100.468 ms, Q1 = 102.994 ms, Median = 104.244 ms, Q3 = 105.597 ms, Max = 108.249 ms
+IQR = 2.603 ms, LowerFence = 99.090 ms, UpperFence = 109.500 ms
+ConfidenceInterval = [102.405 ms; 106.364 ms] (CI 99.9%), Margin = 1.980 ms (1.90% of Mean)
+Skewness = 0.14, Kurtosis = 1.8, MValue = 2
+
+// ** Remained 18 (56.2 %) benchmark(s) to run. Estimated finish 2024-05-26 20:04 (0h 6m from now) **
+// **************************
+// Benchmark: Benchmarks.BCryptWithParallelForEach: .NET 8.0(Runtime=.NET 8.0) [cost=6]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet ".NET 8.0.dll" --anonymousPipes 115 116 --benchmarkName "TPLBenchmarks.Benchmarks.BCryptWithParallelForEach(cost: 6)" --job ".NET 8.0" --benchmarkId 14 in /BenchmarkProj/bin/Release/net8.0/.NET 8.0/bin/Release/net8.0
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.13.12
+// Runtime=.NET 8.0.5 (8.0.524.21615), X64 RyuJIT AVX-512F+CD+BW+DQ+VL+VBMI
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX-512F+CD+BW+DQ+VL+VBMI,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT,AvxVnni,SERIALIZE VectorSize=256
+// Job: .NET 8.0
+
+OverheadJitting  1: 1 op, 201327.00 ns, 201.3270 us/op
+WorkloadJitting  1: 1 op, 206827788.00 ns, 206.8278 ms/op
+
+WorkloadPilot    1: 2 op, 201100326.00 ns, 100.5502 ms/op
+WorkloadPilot    2: 3 op, 309030815.00 ns, 103.0103 ms/op
+WorkloadPilot    3: 4 op, 421794317.00 ns, 105.4486 ms/op
+WorkloadPilot    4: 5 op, 528165701.00 ns, 105.6331 ms/op
+
+WorkloadWarmup   1: 5 op, 523980121.00 ns, 104.7960 ms/op
+WorkloadWarmup   2: 5 op, 490544680.00 ns, 98.1089 ms/op
+WorkloadWarmup   3: 5 op, 518715206.00 ns, 103.7430 ms/op
+WorkloadWarmup   4: 5 op, 513446777.00 ns, 102.6894 ms/op
+WorkloadWarmup   5: 5 op, 503467719.00 ns, 100.6935 ms/op
+WorkloadWarmup   6: 5 op, 519639808.00 ns, 103.9280 ms/op
+WorkloadWarmup   7: 5 op, 535283454.00 ns, 107.0567 ms/op
+WorkloadWarmup   8: 5 op, 522236122.00 ns, 104.4472 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 5 op, 513207823.00 ns, 102.6416 ms/op
+WorkloadActual   2: 5 op, 515115749.00 ns, 103.0231 ms/op
+WorkloadActual   3: 5 op, 516060874.00 ns, 103.2122 ms/op
+WorkloadActual   4: 5 op, 520399849.00 ns, 104.0800 ms/op
+WorkloadActual   5: 5 op, 513388429.00 ns, 102.6777 ms/op
+WorkloadActual   6: 5 op, 508189010.00 ns, 101.6378 ms/op
+WorkloadActual   7: 5 op, 517307103.00 ns, 103.4614 ms/op
+WorkloadActual   8: 5 op, 513933239.00 ns, 102.7866 ms/op
+WorkloadActual   9: 5 op, 534284047.00 ns, 106.8568 ms/op
+WorkloadActual  10: 5 op, 509313788.00 ns, 101.8628 ms/op
+WorkloadActual  11: 5 op, 551340098.00 ns, 110.2680 ms/op
+WorkloadActual  12: 5 op, 549622322.00 ns, 109.9245 ms/op
+WorkloadActual  13: 5 op, 526276230.00 ns, 105.2552 ms/op
+WorkloadActual  14: 5 op, 520115552.00 ns, 104.0231 ms/op
+WorkloadActual  15: 5 op, 529299546.00 ns, 105.8599 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 5 op, 513207823.00 ns, 102.6416 ms/op
+WorkloadResult   2: 5 op, 515115749.00 ns, 103.0231 ms/op
+WorkloadResult   3: 5 op, 516060874.00 ns, 103.2122 ms/op
+WorkloadResult   4: 5 op, 520399849.00 ns, 104.0800 ms/op
+WorkloadResult   5: 5 op, 513388429.00 ns, 102.6777 ms/op
+WorkloadResult   6: 5 op, 508189010.00 ns, 101.6378 ms/op
+WorkloadResult   7: 5 op, 517307103.00 ns, 103.4614 ms/op
+WorkloadResult   8: 5 op, 513933239.00 ns, 102.7866 ms/op
+WorkloadResult   9: 5 op, 534284047.00 ns, 106.8568 ms/op
+WorkloadResult  10: 5 op, 509313788.00 ns, 101.8628 ms/op
+WorkloadResult  11: 5 op, 526276230.00 ns, 105.2552 ms/op
+WorkloadResult  12: 5 op, 520115552.00 ns, 104.0231 ms/op
+WorkloadResult  13: 5 op, 529299546.00 ns, 105.8599 ms/op
+
+// AfterAll
+// Benchmark Process 662 has exited with code 0.
+
+Mean = 103.644 ms, StdErr = 0.428 ms (0.41%), N = 13, StdDev = 1.545 ms
+Min = 101.638 ms, Q1 = 102.678 ms, Median = 103.212 ms, Q3 = 104.080 ms, Max = 106.857 ms
+IQR = 1.402 ms, LowerFence = 100.574 ms, UpperFence = 106.183 ms
+ConfidenceInterval = [101.794 ms; 105.495 ms] (CI 99.9%), Margin = 1.850 ms (1.78% of Mean)
+Skewness = 0.66, Kurtosis = 2.25, MValue = 2
+
+// ** Remained 17 (53.1 %) benchmark(s) to run. Estimated finish 2024-05-26 20:04 (0h 5m from now) **
+// **************************
+// Benchmark: Benchmarks.BCryptParallelOptimizedForSmallOperations: .NET 8.0(Runtime=.NET 8.0) [cost=6]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet ".NET 8.0.dll" --anonymousPipes 115 116 --benchmarkName "TPLBenchmarks.Benchmarks.BCryptParallelOptimizedForSmallOperations(cost: 6)" --job ".NET 8.0" --benchmarkId 15 in /BenchmarkProj/bin/Release/net8.0/.NET 8.0/bin/Release/net8.0
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.13.12
+// Runtime=.NET 8.0.5 (8.0.524.21615), X64 RyuJIT AVX-512F+CD+BW+DQ+VL+VBMI
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX-512F+CD+BW+DQ+VL+VBMI,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT,AvxVnni,SERIALIZE VectorSize=256
+// Job: .NET 8.0
+
+OverheadJitting  1: 1 op, 170412.00 ns, 170.4120 us/op
+WorkloadJitting  1: 1 op, 263568301.00 ns, 263.5683 ms/op
+
+WorkloadPilot    1: 2 op, 320029642.00 ns, 160.0148 ms/op
+WorkloadPilot    2: 3 op, 314760034.00 ns, 104.9200 ms/op
+WorkloadPilot    3: 4 op, 383759453.00 ns, 95.9399 ms/op
+WorkloadPilot    4: 5 op, 486992345.00 ns, 97.3985 ms/op
+WorkloadPilot    5: 6 op, 614368568.00 ns, 102.3948 ms/op
+
+WorkloadWarmup   1: 6 op, 630199993.00 ns, 105.0333 ms/op
+WorkloadWarmup   2: 6 op, 619337671.00 ns, 103.2229 ms/op
+WorkloadWarmup   3: 6 op, 584635742.00 ns, 97.4393 ms/op
+WorkloadWarmup   4: 6 op, 604907897.00 ns, 100.8180 ms/op
+WorkloadWarmup   5: 6 op, 631641879.00 ns, 105.2736 ms/op
+WorkloadWarmup   6: 6 op, 616719169.00 ns, 102.7865 ms/op
+WorkloadWarmup   7: 6 op, 576413182.00 ns, 96.0689 ms/op
+WorkloadWarmup   8: 6 op, 595066060.00 ns, 99.1777 ms/op
+WorkloadWarmup   9: 6 op, 617609561.00 ns, 102.9349 ms/op
+WorkloadWarmup  10: 6 op, 575021723.00 ns, 95.8370 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 6 op, 586216016.00 ns, 97.7027 ms/op
+WorkloadActual   2: 6 op, 576253410.00 ns, 96.0422 ms/op
+WorkloadActual   3: 6 op, 579787212.00 ns, 96.6312 ms/op
+WorkloadActual   4: 6 op, 585509562.00 ns, 97.5849 ms/op
+WorkloadActual   5: 6 op, 581493952.00 ns, 96.9157 ms/op
+WorkloadActual   6: 6 op, 586596652.00 ns, 97.7661 ms/op
+WorkloadActual   7: 6 op, 573407319.00 ns, 95.5679 ms/op
+WorkloadActual   8: 6 op, 584418313.00 ns, 97.4031 ms/op
+WorkloadActual   9: 6 op, 585753462.00 ns, 97.6256 ms/op
+WorkloadActual  10: 6 op, 584623766.00 ns, 97.4373 ms/op
+WorkloadActual  11: 6 op, 576491570.00 ns, 96.0819 ms/op
+WorkloadActual  12: 6 op, 579633520.00 ns, 96.6056 ms/op
+WorkloadActual  13: 6 op, 573553537.00 ns, 95.5923 ms/op
+WorkloadActual  14: 6 op, 575782867.00 ns, 95.9638 ms/op
+WorkloadActual  15: 6 op, 584744120.00 ns, 97.4574 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 6 op, 586216016.00 ns, 97.7027 ms/op
+WorkloadResult   2: 6 op, 576253410.00 ns, 96.0422 ms/op
+WorkloadResult   3: 6 op, 579787212.00 ns, 96.6312 ms/op
+WorkloadResult   4: 6 op, 585509562.00 ns, 97.5849 ms/op
+WorkloadResult   5: 6 op, 581493952.00 ns, 96.9157 ms/op
+WorkloadResult   6: 6 op, 586596652.00 ns, 97.7661 ms/op
+WorkloadResult   7: 6 op, 573407319.00 ns, 95.5679 ms/op
+WorkloadResult   8: 6 op, 584418313.00 ns, 97.4031 ms/op
+WorkloadResult   9: 6 op, 585753462.00 ns, 97.6256 ms/op
+WorkloadResult  10: 6 op, 584623766.00 ns, 97.4373 ms/op
+WorkloadResult  11: 6 op, 576491570.00 ns, 96.0819 ms/op
+WorkloadResult  12: 6 op, 579633520.00 ns, 96.6056 ms/op
+WorkloadResult  13: 6 op, 573553537.00 ns, 95.5923 ms/op
+WorkloadResult  14: 6 op, 575782867.00 ns, 95.9638 ms/op
+WorkloadResult  15: 6 op, 584744120.00 ns, 97.4574 ms/op
+
+// AfterAll
+// Benchmark Process 694 has exited with code 0.
+
+Mean = 96.825 ms, StdErr = 0.208 ms (0.21%), N = 15, StdDev = 0.806 ms
+Min = 95.568 ms, Q1 = 96.062 ms, Median = 96.916 ms, Q3 = 97.521 ms, Max = 97.766 ms
+IQR = 1.459 ms, LowerFence = 93.873 ms, UpperFence = 99.710 ms
+ConfidenceInterval = [95.964 ms; 97.686 ms] (CI 99.9%), Margin = 0.861 ms (0.89% of Mean)
+Skewness = -0.29, Kurtosis = 1.36, MValue = 2
+
+// ** Remained 16 (50.0 %) benchmark(s) to run. Estimated finish 2024-05-26 20:03 (0h 5m from now) **
+// **************************
+// Benchmark: Benchmarks.BCryptWithLINQ: .NET 8.0(Runtime=.NET 8.0) [cost=8]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet ".NET 8.0.dll" --anonymousPipes 115 116 --benchmarkName "TPLBenchmarks.Benchmarks.BCryptWithLINQ(cost: 8)" --job ".NET 8.0" --benchmarkId 16 in /BenchmarkProj/bin/Release/net8.0/.NET 8.0/bin/Release/net8.0
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.13.12
+// Runtime=.NET 8.0.5 (8.0.524.21615), X64 RyuJIT AVX-512F+CD+BW+DQ+VL+VBMI
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX-512F+CD+BW+DQ+VL+VBMI,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT,AvxVnni,SERIALIZE VectorSize=256
+// Job: .NET 8.0
+
+OverheadJitting  1: 1 op, 197184.00 ns, 197.1840 us/op
+WorkloadJitting  1: 1 op, 4894284587.00 ns, 4.8943 s/op
+
+OverheadJitting  2: 1 op, 316.00 ns, 316.0000 ns/op
+WorkloadJitting  2: 1 op, 4840870939.00 ns, 4.8409 s/op
+
+WorkloadWarmup   1: 1 op, 4839836486.00 ns, 4.8398 s/op
+WorkloadWarmup   2: 1 op, 4841590334.00 ns, 4.8416 s/op
+WorkloadWarmup   3: 1 op, 4844083172.00 ns, 4.8441 s/op
+WorkloadWarmup   4: 1 op, 4841750454.00 ns, 4.8418 s/op
+WorkloadWarmup   5: 1 op, 4841618082.00 ns, 4.8416 s/op
+WorkloadWarmup   6: 1 op, 4843998327.00 ns, 4.8440 s/op
+WorkloadWarmup   7: 1 op, 4841443564.00 ns, 4.8414 s/op
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 4840751830.00 ns, 4.8408 s/op
+WorkloadActual   2: 1 op, 4842384228.00 ns, 4.8424 s/op
+WorkloadActual   3: 1 op, 4840587480.00 ns, 4.8406 s/op
+WorkloadActual   4: 1 op, 4839880933.00 ns, 4.8399 s/op
+WorkloadActual   5: 1 op, 4840494997.00 ns, 4.8405 s/op
+WorkloadActual   6: 1 op, 4839567166.00 ns, 4.8396 s/op
+WorkloadActual   7: 1 op, 4840254883.00 ns, 4.8403 s/op
+WorkloadActual   8: 1 op, 4843392920.00 ns, 4.8434 s/op
+WorkloadActual   9: 1 op, 4841981650.00 ns, 4.8420 s/op
+WorkloadActual  10: 1 op, 4841811372.00 ns, 4.8418 s/op
+WorkloadActual  11: 1 op, 4842060785.00 ns, 4.8421 s/op
+WorkloadActual  12: 1 op, 4841411023.00 ns, 4.8414 s/op
+WorkloadActual  13: 1 op, 4841391267.00 ns, 4.8414 s/op
+WorkloadActual  14: 1 op, 4843184675.00 ns, 4.8432 s/op
+WorkloadActual  15: 1 op, 4841108415.00 ns, 4.8411 s/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 4840751830.00 ns, 4.8408 s/op
+WorkloadResult   2: 1 op, 4842384228.00 ns, 4.8424 s/op
+WorkloadResult   3: 1 op, 4840587480.00 ns, 4.8406 s/op
+WorkloadResult   4: 1 op, 4839880933.00 ns, 4.8399 s/op
+WorkloadResult   5: 1 op, 4840494997.00 ns, 4.8405 s/op
+WorkloadResult   6: 1 op, 4839567166.00 ns, 4.8396 s/op
+WorkloadResult   7: 1 op, 4840254883.00 ns, 4.8403 s/op
+WorkloadResult   8: 1 op, 4843392920.00 ns, 4.8434 s/op
+WorkloadResult   9: 1 op, 4841981650.00 ns, 4.8420 s/op
+WorkloadResult  10: 1 op, 4841811372.00 ns, 4.8418 s/op
+WorkloadResult  11: 1 op, 4842060785.00 ns, 4.8421 s/op
+WorkloadResult  12: 1 op, 4841411023.00 ns, 4.8414 s/op
+WorkloadResult  13: 1 op, 4841391267.00 ns, 4.8414 s/op
+WorkloadResult  14: 1 op, 4843184675.00 ns, 4.8432 s/op
+WorkloadResult  15: 1 op, 4841108415.00 ns, 4.8411 s/op
+
+// AfterAll
+// Benchmark Process 737 has exited with code 0.
+
+Mean = 4.841 s, StdErr = 0.000 s (0.01%), N = 15, StdDev = 0.001 s
+Min = 4.840 s, Q1 = 4.841 s, Median = 4.841 s, Q3 = 4.842 s, Max = 4.843 s
+IQR = 0.001 s, LowerFence = 4.838 s, UpperFence = 4.844 s
+ConfidenceInterval = [4.840 s; 4.843 s] (CI 99.9%), Margin = 0.001 s (0.03% of Mean)
+Skewness = 0.23, Kurtosis = 1.92, MValue = 2
+
+// ** Remained 15 (46.9 %) benchmark(s) to run. Estimated finish 2024-05-26 20:06 (0h 6m from now) **
+// **************************
+// Benchmark: Benchmarks.BCryptWithPLINQ: .NET 8.0(Runtime=.NET 8.0) [cost=8]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet ".NET 8.0.dll" --anonymousPipes 115 116 --benchmarkName "TPLBenchmarks.Benchmarks.BCryptWithPLINQ(cost: 8)" --job ".NET 8.0" --benchmarkId 17 in /BenchmarkProj/bin/Release/net8.0/.NET 8.0/bin/Release/net8.0
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.13.12
+// Runtime=.NET 8.0.5 (8.0.524.21615), X64 RyuJIT AVX-512F+CD+BW+DQ+VL+VBMI
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX-512F+CD+BW+DQ+VL+VBMI,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT,AvxVnni,SERIALIZE VectorSize=256
+// Job: .NET 8.0
+
+OverheadJitting  1: 1 op, 173952.00 ns, 173.9520 us/op
+WorkloadJitting  1: 1 op, 567245623.00 ns, 567.2456 ms/op
+
+OverheadJitting  2: 1 op, 637.00 ns, 637.0000 ns/op
+WorkloadJitting  2: 1 op, 349758309.00 ns, 349.7583 ms/op
+
+WorkloadWarmup   1: 1 op, 342259687.00 ns, 342.2597 ms/op
+WorkloadWarmup   2: 1 op, 342073045.00 ns, 342.0730 ms/op
+WorkloadWarmup   3: 1 op, 341887630.00 ns, 341.8876 ms/op
+WorkloadWarmup   4: 1 op, 342267754.00 ns, 342.2678 ms/op
+WorkloadWarmup   5: 1 op, 342357862.00 ns, 342.3579 ms/op
+WorkloadWarmup   6: 1 op, 342065279.00 ns, 342.0653 ms/op
+WorkloadWarmup   7: 1 op, 342176875.00 ns, 342.1769 ms/op
+WorkloadWarmup   8: 1 op, 342157099.00 ns, 342.1571 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 342281334.00 ns, 342.2813 ms/op
+WorkloadActual   2: 1 op, 342106199.00 ns, 342.1062 ms/op
+WorkloadActual   3: 1 op, 342199615.00 ns, 342.1996 ms/op
+WorkloadActual   4: 1 op, 342943348.00 ns, 342.9433 ms/op
+WorkloadActual   5: 1 op, 342258929.00 ns, 342.2589 ms/op
+WorkloadActual   6: 1 op, 342074659.00 ns, 342.0747 ms/op
+WorkloadActual   7: 1 op, 341944538.00 ns, 341.9445 ms/op
+WorkloadActual   8: 1 op, 342187637.00 ns, 342.1876 ms/op
+WorkloadActual   9: 1 op, 342278855.00 ns, 342.2789 ms/op
+WorkloadActual  10: 1 op, 342397175.00 ns, 342.3972 ms/op
+WorkloadActual  11: 1 op, 342163517.00 ns, 342.1635 ms/op
+WorkloadActual  12: 1 op, 342641388.00 ns, 342.6414 ms/op
+WorkloadActual  13: 1 op, 342011167.00 ns, 342.0112 ms/op
+WorkloadActual  14: 1 op, 342026928.00 ns, 342.0269 ms/op
+WorkloadActual  15: 1 op, 342118769.00 ns, 342.1188 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 342281334.00 ns, 342.2813 ms/op
+WorkloadResult   2: 1 op, 342106199.00 ns, 342.1062 ms/op
+WorkloadResult   3: 1 op, 342199615.00 ns, 342.1996 ms/op
+WorkloadResult   4: 1 op, 342258929.00 ns, 342.2589 ms/op
+WorkloadResult   5: 1 op, 342074659.00 ns, 342.0747 ms/op
+WorkloadResult   6: 1 op, 341944538.00 ns, 341.9445 ms/op
+WorkloadResult   7: 1 op, 342187637.00 ns, 342.1876 ms/op
+WorkloadResult   8: 1 op, 342278855.00 ns, 342.2789 ms/op
+WorkloadResult   9: 1 op, 342397175.00 ns, 342.3972 ms/op
+WorkloadResult  10: 1 op, 342163517.00 ns, 342.1635 ms/op
+WorkloadResult  11: 1 op, 342011167.00 ns, 342.0112 ms/op
+WorkloadResult  12: 1 op, 342026928.00 ns, 342.0269 ms/op
+WorkloadResult  13: 1 op, 342118769.00 ns, 342.1188 ms/op
+
+// AfterAll
+// Benchmark Process 791 has exited with code 0.
+
+Mean = 342.158 ms, StdErr = 0.035 ms (0.01%), N = 13, StdDev = 0.128 ms
+Min = 341.945 ms, Q1 = 342.075 ms, Median = 342.164 ms, Q3 = 342.259 ms, Max = 342.397 ms
+IQR = 0.184 ms, LowerFence = 341.798 ms, UpperFence = 342.535 ms
+ConfidenceInterval = [342.005 ms; 342.310 ms] (CI 99.9%), Margin = 0.153 ms (0.04% of Mean)
+Skewness = 0.1, Kurtosis = 1.95, MValue = 2
+
+// ** Remained 14 (43.8 %) benchmark(s) to run. Estimated finish 2024-05-26 20:06 (0h 5m from now) **
+// **************************
+// Benchmark: Benchmarks.BCryptWithOrderedPLINQ: .NET 8.0(Runtime=.NET 8.0) [cost=8]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet ".NET 8.0.dll" --anonymousPipes 115 116 --benchmarkName "TPLBenchmarks.Benchmarks.BCryptWithOrderedPLINQ(cost: 8)" --job ".NET 8.0" --benchmarkId 18 in /BenchmarkProj/bin/Release/net8.0/.NET 8.0/bin/Release/net8.0
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.13.12
+// Runtime=.NET 8.0.5 (8.0.524.21615), X64 RyuJIT AVX-512F+CD+BW+DQ+VL+VBMI
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX-512F+CD+BW+DQ+VL+VBMI,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT,AvxVnni,SERIALIZE VectorSize=256
+// Job: .NET 8.0
+
+OverheadJitting  1: 1 op, 172091.00 ns, 172.0910 us/op
+WorkloadJitting  1: 1 op, 467978878.00 ns, 467.9789 ms/op
+
+OverheadJitting  2: 1 op, 308.00 ns, 308.0000 ns/op
+WorkloadJitting  2: 1 op, 341579998.00 ns, 341.5800 ms/op
+
+WorkloadWarmup   1: 1 op, 362062844.00 ns, 362.0628 ms/op
+WorkloadWarmup   2: 1 op, 344799873.00 ns, 344.7999 ms/op
+WorkloadWarmup   3: 1 op, 341160739.00 ns, 341.1607 ms/op
+WorkloadWarmup   4: 1 op, 340549653.00 ns, 340.5497 ms/op
+WorkloadWarmup   5: 1 op, 340598918.00 ns, 340.5989 ms/op
+WorkloadWarmup   6: 1 op, 340902806.00 ns, 340.9028 ms/op
+WorkloadWarmup   7: 1 op, 340657685.00 ns, 340.6577 ms/op
+WorkloadWarmup   8: 1 op, 340369196.00 ns, 340.3692 ms/op
+WorkloadWarmup   9: 1 op, 340698464.00 ns, 340.6985 ms/op
+WorkloadWarmup  10: 1 op, 340419783.00 ns, 340.4198 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 340813420.00 ns, 340.8134 ms/op
+WorkloadActual   2: 1 op, 340479795.00 ns, 340.4798 ms/op
+WorkloadActual   3: 1 op, 340814435.00 ns, 340.8144 ms/op
+WorkloadActual   4: 1 op, 340785592.00 ns, 340.7856 ms/op
+WorkloadActual   5: 1 op, 340803614.00 ns, 340.8036 ms/op
+WorkloadActual   6: 1 op, 341869172.00 ns, 341.8692 ms/op
+WorkloadActual   7: 1 op, 341340826.00 ns, 341.3408 ms/op
+WorkloadActual   8: 1 op, 340693071.00 ns, 340.6931 ms/op
+WorkloadActual   9: 1 op, 340525068.00 ns, 340.5251 ms/op
+WorkloadActual  10: 1 op, 340786530.00 ns, 340.7865 ms/op
+WorkloadActual  11: 1 op, 340489371.00 ns, 340.4894 ms/op
+WorkloadActual  12: 1 op, 340623182.00 ns, 340.6232 ms/op
+WorkloadActual  13: 1 op, 340632423.00 ns, 340.6324 ms/op
+WorkloadActual  14: 1 op, 340969735.00 ns, 340.9697 ms/op
+WorkloadActual  15: 1 op, 340577253.00 ns, 340.5773 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 340813420.00 ns, 340.8134 ms/op
+WorkloadResult   2: 1 op, 340479795.00 ns, 340.4798 ms/op
+WorkloadResult   3: 1 op, 340814435.00 ns, 340.8144 ms/op
+WorkloadResult   4: 1 op, 340785592.00 ns, 340.7856 ms/op
+WorkloadResult   5: 1 op, 340803614.00 ns, 340.8036 ms/op
+WorkloadResult   6: 1 op, 340693071.00 ns, 340.6931 ms/op
+WorkloadResult   7: 1 op, 340525068.00 ns, 340.5251 ms/op
+WorkloadResult   8: 1 op, 340786530.00 ns, 340.7865 ms/op
+WorkloadResult   9: 1 op, 340489371.00 ns, 340.4894 ms/op
+WorkloadResult  10: 1 op, 340623182.00 ns, 340.6232 ms/op
+WorkloadResult  11: 1 op, 340632423.00 ns, 340.6324 ms/op
+WorkloadResult  12: 1 op, 340969735.00 ns, 340.9697 ms/op
+WorkloadResult  13: 1 op, 340577253.00 ns, 340.5773 ms/op
+
+// AfterAll
+// Benchmark Process 817 has exited with code 0.
+
+Mean = 340.692 ms, StdErr = 0.042 ms (0.01%), N = 13, StdDev = 0.151 ms
+Min = 340.480 ms, Q1 = 340.577 ms, Median = 340.693 ms, Q3 = 340.804 ms, Max = 340.970 ms
+IQR = 0.226 ms, LowerFence = 340.238 ms, UpperFence = 341.143 ms
+ConfidenceInterval = [340.511 ms; 340.872 ms] (CI 99.9%), Margin = 0.180 ms (0.05% of Mean)
+Skewness = 0.08, Kurtosis = 1.7, MValue = 2
+
+// ** Remained 13 (40.6 %) benchmark(s) to run. Estimated finish 2024-05-26 20:06 (0h 5m from now) **
+// **************************
+// Benchmark: Benchmarks.BCryptWithRegularFor: .NET 8.0(Runtime=.NET 8.0) [cost=8]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet ".NET 8.0.dll" --anonymousPipes 115 116 --benchmarkName "TPLBenchmarks.Benchmarks.BCryptWithRegularFor(cost: 8)" --job ".NET 8.0" --benchmarkId 19 in /BenchmarkProj/bin/Release/net8.0/.NET 8.0/bin/Release/net8.0
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.13.12
+// Runtime=.NET 8.0.5 (8.0.524.21615), X64 RyuJIT AVX-512F+CD+BW+DQ+VL+VBMI
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX-512F+CD+BW+DQ+VL+VBMI,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT,AvxVnni,SERIALIZE VectorSize=256
+// Job: .NET 8.0
+
+OverheadJitting  1: 1 op, 174076.00 ns, 174.0760 us/op
+WorkloadJitting  1: 1 op, 4903228805.00 ns, 4.9032 s/op
+
+OverheadJitting  2: 1 op, 360.00 ns, 360.0000 ns/op
+WorkloadJitting  2: 1 op, 4848278766.00 ns, 4.8483 s/op
+
+WorkloadWarmup   1: 1 op, 4846120785.00 ns, 4.8461 s/op
+WorkloadWarmup   2: 1 op, 4849505611.00 ns, 4.8495 s/op
+WorkloadWarmup   3: 1 op, 4849513015.00 ns, 4.8495 s/op
+WorkloadWarmup   4: 1 op, 4849853948.00 ns, 4.8499 s/op
+WorkloadWarmup   5: 1 op, 4849758188.00 ns, 4.8498 s/op
+WorkloadWarmup   6: 1 op, 4849023045.00 ns, 4.8490 s/op
+WorkloadWarmup   7: 1 op, 4845088353.00 ns, 4.8451 s/op
+WorkloadWarmup   8: 1 op, 4844870747.00 ns, 4.8449 s/op
+WorkloadWarmup   9: 1 op, 4844778347.00 ns, 4.8448 s/op
+WorkloadWarmup  10: 1 op, 4844970498.00 ns, 4.8450 s/op
+WorkloadWarmup  11: 1 op, 4844957272.00 ns, 4.8450 s/op
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 4846820292.00 ns, 4.8468 s/op
+WorkloadActual   2: 1 op, 4844994078.00 ns, 4.8450 s/op
+WorkloadActual   3: 1 op, 4845371185.00 ns, 4.8454 s/op
+WorkloadActual   4: 1 op, 4845092731.00 ns, 4.8451 s/op
+WorkloadActual   5: 1 op, 4844964150.00 ns, 4.8450 s/op
+WorkloadActual   6: 1 op, 4845029306.00 ns, 4.8450 s/op
+WorkloadActual   7: 1 op, 4846964405.00 ns, 4.8470 s/op
+WorkloadActual   8: 1 op, 4846613843.00 ns, 4.8466 s/op
+WorkloadActual   9: 1 op, 4846503259.00 ns, 4.8465 s/op
+WorkloadActual  10: 1 op, 4846330417.00 ns, 4.8463 s/op
+WorkloadActual  11: 1 op, 4847236783.00 ns, 4.8472 s/op
+WorkloadActual  12: 1 op, 4846653618.00 ns, 4.8467 s/op
+WorkloadActual  13: 1 op, 4846637064.00 ns, 4.8466 s/op
+WorkloadActual  14: 1 op, 4848890141.00 ns, 4.8489 s/op
+WorkloadActual  15: 1 op, 4846864942.00 ns, 4.8469 s/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 4846820292.00 ns, 4.8468 s/op
+WorkloadResult   2: 1 op, 4844994078.00 ns, 4.8450 s/op
+WorkloadResult   3: 1 op, 4845371185.00 ns, 4.8454 s/op
+WorkloadResult   4: 1 op, 4845092731.00 ns, 4.8451 s/op
+WorkloadResult   5: 1 op, 4844964150.00 ns, 4.8450 s/op
+WorkloadResult   6: 1 op, 4845029306.00 ns, 4.8450 s/op
+WorkloadResult   7: 1 op, 4846964405.00 ns, 4.8470 s/op
+WorkloadResult   8: 1 op, 4846613843.00 ns, 4.8466 s/op
+WorkloadResult   9: 1 op, 4846503259.00 ns, 4.8465 s/op
+WorkloadResult  10: 1 op, 4846330417.00 ns, 4.8463 s/op
+WorkloadResult  11: 1 op, 4847236783.00 ns, 4.8472 s/op
+WorkloadResult  12: 1 op, 4846653618.00 ns, 4.8467 s/op
+WorkloadResult  13: 1 op, 4846637064.00 ns, 4.8466 s/op
+WorkloadResult  14: 1 op, 4848890141.00 ns, 4.8489 s/op
+WorkloadResult  15: 1 op, 4846864942.00 ns, 4.8469 s/op
+
+// AfterAll
+// Benchmark Process 845 has exited with code 0.
+
+Mean = 4.846 s, StdErr = 0.000 s (0.01%), N = 15, StdDev = 0.001 s
+Min = 4.845 s, Q1 = 4.845 s, Median = 4.847 s, Q3 = 4.847 s, Max = 4.849 s
+IQR = 0.002 s, LowerFence = 4.843 s, UpperFence = 4.849 s
+ConfidenceInterval = [4.845 s; 4.847 s] (CI 99.9%), Margin = 0.001 s (0.02% of Mean)
+Skewness = 0.43, Kurtosis = 2.75, MValue = 2
+
+// ** Remained 12 (37.5 %) benchmark(s) to run. Estimated finish 2024-05-26 20:08 (0h 6m from now) **
+// **************************
+// Benchmark: Benchmarks.BCryptWithRegularForEach: .NET 8.0(Runtime=.NET 8.0) [cost=8]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet ".NET 8.0.dll" --anonymousPipes 115 116 --benchmarkName "TPLBenchmarks.Benchmarks.BCryptWithRegularForEach(cost: 8)" --job ".NET 8.0" --benchmarkId 20 in /BenchmarkProj/bin/Release/net8.0/.NET 8.0/bin/Release/net8.0
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.13.12
+// Runtime=.NET 8.0.5 (8.0.524.21615), X64 RyuJIT AVX-512F+CD+BW+DQ+VL+VBMI
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX-512F+CD+BW+DQ+VL+VBMI,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT,AvxVnni,SERIALIZE VectorSize=256
+// Job: .NET 8.0
+
+OverheadJitting  1: 1 op, 174515.00 ns, 174.5150 us/op
+WorkloadJitting  1: 1 op, 4902697615.00 ns, 4.9027 s/op
+
+OverheadJitting  2: 1 op, 262.00 ns, 262.0000 ns/op
+WorkloadJitting  2: 1 op, 4847484003.00 ns, 4.8475 s/op
+
+WorkloadWarmup   1: 1 op, 4846508092.00 ns, 4.8465 s/op
+WorkloadWarmup   2: 1 op, 4846670195.00 ns, 4.8467 s/op
+WorkloadWarmup   3: 1 op, 4847066583.00 ns, 4.8471 s/op
+WorkloadWarmup   4: 1 op, 4845152901.00 ns, 4.8452 s/op
+WorkloadWarmup   5: 1 op, 4845521716.00 ns, 4.8455 s/op
+WorkloadWarmup   6: 1 op, 4845109193.00 ns, 4.8451 s/op
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 4845106364.00 ns, 4.8451 s/op
+WorkloadActual   2: 1 op, 4845217912.00 ns, 4.8452 s/op
+WorkloadActual   3: 1 op, 4845229223.00 ns, 4.8452 s/op
+WorkloadActual   4: 1 op, 4845828820.00 ns, 4.8458 s/op
+WorkloadActual   5: 1 op, 4845575722.00 ns, 4.8456 s/op
+WorkloadActual   6: 1 op, 4845572914.00 ns, 4.8456 s/op
+WorkloadActual   7: 1 op, 4845935173.00 ns, 4.8459 s/op
+WorkloadActual   8: 1 op, 4846539450.00 ns, 4.8465 s/op
+WorkloadActual   9: 1 op, 4845838919.00 ns, 4.8458 s/op
+WorkloadActual  10: 1 op, 4844930607.00 ns, 4.8449 s/op
+WorkloadActual  11: 1 op, 4845769594.00 ns, 4.8458 s/op
+WorkloadActual  12: 1 op, 4845520219.00 ns, 4.8455 s/op
+WorkloadActual  13: 1 op, 4845833412.00 ns, 4.8458 s/op
+WorkloadActual  14: 1 op, 4846026451.00 ns, 4.8460 s/op
+WorkloadActual  15: 1 op, 4845131231.00 ns, 4.8451 s/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 4845106364.00 ns, 4.8451 s/op
+WorkloadResult   2: 1 op, 4845217912.00 ns, 4.8452 s/op
+WorkloadResult   3: 1 op, 4845229223.00 ns, 4.8452 s/op
+WorkloadResult   4: 1 op, 4845828820.00 ns, 4.8458 s/op
+WorkloadResult   5: 1 op, 4845575722.00 ns, 4.8456 s/op
+WorkloadResult   6: 1 op, 4845572914.00 ns, 4.8456 s/op
+WorkloadResult   7: 1 op, 4845935173.00 ns, 4.8459 s/op
+WorkloadResult   8: 1 op, 4846539450.00 ns, 4.8465 s/op
+WorkloadResult   9: 1 op, 4845838919.00 ns, 4.8458 s/op
+WorkloadResult  10: 1 op, 4844930607.00 ns, 4.8449 s/op
+WorkloadResult  11: 1 op, 4845769594.00 ns, 4.8458 s/op
+WorkloadResult  12: 1 op, 4845520219.00 ns, 4.8455 s/op
+WorkloadResult  13: 1 op, 4845833412.00 ns, 4.8458 s/op
+WorkloadResult  14: 1 op, 4846026451.00 ns, 4.8460 s/op
+WorkloadResult  15: 1 op, 4845131231.00 ns, 4.8451 s/op
+
+// AfterAll
+// Benchmark Process 911 has exited with code 0.
+
+Mean = 4.846 s, StdErr = 0.000 s (0.00%), N = 15, StdDev = 0.000 s
+Min = 4.845 s, Q1 = 4.845 s, Median = 4.846 s, Q3 = 4.846 s, Max = 4.847 s
+IQR = 0.001 s, LowerFence = 4.844 s, UpperFence = 4.847 s
+ConfidenceInterval = [4.845 s; 4.846 s] (CI 99.9%), Margin = 0.000 s (0.01% of Mean)
+Skewness = 0.28, Kurtosis = 2.33, MValue = 2
+
+// ** Remained 11 (34.4 %) benchmark(s) to run. Estimated finish 2024-05-26 20:11 (0h 6m from now) **
+// **************************
+// Benchmark: Benchmarks.BCryptWithParallelFor: .NET 8.0(Runtime=.NET 8.0) [cost=8]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet ".NET 8.0.dll" --anonymousPipes 115 116 --benchmarkName "TPLBenchmarks.Benchmarks.BCryptWithParallelFor(cost: 8)" --job ".NET 8.0" --benchmarkId 21 in /BenchmarkProj/bin/Release/net8.0/.NET 8.0/bin/Release/net8.0
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.13.12
+// Runtime=.NET 8.0.5 (8.0.524.21615), X64 RyuJIT AVX-512F+CD+BW+DQ+VL+VBMI
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX-512F+CD+BW+DQ+VL+VBMI,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT,AvxVnni,SERIALIZE VectorSize=256
+// Job: .NET 8.0
+
+OverheadJitting  1: 1 op, 172721.00 ns, 172.7210 us/op
+WorkloadJitting  1: 1 op, 617261337.00 ns, 617.2613 ms/op
+
+OverheadJitting  2: 1 op, 522.00 ns, 522.0000 ns/op
+WorkloadJitting  2: 1 op, 393326756.00 ns, 393.3268 ms/op
+
+WorkloadWarmup   1: 1 op, 403202376.00 ns, 403.2024 ms/op
+WorkloadWarmup   2: 1 op, 392582885.00 ns, 392.5829 ms/op
+WorkloadWarmup   3: 1 op, 390670593.00 ns, 390.6706 ms/op
+WorkloadWarmup   4: 1 op, 418661820.00 ns, 418.6618 ms/op
+WorkloadWarmup   5: 1 op, 386636620.00 ns, 386.6366 ms/op
+WorkloadWarmup   6: 1 op, 404733751.00 ns, 404.7338 ms/op
+WorkloadWarmup   7: 1 op, 391103925.00 ns, 391.1039 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 384075024.00 ns, 384.0750 ms/op
+WorkloadActual   2: 1 op, 396630119.00 ns, 396.6301 ms/op
+WorkloadActual   3: 1 op, 404004051.00 ns, 404.0041 ms/op
+WorkloadActual   4: 1 op, 385390334.00 ns, 385.3903 ms/op
+WorkloadActual   5: 1 op, 427122277.00 ns, 427.1223 ms/op
+WorkloadActual   6: 1 op, 372290627.00 ns, 372.2906 ms/op
+WorkloadActual   7: 1 op, 375796597.00 ns, 375.7966 ms/op
+WorkloadActual   8: 1 op, 374453937.00 ns, 374.4539 ms/op
+WorkloadActual   9: 1 op, 388532327.00 ns, 388.5323 ms/op
+WorkloadActual  10: 1 op, 377866529.00 ns, 377.8665 ms/op
+WorkloadActual  11: 1 op, 370705586.00 ns, 370.7056 ms/op
+WorkloadActual  12: 1 op, 377795946.00 ns, 377.7959 ms/op
+WorkloadActual  13: 1 op, 393247643.00 ns, 393.2476 ms/op
+WorkloadActual  14: 1 op, 378037767.00 ns, 378.0378 ms/op
+WorkloadActual  15: 1 op, 417195873.00 ns, 417.1959 ms/op
+WorkloadActual  16: 1 op, 393178608.00 ns, 393.1786 ms/op
+WorkloadActual  17: 1 op, 361332416.00 ns, 361.3324 ms/op
+WorkloadActual  18: 1 op, 403912685.00 ns, 403.9127 ms/op
+WorkloadActual  19: 1 op, 388222734.00 ns, 388.2227 ms/op
+WorkloadActual  20: 1 op, 402280988.00 ns, 402.2810 ms/op
+WorkloadActual  21: 1 op, 386554057.00 ns, 386.5541 ms/op
+WorkloadActual  22: 1 op, 409647854.00 ns, 409.6479 ms/op
+WorkloadActual  23: 1 op, 377241881.00 ns, 377.2419 ms/op
+WorkloadActual  24: 1 op, 393673829.00 ns, 393.6738 ms/op
+WorkloadActual  25: 1 op, 376112564.00 ns, 376.1126 ms/op
+WorkloadActual  26: 1 op, 376128550.00 ns, 376.1286 ms/op
+WorkloadActual  27: 1 op, 370976479.00 ns, 370.9765 ms/op
+WorkloadActual  28: 1 op, 383904258.00 ns, 383.9043 ms/op
+WorkloadActual  29: 1 op, 390503516.00 ns, 390.5035 ms/op
+WorkloadActual  30: 1 op, 391588028.00 ns, 391.5880 ms/op
+WorkloadActual  31: 1 op, 374794243.00 ns, 374.7942 ms/op
+WorkloadActual  32: 1 op, 392676695.00 ns, 392.6767 ms/op
+WorkloadActual  33: 1 op, 378465741.00 ns, 378.4657 ms/op
+WorkloadActual  34: 1 op, 393384677.00 ns, 393.3847 ms/op
+WorkloadActual  35: 1 op, 372754372.00 ns, 372.7544 ms/op
+WorkloadActual  36: 1 op, 412096221.00 ns, 412.0962 ms/op
+WorkloadActual  37: 1 op, 384168302.00 ns, 384.1683 ms/op
+WorkloadActual  38: 1 op, 386589542.00 ns, 386.5895 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 384075024.00 ns, 384.0750 ms/op
+WorkloadResult   2: 1 op, 396630119.00 ns, 396.6301 ms/op
+WorkloadResult   3: 1 op, 404004051.00 ns, 404.0041 ms/op
+WorkloadResult   4: 1 op, 385390334.00 ns, 385.3903 ms/op
+WorkloadResult   5: 1 op, 372290627.00 ns, 372.2906 ms/op
+WorkloadResult   6: 1 op, 375796597.00 ns, 375.7966 ms/op
+WorkloadResult   7: 1 op, 374453937.00 ns, 374.4539 ms/op
+WorkloadResult   8: 1 op, 388532327.00 ns, 388.5323 ms/op
+WorkloadResult   9: 1 op, 377866529.00 ns, 377.8665 ms/op
+WorkloadResult  10: 1 op, 370705586.00 ns, 370.7056 ms/op
+WorkloadResult  11: 1 op, 377795946.00 ns, 377.7959 ms/op
+WorkloadResult  12: 1 op, 393247643.00 ns, 393.2476 ms/op
+WorkloadResult  13: 1 op, 378037767.00 ns, 378.0378 ms/op
+WorkloadResult  14: 1 op, 417195873.00 ns, 417.1959 ms/op
+WorkloadResult  15: 1 op, 393178608.00 ns, 393.1786 ms/op
+WorkloadResult  16: 1 op, 361332416.00 ns, 361.3324 ms/op
+WorkloadResult  17: 1 op, 403912685.00 ns, 403.9127 ms/op
+WorkloadResult  18: 1 op, 388222734.00 ns, 388.2227 ms/op
+WorkloadResult  19: 1 op, 402280988.00 ns, 402.2810 ms/op
+WorkloadResult  20: 1 op, 386554057.00 ns, 386.5541 ms/op
+WorkloadResult  21: 1 op, 409647854.00 ns, 409.6479 ms/op
+WorkloadResult  22: 1 op, 377241881.00 ns, 377.2419 ms/op
+WorkloadResult  23: 1 op, 393673829.00 ns, 393.6738 ms/op
+WorkloadResult  24: 1 op, 376112564.00 ns, 376.1126 ms/op
+WorkloadResult  25: 1 op, 376128550.00 ns, 376.1286 ms/op
+WorkloadResult  26: 1 op, 370976479.00 ns, 370.9765 ms/op
+WorkloadResult  27: 1 op, 383904258.00 ns, 383.9043 ms/op
+WorkloadResult  28: 1 op, 390503516.00 ns, 390.5035 ms/op
+WorkloadResult  29: 1 op, 391588028.00 ns, 391.5880 ms/op
+WorkloadResult  30: 1 op, 374794243.00 ns, 374.7942 ms/op
+WorkloadResult  31: 1 op, 392676695.00 ns, 392.6767 ms/op
+WorkloadResult  32: 1 op, 378465741.00 ns, 378.4657 ms/op
+WorkloadResult  33: 1 op, 393384677.00 ns, 393.3847 ms/op
+WorkloadResult  34: 1 op, 372754372.00 ns, 372.7544 ms/op
+WorkloadResult  35: 1 op, 412096221.00 ns, 412.0962 ms/op
+WorkloadResult  36: 1 op, 384168302.00 ns, 384.1683 ms/op
+WorkloadResult  37: 1 op, 386589542.00 ns, 386.5895 ms/op
+
+// AfterAll
+// Benchmark Process 948 has exited with code 0.
+
+Mean = 386.384 ms, StdErr = 2.103 ms (0.54%), N = 37, StdDev = 12.789 ms
+Min = 361.332 ms, Q1 = 376.129 ms, Median = 385.390 ms, Q3 = 393.248 ms, Max = 417.196 ms
+IQR = 17.119 ms, LowerFence = 350.450 ms, UpperFence = 418.926 ms
+ConfidenceInterval = [378.852 ms; 393.916 ms] (CI 99.9%), Margin = 7.532 ms (1.95% of Mean)
+Skewness = 0.5, Kurtosis = 2.62, MValue = 2.53
+
+// ** Remained 10 (31.2 %) benchmark(s) to run. Estimated finish 2024-05-26 20:10 (0h 5m from now) **
+// **************************
+// Benchmark: Benchmarks.BCryptWithParallelForEach: .NET 8.0(Runtime=.NET 8.0) [cost=8]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet ".NET 8.0.dll" --anonymousPipes 115 116 --benchmarkName "TPLBenchmarks.Benchmarks.BCryptWithParallelForEach(cost: 8)" --job ".NET 8.0" --benchmarkId 22 in /BenchmarkProj/bin/Release/net8.0/.NET 8.0/bin/Release/net8.0
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.13.12
+// Runtime=.NET 8.0.5 (8.0.524.21615), X64 RyuJIT AVX-512F+CD+BW+DQ+VL+VBMI
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX-512F+CD+BW+DQ+VL+VBMI,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT,AvxVnni,SERIALIZE VectorSize=256
+// Job: .NET 8.0
+
+OverheadJitting  1: 1 op, 173265.00 ns, 173.2650 us/op
+WorkloadJitting  1: 1 op, 592663681.00 ns, 592.6637 ms/op
+
+OverheadJitting  2: 1 op, 350.00 ns, 350.0000 ns/op
+WorkloadJitting  2: 1 op, 389465448.00 ns, 389.4654 ms/op
+
+WorkloadWarmup   1: 1 op, 395145638.00 ns, 395.1456 ms/op
+WorkloadWarmup   2: 1 op, 372417770.00 ns, 372.4178 ms/op
+WorkloadWarmup   3: 1 op, 389113749.00 ns, 389.1137 ms/op
+WorkloadWarmup   4: 1 op, 452240910.00 ns, 452.2409 ms/op
+WorkloadWarmup   5: 1 op, 435160225.00 ns, 435.1602 ms/op
+WorkloadWarmup   6: 1 op, 411210815.00 ns, 411.2108 ms/op
+WorkloadWarmup   7: 1 op, 378114726.00 ns, 378.1147 ms/op
+WorkloadWarmup   8: 1 op, 418526971.00 ns, 418.5270 ms/op
+WorkloadWarmup   9: 1 op, 399516375.00 ns, 399.5164 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 390156235.00 ns, 390.1562 ms/op
+WorkloadActual   2: 1 op, 415384809.00 ns, 415.3848 ms/op
+WorkloadActual   3: 1 op, 390785651.00 ns, 390.7857 ms/op
+WorkloadActual   4: 1 op, 386600622.00 ns, 386.6006 ms/op
+WorkloadActual   5: 1 op, 424926340.00 ns, 424.9263 ms/op
+WorkloadActual   6: 1 op, 391835775.00 ns, 391.8358 ms/op
+WorkloadActual   7: 1 op, 377212353.00 ns, 377.2124 ms/op
+WorkloadActual   8: 1 op, 406889731.00 ns, 406.8897 ms/op
+WorkloadActual   9: 1 op, 376163197.00 ns, 376.1632 ms/op
+WorkloadActual  10: 1 op, 391242183.00 ns, 391.2422 ms/op
+WorkloadActual  11: 1 op, 399184683.00 ns, 399.1847 ms/op
+WorkloadActual  12: 1 op, 383662953.00 ns, 383.6630 ms/op
+WorkloadActual  13: 1 op, 376721255.00 ns, 376.7213 ms/op
+WorkloadActual  14: 1 op, 373996797.00 ns, 373.9968 ms/op
+WorkloadActual  15: 1 op, 375996455.00 ns, 375.9965 ms/op
+WorkloadActual  16: 1 op, 371019585.00 ns, 371.0196 ms/op
+WorkloadActual  17: 1 op, 386743568.00 ns, 386.7436 ms/op
+WorkloadActual  18: 1 op, 380534166.00 ns, 380.5342 ms/op
+WorkloadActual  19: 1 op, 395132293.00 ns, 395.1323 ms/op
+WorkloadActual  20: 1 op, 405584290.00 ns, 405.5843 ms/op
+WorkloadActual  21: 1 op, 383521667.00 ns, 383.5217 ms/op
+WorkloadActual  22: 1 op, 392342879.00 ns, 392.3429 ms/op
+WorkloadActual  23: 1 op, 406193091.00 ns, 406.1931 ms/op
+WorkloadActual  24: 1 op, 377836729.00 ns, 377.8367 ms/op
+WorkloadActual  25: 1 op, 406102431.00 ns, 406.1024 ms/op
+WorkloadActual  26: 1 op, 416885140.00 ns, 416.8851 ms/op
+WorkloadActual  27: 1 op, 402442850.00 ns, 402.4429 ms/op
+WorkloadActual  28: 1 op, 423187211.00 ns, 423.1872 ms/op
+WorkloadActual  29: 1 op, 377985414.00 ns, 377.9854 ms/op
+WorkloadActual  30: 1 op, 406228266.00 ns, 406.2283 ms/op
+WorkloadActual  31: 1 op, 392088274.00 ns, 392.0883 ms/op
+WorkloadActual  32: 1 op, 383765175.00 ns, 383.7652 ms/op
+WorkloadActual  33: 1 op, 441092289.00 ns, 441.0923 ms/op
+WorkloadActual  34: 1 op, 402053971.00 ns, 402.0540 ms/op
+WorkloadActual  35: 1 op, 387277076.00 ns, 387.2771 ms/op
+WorkloadActual  36: 1 op, 374088745.00 ns, 374.0887 ms/op
+WorkloadActual  37: 1 op, 393979893.00 ns, 393.9799 ms/op
+WorkloadActual  38: 1 op, 452079936.00 ns, 452.0799 ms/op
+WorkloadActual  39: 1 op, 405483551.00 ns, 405.4836 ms/op
+WorkloadActual  40: 1 op, 418314294.00 ns, 418.3143 ms/op
+WorkloadActual  41: 1 op, 396638627.00 ns, 396.6386 ms/op
+WorkloadActual  42: 1 op, 392602549.00 ns, 392.6025 ms/op
+WorkloadActual  43: 1 op, 371036003.00 ns, 371.0360 ms/op
+WorkloadActual  44: 1 op, 391862826.00 ns, 391.8628 ms/op
+WorkloadActual  45: 1 op, 423054318.00 ns, 423.0543 ms/op
+WorkloadActual  46: 1 op, 410684105.00 ns, 410.6841 ms/op
+WorkloadActual  47: 1 op, 394534955.00 ns, 394.5350 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 390156235.00 ns, 390.1562 ms/op
+WorkloadResult   2: 1 op, 415384809.00 ns, 415.3848 ms/op
+WorkloadResult   3: 1 op, 390785651.00 ns, 390.7857 ms/op
+WorkloadResult   4: 1 op, 386600622.00 ns, 386.6006 ms/op
+WorkloadResult   5: 1 op, 424926340.00 ns, 424.9263 ms/op
+WorkloadResult   6: 1 op, 391835775.00 ns, 391.8358 ms/op
+WorkloadResult   7: 1 op, 377212353.00 ns, 377.2124 ms/op
+WorkloadResult   8: 1 op, 406889731.00 ns, 406.8897 ms/op
+WorkloadResult   9: 1 op, 376163197.00 ns, 376.1632 ms/op
+WorkloadResult  10: 1 op, 391242183.00 ns, 391.2422 ms/op
+WorkloadResult  11: 1 op, 399184683.00 ns, 399.1847 ms/op
+WorkloadResult  12: 1 op, 383662953.00 ns, 383.6630 ms/op
+WorkloadResult  13: 1 op, 376721255.00 ns, 376.7213 ms/op
+WorkloadResult  14: 1 op, 373996797.00 ns, 373.9968 ms/op
+WorkloadResult  15: 1 op, 375996455.00 ns, 375.9965 ms/op
+WorkloadResult  16: 1 op, 371019585.00 ns, 371.0196 ms/op
+WorkloadResult  17: 1 op, 386743568.00 ns, 386.7436 ms/op
+WorkloadResult  18: 1 op, 380534166.00 ns, 380.5342 ms/op
+WorkloadResult  19: 1 op, 395132293.00 ns, 395.1323 ms/op
+WorkloadResult  20: 1 op, 405584290.00 ns, 405.5843 ms/op
+WorkloadResult  21: 1 op, 383521667.00 ns, 383.5217 ms/op
+WorkloadResult  22: 1 op, 392342879.00 ns, 392.3429 ms/op
+WorkloadResult  23: 1 op, 406193091.00 ns, 406.1931 ms/op
+WorkloadResult  24: 1 op, 377836729.00 ns, 377.8367 ms/op
+WorkloadResult  25: 1 op, 406102431.00 ns, 406.1024 ms/op
+WorkloadResult  26: 1 op, 416885140.00 ns, 416.8851 ms/op
+WorkloadResult  27: 1 op, 402442850.00 ns, 402.4429 ms/op
+WorkloadResult  28: 1 op, 423187211.00 ns, 423.1872 ms/op
+WorkloadResult  29: 1 op, 377985414.00 ns, 377.9854 ms/op
+WorkloadResult  30: 1 op, 406228266.00 ns, 406.2283 ms/op
+WorkloadResult  31: 1 op, 392088274.00 ns, 392.0883 ms/op
+WorkloadResult  32: 1 op, 383765175.00 ns, 383.7652 ms/op
+WorkloadResult  33: 1 op, 402053971.00 ns, 402.0540 ms/op
+WorkloadResult  34: 1 op, 387277076.00 ns, 387.2771 ms/op
+WorkloadResult  35: 1 op, 374088745.00 ns, 374.0887 ms/op
+WorkloadResult  36: 1 op, 393979893.00 ns, 393.9799 ms/op
+WorkloadResult  37: 1 op, 405483551.00 ns, 405.4836 ms/op
+WorkloadResult  38: 1 op, 418314294.00 ns, 418.3143 ms/op
+WorkloadResult  39: 1 op, 396638627.00 ns, 396.6386 ms/op
+WorkloadResult  40: 1 op, 392602549.00 ns, 392.6025 ms/op
+WorkloadResult  41: 1 op, 371036003.00 ns, 371.0360 ms/op
+WorkloadResult  42: 1 op, 391862826.00 ns, 391.8628 ms/op
+WorkloadResult  43: 1 op, 423054318.00 ns, 423.0543 ms/op
+WorkloadResult  44: 1 op, 410684105.00 ns, 410.6841 ms/op
+WorkloadResult  45: 1 op, 394534955.00 ns, 394.5350 ms/op
+
+// AfterAll
+// Benchmark Process 977 has exited with code 0.
+
+Mean = 393.999 ms, StdErr = 2.230 ms (0.57%), N = 45, StdDev = 14.962 ms
+Min = 371.020 ms, Q1 = 383.522 ms, Median = 392.088 ms, Q3 = 405.584 ms, Max = 424.926 ms
+IQR = 22.063 ms, LowerFence = 350.428 ms, UpperFence = 438.678 ms
+ConfidenceInterval = [386.135 ms; 401.863 ms] (CI 99.9%), Margin = 7.864 ms (2.00% of Mean)
+Skewness = 0.36, Kurtosis = 2.16, MValue = 2
+
+// ** Remained 9 (28.1 %) benchmark(s) to run. Estimated finish 2024-05-26 20:10 (0h 4m from now) **
+// **************************
+// Benchmark: Benchmarks.BCryptParallelOptimizedForSmallOperations: .NET 8.0(Runtime=.NET 8.0) [cost=8]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet ".NET 8.0.dll" --anonymousPipes 115 116 --benchmarkName "TPLBenchmarks.Benchmarks.BCryptParallelOptimizedForSmallOperations(cost: 8)" --job ".NET 8.0" --benchmarkId 23 in /BenchmarkProj/bin/Release/net8.0/.NET 8.0/bin/Release/net8.0
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.13.12
+// Runtime=.NET 8.0.5 (8.0.524.21615), X64 RyuJIT AVX-512F+CD+BW+DQ+VL+VBMI
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX-512F+CD+BW+DQ+VL+VBMI,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT,AvxVnni,SERIALIZE VectorSize=256
+// Job: .NET 8.0
+
+OverheadJitting  1: 1 op, 169821.00 ns, 169.8210 us/op
+WorkloadJitting  1: 1 op, 494872379.00 ns, 494.8724 ms/op
+
+OverheadJitting  2: 1 op, 374.00 ns, 374.0000 ns/op
+WorkloadJitting  2: 1 op, 417709764.00 ns, 417.7098 ms/op
+
+WorkloadWarmup   1: 1 op, 419213673.00 ns, 419.2137 ms/op
+WorkloadWarmup   2: 1 op, 409761269.00 ns, 409.7613 ms/op
+WorkloadWarmup   3: 1 op, 419164919.00 ns, 419.1649 ms/op
+WorkloadWarmup   4: 1 op, 385845634.00 ns, 385.8456 ms/op
+WorkloadWarmup   5: 1 op, 392324974.00 ns, 392.3250 ms/op
+WorkloadWarmup   6: 1 op, 378117887.00 ns, 378.1179 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 397090193.00 ns, 397.0902 ms/op
+WorkloadActual   2: 1 op, 385917884.00 ns, 385.9179 ms/op
+WorkloadActual   3: 1 op, 397386253.00 ns, 397.3863 ms/op
+WorkloadActual   4: 1 op, 415438602.00 ns, 415.4386 ms/op
+WorkloadActual   5: 1 op, 379832443.00 ns, 379.8324 ms/op
+WorkloadActual   6: 1 op, 384044690.00 ns, 384.0447 ms/op
+WorkloadActual   7: 1 op, 409085638.00 ns, 409.0856 ms/op
+WorkloadActual   8: 1 op, 410090553.00 ns, 410.0906 ms/op
+WorkloadActual   9: 1 op, 424110929.00 ns, 424.1109 ms/op
+WorkloadActual  10: 1 op, 419324286.00 ns, 419.3243 ms/op
+WorkloadActual  11: 1 op, 418809016.00 ns, 418.8090 ms/op
+WorkloadActual  12: 1 op, 414750389.00 ns, 414.7504 ms/op
+WorkloadActual  13: 1 op, 385894813.00 ns, 385.8948 ms/op
+WorkloadActual  14: 1 op, 400626621.00 ns, 400.6266 ms/op
+WorkloadActual  15: 1 op, 418824549.00 ns, 418.8245 ms/op
+WorkloadActual  16: 1 op, 418841338.00 ns, 418.8413 ms/op
+WorkloadActual  17: 1 op, 385443562.00 ns, 385.4436 ms/op
+WorkloadActual  18: 1 op, 399417522.00 ns, 399.4175 ms/op
+WorkloadActual  19: 1 op, 408051281.00 ns, 408.0513 ms/op
+WorkloadActual  20: 1 op, 407626797.00 ns, 407.6268 ms/op
+WorkloadActual  21: 1 op, 411633246.00 ns, 411.6332 ms/op
+WorkloadActual  22: 1 op, 407665282.00 ns, 407.6653 ms/op
+WorkloadActual  23: 1 op, 410175744.00 ns, 410.1757 ms/op
+WorkloadActual  24: 1 op, 384501120.00 ns, 384.5011 ms/op
+WorkloadActual  25: 1 op, 398419981.00 ns, 398.4200 ms/op
+WorkloadActual  26: 1 op, 385205149.00 ns, 385.2051 ms/op
+WorkloadActual  27: 1 op, 419033765.00 ns, 419.0338 ms/op
+WorkloadActual  28: 1 op, 399888220.00 ns, 399.8882 ms/op
+WorkloadActual  29: 1 op, 419232998.00 ns, 419.2330 ms/op
+WorkloadActual  30: 1 op, 418713632.00 ns, 418.7136 ms/op
+WorkloadActual  31: 1 op, 397345063.00 ns, 397.3451 ms/op
+WorkloadActual  32: 1 op, 408431404.00 ns, 408.4314 ms/op
+WorkloadActual  33: 1 op, 413855182.00 ns, 413.8552 ms/op
+WorkloadActual  34: 1 op, 407143693.00 ns, 407.1437 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 397090193.00 ns, 397.0902 ms/op
+WorkloadResult   2: 1 op, 385917884.00 ns, 385.9179 ms/op
+WorkloadResult   3: 1 op, 397386253.00 ns, 397.3863 ms/op
+WorkloadResult   4: 1 op, 415438602.00 ns, 415.4386 ms/op
+WorkloadResult   5: 1 op, 379832443.00 ns, 379.8324 ms/op
+WorkloadResult   6: 1 op, 384044690.00 ns, 384.0447 ms/op
+WorkloadResult   7: 1 op, 409085638.00 ns, 409.0856 ms/op
+WorkloadResult   8: 1 op, 410090553.00 ns, 410.0906 ms/op
+WorkloadResult   9: 1 op, 424110929.00 ns, 424.1109 ms/op
+WorkloadResult  10: 1 op, 419324286.00 ns, 419.3243 ms/op
+WorkloadResult  11: 1 op, 418809016.00 ns, 418.8090 ms/op
+WorkloadResult  12: 1 op, 414750389.00 ns, 414.7504 ms/op
+WorkloadResult  13: 1 op, 385894813.00 ns, 385.8948 ms/op
+WorkloadResult  14: 1 op, 400626621.00 ns, 400.6266 ms/op
+WorkloadResult  15: 1 op, 418824549.00 ns, 418.8245 ms/op
+WorkloadResult  16: 1 op, 418841338.00 ns, 418.8413 ms/op
+WorkloadResult  17: 1 op, 385443562.00 ns, 385.4436 ms/op
+WorkloadResult  18: 1 op, 399417522.00 ns, 399.4175 ms/op
+WorkloadResult  19: 1 op, 408051281.00 ns, 408.0513 ms/op
+WorkloadResult  20: 1 op, 407626797.00 ns, 407.6268 ms/op
+WorkloadResult  21: 1 op, 411633246.00 ns, 411.6332 ms/op
+WorkloadResult  22: 1 op, 407665282.00 ns, 407.6653 ms/op
+WorkloadResult  23: 1 op, 410175744.00 ns, 410.1757 ms/op
+WorkloadResult  24: 1 op, 384501120.00 ns, 384.5011 ms/op
+WorkloadResult  25: 1 op, 398419981.00 ns, 398.4200 ms/op
+WorkloadResult  26: 1 op, 385205149.00 ns, 385.2051 ms/op
+WorkloadResult  27: 1 op, 419033765.00 ns, 419.0338 ms/op
+WorkloadResult  28: 1 op, 399888220.00 ns, 399.8882 ms/op
+WorkloadResult  29: 1 op, 419232998.00 ns, 419.2330 ms/op
+WorkloadResult  30: 1 op, 418713632.00 ns, 418.7136 ms/op
+WorkloadResult  31: 1 op, 397345063.00 ns, 397.3451 ms/op
+WorkloadResult  32: 1 op, 408431404.00 ns, 408.4314 ms/op
+WorkloadResult  33: 1 op, 413855182.00 ns, 413.8552 ms/op
+WorkloadResult  34: 1 op, 407143693.00 ns, 407.1437 ms/op
+
+// AfterAll
+// Benchmark Process 1009 has exited with code 0.
+
+Mean = 404.760 ms, StdErr = 2.206 ms (0.55%), N = 34, StdDev = 12.863 ms
+Min = 379.832 ms, Q1 = 397.355 ms, Median = 407.858 ms, Q3 = 415.267 ms, Max = 424.111 ms
+IQR = 17.911 ms, LowerFence = 370.489 ms, UpperFence = 442.133 ms
+ConfidenceInterval = [396.795 ms; 412.726 ms] (CI 99.9%), Margin = 7.966 ms (1.97% of Mean)
+Skewness = -0.43, Kurtosis = 1.88, MValue = 2.57
+
+// ** Remained 8 (25.0 %) benchmark(s) to run. Estimated finish 2024-05-26 20:10 (0h 4m from now) **
+// **************************
+// Benchmark: Benchmarks.BCryptWithLINQ: .NET 8.0(Runtime=.NET 8.0) [cost=10]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet ".NET 8.0.dll" --anonymousPipes 115 116 --benchmarkName "TPLBenchmarks.Benchmarks.BCryptWithLINQ(cost: 10)" --job ".NET 8.0" --benchmarkId 24 in /BenchmarkProj/bin/Release/net8.0/.NET 8.0/bin/Release/net8.0
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.13.12
+// Runtime=.NET 8.0.5 (8.0.524.21615), X64 RyuJIT AVX-512F+CD+BW+DQ+VL+VBMI
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX-512F+CD+BW+DQ+VL+VBMI,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT,AvxVnni,SERIALIZE VectorSize=256
+// Job: .NET 8.0
+
+OverheadJitting  1: 1 op, 176240.00 ns, 176.2400 us/op
+WorkloadJitting  1: 1 op, 19363396877.00 ns, 19.3634 s/op
+
+WorkloadWarmup   1: 1 op, 19314380401.00 ns, 19.3144 s/op
+WorkloadWarmup   2: 1 op, 19310029589.00 ns, 19.3100 s/op
+WorkloadWarmup   3: 1 op, 19309011355.00 ns, 19.3090 s/op
+WorkloadWarmup   4: 1 op, 19308045905.00 ns, 19.3080 s/op
+WorkloadWarmup   5: 1 op, 19310178636.00 ns, 19.3102 s/op
+WorkloadWarmup   6: 1 op, 19306828966.00 ns, 19.3068 s/op
+WorkloadWarmup   7: 1 op, 19306869684.00 ns, 19.3069 s/op
+WorkloadWarmup   8: 1 op, 19307626105.00 ns, 19.3076 s/op
+WorkloadWarmup   9: 1 op, 19308449317.00 ns, 19.3084 s/op
+WorkloadWarmup  10: 1 op, 19308399562.00 ns, 19.3084 s/op
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 19306271995.00 ns, 19.3063 s/op
+WorkloadActual   2: 1 op, 19307198772.00 ns, 19.3072 s/op
+WorkloadActual   3: 1 op, 19307487001.00 ns, 19.3075 s/op
+WorkloadActual   4: 1 op, 19303913161.00 ns, 19.3039 s/op
+WorkloadActual   5: 1 op, 19307921265.00 ns, 19.3079 s/op
+WorkloadActual   6: 1 op, 19307450839.00 ns, 19.3075 s/op
+WorkloadActual   7: 1 op, 19305618123.00 ns, 19.3056 s/op
+WorkloadActual   8: 1 op, 19308733099.00 ns, 19.3087 s/op
+WorkloadActual   9: 1 op, 19308718424.00 ns, 19.3087 s/op
+WorkloadActual  10: 1 op, 19306450407.00 ns, 19.3065 s/op
+WorkloadActual  11: 1 op, 19307987176.00 ns, 19.3080 s/op
+WorkloadActual  12: 1 op, 19309881683.00 ns, 19.3099 s/op
+WorkloadActual  13: 1 op, 19309766772.00 ns, 19.3098 s/op
+WorkloadActual  14: 1 op, 19309361840.00 ns, 19.3094 s/op
+WorkloadActual  15: 1 op, 19313034575.00 ns, 19.3130 s/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 19306271995.00 ns, 19.3063 s/op
+WorkloadResult   2: 1 op, 19307198772.00 ns, 19.3072 s/op
+WorkloadResult   3: 1 op, 19307487001.00 ns, 19.3075 s/op
+WorkloadResult   4: 1 op, 19303913161.00 ns, 19.3039 s/op
+WorkloadResult   5: 1 op, 19307921265.00 ns, 19.3079 s/op
+WorkloadResult   6: 1 op, 19307450839.00 ns, 19.3075 s/op
+WorkloadResult   7: 1 op, 19305618123.00 ns, 19.3056 s/op
+WorkloadResult   8: 1 op, 19308733099.00 ns, 19.3087 s/op
+WorkloadResult   9: 1 op, 19308718424.00 ns, 19.3087 s/op
+WorkloadResult  10: 1 op, 19306450407.00 ns, 19.3065 s/op
+WorkloadResult  11: 1 op, 19307987176.00 ns, 19.3080 s/op
+WorkloadResult  12: 1 op, 19309881683.00 ns, 19.3099 s/op
+WorkloadResult  13: 1 op, 19309766772.00 ns, 19.3098 s/op
+WorkloadResult  14: 1 op, 19309361840.00 ns, 19.3094 s/op
+
+// AfterAll
+// Benchmark Process 1036 has exited with code 0.
+
+Mean = 19.308 s, StdErr = 0.000 s (0.00%), N = 14, StdDev = 0.002 s
+Min = 19.304 s, Q1 = 19.307 s, Median = 19.308 s, Q3 = 19.309 s, Max = 19.310 s
+IQR = 0.002 s, LowerFence = 19.303 s, UpperFence = 19.312 s
+ConfidenceInterval = [19.306 s; 19.310 s] (CI 99.9%), Margin = 0.002 s (0.01% of Mean)
+Skewness = -0.52, Kurtosis = 2.44, MValue = 2
+
+// ** Remained 7 (21.9 %) benchmark(s) to run. Estimated finish 2024-05-26 20:20 (0h 5m from now) **
+// **************************
+// Benchmark: Benchmarks.BCryptWithPLINQ: .NET 8.0(Runtime=.NET 8.0) [cost=10]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet ".NET 8.0.dll" --anonymousPipes 115 116 --benchmarkName "TPLBenchmarks.Benchmarks.BCryptWithPLINQ(cost: 10)" --job ".NET 8.0" --benchmarkId 25 in /BenchmarkProj/bin/Release/net8.0/.NET 8.0/bin/Release/net8.0
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.13.12
+// Runtime=.NET 8.0.5 (8.0.524.21615), X64 RyuJIT AVX-512F+CD+BW+DQ+VL+VBMI
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX-512F+CD+BW+DQ+VL+VBMI,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT,AvxVnni,SERIALIZE VectorSize=256
+// Job: .NET 8.0
+
+OverheadJitting  1: 1 op, 191915.00 ns, 191.9150 us/op
+WorkloadJitting  1: 1 op, 1502852871.00 ns, 1.5029 s/op
+
+OverheadJitting  2: 1 op, 354.00 ns, 354.0000 ns/op
+WorkloadJitting  2: 1 op, 1356859166.00 ns, 1.3569 s/op
+
+WorkloadWarmup   1: 1 op, 1366849002.00 ns, 1.3668 s/op
+WorkloadWarmup   2: 1 op, 1357291789.00 ns, 1.3573 s/op
+WorkloadWarmup   3: 1 op, 1362427692.00 ns, 1.3624 s/op
+WorkloadWarmup   4: 1 op, 1357510265.00 ns, 1.3575 s/op
+WorkloadWarmup   5: 1 op, 1356730731.00 ns, 1.3567 s/op
+WorkloadWarmup   6: 1 op, 1356743943.00 ns, 1.3567 s/op
+WorkloadWarmup   7: 1 op, 1356510942.00 ns, 1.3565 s/op
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 1356476918.00 ns, 1.3565 s/op
+WorkloadActual   2: 1 op, 1356801628.00 ns, 1.3568 s/op
+WorkloadActual   3: 1 op, 1361117677.00 ns, 1.3611 s/op
+WorkloadActual   4: 1 op, 1357127552.00 ns, 1.3571 s/op
+WorkloadActual   5: 1 op, 1356616502.00 ns, 1.3566 s/op
+WorkloadActual   6: 1 op, 1357015269.00 ns, 1.3570 s/op
+WorkloadActual   7: 1 op, 1358312502.00 ns, 1.3583 s/op
+WorkloadActual   8: 1 op, 1364864684.00 ns, 1.3649 s/op
+WorkloadActual   9: 1 op, 1357182291.00 ns, 1.3572 s/op
+WorkloadActual  10: 1 op, 1357174006.00 ns, 1.3572 s/op
+WorkloadActual  11: 1 op, 1367331975.00 ns, 1.3673 s/op
+WorkloadActual  12: 1 op, 1357379056.00 ns, 1.3574 s/op
+WorkloadActual  13: 1 op, 1357520769.00 ns, 1.3575 s/op
+WorkloadActual  14: 1 op, 1357435867.00 ns, 1.3574 s/op
+WorkloadActual  15: 1 op, 1356717222.00 ns, 1.3567 s/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 1356476918.00 ns, 1.3565 s/op
+WorkloadResult   2: 1 op, 1356801628.00 ns, 1.3568 s/op
+WorkloadResult   3: 1 op, 1357127552.00 ns, 1.3571 s/op
+WorkloadResult   4: 1 op, 1356616502.00 ns, 1.3566 s/op
+WorkloadResult   5: 1 op, 1357015269.00 ns, 1.3570 s/op
+WorkloadResult   6: 1 op, 1358312502.00 ns, 1.3583 s/op
+WorkloadResult   7: 1 op, 1357182291.00 ns, 1.3572 s/op
+WorkloadResult   8: 1 op, 1357174006.00 ns, 1.3572 s/op
+WorkloadResult   9: 1 op, 1357379056.00 ns, 1.3574 s/op
+WorkloadResult  10: 1 op, 1357520769.00 ns, 1.3575 s/op
+WorkloadResult  11: 1 op, 1357435867.00 ns, 1.3574 s/op
+WorkloadResult  12: 1 op, 1356717222.00 ns, 1.3567 s/op
+
+// AfterAll
+// Benchmark Process 1078 has exited with code 0.
+
+Mean = 1.357 s, StdErr = 0.000 s (0.01%), N = 12, StdDev = 0.000 s
+Min = 1.356 s, Q1 = 1.357 s, Median = 1.357 s, Q3 = 1.357 s, Max = 1.358 s
+IQR = 0.001 s, LowerFence = 1.356 s, UpperFence = 1.358 s
+ConfidenceInterval = [1.357 s; 1.358 s] (CI 99.9%), Margin = 0.001 s (0.05% of Mean)
+Skewness = 0.76, Kurtosis = 3.07, MValue = 2
+
+// ** Remained 6 (18.8 %) benchmark(s) to run. Estimated finish 2024-05-26 20:19 (0h 5m from now) **
+// **************************
+// Benchmark: Benchmarks.BCryptWithOrderedPLINQ: .NET 8.0(Runtime=.NET 8.0) [cost=10]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet ".NET 8.0.dll" --anonymousPipes 115 116 --benchmarkName "TPLBenchmarks.Benchmarks.BCryptWithOrderedPLINQ(cost: 10)" --job ".NET 8.0" --benchmarkId 26 in /BenchmarkProj/bin/Release/net8.0/.NET 8.0/bin/Release/net8.0
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.13.12
+// Runtime=.NET 8.0.5 (8.0.524.21615), X64 RyuJIT AVX-512F+CD+BW+DQ+VL+VBMI
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX-512F+CD+BW+DQ+VL+VBMI,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT,AvxVnni,SERIALIZE VectorSize=256
+// Job: .NET 8.0
+
+OverheadJitting  1: 1 op, 181974.00 ns, 181.9740 us/op
+WorkloadJitting  1: 1 op, 1468643856.00 ns, 1.4686 s/op
+
+OverheadJitting  2: 1 op, 477.00 ns, 477.0000 ns/op
+WorkloadJitting  2: 1 op, 1357586584.00 ns, 1.3576 s/op
+
+WorkloadWarmup   1: 1 op, 1357885893.00 ns, 1.3579 s/op
+WorkloadWarmup   2: 1 op, 1359094780.00 ns, 1.3591 s/op
+WorkloadWarmup   3: 1 op, 1358104104.00 ns, 1.3581 s/op
+WorkloadWarmup   4: 1 op, 1357799993.00 ns, 1.3578 s/op
+WorkloadWarmup   5: 1 op, 1357565432.00 ns, 1.3576 s/op
+WorkloadWarmup   6: 1 op, 1357477157.00 ns, 1.3575 s/op
+WorkloadWarmup   7: 1 op, 1357314086.00 ns, 1.3573 s/op
+WorkloadWarmup   8: 1 op, 1357526144.00 ns, 1.3575 s/op
+WorkloadWarmup   9: 1 op, 1357099993.00 ns, 1.3571 s/op
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 1357854105.00 ns, 1.3579 s/op
+WorkloadActual   2: 1 op, 1357738083.00 ns, 1.3577 s/op
+WorkloadActual   3: 1 op, 1357458919.00 ns, 1.3575 s/op
+WorkloadActual   4: 1 op, 1357934554.00 ns, 1.3579 s/op
+WorkloadActual   5: 1 op, 1357438508.00 ns, 1.3574 s/op
+WorkloadActual   6: 1 op, 1357700958.00 ns, 1.3577 s/op
+WorkloadActual   7: 1 op, 1358173221.00 ns, 1.3582 s/op
+WorkloadActual   8: 1 op, 1357540295.00 ns, 1.3575 s/op
+WorkloadActual   9: 1 op, 1357520512.00 ns, 1.3575 s/op
+WorkloadActual  10: 1 op, 1357674006.00 ns, 1.3577 s/op
+WorkloadActual  11: 1 op, 1357833238.00 ns, 1.3578 s/op
+WorkloadActual  12: 1 op, 1357907471.00 ns, 1.3579 s/op
+WorkloadActual  13: 1 op, 1357539111.00 ns, 1.3575 s/op
+WorkloadActual  14: 1 op, 1357469381.00 ns, 1.3575 s/op
+WorkloadActual  15: 1 op, 1357192919.00 ns, 1.3572 s/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 1357854105.00 ns, 1.3579 s/op
+WorkloadResult   2: 1 op, 1357738083.00 ns, 1.3577 s/op
+WorkloadResult   3: 1 op, 1357458919.00 ns, 1.3575 s/op
+WorkloadResult   4: 1 op, 1357934554.00 ns, 1.3579 s/op
+WorkloadResult   5: 1 op, 1357438508.00 ns, 1.3574 s/op
+WorkloadResult   6: 1 op, 1357700958.00 ns, 1.3577 s/op
+WorkloadResult   7: 1 op, 1358173221.00 ns, 1.3582 s/op
+WorkloadResult   8: 1 op, 1357540295.00 ns, 1.3575 s/op
+WorkloadResult   9: 1 op, 1357520512.00 ns, 1.3575 s/op
+WorkloadResult  10: 1 op, 1357674006.00 ns, 1.3577 s/op
+WorkloadResult  11: 1 op, 1357833238.00 ns, 1.3578 s/op
+WorkloadResult  12: 1 op, 1357907471.00 ns, 1.3579 s/op
+WorkloadResult  13: 1 op, 1357539111.00 ns, 1.3575 s/op
+WorkloadResult  14: 1 op, 1357469381.00 ns, 1.3575 s/op
+WorkloadResult  15: 1 op, 1357192919.00 ns, 1.3572 s/op
+
+// AfterAll
+// Benchmark Process 1109 has exited with code 0.
+
+Mean = 1.358 s, StdErr = 0.000 s (0.00%), N = 15, StdDev = 0.000 s
+Min = 1.357 s, Q1 = 1.357 s, Median = 1.358 s, Q3 = 1.358 s, Max = 1.358 s
+IQR = 0.000 s, LowerFence = 1.357 s, UpperFence = 1.358 s
+ConfidenceInterval = [1.357 s; 1.358 s] (CI 99.9%), Margin = 0.000 s (0.02% of Mean)
+Skewness = 0.16, Kurtosis = 2.33, MValue = 2
+
+// ** Remained 5 (15.6 %) benchmark(s) to run. Estimated finish 2024-05-26 20:19 (0h 4m from now) **
+// **************************
+// Benchmark: Benchmarks.BCryptWithRegularFor: .NET 8.0(Runtime=.NET 8.0) [cost=10]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet ".NET 8.0.dll" --anonymousPipes 115 116 --benchmarkName "TPLBenchmarks.Benchmarks.BCryptWithRegularFor(cost: 10)" --job ".NET 8.0" --benchmarkId 27 in /BenchmarkProj/bin/Release/net8.0/.NET 8.0/bin/Release/net8.0
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.13.12
+// Runtime=.NET 8.0.5 (8.0.524.21615), X64 RyuJIT AVX-512F+CD+BW+DQ+VL+VBMI
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX-512F+CD+BW+DQ+VL+VBMI,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT,AvxVnni,SERIALIZE VectorSize=256
+// Job: .NET 8.0
+
+OverheadJitting  1: 1 op, 176202.00 ns, 176.2020 us/op
+WorkloadJitting  1: 1 op, 19388797784.00 ns, 19.3888 s/op
+
+WorkloadWarmup   1: 1 op, 19332220561.00 ns, 19.3322 s/op
+WorkloadWarmup   2: 1 op, 19333223739.00 ns, 19.3332 s/op
+WorkloadWarmup   3: 1 op, 19332770459.00 ns, 19.3328 s/op
+WorkloadWarmup   4: 1 op, 19331921309.00 ns, 19.3319 s/op
+WorkloadWarmup   5: 1 op, 19332952464.00 ns, 19.3330 s/op
+WorkloadWarmup   6: 1 op, 19332049659.00 ns, 19.3320 s/op
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 19331138716.00 ns, 19.3311 s/op
+WorkloadActual   2: 1 op, 19332186866.00 ns, 19.3322 s/op
+WorkloadActual   3: 1 op, 19330344284.00 ns, 19.3303 s/op
+WorkloadActual   4: 1 op, 19332884043.00 ns, 19.3329 s/op
+WorkloadActual   5: 1 op, 19332908265.00 ns, 19.3329 s/op
+WorkloadActual   6: 1 op, 19331555551.00 ns, 19.3316 s/op
+WorkloadActual   7: 1 op, 19331068349.00 ns, 19.3311 s/op
+WorkloadActual   8: 1 op, 19330824975.00 ns, 19.3308 s/op
+WorkloadActual   9: 1 op, 19332144848.00 ns, 19.3321 s/op
+WorkloadActual  10: 1 op, 19330332088.00 ns, 19.3303 s/op
+WorkloadActual  11: 1 op, 19329947609.00 ns, 19.3299 s/op
+WorkloadActual  12: 1 op, 19331064850.00 ns, 19.3311 s/op
+WorkloadActual  13: 1 op, 19330627233.00 ns, 19.3306 s/op
+WorkloadActual  14: 1 op, 19331454439.00 ns, 19.3315 s/op
+WorkloadActual  15: 1 op, 19331756794.00 ns, 19.3318 s/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 19331138716.00 ns, 19.3311 s/op
+WorkloadResult   2: 1 op, 19332186866.00 ns, 19.3322 s/op
+WorkloadResult   3: 1 op, 19330344284.00 ns, 19.3303 s/op
+WorkloadResult   4: 1 op, 19332884043.00 ns, 19.3329 s/op
+WorkloadResult   5: 1 op, 19332908265.00 ns, 19.3329 s/op
+WorkloadResult   6: 1 op, 19331555551.00 ns, 19.3316 s/op
+WorkloadResult   7: 1 op, 19331068349.00 ns, 19.3311 s/op
+WorkloadResult   8: 1 op, 19330824975.00 ns, 19.3308 s/op
+WorkloadResult   9: 1 op, 19332144848.00 ns, 19.3321 s/op
+WorkloadResult  10: 1 op, 19330332088.00 ns, 19.3303 s/op
+WorkloadResult  11: 1 op, 19329947609.00 ns, 19.3299 s/op
+WorkloadResult  12: 1 op, 19331064850.00 ns, 19.3311 s/op
+WorkloadResult  13: 1 op, 19330627233.00 ns, 19.3306 s/op
+WorkloadResult  14: 1 op, 19331454439.00 ns, 19.3315 s/op
+WorkloadResult  15: 1 op, 19331756794.00 ns, 19.3318 s/op
+
+// AfterAll
+// Benchmark Process 1140 has exited with code 0.
+
+Mean = 19.331 s, StdErr = 0.000 s (0.00%), N = 15, StdDev = 0.001 s
+Min = 19.330 s, Q1 = 19.331 s, Median = 19.331 s, Q3 = 19.332 s, Max = 19.333 s
+IQR = 0.001 s, LowerFence = 19.329 s, UpperFence = 19.334 s
+ConfidenceInterval = [19.330 s; 19.332 s] (CI 99.9%), Margin = 0.001 s (0.00% of Mean)
+Skewness = 0.29, Kurtosis = 1.9, MValue = 2
+
+// ** Remained 4 (12.5 %) benchmark(s) to run. Estimated finish 2024-05-26 20:26 (0h 4m from now) **
+// **************************
+// Benchmark: Benchmarks.BCryptWithRegularForEach: .NET 8.0(Runtime=.NET 8.0) [cost=10]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet ".NET 8.0.dll" --anonymousPipes 115 116 --benchmarkName "TPLBenchmarks.Benchmarks.BCryptWithRegularForEach(cost: 10)" --job ".NET 8.0" --benchmarkId 28 in /BenchmarkProj/bin/Release/net8.0/.NET 8.0/bin/Release/net8.0
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.13.12
+// Runtime=.NET 8.0.5 (8.0.524.21615), X64 RyuJIT AVX-512F+CD+BW+DQ+VL+VBMI
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX-512F+CD+BW+DQ+VL+VBMI,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT,AvxVnni,SERIALIZE VectorSize=256
+// Job: .NET 8.0
+
+OverheadJitting  1: 1 op, 173634.00 ns, 173.6340 us/op
+WorkloadJitting  1: 1 op, 19370975967.00 ns, 19.3710 s/op
+
+WorkloadWarmup   1: 1 op, 19318426068.00 ns, 19.3184 s/op
+WorkloadWarmup   2: 1 op, 19313503190.00 ns, 19.3135 s/op
+WorkloadWarmup   3: 1 op, 19313224804.00 ns, 19.3132 s/op
+WorkloadWarmup   4: 1 op, 19316699102.00 ns, 19.3167 s/op
+WorkloadWarmup   5: 1 op, 19314952123.00 ns, 19.3150 s/op
+WorkloadWarmup   6: 1 op, 19315563682.00 ns, 19.3156 s/op
+WorkloadWarmup   7: 1 op, 19316467374.00 ns, 19.3165 s/op
+WorkloadWarmup   8: 1 op, 19316714286.00 ns, 19.3167 s/op
+WorkloadWarmup   9: 1 op, 19319292819.00 ns, 19.3193 s/op
+WorkloadWarmup  10: 1 op, 19321690390.00 ns, 19.3217 s/op
+WorkloadWarmup  11: 1 op, 19314154049.00 ns, 19.3142 s/op
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 19316450977.00 ns, 19.3165 s/op
+WorkloadActual   2: 1 op, 19315822479.00 ns, 19.3158 s/op
+WorkloadActual   3: 1 op, 19317724040.00 ns, 19.3177 s/op
+WorkloadActual   4: 1 op, 19310307263.00 ns, 19.3103 s/op
+WorkloadActual   5: 1 op, 19312780235.00 ns, 19.3128 s/op
+WorkloadActual   6: 1 op, 19318572819.00 ns, 19.3186 s/op
+WorkloadActual   7: 1 op, 19313396186.00 ns, 19.3134 s/op
+WorkloadActual   8: 1 op, 19315547900.00 ns, 19.3155 s/op
+WorkloadActual   9: 1 op, 19314140473.00 ns, 19.3141 s/op
+WorkloadActual  10: 1 op, 19312603155.00 ns, 19.3126 s/op
+WorkloadActual  11: 1 op, 19318241805.00 ns, 19.3182 s/op
+WorkloadActual  12: 1 op, 19312805409.00 ns, 19.3128 s/op
+WorkloadActual  13: 1 op, 19312604314.00 ns, 19.3126 s/op
+WorkloadActual  14: 1 op, 19312694038.00 ns, 19.3127 s/op
+WorkloadActual  15: 1 op, 19318177608.00 ns, 19.3182 s/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 19316450977.00 ns, 19.3165 s/op
+WorkloadResult   2: 1 op, 19315822479.00 ns, 19.3158 s/op
+WorkloadResult   3: 1 op, 19317724040.00 ns, 19.3177 s/op
+WorkloadResult   4: 1 op, 19310307263.00 ns, 19.3103 s/op
+WorkloadResult   5: 1 op, 19312780235.00 ns, 19.3128 s/op
+WorkloadResult   6: 1 op, 19318572819.00 ns, 19.3186 s/op
+WorkloadResult   7: 1 op, 19313396186.00 ns, 19.3134 s/op
+WorkloadResult   8: 1 op, 19315547900.00 ns, 19.3155 s/op
+WorkloadResult   9: 1 op, 19314140473.00 ns, 19.3141 s/op
+WorkloadResult  10: 1 op, 19312603155.00 ns, 19.3126 s/op
+WorkloadResult  11: 1 op, 19318241805.00 ns, 19.3182 s/op
+WorkloadResult  12: 1 op, 19312805409.00 ns, 19.3128 s/op
+WorkloadResult  13: 1 op, 19312604314.00 ns, 19.3126 s/op
+WorkloadResult  14: 1 op, 19312694038.00 ns, 19.3127 s/op
+WorkloadResult  15: 1 op, 19318177608.00 ns, 19.3182 s/op
+
+// AfterAll
+// Benchmark Process 1180 has exited with code 0.
+
+Mean = 19.315 s, StdErr = 0.001 s (0.00%), N = 15, StdDev = 0.003 s
+Min = 19.310 s, Q1 = 19.313 s, Median = 19.314 s, Q3 = 19.317 s, Max = 19.319 s
+IQR = 0.004 s, LowerFence = 19.306 s, UpperFence = 19.324 s
+ConfidenceInterval = [19.312 s; 19.318 s] (CI 99.9%), Margin = 0.003 s (0.01% of Mean)
+Skewness = 0.1, Kurtosis = 1.54, MValue = 2
+
+// ** Remained 3 (9.4 %) benchmark(s) to run. Estimated finish 2024-05-26 20:35 (0h 3m from now) **
+// **************************
+// Benchmark: Benchmarks.BCryptWithParallelFor: .NET 8.0(Runtime=.NET 8.0) [cost=10]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet ".NET 8.0.dll" --anonymousPipes 115 116 --benchmarkName "TPLBenchmarks.Benchmarks.BCryptWithParallelFor(cost: 10)" --job ".NET 8.0" --benchmarkId 29 in /BenchmarkProj/bin/Release/net8.0/.NET 8.0/bin/Release/net8.0
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.13.12
+// Runtime=.NET 8.0.5 (8.0.524.21615), X64 RyuJIT AVX-512F+CD+BW+DQ+VL+VBMI
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX-512F+CD+BW+DQ+VL+VBMI,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT,AvxVnni,SERIALIZE VectorSize=256
+// Job: .NET 8.0
+
+OverheadJitting  1: 1 op, 177919.00 ns, 177.9190 us/op
+WorkloadJitting  1: 1 op, 1572722042.00 ns, 1.5727 s/op
+
+OverheadJitting  2: 1 op, 355.00 ns, 355.0000 ns/op
+WorkloadJitting  2: 1 op, 1454796347.00 ns, 1.4548 s/op
+
+WorkloadWarmup   1: 1 op, 1458233514.00 ns, 1.4582 s/op
+WorkloadWarmup   2: 1 op, 1436658802.00 ns, 1.4367 s/op
+WorkloadWarmup   3: 1 op, 1433094148.00 ns, 1.4331 s/op
+WorkloadWarmup   4: 1 op, 1478083693.00 ns, 1.4781 s/op
+WorkloadWarmup   5: 1 op, 1528315633.00 ns, 1.5283 s/op
+WorkloadWarmup   6: 1 op, 1477837076.00 ns, 1.4778 s/op
+WorkloadWarmup   7: 1 op, 1478809222.00 ns, 1.4788 s/op
+WorkloadWarmup   8: 1 op, 1474399535.00 ns, 1.4744 s/op
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 1532779341.00 ns, 1.5328 s/op
+WorkloadActual   2: 1 op, 1432434969.00 ns, 1.4324 s/op
+WorkloadActual   3: 1 op, 1456595925.00 ns, 1.4566 s/op
+WorkloadActual   4: 1 op, 1550996704.00 ns, 1.5510 s/op
+WorkloadActual   5: 1 op, 1463617686.00 ns, 1.4636 s/op
+WorkloadActual   6: 1 op, 1434371396.00 ns, 1.4344 s/op
+WorkloadActual   7: 1 op, 1477818945.00 ns, 1.4778 s/op
+WorkloadActual   8: 1 op, 1478685898.00 ns, 1.4787 s/op
+WorkloadActual   9: 1 op, 1485997089.00 ns, 1.4860 s/op
+WorkloadActual  10: 1 op, 1482300735.00 ns, 1.4823 s/op
+WorkloadActual  11: 1 op, 1518018119.00 ns, 1.5180 s/op
+WorkloadActual  12: 1 op, 1614256758.00 ns, 1.6143 s/op
+WorkloadActual  13: 1 op, 1596487593.00 ns, 1.5965 s/op
+WorkloadActual  14: 1 op, 1732328670.00 ns, 1.7323 s/op
+WorkloadActual  15: 1 op, 1527906609.00 ns, 1.5279 s/op
+WorkloadActual  16: 1 op, 1531131185.00 ns, 1.5311 s/op
+WorkloadActual  17: 1 op, 1500904569.00 ns, 1.5009 s/op
+WorkloadActual  18: 1 op, 1542585604.00 ns, 1.5426 s/op
+WorkloadActual  19: 1 op, 1478840204.00 ns, 1.4788 s/op
+WorkloadActual  20: 1 op, 1752310039.00 ns, 1.7523 s/op
+WorkloadActual  21: 1 op, 1618037181.00 ns, 1.6180 s/op
+WorkloadActual  22: 1 op, 1492157433.00 ns, 1.4922 s/op
+WorkloadActual  23: 1 op, 1620887392.00 ns, 1.6209 s/op
+WorkloadActual  24: 1 op, 1737328475.00 ns, 1.7373 s/op
+WorkloadActual  25: 1 op, 1469576275.00 ns, 1.4696 s/op
+WorkloadActual  26: 1 op, 1390473374.00 ns, 1.3905 s/op
+WorkloadActual  27: 1 op, 1417967672.00 ns, 1.4180 s/op
+WorkloadActual  28: 1 op, 1496647304.00 ns, 1.4966 s/op
+WorkloadActual  29: 1 op, 1646422390.00 ns, 1.6464 s/op
+WorkloadActual  30: 1 op, 1592653361.00 ns, 1.5927 s/op
+WorkloadActual  31: 1 op, 1619579844.00 ns, 1.6196 s/op
+WorkloadActual  32: 1 op, 1487369638.00 ns, 1.4874 s/op
+WorkloadActual  33: 1 op, 1479496933.00 ns, 1.4795 s/op
+WorkloadActual  34: 1 op, 1513528810.00 ns, 1.5135 s/op
+WorkloadActual  35: 1 op, 1594692320.00 ns, 1.5947 s/op
+WorkloadActual  36: 1 op, 1450143440.00 ns, 1.4501 s/op
+WorkloadActual  37: 1 op, 1609778973.00 ns, 1.6098 s/op
+WorkloadActual  38: 1 op, 1659130493.00 ns, 1.6591 s/op
+WorkloadActual  39: 1 op, 1625822111.00 ns, 1.6258 s/op
+WorkloadActual  40: 1 op, 1576548709.00 ns, 1.5765 s/op
+WorkloadActual  41: 1 op, 1625363494.00 ns, 1.6254 s/op
+WorkloadActual  42: 1 op, 1709237819.00 ns, 1.7092 s/op
+WorkloadActual  43: 1 op, 1527705088.00 ns, 1.5277 s/op
+WorkloadActual  44: 1 op, 1440829775.00 ns, 1.4408 s/op
+WorkloadActual  45: 1 op, 1585355531.00 ns, 1.5854 s/op
+WorkloadActual  46: 1 op, 1424699013.00 ns, 1.4247 s/op
+WorkloadActual  47: 1 op, 1589548324.00 ns, 1.5895 s/op
+WorkloadActual  48: 1 op, 1739616670.00 ns, 1.7396 s/op
+WorkloadActual  49: 1 op, 1663506093.00 ns, 1.6635 s/op
+WorkloadActual  50: 1 op, 1605612744.00 ns, 1.6056 s/op
+WorkloadActual  51: 1 op, 1589300816.00 ns, 1.5893 s/op
+WorkloadActual  52: 1 op, 1478631160.00 ns, 1.4786 s/op
+WorkloadActual  53: 1 op, 1471297859.00 ns, 1.4713 s/op
+WorkloadActual  54: 1 op, 1483761714.00 ns, 1.4838 s/op
+WorkloadActual  55: 1 op, 1516502273.00 ns, 1.5165 s/op
+WorkloadActual  56: 1 op, 1512809537.00 ns, 1.5128 s/op
+WorkloadActual  57: 1 op, 1594302480.00 ns, 1.5943 s/op
+WorkloadActual  58: 1 op, 1598542169.00 ns, 1.5985 s/op
+WorkloadActual  59: 1 op, 1622794091.00 ns, 1.6228 s/op
+WorkloadActual  60: 1 op, 1660129421.00 ns, 1.6601 s/op
+WorkloadActual  61: 1 op, 1469027092.00 ns, 1.4690 s/op
+WorkloadActual  62: 1 op, 1508425818.00 ns, 1.5084 s/op
+WorkloadActual  63: 1 op, 1539649794.00 ns, 1.5396 s/op
+WorkloadActual  64: 1 op, 1530323016.00 ns, 1.5303 s/op
+WorkloadActual  65: 1 op, 1728035880.00 ns, 1.7280 s/op
+WorkloadActual  66: 1 op, 1608224940.00 ns, 1.6082 s/op
+WorkloadActual  67: 1 op, 1500853154.00 ns, 1.5009 s/op
+WorkloadActual  68: 1 op, 1692981722.00 ns, 1.6930 s/op
+WorkloadActual  69: 1 op, 1618600102.00 ns, 1.6186 s/op
+WorkloadActual  70: 1 op, 1551947663.00 ns, 1.5519 s/op
+WorkloadActual  71: 1 op, 1511430436.00 ns, 1.5114 s/op
+WorkloadActual  72: 1 op, 1641723858.00 ns, 1.6417 s/op
+WorkloadActual  73: 1 op, 1557299729.00 ns, 1.5573 s/op
+WorkloadActual  74: 1 op, 1584958287.00 ns, 1.5850 s/op
+WorkloadActual  75: 1 op, 1518142017.00 ns, 1.5181 s/op
+WorkloadActual  76: 1 op, 1556919234.00 ns, 1.5569 s/op
+WorkloadActual  77: 1 op, 1796872997.00 ns, 1.7969 s/op
+WorkloadActual  78: 1 op, 1686507184.00 ns, 1.6865 s/op
+WorkloadActual  79: 1 op, 1711082513.00 ns, 1.7111 s/op
+WorkloadActual  80: 1 op, 1576909255.00 ns, 1.5769 s/op
+WorkloadActual  81: 1 op, 1539749266.00 ns, 1.5397 s/op
+WorkloadActual  82: 1 op, 1599854358.00 ns, 1.5999 s/op
+WorkloadActual  83: 1 op, 1715545673.00 ns, 1.7155 s/op
+WorkloadActual  84: 1 op, 1588530132.00 ns, 1.5885 s/op
+WorkloadActual  85: 1 op, 1626589889.00 ns, 1.6266 s/op
+WorkloadActual  86: 1 op, 1642798496.00 ns, 1.6428 s/op
+WorkloadActual  87: 1 op, 1587738388.00 ns, 1.5877 s/op
+WorkloadActual  88: 1 op, 1587034763.00 ns, 1.5870 s/op
+WorkloadActual  89: 1 op, 1571418443.00 ns, 1.5714 s/op
+WorkloadActual  90: 1 op, 1592923264.00 ns, 1.5929 s/op
+WorkloadActual  91: 1 op, 1642170723.00 ns, 1.6422 s/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 1532779341.00 ns, 1.5328 s/op
+WorkloadResult   2: 1 op, 1432434969.00 ns, 1.4324 s/op
+WorkloadResult   3: 1 op, 1456595925.00 ns, 1.4566 s/op
+WorkloadResult   4: 1 op, 1550996704.00 ns, 1.5510 s/op
+WorkloadResult   5: 1 op, 1463617686.00 ns, 1.4636 s/op
+WorkloadResult   6: 1 op, 1434371396.00 ns, 1.4344 s/op
+WorkloadResult   7: 1 op, 1477818945.00 ns, 1.4778 s/op
+WorkloadResult   8: 1 op, 1478685898.00 ns, 1.4787 s/op
+WorkloadResult   9: 1 op, 1485997089.00 ns, 1.4860 s/op
+WorkloadResult  10: 1 op, 1482300735.00 ns, 1.4823 s/op
+WorkloadResult  11: 1 op, 1518018119.00 ns, 1.5180 s/op
+WorkloadResult  12: 1 op, 1614256758.00 ns, 1.6143 s/op
+WorkloadResult  13: 1 op, 1596487593.00 ns, 1.5965 s/op
+WorkloadResult  14: 1 op, 1732328670.00 ns, 1.7323 s/op
+WorkloadResult  15: 1 op, 1527906609.00 ns, 1.5279 s/op
+WorkloadResult  16: 1 op, 1531131185.00 ns, 1.5311 s/op
+WorkloadResult  17: 1 op, 1500904569.00 ns, 1.5009 s/op
+WorkloadResult  18: 1 op, 1542585604.00 ns, 1.5426 s/op
+WorkloadResult  19: 1 op, 1478840204.00 ns, 1.4788 s/op
+WorkloadResult  20: 1 op, 1752310039.00 ns, 1.7523 s/op
+WorkloadResult  21: 1 op, 1618037181.00 ns, 1.6180 s/op
+WorkloadResult  22: 1 op, 1492157433.00 ns, 1.4922 s/op
+WorkloadResult  23: 1 op, 1620887392.00 ns, 1.6209 s/op
+WorkloadResult  24: 1 op, 1737328475.00 ns, 1.7373 s/op
+WorkloadResult  25: 1 op, 1469576275.00 ns, 1.4696 s/op
+WorkloadResult  26: 1 op, 1390473374.00 ns, 1.3905 s/op
+WorkloadResult  27: 1 op, 1417967672.00 ns, 1.4180 s/op
+WorkloadResult  28: 1 op, 1496647304.00 ns, 1.4966 s/op
+WorkloadResult  29: 1 op, 1646422390.00 ns, 1.6464 s/op
+WorkloadResult  30: 1 op, 1592653361.00 ns, 1.5927 s/op
+WorkloadResult  31: 1 op, 1619579844.00 ns, 1.6196 s/op
+WorkloadResult  32: 1 op, 1487369638.00 ns, 1.4874 s/op
+WorkloadResult  33: 1 op, 1479496933.00 ns, 1.4795 s/op
+WorkloadResult  34: 1 op, 1513528810.00 ns, 1.5135 s/op
+WorkloadResult  35: 1 op, 1594692320.00 ns, 1.5947 s/op
+WorkloadResult  36: 1 op, 1450143440.00 ns, 1.4501 s/op
+WorkloadResult  37: 1 op, 1609778973.00 ns, 1.6098 s/op
+WorkloadResult  38: 1 op, 1659130493.00 ns, 1.6591 s/op
+WorkloadResult  39: 1 op, 1625822111.00 ns, 1.6258 s/op
+WorkloadResult  40: 1 op, 1576548709.00 ns, 1.5765 s/op
+WorkloadResult  41: 1 op, 1625363494.00 ns, 1.6254 s/op
+WorkloadResult  42: 1 op, 1709237819.00 ns, 1.7092 s/op
+WorkloadResult  43: 1 op, 1527705088.00 ns, 1.5277 s/op
+WorkloadResult  44: 1 op, 1440829775.00 ns, 1.4408 s/op
+WorkloadResult  45: 1 op, 1585355531.00 ns, 1.5854 s/op
+WorkloadResult  46: 1 op, 1424699013.00 ns, 1.4247 s/op
+WorkloadResult  47: 1 op, 1589548324.00 ns, 1.5895 s/op
+WorkloadResult  48: 1 op, 1739616670.00 ns, 1.7396 s/op
+WorkloadResult  49: 1 op, 1663506093.00 ns, 1.6635 s/op
+WorkloadResult  50: 1 op, 1605612744.00 ns, 1.6056 s/op
+WorkloadResult  51: 1 op, 1589300816.00 ns, 1.5893 s/op
+WorkloadResult  52: 1 op, 1478631160.00 ns, 1.4786 s/op
+WorkloadResult  53: 1 op, 1471297859.00 ns, 1.4713 s/op
+WorkloadResult  54: 1 op, 1483761714.00 ns, 1.4838 s/op
+WorkloadResult  55: 1 op, 1516502273.00 ns, 1.5165 s/op
+WorkloadResult  56: 1 op, 1512809537.00 ns, 1.5128 s/op
+WorkloadResult  57: 1 op, 1594302480.00 ns, 1.5943 s/op
+WorkloadResult  58: 1 op, 1598542169.00 ns, 1.5985 s/op
+WorkloadResult  59: 1 op, 1622794091.00 ns, 1.6228 s/op
+WorkloadResult  60: 1 op, 1660129421.00 ns, 1.6601 s/op
+WorkloadResult  61: 1 op, 1469027092.00 ns, 1.4690 s/op
+WorkloadResult  62: 1 op, 1508425818.00 ns, 1.5084 s/op
+WorkloadResult  63: 1 op, 1539649794.00 ns, 1.5396 s/op
+WorkloadResult  64: 1 op, 1530323016.00 ns, 1.5303 s/op
+WorkloadResult  65: 1 op, 1728035880.00 ns, 1.7280 s/op
+WorkloadResult  66: 1 op, 1608224940.00 ns, 1.6082 s/op
+WorkloadResult  67: 1 op, 1500853154.00 ns, 1.5009 s/op
+WorkloadResult  68: 1 op, 1692981722.00 ns, 1.6930 s/op
+WorkloadResult  69: 1 op, 1618600102.00 ns, 1.6186 s/op
+WorkloadResult  70: 1 op, 1551947663.00 ns, 1.5519 s/op
+WorkloadResult  71: 1 op, 1511430436.00 ns, 1.5114 s/op
+WorkloadResult  72: 1 op, 1641723858.00 ns, 1.6417 s/op
+WorkloadResult  73: 1 op, 1557299729.00 ns, 1.5573 s/op
+WorkloadResult  74: 1 op, 1584958287.00 ns, 1.5850 s/op
+WorkloadResult  75: 1 op, 1518142017.00 ns, 1.5181 s/op
+WorkloadResult  76: 1 op, 1556919234.00 ns, 1.5569 s/op
+WorkloadResult  77: 1 op, 1796872997.00 ns, 1.7969 s/op
+WorkloadResult  78: 1 op, 1686507184.00 ns, 1.6865 s/op
+WorkloadResult  79: 1 op, 1711082513.00 ns, 1.7111 s/op
+WorkloadResult  80: 1 op, 1576909255.00 ns, 1.5769 s/op
+WorkloadResult  81: 1 op, 1539749266.00 ns, 1.5397 s/op
+WorkloadResult  82: 1 op, 1599854358.00 ns, 1.5999 s/op
+WorkloadResult  83: 1 op, 1715545673.00 ns, 1.7155 s/op
+WorkloadResult  84: 1 op, 1588530132.00 ns, 1.5885 s/op
+WorkloadResult  85: 1 op, 1626589889.00 ns, 1.6266 s/op
+WorkloadResult  86: 1 op, 1642798496.00 ns, 1.6428 s/op
+WorkloadResult  87: 1 op, 1587738388.00 ns, 1.5877 s/op
+WorkloadResult  88: 1 op, 1587034763.00 ns, 1.5870 s/op
+WorkloadResult  89: 1 op, 1571418443.00 ns, 1.5714 s/op
+WorkloadResult  90: 1 op, 1592923264.00 ns, 1.5929 s/op
+WorkloadResult  91: 1 op, 1642170723.00 ns, 1.6422 s/op
+
+// AfterAll
+// Benchmark Process 1222 has exited with code 0.
+
+Mean = 1.568 s, StdErr = 0.009 s (0.58%), N = 91, StdDev = 0.087 s
+Min = 1.390 s, Q1 = 1.499 s, Median = 1.577 s, Q3 = 1.620 s, Max = 1.797 s
+IQR = 0.121 s, LowerFence = 1.317 s, UpperFence = 1.802 s
+ConfidenceInterval = [1.537 s; 1.599 s] (CI 99.9%), Margin = 0.031 s (1.99% of Mean)
+Skewness = 0.33, Kurtosis = 2.52, MValue = 2.79
+
+// ** Remained 2 (6.2 %) benchmark(s) to run. Estimated finish 2024-05-26 20:36 (0h 2m from now) **
+// **************************
+// Benchmark: Benchmarks.BCryptWithParallelForEach: .NET 8.0(Runtime=.NET 8.0) [cost=10]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet ".NET 8.0.dll" --anonymousPipes 115 116 --benchmarkName "TPLBenchmarks.Benchmarks.BCryptWithParallelForEach(cost: 10)" --job ".NET 8.0" --benchmarkId 30 in /BenchmarkProj/bin/Release/net8.0/.NET 8.0/bin/Release/net8.0
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.13.12
+// Runtime=.NET 8.0.5 (8.0.524.21615), X64 RyuJIT AVX-512F+CD+BW+DQ+VL+VBMI
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX-512F+CD+BW+DQ+VL+VBMI,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT,AvxVnni,SERIALIZE VectorSize=256
+// Job: .NET 8.0
+
+OverheadJitting  1: 1 op, 171399.00 ns, 171.3990 us/op
+WorkloadJitting  1: 1 op, 1581640440.00 ns, 1.5816 s/op
+
+OverheadJitting  2: 1 op, 396.00 ns, 396.0000 ns/op
+WorkloadJitting  2: 1 op, 1488214989.00 ns, 1.4882 s/op
+
+WorkloadWarmup   1: 1 op, 1462481359.00 ns, 1.4625 s/op
+WorkloadWarmup   2: 1 op, 1519507256.00 ns, 1.5195 s/op
+WorkloadWarmup   3: 1 op, 1435755540.00 ns, 1.4358 s/op
+WorkloadWarmup   4: 1 op, 1396514974.00 ns, 1.3965 s/op
+WorkloadWarmup   5: 1 op, 1458273792.00 ns, 1.4583 s/op
+WorkloadWarmup   6: 1 op, 1435076412.00 ns, 1.4351 s/op
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 1467639727.00 ns, 1.4676 s/op
+WorkloadActual   2: 1 op, 1482939597.00 ns, 1.4829 s/op
+WorkloadActual   3: 1 op, 1488731794.00 ns, 1.4887 s/op
+WorkloadActual   4: 1 op, 1423430094.00 ns, 1.4234 s/op
+WorkloadActual   5: 1 op, 1526278205.00 ns, 1.5263 s/op
+WorkloadActual   6: 1 op, 1439204276.00 ns, 1.4392 s/op
+WorkloadActual   7: 1 op, 1417699361.00 ns, 1.4177 s/op
+WorkloadActual   8: 1 op, 1546008112.00 ns, 1.5460 s/op
+WorkloadActual   9: 1 op, 1497763216.00 ns, 1.4978 s/op
+WorkloadActual  10: 1 op, 1484929603.00 ns, 1.4849 s/op
+WorkloadActual  11: 1 op, 1472012540.00 ns, 1.4720 s/op
+WorkloadActual  12: 1 op, 1496338651.00 ns, 1.4963 s/op
+WorkloadActual  13: 1 op, 1447767042.00 ns, 1.4478 s/op
+WorkloadActual  14: 1 op, 1839348631.00 ns, 1.8393 s/op
+WorkloadActual  15: 1 op, 1501521078.00 ns, 1.5015 s/op
+WorkloadActual  16: 1 op, 1597586030.00 ns, 1.5976 s/op
+WorkloadActual  17: 1 op, 1614251672.00 ns, 1.6143 s/op
+WorkloadActual  18: 1 op, 1487977082.00 ns, 1.4880 s/op
+WorkloadActual  19: 1 op, 1519679667.00 ns, 1.5197 s/op
+WorkloadActual  20: 1 op, 1483882884.00 ns, 1.4839 s/op
+WorkloadActual  21: 1 op, 1482456856.00 ns, 1.4825 s/op
+WorkloadActual  22: 1 op, 1546892157.00 ns, 1.5469 s/op
+WorkloadActual  23: 1 op, 1621010083.00 ns, 1.6210 s/op
+WorkloadActual  24: 1 op, 1722858666.00 ns, 1.7229 s/op
+WorkloadActual  25: 1 op, 1638439463.00 ns, 1.6384 s/op
+WorkloadActual  26: 1 op, 1517782430.00 ns, 1.5178 s/op
+WorkloadActual  27: 1 op, 1430808407.00 ns, 1.4308 s/op
+WorkloadActual  28: 1 op, 1511020451.00 ns, 1.5110 s/op
+WorkloadActual  29: 1 op, 1484408582.00 ns, 1.4844 s/op
+WorkloadActual  30: 1 op, 1488052969.00 ns, 1.4881 s/op
+WorkloadActual  31: 1 op, 1645398074.00 ns, 1.6454 s/op
+WorkloadActual  32: 1 op, 1474003375.00 ns, 1.4740 s/op
+WorkloadActual  33: 1 op, 1492406820.00 ns, 1.4924 s/op
+WorkloadActual  34: 1 op, 1473402086.00 ns, 1.4734 s/op
+WorkloadActual  35: 1 op, 1811963721.00 ns, 1.8120 s/op
+WorkloadActual  36: 1 op, 1482985682.00 ns, 1.4830 s/op
+WorkloadActual  37: 1 op, 1500755809.00 ns, 1.5008 s/op
+WorkloadActual  38: 1 op, 1482803724.00 ns, 1.4828 s/op
+WorkloadActual  39: 1 op, 1536611146.00 ns, 1.5366 s/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 1467639727.00 ns, 1.4676 s/op
+WorkloadResult   2: 1 op, 1482939597.00 ns, 1.4829 s/op
+WorkloadResult   3: 1 op, 1488731794.00 ns, 1.4887 s/op
+WorkloadResult   4: 1 op, 1423430094.00 ns, 1.4234 s/op
+WorkloadResult   5: 1 op, 1526278205.00 ns, 1.5263 s/op
+WorkloadResult   6: 1 op, 1439204276.00 ns, 1.4392 s/op
+WorkloadResult   7: 1 op, 1417699361.00 ns, 1.4177 s/op
+WorkloadResult   8: 1 op, 1546008112.00 ns, 1.5460 s/op
+WorkloadResult   9: 1 op, 1497763216.00 ns, 1.4978 s/op
+WorkloadResult  10: 1 op, 1484929603.00 ns, 1.4849 s/op
+WorkloadResult  11: 1 op, 1472012540.00 ns, 1.4720 s/op
+WorkloadResult  12: 1 op, 1496338651.00 ns, 1.4963 s/op
+WorkloadResult  13: 1 op, 1447767042.00 ns, 1.4478 s/op
+WorkloadResult  14: 1 op, 1501521078.00 ns, 1.5015 s/op
+WorkloadResult  15: 1 op, 1597586030.00 ns, 1.5976 s/op
+WorkloadResult  16: 1 op, 1614251672.00 ns, 1.6143 s/op
+WorkloadResult  17: 1 op, 1487977082.00 ns, 1.4880 s/op
+WorkloadResult  18: 1 op, 1519679667.00 ns, 1.5197 s/op
+WorkloadResult  19: 1 op, 1483882884.00 ns, 1.4839 s/op
+WorkloadResult  20: 1 op, 1482456856.00 ns, 1.4825 s/op
+WorkloadResult  21: 1 op, 1546892157.00 ns, 1.5469 s/op
+WorkloadResult  22: 1 op, 1621010083.00 ns, 1.6210 s/op
+WorkloadResult  23: 1 op, 1517782430.00 ns, 1.5178 s/op
+WorkloadResult  24: 1 op, 1430808407.00 ns, 1.4308 s/op
+WorkloadResult  25: 1 op, 1511020451.00 ns, 1.5110 s/op
+WorkloadResult  26: 1 op, 1484408582.00 ns, 1.4844 s/op
+WorkloadResult  27: 1 op, 1488052969.00 ns, 1.4881 s/op
+WorkloadResult  28: 1 op, 1474003375.00 ns, 1.4740 s/op
+WorkloadResult  29: 1 op, 1492406820.00 ns, 1.4924 s/op
+WorkloadResult  30: 1 op, 1473402086.00 ns, 1.4734 s/op
+WorkloadResult  31: 1 op, 1482985682.00 ns, 1.4830 s/op
+WorkloadResult  32: 1 op, 1500755809.00 ns, 1.5008 s/op
+WorkloadResult  33: 1 op, 1482803724.00 ns, 1.4828 s/op
+WorkloadResult  34: 1 op, 1536611146.00 ns, 1.5366 s/op
+
+// AfterAll
+// Benchmark Process 1281 has exited with code 0.
+
+Mean = 1.498 s, StdErr = 0.008 s (0.54%), N = 34, StdDev = 0.047 s
+Min = 1.418 s, Q1 = 1.476 s, Median = 1.488 s, Q3 = 1.516 s, Max = 1.621 s
+IQR = 0.040 s, LowerFence = 1.416 s, UpperFence = 1.576 s
+ConfidenceInterval = [1.468 s; 1.527 s] (CI 99.9%), Margin = 0.029 s (1.95% of Mean)
+Skewness = 0.88, Kurtosis = 3.79, MValue = 2
+
+// ** Remained 1 (3.1 %) benchmark(s) to run. Estimated finish 2024-05-26 20:36 (0h 1m from now) **
+// **************************
+// Benchmark: Benchmarks.BCryptParallelOptimizedForSmallOperations: .NET 8.0(Runtime=.NET 8.0) [cost=10]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet ".NET 8.0.dll" --anonymousPipes 115 116 --benchmarkName "TPLBenchmarks.Benchmarks.BCryptParallelOptimizedForSmallOperations(cost: 10)" --job ".NET 8.0" --benchmarkId 31 in /BenchmarkProj/bin/Release/net8.0/.NET 8.0/bin/Release/net8.0
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.13.12
+// Runtime=.NET 8.0.5 (8.0.524.21615), X64 RyuJIT AVX-512F+CD+BW+DQ+VL+VBMI
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX-512F+CD+BW+DQ+VL+VBMI,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT,AvxVnni,SERIALIZE VectorSize=256
+// Job: .NET 8.0
+
+OverheadJitting  1: 1 op, 174754.00 ns, 174.7540 us/op
+WorkloadJitting  1: 1 op, 1654805477.00 ns, 1.6548 s/op
+
+OverheadJitting  2: 1 op, 480.00 ns, 480.0000 ns/op
+WorkloadJitting  2: 1 op, 1536837489.00 ns, 1.5368 s/op
+
+WorkloadWarmup   1: 1 op, 1497462216.00 ns, 1.4975 s/op
+WorkloadWarmup   2: 1 op, 1495594807.00 ns, 1.4956 s/op
+WorkloadWarmup   3: 1 op, 1507929643.00 ns, 1.5079 s/op
+WorkloadWarmup   4: 1 op, 1555218483.00 ns, 1.5552 s/op
+WorkloadWarmup   5: 1 op, 1550833665.00 ns, 1.5508 s/op
+WorkloadWarmup   6: 1 op, 1672135317.00 ns, 1.6721 s/op
+WorkloadWarmup   7: 1 op, 1618872148.00 ns, 1.6189 s/op
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 1641265705.00 ns, 1.6413 s/op
+WorkloadActual   2: 1 op, 1621652167.00 ns, 1.6217 s/op
+WorkloadActual   3: 1 op, 1458700848.00 ns, 1.4587 s/op
+WorkloadActual   4: 1 op, 1460475207.00 ns, 1.4605 s/op
+WorkloadActual   5: 1 op, 1519696179.00 ns, 1.5197 s/op
+WorkloadActual   6: 1 op, 1508867862.00 ns, 1.5089 s/op
+WorkloadActual   7: 1 op, 1568965508.00 ns, 1.5690 s/op
+WorkloadActual   8: 1 op, 1618141472.00 ns, 1.6181 s/op
+WorkloadActual   9: 1 op, 1451789875.00 ns, 1.4518 s/op
+WorkloadActual  10: 1 op, 1607614786.00 ns, 1.6076 s/op
+WorkloadActual  11: 1 op, 1622681241.00 ns, 1.6227 s/op
+WorkloadActual  12: 1 op, 1525627174.00 ns, 1.5256 s/op
+WorkloadActual  13: 1 op, 1454139240.00 ns, 1.4541 s/op
+WorkloadActual  14: 1 op, 1502267918.00 ns, 1.5023 s/op
+WorkloadActual  15: 1 op, 1438418791.00 ns, 1.4384 s/op
+WorkloadActual  16: 1 op, 1496683223.00 ns, 1.4967 s/op
+WorkloadActual  17: 1 op, 1595740255.00 ns, 1.5957 s/op
+WorkloadActual  18: 1 op, 1481923236.00 ns, 1.4819 s/op
+WorkloadActual  19: 1 op, 1639208509.00 ns, 1.6392 s/op
+WorkloadActual  20: 1 op, 1674700424.00 ns, 1.6747 s/op
+WorkloadActual  21: 1 op, 1517916460.00 ns, 1.5179 s/op
+WorkloadActual  22: 1 op, 1514083910.00 ns, 1.5141 s/op
+WorkloadActual  23: 1 op, 1476794979.00 ns, 1.4768 s/op
+WorkloadActual  24: 1 op, 1459569712.00 ns, 1.4596 s/op
+WorkloadActual  25: 1 op, 1465172682.00 ns, 1.4652 s/op
+WorkloadActual  26: 1 op, 1611481917.00 ns, 1.6115 s/op
+WorkloadActual  27: 1 op, 1616878649.00 ns, 1.6169 s/op
+WorkloadActual  28: 1 op, 1591278783.00 ns, 1.5913 s/op
+WorkloadActual  29: 1 op, 1602363279.00 ns, 1.6024 s/op
+WorkloadActual  30: 1 op, 1445021973.00 ns, 1.4450 s/op
+WorkloadActual  31: 1 op, 1459252732.00 ns, 1.4593 s/op
+WorkloadActual  32: 1 op, 1448872521.00 ns, 1.4489 s/op
+WorkloadActual  33: 1 op, 1456236515.00 ns, 1.4562 s/op
+WorkloadActual  34: 1 op, 1437364934.00 ns, 1.4374 s/op
+WorkloadActual  35: 1 op, 1411744957.00 ns, 1.4117 s/op
+WorkloadActual  36: 1 op, 1468487613.00 ns, 1.4685 s/op
+WorkloadActual  37: 1 op, 1429762910.00 ns, 1.4298 s/op
+WorkloadActual  38: 1 op, 1490137891.00 ns, 1.4901 s/op
+WorkloadActual  39: 1 op, 1482977359.00 ns, 1.4830 s/op
+WorkloadActual  40: 1 op, 1472643556.00 ns, 1.4726 s/op
+WorkloadActual  41: 1 op, 1484684656.00 ns, 1.4847 s/op
+WorkloadActual  42: 1 op, 1472902761.00 ns, 1.4729 s/op
+WorkloadActual  43: 1 op, 1442855238.00 ns, 1.4429 s/op
+WorkloadActual  44: 1 op, 1429224197.00 ns, 1.4292 s/op
+WorkloadActual  45: 1 op, 1434063441.00 ns, 1.4341 s/op
+WorkloadActual  46: 1 op, 1425584386.00 ns, 1.4256 s/op
+WorkloadActual  47: 1 op, 1465290436.00 ns, 1.4653 s/op
+WorkloadActual  48: 1 op, 1463674082.00 ns, 1.4637 s/op
+WorkloadActual  49: 1 op, 1438830121.00 ns, 1.4388 s/op
+WorkloadActual  50: 1 op, 1451004622.00 ns, 1.4510 s/op
+WorkloadActual  51: 1 op, 1450352327.00 ns, 1.4504 s/op
+WorkloadActual  52: 1 op, 1412373490.00 ns, 1.4124 s/op
+WorkloadActual  53: 1 op, 1431323821.00 ns, 1.4313 s/op
+WorkloadActual  54: 1 op, 1475413041.00 ns, 1.4754 s/op
+WorkloadActual  55: 1 op, 1446203211.00 ns, 1.4462 s/op
+WorkloadActual  56: 1 op, 1467578914.00 ns, 1.4676 s/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 1621652167.00 ns, 1.6217 s/op
+WorkloadResult   2: 1 op, 1458700848.00 ns, 1.4587 s/op
+WorkloadResult   3: 1 op, 1460475207.00 ns, 1.4605 s/op
+WorkloadResult   4: 1 op, 1519696179.00 ns, 1.5197 s/op
+WorkloadResult   5: 1 op, 1508867862.00 ns, 1.5089 s/op
+WorkloadResult   6: 1 op, 1568965508.00 ns, 1.5690 s/op
+WorkloadResult   7: 1 op, 1618141472.00 ns, 1.6181 s/op
+WorkloadResult   8: 1 op, 1451789875.00 ns, 1.4518 s/op
+WorkloadResult   9: 1 op, 1607614786.00 ns, 1.6076 s/op
+WorkloadResult  10: 1 op, 1622681241.00 ns, 1.6227 s/op
+WorkloadResult  11: 1 op, 1525627174.00 ns, 1.5256 s/op
+WorkloadResult  12: 1 op, 1454139240.00 ns, 1.4541 s/op
+WorkloadResult  13: 1 op, 1502267918.00 ns, 1.5023 s/op
+WorkloadResult  14: 1 op, 1438418791.00 ns, 1.4384 s/op
+WorkloadResult  15: 1 op, 1496683223.00 ns, 1.4967 s/op
+WorkloadResult  16: 1 op, 1595740255.00 ns, 1.5957 s/op
+WorkloadResult  17: 1 op, 1481923236.00 ns, 1.4819 s/op
+WorkloadResult  18: 1 op, 1517916460.00 ns, 1.5179 s/op
+WorkloadResult  19: 1 op, 1514083910.00 ns, 1.5141 s/op
+WorkloadResult  20: 1 op, 1476794979.00 ns, 1.4768 s/op
+WorkloadResult  21: 1 op, 1459569712.00 ns, 1.4596 s/op
+WorkloadResult  22: 1 op, 1465172682.00 ns, 1.4652 s/op
+WorkloadResult  23: 1 op, 1611481917.00 ns, 1.6115 s/op
+WorkloadResult  24: 1 op, 1616878649.00 ns, 1.6169 s/op
+WorkloadResult  25: 1 op, 1591278783.00 ns, 1.5913 s/op
+WorkloadResult  26: 1 op, 1602363279.00 ns, 1.6024 s/op
+WorkloadResult  27: 1 op, 1445021973.00 ns, 1.4450 s/op
+WorkloadResult  28: 1 op, 1459252732.00 ns, 1.4593 s/op
+WorkloadResult  29: 1 op, 1448872521.00 ns, 1.4489 s/op
+WorkloadResult  30: 1 op, 1456236515.00 ns, 1.4562 s/op
+WorkloadResult  31: 1 op, 1437364934.00 ns, 1.4374 s/op
+WorkloadResult  32: 1 op, 1411744957.00 ns, 1.4117 s/op
+WorkloadResult  33: 1 op, 1468487613.00 ns, 1.4685 s/op
+WorkloadResult  34: 1 op, 1429762910.00 ns, 1.4298 s/op
+WorkloadResult  35: 1 op, 1490137891.00 ns, 1.4901 s/op
+WorkloadResult  36: 1 op, 1482977359.00 ns, 1.4830 s/op
+WorkloadResult  37: 1 op, 1472643556.00 ns, 1.4726 s/op
+WorkloadResult  38: 1 op, 1484684656.00 ns, 1.4847 s/op
+WorkloadResult  39: 1 op, 1472902761.00 ns, 1.4729 s/op
+WorkloadResult  40: 1 op, 1442855238.00 ns, 1.4429 s/op
+WorkloadResult  41: 1 op, 1429224197.00 ns, 1.4292 s/op
+WorkloadResult  42: 1 op, 1434063441.00 ns, 1.4341 s/op
+WorkloadResult  43: 1 op, 1425584386.00 ns, 1.4256 s/op
+WorkloadResult  44: 1 op, 1465290436.00 ns, 1.4653 s/op
+WorkloadResult  45: 1 op, 1463674082.00 ns, 1.4637 s/op
+WorkloadResult  46: 1 op, 1438830121.00 ns, 1.4388 s/op
+WorkloadResult  47: 1 op, 1451004622.00 ns, 1.4510 s/op
+WorkloadResult  48: 1 op, 1450352327.00 ns, 1.4504 s/op
+WorkloadResult  49: 1 op, 1412373490.00 ns, 1.4124 s/op
+WorkloadResult  50: 1 op, 1431323821.00 ns, 1.4313 s/op
+WorkloadResult  51: 1 op, 1475413041.00 ns, 1.4754 s/op
+WorkloadResult  52: 1 op, 1446203211.00 ns, 1.4462 s/op
+WorkloadResult  53: 1 op, 1467578914.00 ns, 1.4676 s/op
+
+// AfterAll
+// Benchmark Process 1317 has exited with code 0.
+
+Mean = 1.490 s, StdErr = 0.009 s (0.57%), N = 53, StdDev = 0.062 s
+Min = 1.412 s, Q1 = 1.449 s, Median = 1.468 s, Q3 = 1.514 s, Max = 1.623 s
+IQR = 0.065 s, LowerFence = 1.351 s, UpperFence = 1.612 s
+ConfidenceInterval = [1.460 s; 1.520 s] (CI 99.9%), Margin = 0.030 s (2.00% of Mean)
+Skewness = 1.02, Kurtosis = 2.72, MValue = 2.35
+
+// ** Remained 0 (0.0 %) benchmark(s) to run. Estimated finish 2024-05-26 20:36 (0h 0m from now) **
+// ***** BenchmarkRunner: Finish  *****
+
+// * Export *
+  BenchmarkDotNet.Artifacts/results/TPLBenchmarks.Benchmarks-report.csv
+  BenchmarkDotNet.Artifacts/results/TPLBenchmarks.Benchmarks-report-github.md
+  BenchmarkDotNet.Artifacts/results/TPLBenchmarks.Benchmarks-report.html
+  BenchmarkDotNet.Artifacts/results/TPLBenchmarks.Benchmarks-report.asciidoc
+  BenchmarkDotNet.Artifacts/results/TPLBenchmarks.Benchmarks-report.txt
+  BenchmarkDotNet.Artifacts/results/TPLBenchmarks.Benchmarks-measurements.csv
+  BenchmarkDotNet.Artifacts/results/TPLBenchmarks.Benchmarks-report-full.json
+  BenchmarkDotNet.Artifacts/results/TPLBenchmarks.Benchmarks-report-default.md
+  BenchmarkDotNet.Artifacts/results/TPLBenchmarks.Benchmarks-report-full.xml
+  BenchmarkDotNet.Artifacts/results/TPLBenchmarks.Benchmarks-report.json
+  BenchmarkDotNet.Artifacts/results/TPLBenchmarks.Benchmarks-report.xml
+RPlotExporter couldn't find Rscript in your PATH and no R_HOME environment variable is defined
+  BenchmarkDotNet.Artifacts/results/BuildPlots.R
+
+// * Detailed results *
+Benchmarks.BCryptWithLINQ: .NET 8.0(Runtime=.NET 8.0) [cost=4]
+Runtime = .NET 8.0.5 (8.0.524.21615), X64 RyuJIT AVX-512F+CD+BW+DQ+VL+VBMI; GC = Concurrent Workstation
+Mean = 317.614 ms, StdErr = 0.005 ms (0.00%), N = 12, StdDev = 0.019 ms
+Min = 317.582 ms, Q1 = 317.608 ms, Median = 317.619 ms, Q3 = 317.626 ms, Max = 317.640 ms
+IQR = 0.019 ms, LowerFence = 317.580 ms, UpperFence = 317.654 ms
+ConfidenceInterval = [317.590 ms; 317.638 ms] (CI 99.9%), Margin = 0.024 ms (0.01% of Mean)
+Skewness = -0.6, Kurtosis = 1.93, MValue = 2
+-------------------- Histogram --------------------
+[317.571 ms ; 317.651 ms) | @@@@@@@@@@@@
+---------------------------------------------------
+
+Benchmarks.BCryptWithPLINQ: .NET 8.0(Runtime=.NET 8.0) [cost=4]
+Runtime = .NET 8.0.5 (8.0.524.21615), X64 RyuJIT AVX-512F+CD+BW+DQ+VL+VBMI; GC = Concurrent Workstation
+Mean = 23.663 ms, StdErr = 0.043 ms (0.18%), N = 14, StdDev = 0.161 ms
+Min = 23.499 ms, Q1 = 23.548 ms, Median = 23.622 ms, Q3 = 23.737 ms, Max = 24.084 ms
+IQR = 0.189 ms, LowerFence = 23.264 ms, UpperFence = 24.021 ms
+ConfidenceInterval = [23.481 ms; 23.845 ms] (CI 99.9%), Margin = 0.182 ms (0.77% of Mean)
+Skewness = 1.2, Kurtosis = 3.68, MValue = 2
+-------------------- Histogram --------------------
+[23.411 ms ; 24.172 ms) | @@@@@@@@@@@@@@
+---------------------------------------------------
+
+Benchmarks.BCryptWithOrderedPLINQ: .NET 8.0(Runtime=.NET 8.0) [cost=4]
+Runtime = .NET 8.0.5 (8.0.524.21615), X64 RyuJIT AVX-512F+CD+BW+DQ+VL+VBMI; GC = Concurrent Workstation
+Mean = 23.520 ms, StdErr = 0.027 ms (0.12%), N = 15, StdDev = 0.106 ms
+Min = 23.363 ms, Q1 = 23.439 ms, Median = 23.497 ms, Q3 = 23.575 ms, Max = 23.771 ms
+IQR = 0.136 ms, LowerFence = 23.235 ms, UpperFence = 23.778 ms
+ConfidenceInterval = [23.406 ms; 23.634 ms] (CI 99.9%), Margin = 0.114 ms (0.48% of Mean)
+Skewness = 0.69, Kurtosis = 2.72, MValue = 2
+-------------------- Histogram --------------------
+[23.306 ms ; 23.827 ms) | @@@@@@@@@@@@@@@
+---------------------------------------------------
+
+Benchmarks.BCryptWithRegularFor: .NET 8.0(Runtime=.NET 8.0) [cost=4]
+Runtime = .NET 8.0.5 (8.0.524.21615), X64 RyuJIT AVX-512F+CD+BW+DQ+VL+VBMI; GC = Concurrent Workstation
+Mean = 317.949 ms, StdErr = 0.006 ms (0.00%), N = 14, StdDev = 0.023 ms
+Min = 317.889 ms, Q1 = 317.938 ms, Median = 317.953 ms, Q3 = 317.960 ms, Max = 317.981 ms
+IQR = 0.022 ms, LowerFence = 317.904 ms, UpperFence = 317.993 ms
+ConfidenceInterval = [317.923 ms; 317.974 ms] (CI 99.9%), Margin = 0.026 ms (0.01% of Mean)
+Skewness = -1.04, Kurtosis = 3.79, MValue = 2
+-------------------- Histogram --------------------
+[317.877 ms ; 317.994 ms) | @@@@@@@@@@@@@@
+---------------------------------------------------
+
+Benchmarks.BCryptWithRegularForEach: .NET 8.0(Runtime=.NET 8.0) [cost=4]
+Runtime = .NET 8.0.5 (8.0.524.21615), X64 RyuJIT AVX-512F+CD+BW+DQ+VL+VBMI; GC = Concurrent Workstation
+Mean = 317.553 ms, StdErr = 0.009 ms (0.00%), N = 13, StdDev = 0.034 ms
+Min = 317.507 ms, Q1 = 317.527 ms, Median = 317.545 ms, Q3 = 317.568 ms, Max = 317.611 ms
+IQR = 0.042 ms, LowerFence = 317.465 ms, UpperFence = 317.631 ms
+ConfidenceInterval = [317.513 ms; 317.594 ms] (CI 99.9%), Margin = 0.041 ms (0.01% of Mean)
+Skewness = 0.42, Kurtosis = 1.69, MValue = 2
+-------------------- Histogram --------------------
+[317.488 ms ; 317.630 ms) | @@@@@@@@@@@@@
+---------------------------------------------------
+
+Benchmarks.BCryptWithParallelFor: .NET 8.0(Runtime=.NET 8.0) [cost=4]
+Runtime = .NET 8.0.5 (8.0.524.21615), X64 RyuJIT AVX-512F+CD+BW+DQ+VL+VBMI; GC = Concurrent Workstation
+Mean = 28.419 ms, StdErr = 0.074 ms (0.26%), N = 15, StdDev = 0.288 ms
+Min = 27.899 ms, Q1 = 28.224 ms, Median = 28.350 ms, Q3 = 28.598 ms, Max = 28.899 ms
+IQR = 0.374 ms, LowerFence = 27.662 ms, UpperFence = 29.160 ms
+ConfidenceInterval = [28.112 ms; 28.727 ms] (CI 99.9%), Margin = 0.308 ms (1.08% of Mean)
+Skewness = 0.16, Kurtosis = 1.95, MValue = 2
+-------------------- Histogram --------------------
+[27.746 ms ; 29.053 ms) | @@@@@@@@@@@@@@@
+---------------------------------------------------
+
+Benchmarks.BCryptWithParallelForEach: .NET 8.0(Runtime=.NET 8.0) [cost=4]
+Runtime = .NET 8.0.5 (8.0.524.21615), X64 RyuJIT AVX-512F+CD+BW+DQ+VL+VBMI; GC = Concurrent Workstation
+Mean = 28.352 ms, StdErr = 0.105 ms (0.37%), N = 15, StdDev = 0.405 ms
+Min = 27.501 ms, Q1 = 28.157 ms, Median = 28.315 ms, Q3 = 28.671 ms, Max = 29.028 ms
+IQR = 0.514 ms, LowerFence = 27.386 ms, UpperFence = 29.442 ms
+ConfidenceInterval = [27.919 ms; 28.785 ms] (CI 99.9%), Margin = 0.433 ms (1.53% of Mean)
+Skewness = -0.23, Kurtosis = 2.34, MValue = 2
+-------------------- Histogram --------------------
+[27.286 ms ; 28.003 ms) | @@@
+[28.003 ms ; 29.138 ms) | @@@@@@@@@@@@
+---------------------------------------------------
+
+Benchmarks.BCryptParallelOptimizedForSmallOperations: .NET 8.0(Runtime=.NET 8.0) [cost=4]
+Runtime = .NET 8.0.5 (8.0.524.21615), X64 RyuJIT AVX-512F+CD+BW+DQ+VL+VBMI; GC = Concurrent Workstation
+Mean = 26.320 ms, StdErr = 0.045 ms (0.17%), N = 15, StdDev = 0.172 ms
+Min = 25.953 ms, Q1 = 26.222 ms, Median = 26.309 ms, Q3 = 26.427 ms, Max = 26.621 ms
+IQR = 0.205 ms, LowerFence = 25.915 ms, UpperFence = 26.734 ms
+ConfidenceInterval = [26.136 ms; 26.505 ms] (CI 99.9%), Margin = 0.184 ms (0.70% of Mean)
+Skewness = -0.09, Kurtosis = 2.51, MValue = 2
+-------------------- Histogram --------------------
+[25.861 ms ; 26.712 ms) | @@@@@@@@@@@@@@@
+---------------------------------------------------
+
+Benchmarks.BCryptWithLINQ: .NET 8.0(Runtime=.NET 8.0) [cost=6]
+Runtime = .NET 8.0.5 (8.0.524.21615), X64 RyuJIT AVX-512F+CD+BW+DQ+VL+VBMI; GC = Concurrent Workstation
+Mean = 1.222 s, StdErr = 0.000 s (0.00%), N = 13, StdDev = 0.000 s
+Min = 1.222 s, Q1 = 1.222 s, Median = 1.223 s, Q3 = 1.223 s, Max = 1.223 s
+IQR = 0.000 s, LowerFence = 1.222 s, UpperFence = 1.223 s
+ConfidenceInterval = [1.222 s; 1.223 s] (CI 99.9%), Margin = 0.000 s (0.01% of Mean)
+Skewness = -0.19, Kurtosis = 2.58, MValue = 2
+-------------------- Histogram --------------------
+[1.222 s ; 1.223 s) | @@@@@@@@@@@@@
+---------------------------------------------------
+
+Benchmarks.BCryptWithPLINQ: .NET 8.0(Runtime=.NET 8.0) [cost=6]
+Runtime = .NET 8.0.5 (8.0.524.21615), X64 RyuJIT AVX-512F+CD+BW+DQ+VL+VBMI; GC = Concurrent Workstation
+Mean = 87.472 ms, StdErr = 0.112 ms (0.13%), N = 14, StdDev = 0.418 ms
+Min = 87.047 ms, Q1 = 87.242 ms, Median = 87.315 ms, Q3 = 87.514 ms, Max = 88.399 ms
+IQR = 0.272 ms, LowerFence = 86.834 ms, UpperFence = 87.921 ms
+ConfidenceInterval = [87.000 ms; 87.944 ms] (CI 99.9%), Margin = 0.472 ms (0.54% of Mean)
+Skewness = 1.16, Kurtosis = 2.83, MValue = 2
+-------------------- Histogram --------------------
+[86.820 ms ; 88.627 ms) | @@@@@@@@@@@@@@
+---------------------------------------------------
+
+Benchmarks.BCryptWithOrderedPLINQ: .NET 8.0(Runtime=.NET 8.0) [cost=6]
+Runtime = .NET 8.0.5 (8.0.524.21615), X64 RyuJIT AVX-512F+CD+BW+DQ+VL+VBMI; GC = Concurrent Workstation
+Mean = 86.894 ms, StdErr = 0.020 ms (0.02%), N = 12, StdDev = 0.070 ms
+Min = 86.712 ms, Q1 = 86.880 ms, Median = 86.898 ms, Q3 = 86.933 ms, Max = 87.007 ms
+IQR = 0.053 ms, LowerFence = 86.800 ms, UpperFence = 87.013 ms
+ConfidenceInterval = [86.804 ms; 86.985 ms] (CI 99.9%), Margin = 0.090 ms (0.10% of Mean)
+Skewness = -1.08, Kurtosis = 4.36, MValue = 2
+-------------------- Histogram --------------------
+[86.671 ms ; 87.048 ms) | @@@@@@@@@@@@
+---------------------------------------------------
+
+Benchmarks.BCryptWithRegularFor: .NET 8.0(Runtime=.NET 8.0) [cost=6]
+Runtime = .NET 8.0.5 (8.0.524.21615), X64 RyuJIT AVX-512F+CD+BW+DQ+VL+VBMI; GC = Concurrent Workstation
+Mean = 1.224 s, StdErr = 0.000 s (0.00%), N = 14, StdDev = 0.000 s
+Min = 1.224 s, Q1 = 1.224 s, Median = 1.224 s, Q3 = 1.224 s, Max = 1.224 s
+IQR = 0.000 s, LowerFence = 1.224 s, UpperFence = 1.224 s
+ConfidenceInterval = [1.224 s; 1.224 s] (CI 99.9%), Margin = 0.000 s (0.00% of Mean)
+Skewness = -0.7, Kurtosis = 2.11, MValue = 2
+-------------------- Histogram --------------------
+[1.223 s ; 1.224 s) | @@@@@@@@@@@@@@
+---------------------------------------------------
+
+Benchmarks.BCryptWithRegularForEach: .NET 8.0(Runtime=.NET 8.0) [cost=6]
+Runtime = .NET 8.0.5 (8.0.524.21615), X64 RyuJIT AVX-512F+CD+BW+DQ+VL+VBMI; GC = Concurrent Workstation
+Mean = 1.222 s, StdErr = 0.000 s (0.00%), N = 14, StdDev = 0.000 s
+Min = 1.222 s, Q1 = 1.222 s, Median = 1.222 s, Q3 = 1.222 s, Max = 1.222 s
+IQR = 0.000 s, LowerFence = 1.222 s, UpperFence = 1.222 s
+ConfidenceInterval = [1.222 s; 1.222 s] (CI 99.9%), Margin = 0.000 s (0.01% of Mean)
+Skewness = 0.32, Kurtosis = 2.24, MValue = 2
+-------------------- Histogram --------------------
+[1.222 s ; 1.222 s) | @@@@@@@@@@@@@@
+---------------------------------------------------
+
+Benchmarks.BCryptWithParallelFor: .NET 8.0(Runtime=.NET 8.0) [cost=6]
+Runtime = .NET 8.0.5 (8.0.524.21615), X64 RyuJIT AVX-512F+CD+BW+DQ+VL+VBMI; GC = Concurrent Workstation
+Mean = 104.385 ms, StdErr = 0.514 ms (0.49%), N = 21, StdDev = 2.356 ms
+Min = 100.468 ms, Q1 = 102.994 ms, Median = 104.244 ms, Q3 = 105.597 ms, Max = 108.249 ms
+IQR = 2.603 ms, LowerFence = 99.090 ms, UpperFence = 109.500 ms
+ConfidenceInterval = [102.405 ms; 106.364 ms] (CI 99.9%), Margin = 1.980 ms (1.90% of Mean)
+Skewness = 0.14, Kurtosis = 1.8, MValue = 2
+-------------------- Histogram --------------------
+[100.180 ms ; 102.776 ms) | @@@@@
+[102.776 ms ; 105.018 ms) | @@@@@@@@
+[105.018 ms ; 108.579 ms) | @@@@@@@@
+---------------------------------------------------
+
+Benchmarks.BCryptWithParallelForEach: .NET 8.0(Runtime=.NET 8.0) [cost=6]
+Runtime = .NET 8.0.5 (8.0.524.21615), X64 RyuJIT AVX-512F+CD+BW+DQ+VL+VBMI; GC = Concurrent Workstation
+Mean = 103.644 ms, StdErr = 0.428 ms (0.41%), N = 13, StdDev = 1.545 ms
+Min = 101.638 ms, Q1 = 102.678 ms, Median = 103.212 ms, Q3 = 104.080 ms, Max = 106.857 ms
+IQR = 1.402 ms, LowerFence = 100.574 ms, UpperFence = 106.183 ms
+ConfidenceInterval = [101.794 ms; 105.495 ms] (CI 99.9%), Margin = 1.850 ms (1.78% of Mean)
+Skewness = 0.66, Kurtosis = 2.25, MValue = 2
+-------------------- Histogram --------------------
+[100.775 ms ; 104.394 ms) | @@@@@@@@@@
+[104.394 ms ; 107.117 ms) | @@@
+---------------------------------------------------
+
+Benchmarks.BCryptParallelOptimizedForSmallOperations: .NET 8.0(Runtime=.NET 8.0) [cost=6]
+Runtime = .NET 8.0.5 (8.0.524.21615), X64 RyuJIT AVX-512F+CD+BW+DQ+VL+VBMI; GC = Concurrent Workstation
+Mean = 96.825 ms, StdErr = 0.208 ms (0.21%), N = 15, StdDev = 0.806 ms
+Min = 95.568 ms, Q1 = 96.062 ms, Median = 96.916 ms, Q3 = 97.521 ms, Max = 97.766 ms
+IQR = 1.459 ms, LowerFence = 93.873 ms, UpperFence = 99.710 ms
+ConfidenceInterval = [95.964 ms; 97.686 ms] (CI 99.9%), Margin = 0.861 ms (0.89% of Mean)
+Skewness = -0.29, Kurtosis = 1.36, MValue = 2
+-------------------- Histogram --------------------
+[95.139 ms ; 98.195 ms) | @@@@@@@@@@@@@@@
+---------------------------------------------------
+
+Benchmarks.BCryptWithLINQ: .NET 8.0(Runtime=.NET 8.0) [cost=8]
+Runtime = .NET 8.0.5 (8.0.524.21615), X64 RyuJIT AVX-512F+CD+BW+DQ+VL+VBMI; GC = Concurrent Workstation
+Mean = 4.841 s, StdErr = 0.000 s (0.01%), N = 15, StdDev = 0.001 s
+Min = 4.840 s, Q1 = 4.841 s, Median = 4.841 s, Q3 = 4.842 s, Max = 4.843 s
+IQR = 0.001 s, LowerFence = 4.838 s, UpperFence = 4.844 s
+ConfidenceInterval = [4.840 s; 4.843 s] (CI 99.9%), Margin = 0.001 s (0.03% of Mean)
+Skewness = 0.23, Kurtosis = 1.92, MValue = 2
+-------------------- Histogram --------------------
+[4.839 s ; 4.844 s) | @@@@@@@@@@@@@@@
+---------------------------------------------------
+
+Benchmarks.BCryptWithPLINQ: .NET 8.0(Runtime=.NET 8.0) [cost=8]
+Runtime = .NET 8.0.5 (8.0.524.21615), X64 RyuJIT AVX-512F+CD+BW+DQ+VL+VBMI; GC = Concurrent Workstation
+Mean = 342.158 ms, StdErr = 0.035 ms (0.01%), N = 13, StdDev = 0.128 ms
+Min = 341.945 ms, Q1 = 342.075 ms, Median = 342.164 ms, Q3 = 342.259 ms, Max = 342.397 ms
+IQR = 0.184 ms, LowerFence = 341.798 ms, UpperFence = 342.535 ms
+ConfidenceInterval = [342.005 ms; 342.310 ms] (CI 99.9%), Margin = 0.153 ms (0.04% of Mean)
+Skewness = 0.1, Kurtosis = 1.95, MValue = 2
+-------------------- Histogram --------------------
+[341.873 ms ; 342.468 ms) | @@@@@@@@@@@@@
+---------------------------------------------------
+
+Benchmarks.BCryptWithOrderedPLINQ: .NET 8.0(Runtime=.NET 8.0) [cost=8]
+Runtime = .NET 8.0.5 (8.0.524.21615), X64 RyuJIT AVX-512F+CD+BW+DQ+VL+VBMI; GC = Concurrent Workstation
+Mean = 340.692 ms, StdErr = 0.042 ms (0.01%), N = 13, StdDev = 0.151 ms
+Min = 340.480 ms, Q1 = 340.577 ms, Median = 340.693 ms, Q3 = 340.804 ms, Max = 340.970 ms
+IQR = 0.226 ms, LowerFence = 340.238 ms, UpperFence = 341.143 ms
+ConfidenceInterval = [340.511 ms; 340.872 ms] (CI 99.9%), Margin = 0.180 ms (0.05% of Mean)
+Skewness = 0.08, Kurtosis = 1.7, MValue = 2
+-------------------- Histogram --------------------
+[340.396 ms ; 341.054 ms) | @@@@@@@@@@@@@
+---------------------------------------------------
+
+Benchmarks.BCryptWithRegularFor: .NET 8.0(Runtime=.NET 8.0) [cost=8]
+Runtime = .NET 8.0.5 (8.0.524.21615), X64 RyuJIT AVX-512F+CD+BW+DQ+VL+VBMI; GC = Concurrent Workstation
+Mean = 4.846 s, StdErr = 0.000 s (0.01%), N = 15, StdDev = 0.001 s
+Min = 4.845 s, Q1 = 4.845 s, Median = 4.847 s, Q3 = 4.847 s, Max = 4.849 s
+IQR = 0.002 s, LowerFence = 4.843 s, UpperFence = 4.849 s
+ConfidenceInterval = [4.845 s; 4.847 s] (CI 99.9%), Margin = 0.001 s (0.02% of Mean)
+Skewness = 0.43, Kurtosis = 2.75, MValue = 2
+-------------------- Histogram --------------------
+[4.844 s ; 4.849 s) | @@@@@@@@@@@@@@@
+---------------------------------------------------
+
+Benchmarks.BCryptWithRegularForEach: .NET 8.0(Runtime=.NET 8.0) [cost=8]
+Runtime = .NET 8.0.5 (8.0.524.21615), X64 RyuJIT AVX-512F+CD+BW+DQ+VL+VBMI; GC = Concurrent Workstation
+Mean = 4.846 s, StdErr = 0.000 s (0.00%), N = 15, StdDev = 0.000 s
+Min = 4.845 s, Q1 = 4.845 s, Median = 4.846 s, Q3 = 4.846 s, Max = 4.847 s
+IQR = 0.001 s, LowerFence = 4.844 s, UpperFence = 4.847 s
+ConfidenceInterval = [4.845 s; 4.846 s] (CI 99.9%), Margin = 0.000 s (0.01% of Mean)
+Skewness = 0.28, Kurtosis = 2.33, MValue = 2
+-------------------- Histogram --------------------
+[4.845 s ; 4.847 s) | @@@@@@@@@@@@@@@
+---------------------------------------------------
+
+Benchmarks.BCryptWithParallelFor: .NET 8.0(Runtime=.NET 8.0) [cost=8]
+Runtime = .NET 8.0.5 (8.0.524.21615), X64 RyuJIT AVX-512F+CD+BW+DQ+VL+VBMI; GC = Concurrent Workstation
+Mean = 386.384 ms, StdErr = 2.103 ms (0.54%), N = 37, StdDev = 12.789 ms
+Min = 361.332 ms, Q1 = 376.129 ms, Median = 385.390 ms, Q3 = 393.248 ms, Max = 417.196 ms
+IQR = 17.119 ms, LowerFence = 350.450 ms, UpperFence = 418.926 ms
+ConfidenceInterval = [378.852 ms; 393.916 ms] (CI 99.9%), Margin = 7.532 ms (1.95% of Mean)
+Skewness = 0.5, Kurtosis = 2.62, MValue = 2.53
+-------------------- Histogram --------------------
+[356.295 ms ; 366.370 ms) | @
+[366.370 ms ; 379.623 ms) | @@@@@@@@@@@@@@
+[379.623 ms ; 393.827 ms) | @@@@@@@@@@@@@@@
+[393.827 ms ; 402.151 ms) | @
+[402.151 ms ; 412.226 ms) | @@@@@
+[412.226 ms ; 422.233 ms) | @
+---------------------------------------------------
+
+Benchmarks.BCryptWithParallelForEach: .NET 8.0(Runtime=.NET 8.0) [cost=8]
+Runtime = .NET 8.0.5 (8.0.524.21615), X64 RyuJIT AVX-512F+CD+BW+DQ+VL+VBMI; GC = Concurrent Workstation
+Mean = 393.999 ms, StdErr = 2.230 ms (0.57%), N = 45, StdDev = 14.962 ms
+Min = 371.020 ms, Q1 = 383.522 ms, Median = 392.088 ms, Q3 = 405.584 ms, Max = 424.926 ms
+IQR = 22.063 ms, LowerFence = 350.428 ms, UpperFence = 438.678 ms
+ConfidenceInterval = [386.135 ms; 401.863 ms] (CI 99.9%), Margin = 7.864 ms (2.00% of Mean)
+Skewness = 0.36, Kurtosis = 2.16, MValue = 2
+-------------------- Histogram --------------------
+[370.256 ms ; 381.298 ms) | @@@@@@@@@@@
+[381.298 ms ; 394.549 ms) | @@@@@@@@@@@@@@@@
+[394.549 ms ; 407.285 ms) | @@@@@@@@@@@
+[407.285 ms ; 425.676 ms) | @@@@@@@
+---------------------------------------------------
+
+Benchmarks.BCryptParallelOptimizedForSmallOperations: .NET 8.0(Runtime=.NET 8.0) [cost=8]
+Runtime = .NET 8.0.5 (8.0.524.21615), X64 RyuJIT AVX-512F+CD+BW+DQ+VL+VBMI; GC = Concurrent Workstation
+Mean = 404.760 ms, StdErr = 2.206 ms (0.55%), N = 34, StdDev = 12.863 ms
+Min = 379.832 ms, Q1 = 397.355 ms, Median = 407.858 ms, Q3 = 415.267 ms, Max = 424.111 ms
+IQR = 17.911 ms, LowerFence = 370.489 ms, UpperFence = 442.133 ms
+ConfidenceInterval = [396.795 ms; 412.726 ms] (CI 99.9%), Margin = 7.966 ms (1.97% of Mean)
+Skewness = -0.43, Kurtosis = 1.88, MValue = 2.57
+-------------------- Histogram --------------------
+[377.664 ms ; 388.086 ms) | @@@@@@@
+[388.086 ms ; 398.214 ms) | @@@
+[398.214 ms ; 408.994 ms) | @@@@@@@@@
+[408.994 ms ; 419.416 ms) | @@@@@@@@@@@@@@
+[419.416 ms ; 429.322 ms) | @
+---------------------------------------------------
+
+Benchmarks.BCryptWithLINQ: .NET 8.0(Runtime=.NET 8.0) [cost=10]
+Runtime = .NET 8.0.5 (8.0.524.21615), X64 RyuJIT AVX-512F+CD+BW+DQ+VL+VBMI; GC = Concurrent Workstation
+Mean = 19.308 s, StdErr = 0.000 s (0.00%), N = 14, StdDev = 0.002 s
+Min = 19.304 s, Q1 = 19.307 s, Median = 19.308 s, Q3 = 19.309 s, Max = 19.310 s
+IQR = 0.002 s, LowerFence = 19.303 s, UpperFence = 19.312 s
+ConfidenceInterval = [19.306 s; 19.310 s] (CI 99.9%), Margin = 0.002 s (0.01% of Mean)
+Skewness = -0.52, Kurtosis = 2.44, MValue = 2
+-------------------- Histogram --------------------
+[19.303 s ; 19.311 s) | @@@@@@@@@@@@@@
+---------------------------------------------------
+
+Benchmarks.BCryptWithPLINQ: .NET 8.0(Runtime=.NET 8.0) [cost=10]
+Runtime = .NET 8.0.5 (8.0.524.21615), X64 RyuJIT AVX-512F+CD+BW+DQ+VL+VBMI; GC = Concurrent Workstation
+Mean = 1.357 s, StdErr = 0.000 s (0.01%), N = 12, StdDev = 0.000 s
+Min = 1.356 s, Q1 = 1.357 s, Median = 1.357 s, Q3 = 1.357 s, Max = 1.358 s
+IQR = 0.001 s, LowerFence = 1.356 s, UpperFence = 1.358 s
+ConfidenceInterval = [1.357 s; 1.358 s] (CI 99.9%), Margin = 0.001 s (0.05% of Mean)
+Skewness = 0.76, Kurtosis = 3.07, MValue = 2
+-------------------- Histogram --------------------
+[1.356 s ; 1.359 s) | @@@@@@@@@@@@
+---------------------------------------------------
+
+Benchmarks.BCryptWithOrderedPLINQ: .NET 8.0(Runtime=.NET 8.0) [cost=10]
+Runtime = .NET 8.0.5 (8.0.524.21615), X64 RyuJIT AVX-512F+CD+BW+DQ+VL+VBMI; GC = Concurrent Workstation
+Mean = 1.358 s, StdErr = 0.000 s (0.00%), N = 15, StdDev = 0.000 s
+Min = 1.357 s, Q1 = 1.357 s, Median = 1.358 s, Q3 = 1.358 s, Max = 1.358 s
+IQR = 0.000 s, LowerFence = 1.357 s, UpperFence = 1.358 s
+ConfidenceInterval = [1.357 s; 1.358 s] (CI 99.9%), Margin = 0.000 s (0.02% of Mean)
+Skewness = 0.16, Kurtosis = 2.33, MValue = 2
+-------------------- Histogram --------------------
+[1.357 s ; 1.358 s) | @@@@@@@@@@@@@@@
+---------------------------------------------------
+
+Benchmarks.BCryptWithRegularFor: .NET 8.0(Runtime=.NET 8.0) [cost=10]
+Runtime = .NET 8.0.5 (8.0.524.21615), X64 RyuJIT AVX-512F+CD+BW+DQ+VL+VBMI; GC = Concurrent Workstation
+Mean = 19.331 s, StdErr = 0.000 s (0.00%), N = 15, StdDev = 0.001 s
+Min = 19.330 s, Q1 = 19.331 s, Median = 19.331 s, Q3 = 19.332 s, Max = 19.333 s
+IQR = 0.001 s, LowerFence = 19.329 s, UpperFence = 19.334 s
+ConfidenceInterval = [19.330 s; 19.332 s] (CI 99.9%), Margin = 0.001 s (0.00% of Mean)
+Skewness = 0.29, Kurtosis = 1.9, MValue = 2
+-------------------- Histogram --------------------
+[19.329 s ; 19.333 s) | @@@@@@@@@@@@@@@
+---------------------------------------------------
+
+Benchmarks.BCryptWithRegularForEach: .NET 8.0(Runtime=.NET 8.0) [cost=10]
+Runtime = .NET 8.0.5 (8.0.524.21615), X64 RyuJIT AVX-512F+CD+BW+DQ+VL+VBMI; GC = Concurrent Workstation
+Mean = 19.315 s, StdErr = 0.001 s (0.00%), N = 15, StdDev = 0.003 s
+Min = 19.310 s, Q1 = 19.313 s, Median = 19.314 s, Q3 = 19.317 s, Max = 19.319 s
+IQR = 0.004 s, LowerFence = 19.306 s, UpperFence = 19.324 s
+ConfidenceInterval = [19.312 s; 19.318 s] (CI 99.9%), Margin = 0.003 s (0.01% of Mean)
+Skewness = 0.1, Kurtosis = 1.54, MValue = 2
+-------------------- Histogram --------------------
+[19.309 s ; 19.320 s) | @@@@@@@@@@@@@@@
+---------------------------------------------------
+
+Benchmarks.BCryptWithParallelFor: .NET 8.0(Runtime=.NET 8.0) [cost=10]
+Runtime = .NET 8.0.5 (8.0.524.21615), X64 RyuJIT AVX-512F+CD+BW+DQ+VL+VBMI; GC = Concurrent Workstation
+Mean = 1.568 s, StdErr = 0.009 s (0.58%), N = 91, StdDev = 0.087 s
+Min = 1.390 s, Q1 = 1.499 s, Median = 1.577 s, Q3 = 1.620 s, Max = 1.797 s
+IQR = 0.121 s, LowerFence = 1.317 s, UpperFence = 1.802 s
+ConfidenceInterval = [1.537 s; 1.599 s] (CI 99.9%), Margin = 0.031 s (1.99% of Mean)
+Skewness = 0.33, Kurtosis = 2.52, MValue = 2.79
+-------------------- Histogram --------------------
+[1.365 s ; 1.415 s) | @
+[1.415 s ; 1.468 s) | @@@@@@@@
+[1.468 s ; 1.519 s) | @@@@@@@@@@@@@@@@@@@@@@@
+[1.519 s ; 1.576 s) | @@@@@@@@@@@@@
+[1.576 s ; 1.627 s) | @@@@@@@@@@@@@@@@@@@@@@@@@@@@
+[1.627 s ; 1.690 s) | @@@@@@@@
+[1.690 s ; 1.756 s) | @@@@@@@@@
+[1.756 s ; 1.822 s) | @
+---------------------------------------------------
+
+Benchmarks.BCryptWithParallelForEach: .NET 8.0(Runtime=.NET 8.0) [cost=10]
+Runtime = .NET 8.0.5 (8.0.524.21615), X64 RyuJIT AVX-512F+CD+BW+DQ+VL+VBMI; GC = Concurrent Workstation
+Mean = 1.498 s, StdErr = 0.008 s (0.54%), N = 34, StdDev = 0.047 s
+Min = 1.418 s, Q1 = 1.476 s, Median = 1.488 s, Q3 = 1.516 s, Max = 1.621 s
+IQR = 0.040 s, LowerFence = 1.416 s, UpperFence = 1.576 s
+ConfidenceInterval = [1.468 s; 1.527 s] (CI 99.9%), Margin = 0.029 s (1.95% of Mean)
+Skewness = 0.88, Kurtosis = 3.79, MValue = 2
+-------------------- Histogram --------------------
+[1.414 s ; 1.452 s) | @@@@@
+[1.452 s ; 1.504 s) | @@@@@@@@@@@@@@@@@@@
+[1.504 s ; 1.548 s) | @@@@@@@
+[1.548 s ; 1.590 s) | 
+[1.590 s ; 1.628 s) | @@@
+---------------------------------------------------
+
+Benchmarks.BCryptParallelOptimizedForSmallOperations: .NET 8.0(Runtime=.NET 8.0) [cost=10]
+Runtime = .NET 8.0.5 (8.0.524.21615), X64 RyuJIT AVX-512F+CD+BW+DQ+VL+VBMI; GC = Concurrent Workstation
+Mean = 1.490 s, StdErr = 0.009 s (0.57%), N = 53, StdDev = 0.062 s
+Min = 1.412 s, Q1 = 1.449 s, Median = 1.468 s, Q3 = 1.514 s, Max = 1.623 s
+IQR = 0.065 s, LowerFence = 1.351 s, UpperFence = 1.612 s
+ConfidenceInterval = [1.460 s; 1.520 s] (CI 99.9%), Margin = 0.030 s (2.00% of Mean)
+Skewness = 1.02, Kurtosis = 2.72, MValue = 2.35
+-------------------- Histogram --------------------
+[1.390 s ; 1.434 s) | @@@@@@
+[1.434 s ; 1.477 s) | @@@@@@@@@@@@@@@@@@@@@@@@@@
+[1.477 s ; 1.523 s) | @@@@@@@@@@
+[1.523 s ; 1.569 s) | @@
+[1.569 s ; 1.629 s) | @@@@@@@@@
+---------------------------------------------------
+
+// * Summary *
+
+BenchmarkDotNet v0.13.12, Debian GNU/Linux 12 (bookworm) (container)
+Intel Xeon Platinum 8488C, 1 CPU, 16 logical and 8 physical cores
+.NET SDK 8.0.300
+  [Host]   : .NET 8.0.5 (8.0.524.21615), X64 RyuJIT AVX-512F+CD+BW+DQ+VL+VBMI
+  .NET 8.0 : .NET 8.0.5 (8.0.524.21615), X64 RyuJIT AVX-512F+CD+BW+DQ+VL+VBMI
+
+Job=.NET 8.0  Runtime=.NET 8.0  
+
+| Method                                    | cost | Mean         | Error     | StdDev    |
+|------------------------------------------ |----- |-------------:|----------:|----------:|
+| BCryptWithLINQ                            | 4    |    317.61 ms |  0.024 ms |  0.019 ms |
+| BCryptWithPLINQ                           | 4    |     23.66 ms |  0.182 ms |  0.161 ms |
+| BCryptWithOrderedPLINQ                    | 4    |     23.52 ms |  0.114 ms |  0.106 ms |
+| BCryptWithRegularFor                      | 4    |    317.95 ms |  0.026 ms |  0.023 ms |
+| BCryptWithRegularForEach                  | 4    |    317.55 ms |  0.041 ms |  0.034 ms |
+| BCryptWithParallelFor                     | 4    |     28.42 ms |  0.308 ms |  0.288 ms |
+| BCryptWithParallelForEach                 | 4    |     28.35 ms |  0.433 ms |  0.405 ms |
+| BCryptParallelOptimizedForSmallOperations | 4    |     26.32 ms |  0.184 ms |  0.172 ms |
+| BCryptWithLINQ                            | 6    |  1,222.50 ms |  0.099 ms |  0.082 ms |
+| BCryptWithPLINQ                           | 6    |     87.47 ms |  0.472 ms |  0.418 ms |
+| BCryptWithOrderedPLINQ                    | 6    |     86.89 ms |  0.090 ms |  0.070 ms |
+| BCryptWithRegularFor                      | 6    |  1,223.62 ms |  0.061 ms |  0.054 ms |
+| BCryptWithRegularForEach                  | 6    |  1,222.05 ms |  0.142 ms |  0.126 ms |
+| BCryptWithParallelFor                     | 6    |    104.38 ms |  1.980 ms |  2.356 ms |
+| BCryptWithParallelForEach                 | 6    |    103.64 ms |  1.850 ms |  1.545 ms |
+| BCryptParallelOptimizedForSmallOperations | 6    |     96.83 ms |  0.861 ms |  0.806 ms |
+| BCryptWithLINQ                            | 8    |  4,841.35 ms |  1.212 ms |  1.134 ms |
+| BCryptWithPLINQ                           | 8    |    342.16 ms |  0.153 ms |  0.128 ms |
+| BCryptWithOrderedPLINQ                    | 8    |    340.69 ms |  0.180 ms |  0.151 ms |
+| BCryptWithRegularFor                      | 8    |  4,846.33 ms |  1.157 ms |  1.083 ms |
+| BCryptWithRegularForEach                  | 8    |  4,845.60 ms |  0.458 ms |  0.429 ms |
+| BCryptWithParallelFor                     | 8    |    386.38 ms |  7.532 ms | 12.789 ms |
+| BCryptWithParallelForEach                 | 8    |    394.00 ms |  7.864 ms | 14.962 ms |
+| BCryptParallelOptimizedForSmallOperations | 8    |    404.76 ms |  7.966 ms | 12.863 ms |
+| BCryptWithLINQ                            | 10   | 19,307.63 ms |  1.892 ms |  1.678 ms |
+| BCryptWithPLINQ                           | 10   |  1,357.15 ms |  0.633 ms |  0.494 ms |
+| BCryptWithOrderedPLINQ                    | 10   |  1,357.67 ms |  0.266 ms |  0.249 ms |
+| BCryptWithRegularFor                      | 10   | 19,331.35 ms |  0.963 ms |  0.900 ms |
+| BCryptWithRegularForEach                  | 10   | 19,314.79 ms |  2.786 ms |  2.606 ms |
+| BCryptWithParallelFor                     | 10   |  1,568.27 ms | 31.166 ms | 87.392 ms |
+| BCryptWithParallelForEach                 | 10   |  1,497.68 ms | 29.261 ms | 47.251 ms |
+| BCryptParallelOptimizedForSmallOperations | 10   |  1,490.24 ms | 29.801 ms | 62.205 ms |
+
+// * Hints *
+Outliers
+  Benchmarks.BCryptWithLINQ: .NET 8.0                            -> 3 outliers were removed, 4 outliers were detected (317.58 ms, 317.71 ms..318.17 ms)
+  Benchmarks.BCryptWithPLINQ: .NET 8.0                           -> 1 outlier  was  removed (24.23 ms)
+  Benchmarks.BCryptWithRegularFor: .NET 8.0                      -> 1 outlier  was  removed, 2 outliers were detected (317.89 ms, 318.66 ms)
+  Benchmarks.BCryptWithRegularForEach: .NET 8.0                  -> 2 outliers were removed (318.19 ms, 318.50 ms)
+  Benchmarks.BCryptWithLINQ: .NET 8.0                            -> 2 outliers were removed, 4 outliers were detected (1.22 s, 1.22 s, 1.22 s, 1.22 s)
+  Benchmarks.BCryptWithPLINQ: .NET 8.0                           -> 1 outlier  was  removed (90.04 ms)
+  Benchmarks.BCryptWithOrderedPLINQ: .NET 8.0                    -> 3 outliers were removed, 4 outliers were detected (86.71 ms, 87.44 ms..88.18 ms)
+  Benchmarks.BCryptWithRegularFor: .NET 8.0                      -> 1 outlier  was  removed, 2 outliers were detected (1.22 s, 1.22 s)
+  Benchmarks.BCryptWithRegularForEach: .NET 8.0                  -> 1 outlier  was  removed (1.22 s)
+  Benchmarks.BCryptWithParallelForEach: .NET 8.0                 -> 2 outliers were removed (109.92 ms, 110.27 ms)
+  Benchmarks.BCryptWithPLINQ: .NET 8.0                           -> 2 outliers were removed (342.64 ms, 342.94 ms)
+  Benchmarks.BCryptWithOrderedPLINQ: .NET 8.0                    -> 2 outliers were removed (341.34 ms, 341.87 ms)
+  Benchmarks.BCryptWithParallelFor: .NET 8.0                     -> 1 outlier  was  removed (427.12 ms)
+  Benchmarks.BCryptWithParallelForEach: .NET 8.0                 -> 2 outliers were removed (441.09 ms, 452.08 ms)
+  Benchmarks.BCryptWithLINQ: .NET 8.0                            -> 1 outlier  was  removed (19.31 s)
+  Benchmarks.BCryptWithPLINQ: .NET 8.0                           -> 3 outliers were removed (1.36 s..1.37 s)
+  Benchmarks.BCryptWithParallelForEach: .NET 8.0                 -> 5 outliers were removed (1.64 s..1.84 s)
+  Benchmarks.BCryptParallelOptimizedForSmallOperations: .NET 8.0 -> 3 outliers were removed (1.64 s..1.67 s)
+
+// * Legends *
+  cost   : Value of the 'cost' parameter
+  Mean   : Arithmetic mean of all measurements
+  Error  : Half of 99.9% confidence interval
+  StdDev : Standard deviation of all measurements
+  1 ms   : 1 Millisecond (0.001 sec)
+
+// ***** BenchmarkRunner: End *****
+Run time: 00:43:42 (2622.14 sec), executed benchmarks: 32
+
+Global total time: 00:43:45 (2625.51 sec), executed benchmarks: 32
+// * Artifacts cleanup *
+Artifacts cleanup is finished

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>ParallelBenchmarks.ParallelLoops-20240503-105533</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; text-align: right; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet v0.13.12, Windows 10 (10.0.19045.4291/22H2/2022Update)
+Intel Core i7-9750H CPU 2.60GHz, 1 CPU, 12 logical and 6 physical cores
+.NET SDK 9.0.100-preview.3.24204.13
+  [Host]               : .NET 8.0.4 (8.0.424.16909), X64 RyuJIT AVX2
+  .NET 8.0             : .NET 8.0.4 (8.0.424.16909), X64 RyuJIT AVX2
+  .NET Framework 4.8.1 : .NET Framework 4.8.1 (4.8.9232.0), X64 RyuJIT VectorSize=256
+  NativeAOT 8.0        : .NET 8.0.2, X64 NativeAOT AVX2
+</code></pre>
+<pre><code></code></pre>
+
+<table>
+<thead><tr><th>Method                             </th><th>Job           </th><th>Runtime       </th><th>cost</th><th>iterations</th><th>Mean       </th><th>Error    </th><th>StdDev   </th><th>Median     </th>
+</tr>
+</thead><tbody><tr><td>RegularForBCrypt</td><td>.NET 8.0</td><td>.NET 8.0</td><td>4</td><td>5</td><td>5,673.441 &mu;s</td><td>85.2563 &mu;s</td><td>75.5775 &mu;s</td><td>5,640.866 &mu;s</td>
+</tr><tr><td>ParallelForBCrypt</td><td>.NET 8.0</td><td>.NET 8.0</td><td>4</td><td>5</td><td>1,778.922 &mu;s</td><td>55.2513 &mu;s</td><td>159.4126 &mu;s</td><td>1,757.801 &mu;s</td>
+</tr><tr><td>ParallelOptimizedForSmallOperationsBCrypt</td><td>.NET 8.0</td><td>.NET 8.0</td><td>4</td><td>5</td><td>1,907.423 &mu;s</td><td>54.2165 &mu;s</td><td>155.5574 &mu;s</td><td>1,913.186 &mu;s</td>
+</tr><tr><td>RegularForBCrypt</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>4</td><td>5</td><td>6,765.380 &mu;s</td><td>202.4620 &mu;s</td><td>547.3679 &mu;s</td><td>6,670.204 &mu;s</td>
+</tr><tr><td>ParallelForBCrypt</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>4</td><td>5</td><td>2,235.149 &mu;s</td><td>44.4432 &mu;s</td><td>57.7887 &mu;s</td><td>2,234.542 &mu;s</td>
+</tr><tr><td>ParallelOptimizedForSmallOperationsBCrypt</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>4</td><td>5</td><td>2,493.148 &mu;s</td><td>55.5364 &mu;s</td><td>159.3444 &mu;s</td><td>2,479.962 &mu;s</td>
+</tr><tr><td>RegularForBCrypt</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>4</td><td>5</td><td>6,140.576 &mu;s</td><td>132.1794 &mu;s</td><td>350.5210 &mu;s</td><td>6,064.501 &mu;s</td>
+</tr><tr><td>ParallelForBCrypt</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>4</td><td>5</td><td>1,831.172 &mu;s</td><td>48.0716 &mu;s</td><td>135.5867 &mu;s</td><td>1,817.641 &mu;s</td>
+</tr><tr><td>ParallelOptimizedForSmallOperationsBCrypt</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>4</td><td>5</td><td>1,924.060 &mu;s</td><td>91.5906 &mu;s</td><td>264.2598 &mu;s</td><td>1,860.946 &mu;s</td>
+</tr><tr><td>RegularForBCrypt</td><td>.NET 8.0</td><td>.NET 8.0</td><td>4</td><td>10</td><td>11,983.725 &mu;s</td><td>517.6607 &mu;s</td><td>1,476.9151 &mu;s</td><td>11,499.040 &mu;s</td>
+</tr><tr><td>ParallelForBCrypt</td><td>.NET 8.0</td><td>.NET 8.0</td><td>4</td><td>10</td><td>2,767.699 &mu;s</td><td>125.0834 &mu;s</td><td>368.8112 &mu;s</td><td>2,641.905 &mu;s</td>
+</tr><tr><td>ParallelOptimizedForSmallOperationsBCrypt</td><td>.NET 8.0</td><td>.NET 8.0</td><td>4</td><td>10</td><td>2,761.867 &mu;s</td><td>96.3999 &mu;s</td><td>282.7243 &mu;s</td><td>2,742.966 &mu;s</td>
+</tr><tr><td>RegularForBCrypt</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>4</td><td>10</td><td>13,632.149 &mu;s</td><td>268.7475 &mu;s</td><td>287.5568 &mu;s</td><td>13,543.107 &mu;s</td>
+</tr><tr><td>ParallelForBCrypt</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>4</td><td>10</td><td>3,003.743 &mu;s</td><td>102.5792 &mu;s</td><td>299.2284 &mu;s</td><td>2,967.228 &mu;s</td>
+</tr><tr><td>ParallelOptimizedForSmallOperationsBCrypt</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>4</td><td>10</td><td>4,351.087 &mu;s</td><td>190.3509 &mu;s</td><td>561.2540 &mu;s</td><td>4,120.964 &mu;s</td>
+</tr><tr><td>RegularForBCrypt</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>4</td><td>10</td><td>11,434.943 &mu;s</td><td>227.5596 &mu;s</td><td>607.4026 &mu;s</td><td>11,348.523 &mu;s</td>
+</tr><tr><td>ParallelForBCrypt</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>4</td><td>10</td><td>2,538.514 &mu;s</td><td>68.1711 &mu;s</td><td>201.0039 &mu;s</td><td>2,528.873 &mu;s</td>
+</tr><tr><td>ParallelOptimizedForSmallOperationsBCrypt</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>4</td><td>10</td><td>2,885.425 &mu;s</td><td>131.9684 &mu;s</td><td>384.9581 &mu;s</td><td>2,748.545 &mu;s</td>
+</tr><tr><td>RegularForBCrypt</td><td>.NET 8.0</td><td>.NET 8.0</td><td>4</td><td>100</td><td>116,911.184 &mu;s</td><td>2,330.7766 &mu;s</td><td>4,546.0008 &mu;s</td><td>116,720.040 &mu;s</td>
+</tr><tr><td>ParallelForBCrypt</td><td>.NET 8.0</td><td>.NET 8.0</td><td>4</td><td>100</td><td>24,756.019 &mu;s</td><td>493.6527 &mu;s</td><td>1,274.2753 &mu;s</td><td>24,777.516 &mu;s</td>
+</tr><tr><td>ParallelOptimizedForSmallOperationsBCrypt</td><td>.NET 8.0</td><td>.NET 8.0</td><td>4</td><td>100</td><td>27,390.935 &mu;s</td><td>764.0071 &mu;s</td><td>2,252.6923 &mu;s</td><td>27,183.858 &mu;s</td>
+</tr><tr><td>RegularForBCrypt</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>4</td><td>100</td><td>122,644.033 &mu;s</td><td>1,866.1916 &mu;s</td><td>1,745.6368 &mu;s</td><td>123,012.350 &mu;s</td>
+</tr><tr><td>ParallelForBCrypt</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>4</td><td>100</td><td>26,516.296 &mu;s</td><td>527.3062 &mu;s</td><td>1,146.3204 &mu;s</td><td>26,593.872 &mu;s</td>
+</tr><tr><td>ParallelOptimizedForSmallOperationsBCrypt</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>4</td><td>100</td><td>32,817.456 &mu;s</td><td>904.2208 &mu;s</td><td>2,666.1154 &mu;s</td><td>32,571.247 &mu;s</td>
+</tr><tr><td>RegularForBCrypt</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>4</td><td>100</td><td>105,897.362 &mu;s</td><td>1,634.6721 &mu;s</td><td>1,365.0253 &mu;s</td><td>105,885.940 &mu;s</td>
+</tr><tr><td>ParallelForBCrypt</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>4</td><td>100</td><td>23,714.922 &mu;s</td><td>472.5694 &mu;s</td><td>1,176.8619 &mu;s</td><td>23,704.081 &mu;s</td>
+</tr><tr><td>ParallelOptimizedForSmallOperationsBCrypt</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>4</td><td>100</td><td>25,281.401 &mu;s</td><td>565.6186 &mu;s</td><td>1,667.7393 &mu;s</td><td>25,351.691 &mu;s</td>
+</tr><tr><td>RegularForBCrypt</td><td>.NET 8.0</td><td>.NET 8.0</td><td>4</td><td>500</td><td>622,081.646 &mu;s</td><td>25,927.8844 &mu;s</td><td>76,041.9966 &mu;s</td><td>601,744.500 &mu;s</td>
+</tr><tr><td>ParallelForBCrypt</td><td>.NET 8.0</td><td>.NET 8.0</td><td>4</td><td>500</td><td>120,832.596 &mu;s</td><td>2,389.7602 &mu;s</td><td>4,772.6093 &mu;s</td><td>120,129.440 &mu;s</td>
+</tr><tr><td>ParallelOptimizedForSmallOperationsBCrypt</td><td>.NET 8.0</td><td>.NET 8.0</td><td>4</td><td>500</td><td>107,913.604 &mu;s</td><td>2,153.5058 &mu;s</td><td>2,800.1659 &mu;s</td><td>107,358.575 &mu;s</td>
+</tr><tr><td>RegularForBCrypt</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>4</td><td>500</td><td>600,589.845 &mu;s</td><td>11,756.2425 &mu;s</td><td>14,437.7215 &mu;s</td><td>593,481.650 &mu;s</td>
+</tr><tr><td>ParallelForBCrypt</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>4</td><td>500</td><td>117,935.485 &mu;s</td><td>2,197.6716 &mu;s</td><td>2,055.7034 &mu;s</td><td>117,892.060 &mu;s</td>
+</tr><tr><td>ParallelOptimizedForSmallOperationsBCrypt</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>4</td><td>500</td><td>131,850.425 &mu;s</td><td>2,595.2099 &mu;s</td><td>2,884.5689 &mu;s</td><td>132,289.625 &mu;s</td>
+</tr><tr><td>RegularForBCrypt</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>4</td><td>500</td><td>522,195.780 &mu;s</td><td>8,666.5978 &mu;s</td><td>8,106.7410 &mu;s</td><td>517,870.500 &mu;s</td>
+</tr><tr><td>ParallelForBCrypt</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>4</td><td>500</td><td>106,718.275 &mu;s</td><td>1,228.0783 &mu;s</td><td>1,148.7452 &mu;s</td><td>106,391.720 &mu;s</td>
+</tr><tr><td>ParallelOptimizedForSmallOperationsBCrypt</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>4</td><td>500</td><td>106,922.159 &mu;s</td><td>2,132.4477 &mu;s</td><td>1,994.6929 &mu;s</td><td>107,150.780 &mu;s</td>
+</tr><tr><td>RegularForBCrypt</td><td>.NET 8.0</td><td>.NET 8.0</td><td>4</td><td>1000</td><td>1,035,273.300 &mu;s</td><td>14,653.4317 &mu;s</td><td>12,989.8855 &mu;s</td><td>1,030,409.250 &mu;s</td>
+</tr><tr><td>ParallelForBCrypt</td><td>.NET 8.0</td><td>.NET 8.0</td><td>4</td><td>1000</td><td>217,335.370 &mu;s</td><td>4,315.2501 &mu;s</td><td>4,796.3891 &mu;s</td><td>216,526.400 &mu;s</td>
+</tr><tr><td>ParallelOptimizedForSmallOperationsBCrypt</td><td>.NET 8.0</td><td>.NET 8.0</td><td>4</td><td>1000</td><td>220,084.755 &mu;s</td><td>4,346.3502 &mu;s</td><td>5,005.2633 &mu;s</td><td>219,013.450 &mu;s</td>
+</tr><tr><td>RegularForBCrypt</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>4</td><td>1000</td><td>1,288,757.171 &mu;s</td><td>25,661.7766 &mu;s</td><td>65,780.9438 &mu;s</td><td>1,274,129.000 &mu;s</td>
+</tr><tr><td>ParallelForBCrypt</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>4</td><td>1000</td><td>252,962.587 &mu;s</td><td>3,480.2550 &mu;s</td><td>3,255.4327 &mu;s</td><td>253,749.100 &mu;s</td>
+</tr><tr><td>ParallelOptimizedForSmallOperationsBCrypt</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>4</td><td>1000</td><td>279,411.561 &mu;s</td><td>5,272.6847 &mu;s</td><td>5,641.7135 &mu;s</td><td>279,186.350 &mu;s</td>
+</tr><tr><td>RegularForBCrypt</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>4</td><td>1000</td><td>1,134,949.593 &mu;s</td><td>22,694.3053 &mu;s</td><td>62,506.7076 &mu;s</td><td>1,121,100.900 &mu;s</td>
+</tr><tr><td>ParallelForBCrypt</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>4</td><td>1000</td><td>228,955.969 &mu;s</td><td>4,413.5965 &mu;s</td><td>3,912.5383 &mu;s</td><td>228,491.817 &mu;s</td>
+</tr><tr><td>ParallelOptimizedForSmallOperationsBCrypt</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>4</td><td>1000</td><td>214,528.765 &mu;s</td><td>4,279.0239 &mu;s</td><td>11,121.7522 &mu;s</td><td>213,187.067 &mu;s</td>
+</tr><tr><td>RegularForBCrypt</td><td>.NET 8.0</td><td>.NET 8.0</td><td>4</td><td>10000</td><td>11,745,192.332 &mu;s</td><td>234,107.8479 &mu;s</td><td>620,820.8018 &mu;s</td><td>11,583,202.700 &mu;s</td>
+</tr><tr><td>ParallelForBCrypt</td><td>.NET 8.0</td><td>.NET 8.0</td><td>4</td><td>10000</td><td>2,137,591.400 &mu;s</td><td>42,529.0588 &mu;s</td><td>79,879.8813 &mu;s</td><td>2,133,384.900 &mu;s</td>
+</tr><tr><td>ParallelOptimizedForSmallOperationsBCrypt</td><td>.NET 8.0</td><td>.NET 8.0</td><td>4</td><td>10000</td><td>2,418,063.437 &mu;s</td><td>72,631.7768 &mu;s</td><td>213,016.4282 &mu;s</td><td>2,388,914.000 &mu;s</td>
+</tr><tr><td>RegularForBCrypt</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>4</td><td>10000</td><td>13,423,464.357 &mu;s</td><td>267,231.9972 &mu;s</td><td>736,034.5290 &mu;s</td><td>13,343,851.200 &mu;s</td>
+</tr><tr><td>ParallelForBCrypt</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>4</td><td>10000</td><td>2,079,573.713 &mu;s</td><td>26,646.0433 &mu;s</td><td>24,924.7255 &mu;s</td><td>2,074,129.100 &mu;s</td>
+</tr><tr><td>ParallelOptimizedForSmallOperationsBCrypt</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>4</td><td>10000</td><td>2,606,170.807 &mu;s</td><td>49,687.3761 &mu;s</td><td>46,477.6025 &mu;s</td><td>2,611,708.000 &mu;s</td>
+</tr><tr><td>RegularForBCrypt</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>4</td><td>10000</td><td>11,539,250.919 &mu;s</td><td>228,875.6608 &mu;s</td><td>320,851.7112 &mu;s</td><td>11,497,891.800 &mu;s</td>
+</tr><tr><td>ParallelForBCrypt</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>4</td><td>10000</td><td>1,975,532.200 &mu;s</td><td>39,048.9599 &mu;s</td><td>66,308.0975 &mu;s</td><td>1,961,083.700 &mu;s</td>
+</tr><tr><td>ParallelOptimizedForSmallOperationsBCrypt</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>4</td><td>10000</td><td>2,050,733.304 &mu;s</td><td>40,287.9986 &mu;s</td><td>50,951.4186 &mu;s</td><td>2,042,676.200 &mu;s</td>
+</tr><tr><td>RegularFor</td><td>.NET 8.0</td><td>.NET 8.0</td><td>?</td><td>5</td><td>3.803 &mu;s</td><td>0.0756 &mu;s</td><td>0.1753 &mu;s</td><td>3.826 &mu;s</td>
+</tr><tr><td>ParallelFor</td><td>.NET 8.0</td><td>.NET 8.0</td><td>?</td><td>5</td><td>7.519 &mu;s</td><td>0.1477 &mu;s</td><td>0.1972 &mu;s</td><td>7.524 &mu;s</td>
+</tr><tr><td>ParallelOptimizedForSmallOperations</td><td>.NET 8.0</td><td>.NET 8.0</td><td>?</td><td>5</td><td>6.810 &mu;s</td><td>0.1352 &mu;s</td><td>0.1198 &mu;s</td><td>6.787 &mu;s</td>
+</tr><tr><td>RegularFor</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>?</td><td>5</td><td>11.869 &mu;s</td><td>0.1867 &mu;s</td><td>0.1559 &mu;s</td><td>11.924 &mu;s</td>
+</tr><tr><td>ParallelFor</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>?</td><td>5</td><td>26.641 &mu;s</td><td>0.5141 &mu;s</td><td>0.5279 &mu;s</td><td>26.519 &mu;s</td>
+</tr><tr><td>ParallelOptimizedForSmallOperations</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>?</td><td>5</td><td>26.008 &mu;s</td><td>0.5119 &mu;s</td><td>0.4788 &mu;s</td><td>25.977 &mu;s</td>
+</tr><tr><td>RegularFor</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>?</td><td>5</td><td>3.802 &mu;s</td><td>0.0728 &mu;s</td><td>0.0715 &mu;s</td><td>3.785 &mu;s</td>
+</tr><tr><td>ParallelFor</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>?</td><td>5</td><td>12.918 &mu;s</td><td>0.3963 &mu;s</td><td>1.1559 &mu;s</td><td>13.086 &mu;s</td>
+</tr><tr><td>ParallelOptimizedForSmallOperations</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>?</td><td>5</td><td>13.718 &mu;s</td><td>0.3138 &mu;s</td><td>0.9103 &mu;s</td><td>13.808 &mu;s</td>
+</tr><tr><td>RegularForBCrypt</td><td>.NET 8.0</td><td>.NET 8.0</td><td>7</td><td>5</td><td>45,175.100 &mu;s</td><td>899.8136 &mu;s</td><td>1,503.3865 &mu;s</td><td>45,474.146 &mu;s</td>
+</tr><tr><td>ParallelForBCrypt</td><td>.NET 8.0</td><td>.NET 8.0</td><td>7</td><td>5</td><td>12,517.781 &mu;s</td><td>452.7352 &mu;s</td><td>1,334.8999 &mu;s</td><td>12,301.343 &mu;s</td>
+</tr><tr><td>ParallelOptimizedForSmallOperationsBCrypt</td><td>.NET 8.0</td><td>.NET 8.0</td><td>7</td><td>5</td><td>11,681.118 &mu;s</td><td>274.7354 &mu;s</td><td>810.0637 &mu;s</td><td>11,440.440 &mu;s</td>
+</tr><tr><td>RegularForBCrypt</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>7</td><td>5</td><td>45,465.087 &mu;s</td><td>875.2328 &mu;s</td><td>1,106.8892 &mu;s</td><td>44,765.264 &mu;s</td>
+</tr><tr><td>ParallelForBCrypt</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>7</td><td>5</td><td>14,233.840 &mu;s</td><td>281.5950 &mu;s</td><td>669.2402 &mu;s</td><td>14,020.652 &mu;s</td>
+</tr><tr><td>ParallelOptimizedForSmallOperationsBCrypt</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>7</td><td>5</td><td>14,372.830 &mu;s</td><td>323.1299 &mu;s</td><td>932.3038 &mu;s</td><td>14,280.433 &mu;s</td>
+</tr><tr><td>RegularForBCrypt</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>7</td><td>5</td><td>38,835.595 &mu;s</td><td>403.2014 &mu;s</td><td>377.1548 &mu;s</td><td>38,699.246 &mu;s</td>
+</tr><tr><td>ParallelForBCrypt</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>7</td><td>5</td><td>11,033.378 &mu;s</td><td>171.4547 &mu;s</td><td>151.9901 &mu;s</td><td>11,035.652 &mu;s</td>
+</tr><tr><td>ParallelOptimizedForSmallOperationsBCrypt</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>7</td><td>5</td><td>10,572.646 &mu;s</td><td>132.5394 &mu;s</td><td>117.4928 &mu;s</td><td>10,538.057 &mu;s</td>
+</tr><tr><td>RegularForBCrypt</td><td>.NET 8.0</td><td>.NET 8.0</td><td>7</td><td>10</td><td>77,041.611 &mu;s</td><td>390.6378 &mu;s</td><td>326.2002 &mu;s</td><td>77,067.200 &mu;s</td>
+</tr><tr><td>ParallelForBCrypt</td><td>.NET 8.0</td><td>.NET 8.0</td><td>7</td><td>10</td><td>17,718.472 &mu;s</td><td>277.8208 &mu;s</td><td>259.8737 &mu;s</td><td>17,676.056 &mu;s</td>
+</tr><tr><td>ParallelOptimizedForSmallOperationsBCrypt</td><td>.NET 8.0</td><td>.NET 8.0</td><td>7</td><td>10</td><td>16,194.641 &mu;s</td><td>272.8693 &mu;s</td><td>255.2421 &mu;s</td><td>16,143.397 &mu;s</td>
+</tr><tr><td>RegularForBCrypt</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>7</td><td>10</td><td>88,515.923 &mu;s</td><td>449.6773 &mu;s</td><td>420.6285 &mu;s</td><td>88,518.500 &mu;s</td>
+</tr><tr><td>ParallelForBCrypt</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>7</td><td>10</td><td>18,826.758 &mu;s</td><td>264.3128 &mu;s</td><td>234.3064 &mu;s</td><td>18,808.125 &mu;s</td>
+</tr><tr><td>ParallelOptimizedForSmallOperationsBCrypt</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>7</td><td>10</td><td>20,579.150 &mu;s</td><td>317.6590 &mu;s</td><td>297.1385 &mu;s</td><td>20,600.772 &mu;s</td>
+</tr><tr><td>RegularForBCrypt</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>7</td><td>10</td><td>77,193.043 &mu;s</td><td>474.6562 &mu;s</td><td>420.7704 &mu;s</td><td>77,184.529 &mu;s</td>
+</tr><tr><td>ParallelForBCrypt</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>7</td><td>10</td><td>16,924.686 &mu;s</td><td>204.5790 &mu;s</td><td>191.3634 &mu;s</td><td>16,909.597 &mu;s</td>
+</tr><tr><td>ParallelOptimizedForSmallOperationsBCrypt</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>7</td><td>10</td><td>16,322.747 &mu;s</td><td>258.0768 &mu;s</td><td>241.4052 &mu;s</td><td>16,296.178 &mu;s</td>
+</tr><tr><td>RegularForBCrypt</td><td>.NET 8.0</td><td>.NET 8.0</td><td>7</td><td>100</td><td>774,469.300 &mu;s</td><td>6,291.6305 &mu;s</td><td>5,885.1950 &mu;s</td><td>772,597.700 &mu;s</td>
+</tr><tr><td>ParallelForBCrypt</td><td>.NET 8.0</td><td>.NET 8.0</td><td>7</td><td>100</td><td>164,595.212 &mu;s</td><td>3,278.4334 &mu;s</td><td>7,196.2408 &mu;s</td><td>165,387.250 &mu;s</td>
+</tr><tr><td>ParallelOptimizedForSmallOperationsBCrypt</td><td>.NET 8.0</td><td>.NET 8.0</td><td>7</td><td>100</td><td>159,860.694 &mu;s</td><td>3,035.2844 &mu;s</td><td>2,981.0552 &mu;s</td><td>159,815.200 &mu;s</td>
+</tr><tr><td>RegularForBCrypt</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>7</td><td>100</td><td>901,043.412 &mu;s</td><td>17,753.7177 &mu;s</td><td>17,436.5246 &mu;s</td><td>892,746.650 &mu;s</td>
+</tr><tr><td>ParallelForBCrypt</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>7</td><td>100</td><td>188,581.859 &mu;s</td><td>3,452.0234 &mu;s</td><td>4,239.3948 &mu;s</td><td>189,242.817 &mu;s</td>
+</tr><tr><td>ParallelOptimizedForSmallOperationsBCrypt</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>7</td><td>100</td><td>197,165.829 &mu;s</td><td>3,806.6942 &mu;s</td><td>5,210.6460 &mu;s</td><td>196,450.517 &mu;s</td>
+</tr><tr><td>RegularForBCrypt</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>7</td><td>100</td><td>771,936.458 &mu;s</td><td>3,184.2227 &mu;s</td><td>2,486.0317 &mu;s</td><td>771,920.800 &mu;s</td>
+</tr><tr><td>ParallelForBCrypt</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>7</td><td>100</td><td>160,202.720 &mu;s</td><td>3,098.9621 &mu;s</td><td>3,043.5952 &mu;s</td><td>159,931.462 &mu;s</td>
+</tr><tr><td>ParallelOptimizedForSmallOperationsBCrypt</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>7</td><td>100</td><td>163,470.195 &mu;s</td><td>2,100.3961 &mu;s</td><td>1,964.7119 &mu;s</td><td>163,967.000 &mu;s</td>
+</tr><tr><td>RegularForBCrypt</td><td>.NET 8.0</td><td>.NET 8.0</td><td>7</td><td>500</td><td>4,850,174.907 &mu;s</td><td>130,799.0430 &mu;s</td><td>385,663.9294 &mu;s</td><td>4,890,219.850 &mu;s</td>
+</tr><tr><td>ParallelForBCrypt</td><td>.NET 8.0</td><td>.NET 8.0</td><td>7</td><td>500</td><td>1,062,788.784 &mu;s</td><td>21,013.0794 &mu;s</td><td>45,680.7052 &mu;s</td><td>1,055,719.100 &mu;s</td>
+</tr><tr><td>ParallelOptimizedForSmallOperationsBCrypt</td><td>.NET 8.0</td><td>.NET 8.0</td><td>7</td><td>500</td><td>997,717.097 &mu;s</td><td>19,739.7207 &mu;s</td><td>54,368.9236 &mu;s</td><td>988,138.000 &mu;s</td>
+</tr><tr><td>RegularForBCrypt</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>7</td><td>500</td><td>5,790,285.041 &mu;s</td><td>113,729.3472 &mu;s</td><td>193,121.0628 &mu;s</td><td>5,781,695.700 &mu;s</td>
+</tr><tr><td>ParallelForBCrypt</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>7</td><td>500</td><td>1,094,058.649 &mu;s</td><td>20,953.6479 &mu;s</td><td>39,866.4928 &mu;s</td><td>1,089,309.600 &mu;s</td>
+</tr><tr><td>ParallelOptimizedForSmallOperationsBCrypt</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>7</td><td>500</td><td>1,274,607.724 &mu;s</td><td>21,168.6472 &mu;s</td><td>25,199.7686 &mu;s</td><td>1,277,076.500 &mu;s</td>
+</tr><tr><td>RegularForBCrypt</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>7</td><td>500</td><td>4,940,059.957 &mu;s</td><td>94,746.1281 &mu;s</td><td>83,989.9747 &mu;s</td><td>4,958,388.900 &mu;s</td>
+</tr><tr><td>ParallelForBCrypt</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>7</td><td>500</td><td>1,003,333.419 &mu;s</td><td>19,900.7626 &mu;s</td><td>41,098.5257 &mu;s</td><td>995,501.150 &mu;s</td>
+</tr><tr><td>ParallelOptimizedForSmallOperationsBCrypt</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>7</td><td>500</td><td>1,016,701.184 &mu;s</td><td>20,288.7905 &mu;s</td><td>43,237.0667 &mu;s</td><td>1,016,407.100 &mu;s</td>
+</tr><tr><td>RegularForBCrypt</td><td>.NET 8.0</td><td>.NET 8.0</td><td>10</td><td>5</td><td>419,390.265 &mu;s</td><td>8,365.7238 &mu;s</td><td>9,633.9800 &mu;s</td><td>418,724.200 &mu;s</td>
+</tr><tr><td>ParallelForBCrypt</td><td>.NET 8.0</td><td>.NET 8.0</td><td>10</td><td>5</td><td>111,534.985 &mu;s</td><td>2,564.4859 &mu;s</td><td>7,233.1779 &mu;s</td><td>110,245.637 &mu;s</td>
+</tr><tr><td>ParallelOptimizedForSmallOperationsBCrypt</td><td>.NET 8.0</td><td>.NET 8.0</td><td>10</td><td>5</td><td>106,877.134 &mu;s</td><td>2,102.7631 &mu;s</td><td>3,791.7156 &mu;s</td><td>106,524.340 &mu;s</td>
+</tr><tr><td>RegularForBCrypt</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>10</td><td>5</td><td>408,585.773 &mu;s</td><td>7,848.8091 &mu;s</td><td>7,341.7809 &mu;s</td><td>404,743.300 &mu;s</td>
+</tr><tr><td>ParallelForBCrypt</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>10</td><td>5</td><td>136,293.120 &mu;s</td><td>3,583.8037 &mu;s</td><td>10,454.1237 &mu;s</td><td>133,631.538 &mu;s</td>
+</tr><tr><td>ParallelOptimizedForSmallOperationsBCrypt</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>10</td><td>5</td><td>138,151.288 &mu;s</td><td>3,072.4124 &mu;s</td><td>9,010.8538 &mu;s</td><td>136,939.825 &mu;s</td>
+</tr><tr><td>RegularForBCrypt</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>10</td><td>5</td><td>338,277.869 &mu;s</td><td>6,549.9109 &mu;s</td><td>6,432.8883 &mu;s</td><td>338,755.600 &mu;s</td>
+</tr><tr><td>ParallelForBCrypt</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>10</td><td>5</td><td>104,660.875 &mu;s</td><td>870.2763 &mu;s</td><td>726.7201 &mu;s</td><td>104,701.180 &mu;s</td>
+</tr><tr><td>ParallelOptimizedForSmallOperationsBCrypt</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>10</td><td>5</td><td>103,762.840 &mu;s</td><td>1,427.5923 &mu;s</td><td>1,192.1042 &mu;s</td><td>103,563.580 &mu;s</td>
+</tr><tr><td>RegularForBCrypt</td><td>.NET 8.0</td><td>.NET 8.0</td><td>10</td><td>10</td><td>666,641.853 &mu;s</td><td>8,254.0254 &mu;s</td><td>7,720.8204 &mu;s</td><td>667,319.400 &mu;s</td>
+</tr><tr><td>ParallelForBCrypt</td><td>.NET 8.0</td><td>.NET 8.0</td><td>10</td><td>10</td><td>170,725.684 &mu;s</td><td>3,176.8065 &mu;s</td><td>6,906.1158 &mu;s</td><td>168,396.533 &mu;s</td>
+</tr><tr><td>ParallelOptimizedForSmallOperationsBCrypt</td><td>.NET 8.0</td><td>.NET 8.0</td><td>10</td><td>10</td><td>160,838.798 &mu;s</td><td>2,429.3354 &mu;s</td><td>2,272.4018 &mu;s</td><td>161,356.600 &mu;s</td>
+</tr><tr><td>RegularForBCrypt</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>10</td><td>10</td><td>811,863.838 &mu;s</td><td>7,464.1788 &mu;s</td><td>6,232.9273 &mu;s</td><td>812,083.000 &mu;s</td>
+</tr><tr><td>ParallelForBCrypt</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>10</td><td>10</td><td>190,593.995 &mu;s</td><td>3,499.0330 &mu;s</td><td>5,447.5729 &mu;s</td><td>189,906.500 &mu;s</td>
+</tr><tr><td>ParallelOptimizedForSmallOperationsBCrypt</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>10</td><td>10</td><td>213,014.842 &mu;s</td><td>4,005.2571 &mu;s</td><td>3,746.5200 &mu;s</td><td>211,601.000 &mu;s</td>
+</tr><tr><td>RegularForBCrypt</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>10</td><td>10</td><td>701,939.197 &mu;s</td><td>13,950.7601 &mu;s</td><td>21,304.2841 &mu;s</td><td>696,934.300 &mu;s</td>
+</tr><tr><td>ParallelForBCrypt</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>10</td><td>10</td><td>161,268.689 &mu;s</td><td>3,116.3130 &mu;s</td><td>3,334.4200 &mu;s</td><td>160,315.567 &mu;s</td>
+</tr><tr><td>ParallelOptimizedForSmallOperationsBCrypt</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>10</td><td>10</td><td>174,464.722 &mu;s</td><td>3,407.0324 &mu;s</td><td>9,830.0676 &mu;s</td><td>171,662.725 &mu;s</td>
+</tr><tr><td>RegularForBCrypt</td><td>.NET 8.0</td><td>.NET 8.0</td><td>10</td><td>100</td><td>6,949,812.845 &mu;s</td><td>136,303.1792 &mu;s</td><td>256,010.4097 &mu;s</td><td>6,896,142.950 &mu;s</td>
+</tr><tr><td>ParallelForBCrypt</td><td>.NET 8.0</td><td>.NET 8.0</td><td>10</td><td>100</td><td>1,443,584.324 &mu;s</td><td>41,265.5820 &mu;s</td><td>121,672.4995 &mu;s</td><td>1,462,146.950 &mu;s</td>
+</tr><tr><td>ParallelOptimizedForSmallOperationsBCrypt</td><td>.NET 8.0</td><td>.NET 8.0</td><td>10</td><td>100</td><td>1,557,921.965 &mu;s</td><td>27,648.0100 &mu;s</td><td>31,839.4894 &mu;s</td><td>1,551,395.100 &mu;s</td>
+</tr><tr><td>RegularForBCrypt</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>10</td><td>100</td><td>8,338,699.428 &mu;s</td><td>164,730.3391 &mu;s</td><td>219,910.2711 &mu;s</td><td>8,296,618.400 &mu;s</td>
+</tr><tr><td>ParallelForBCrypt</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>10</td><td>100</td><td>1,645,699.140 &mu;s</td><td>48,015.0043 &mu;s</td><td>141,573.3235 &mu;s</td><td>1,668,832.800 &mu;s</td>
+</tr><tr><td>ParallelOptimizedForSmallOperationsBCrypt</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>10</td><td>100</td><td>1,977,945.919 &mu;s</td><td>38,604.6104 &mu;s</td><td>37,914.8893 &mu;s</td><td>1,978,770.550 &mu;s</td>
+</tr><tr><td>RegularForBCrypt</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>10</td><td>100</td><td>7,104,025.734 &mu;s</td><td>140,393.8495 &mu;s</td><td>316,892.3148 &mu;s</td><td>7,041,584.900 &mu;s</td>
+</tr><tr><td>ParallelForBCrypt</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>10</td><td>100</td><td>1,312,537.362 &mu;s</td><td>25,938.4003 &mu;s</td><td>30,877.8204 &mu;s</td><td>1,305,533.800 &mu;s</td>
+</tr><tr><td>ParallelOptimizedForSmallOperationsBCrypt</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>10</td><td>100</td><td>1,527,888.337 &mu;s</td><td>30,155.1022 &mu;s</td><td>63,607.3453 &mu;s</td><td>1,540,860.800 &mu;s</td>
+</tr><tr><td>RegularFor</td><td>.NET 8.0</td><td>.NET 8.0</td><td>?</td><td>10</td><td>9.826 &mu;s</td><td>0.5345 &mu;s</td><td>1.5760 &mu;s</td><td>9.064 &mu;s</td>
+</tr><tr><td>ParallelFor</td><td>.NET 8.0</td><td>.NET 8.0</td><td>?</td><td>10</td><td>13.198 &mu;s</td><td>0.2614 &mu;s</td><td>0.3305 &mu;s</td><td>13.195 &mu;s</td>
+</tr><tr><td>ParallelOptimizedForSmallOperations</td><td>.NET 8.0</td><td>.NET 8.0</td><td>?</td><td>10</td><td>12.385 &mu;s</td><td>0.5683 &mu;s</td><td>1.5462 &mu;s</td><td>12.020 &mu;s</td>
+</tr><tr><td>RegularFor</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>?</td><td>10</td><td>26.496 &mu;s</td><td>0.8796 &mu;s</td><td>2.3780 &mu;s</td><td>25.762 &mu;s</td>
+</tr><tr><td>ParallelFor</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>?</td><td>10</td><td>47.018 &mu;s</td><td>0.5518 &mu;s</td><td>0.5161 &mu;s</td><td>46.931 &mu;s</td>
+</tr><tr><td>ParallelOptimizedForSmallOperations</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>?</td><td>10</td><td>44.770 &mu;s</td><td>0.8923 &mu;s</td><td>1.3079 &mu;s</td><td>44.699 &mu;s</td>
+</tr><tr><td>RegularFor</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>?</td><td>10</td><td>9.835 &mu;s</td><td>0.2228 &mu;s</td><td>0.6429 &mu;s</td><td>9.687 &mu;s</td>
+</tr><tr><td>ParallelFor</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>?</td><td>10</td><td>20.945 &mu;s</td><td>0.5295 &mu;s</td><td>1.5447 &mu;s</td><td>20.986 &mu;s</td>
+</tr><tr><td>ParallelOptimizedForSmallOperations</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>?</td><td>10</td><td>23.396 &mu;s</td><td>0.5780 &mu;s</td><td>1.6490 &mu;s</td><td>23.358 &mu;s</td>
+</tr><tr><td>RegularFor</td><td>.NET 8.0</td><td>.NET 8.0</td><td>?</td><td>100</td><td>90.251 &mu;s</td><td>1.8026 &mu;s</td><td>4.6206 &mu;s</td><td>88.284 &mu;s</td>
+</tr><tr><td>ParallelFor</td><td>.NET 8.0</td><td>.NET 8.0</td><td>?</td><td>100</td><td>64.982 &mu;s</td><td>0.8514 &mu;s</td><td>0.7964 &mu;s</td><td>64.964 &mu;s</td>
+</tr><tr><td>ParallelOptimizedForSmallOperations</td><td>.NET 8.0</td><td>.NET 8.0</td><td>?</td><td>100</td><td>69.038 &mu;s</td><td>3.2529 &mu;s</td><td>9.5912 &mu;s</td><td>67.977 &mu;s</td>
+</tr><tr><td>RegularFor</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>?</td><td>100</td><td>304.178 &mu;s</td><td>7.5603 &mu;s</td><td>22.1730 &mu;s</td><td>299.380 &mu;s</td>
+</tr><tr><td>ParallelFor</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>?</td><td>100</td><td>212.055 &mu;s</td><td>5.5939 &mu;s</td><td>16.4937 &mu;s</td><td>211.806 &mu;s</td>
+</tr><tr><td>ParallelOptimizedForSmallOperations</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>?</td><td>100</td><td>156.500 &mu;s</td><td>3.0925 &mu;s</td><td>5.7321 &mu;s</td><td>156.536 &mu;s</td>
+</tr><tr><td>RegularFor</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>?</td><td>100</td><td>88.138 &mu;s</td><td>1.7142 &mu;s</td><td>2.1051 &mu;s</td><td>88.049 &mu;s</td>
+</tr><tr><td>ParallelFor</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>?</td><td>100</td><td>83.483 &mu;s</td><td>1.6599 &mu;s</td><td>4.5159 &mu;s</td><td>82.985 &mu;s</td>
+</tr><tr><td>ParallelOptimizedForSmallOperations</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>?</td><td>100</td><td>85.566 &mu;s</td><td>1.6657 &mu;s</td><td>3.2488 &mu;s</td><td>84.965 &mu;s</td>
+</tr><tr><td>RegularFor</td><td>.NET 8.0</td><td>.NET 8.0</td><td>?</td><td>500</td><td>426.615 &mu;s</td><td>8.5272 &mu;s</td><td>18.3558 &mu;s</td><td>422.434 &mu;s</td>
+</tr><tr><td>ParallelFor</td><td>.NET 8.0</td><td>.NET 8.0</td><td>?</td><td>500</td><td>248.307 &mu;s</td><td>7.7877 &mu;s</td><td>22.5934 &mu;s</td><td>242.426 &mu;s</td>
+</tr><tr><td>ParallelOptimizedForSmallOperations</td><td>.NET 8.0</td><td>.NET 8.0</td><td>?</td><td>500</td><td>251.673 &mu;s</td><td>4.9972 &mu;s</td><td>13.9301 &mu;s</td><td>250.767 &mu;s</td>
+</tr><tr><td>RegularFor</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>?</td><td>500</td><td>1,360.606 &mu;s</td><td>26.8646 &mu;s</td><td>41.8249 &mu;s</td><td>1,347.288 &mu;s</td>
+</tr><tr><td>ParallelFor</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>?</td><td>500</td><td>622.816 &mu;s</td><td>12.1905 &mu;s</td><td>11.4030 &mu;s</td><td>622.533 &mu;s</td>
+</tr><tr><td>ParallelOptimizedForSmallOperations</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>?</td><td>500</td><td>709.265 &mu;s</td><td>14.9909 &mu;s</td><td>43.4915 &mu;s</td><td>708.450 &mu;s</td>
+</tr><tr><td>RegularFor</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>?</td><td>500</td><td>447.837 &mu;s</td><td>8.8322 &mu;s</td><td>13.2196 &mu;s</td><td>442.634 &mu;s</td>
+</tr><tr><td>ParallelFor</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>?</td><td>500</td><td>317.497 &mu;s</td><td>10.3153 &mu;s</td><td>29.9266 &mu;s</td><td>316.246 &mu;s</td>
+</tr><tr><td>ParallelOptimizedForSmallOperations</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>?</td><td>500</td><td>314.433 &mu;s</td><td>7.3965 &mu;s</td><td>21.6927 &mu;s</td><td>320.045 &mu;s</td>
+</tr><tr><td>RegularFor</td><td>.NET 8.0</td><td>.NET 8.0</td><td>?</td><td>1000</td><td>831.367 &mu;s</td><td>13.0509 &mu;s</td><td>12.2078 &mu;s</td><td>832.189 &mu;s</td>
+</tr><tr><td>ParallelFor</td><td>.NET 8.0</td><td>.NET 8.0</td><td>?</td><td>1000</td><td>485.958 &mu;s</td><td>16.2655 &mu;s</td><td>47.9593 &mu;s</td><td>483.617 &mu;s</td>
+</tr><tr><td>ParallelOptimizedForSmallOperations</td><td>.NET 8.0</td><td>.NET 8.0</td><td>?</td><td>1000</td><td>500.947 &mu;s</td><td>14.2012 &mu;s</td><td>41.8727 &mu;s</td><td>504.519 &mu;s</td>
+</tr><tr><td>RegularFor</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>?</td><td>1000</td><td>2,717.234 &mu;s</td><td>40.8895 &mu;s</td><td>34.1446 &mu;s</td><td>2,727.446 &mu;s</td>
+</tr><tr><td>ParallelFor</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>?</td><td>1000</td><td>1,251.162 &mu;s</td><td>39.0366 &mu;s</td><td>113.2522 &mu;s</td><td>1,248.137 &mu;s</td>
+</tr><tr><td>ParallelOptimizedForSmallOperations</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>?</td><td>1000</td><td>1,290.320 &mu;s</td><td>25.8378 &mu;s</td><td>76.1835 &mu;s</td><td>1,289.002 &mu;s</td>
+</tr><tr><td>RegularFor</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>?</td><td>1000</td><td>892.731 &mu;s</td><td>17.1074 &mu;s</td><td>36.4573 &mu;s</td><td>884.269 &mu;s</td>
+</tr><tr><td>ParallelFor</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>?</td><td>1000</td><td>457.304 &mu;s</td><td>9.0236 &mu;s</td><td>10.7420 &mu;s</td><td>459.619 &mu;s</td>
+</tr><tr><td>ParallelOptimizedForSmallOperations</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>?</td><td>1000</td><td>469.470 &mu;s</td><td>9.3631 &mu;s</td><td>26.2553 &mu;s</td><td>478.087 &mu;s</td>
+</tr><tr><td>RegularFor</td><td>.NET 8.0</td><td>.NET 8.0</td><td>?</td><td>10000</td><td>8,537.969 &mu;s</td><td>166.1007 &mu;s</td><td>253.6533 &mu;s</td><td>8,456.178 &mu;s</td>
+</tr><tr><td>ParallelFor</td><td>.NET 8.0</td><td>.NET 8.0</td><td>?</td><td>10000</td><td>4,210.069 &mu;s</td><td>84.0277 &mu;s</td><td>161.8929 &mu;s</td><td>4,206.241 &mu;s</td>
+</tr><tr><td>ParallelOptimizedForSmallOperations</td><td>.NET 8.0</td><td>.NET 8.0</td><td>?</td><td>10000</td><td>4,180.433 &mu;s</td><td>67.3615 &mu;s</td><td>85.1907 &mu;s</td><td>4,174.757 &mu;s</td>
+</tr><tr><td>RegularFor</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>?</td><td>10000</td><td>26,435.467 &mu;s</td><td>299.7093 &mu;s</td><td>280.3483 &mu;s</td><td>26,457.088 &mu;s</td>
+</tr><tr><td>ParallelFor</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>?</td><td>10000</td><td>9,886.193 &mu;s</td><td>189.5754 &mu;s</td><td>253.0778 &mu;s</td><td>9,944.903 &mu;s</td>
+</tr><tr><td>ParallelOptimizedForSmallOperations</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>?</td><td>10000</td><td>9,815.500 &mu;s</td><td>187.8973 &mu;s</td><td>216.3828 &mu;s</td><td>9,798.865 &mu;s</td>
+</tr><tr><td>RegularFor</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>?</td><td>10000</td><td>8,905.278 &mu;s</td><td>163.7812 &mu;s</td><td>286.8496 &mu;s</td><td>8,828.006 &mu;s</td>
+</tr><tr><td>ParallelFor</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>?</td><td>10000</td><td>4,138.912 &mu;s</td><td>82.0062 &mu;s</td><td>143.6272 &mu;s</td><td>4,106.248 &mu;s</td>
+</tr><tr><td>ParallelOptimizedForSmallOperations</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>?</td><td>10000</td><td>4,255.901 &mu;s</td><td>84.0814 &mu;s</td><td>193.1909 &mu;s</td><td>4,171.399 &mu;s</td>
+</tr><tr><td>RegularFor</td><td>.NET 8.0</td><td>.NET 8.0</td><td>?</td><td>100000</td><td>80,395.358 &mu;s</td><td>980.8852 &mu;s</td><td>819.0836 &mu;s</td><td>80,204.729 &mu;s</td>
+</tr><tr><td>ParallelFor</td><td>.NET 8.0</td><td>.NET 8.0</td><td>?</td><td>100000</td><td>38,997.447 &mu;s</td><td>768.3246 &mu;s</td><td>1,051.6914 &mu;s</td><td>38,954.557 &mu;s</td>
+</tr><tr><td>ParallelOptimizedForSmallOperations</td><td>.NET 8.0</td><td>.NET 8.0</td><td>?</td><td>100000</td><td>45,518.278 &mu;s</td><td>1,289.1673 &mu;s</td><td>3,698.8627 &mu;s</td><td>45,183.558 &mu;s</td>
+</tr><tr><td>RegularFor</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>?</td><td>100000</td><td>274,148.671 &mu;s</td><td>5,398.6798 &mu;s</td><td>7,742.6252 &mu;s</td><td>272,995.225 &mu;s</td>
+</tr><tr><td>ParallelFor</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>?</td><td>100000</td><td>102,042.566 &mu;s</td><td>3,040.8146 &mu;s</td><td>8,675.6150 &mu;s</td><td>100,556.330 &mu;s</td>
+</tr><tr><td>ParallelOptimizedForSmallOperations</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>?</td><td>100000</td><td>107,950.180 &mu;s</td><td>3,308.0208 &mu;s</td><td>9,753.7741 &mu;s</td><td>109,292.950 &mu;s</td>
+</tr><tr><td>RegularFor</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>?</td><td>100000</td><td>88,702.714 &mu;s</td><td>1,729.7059 &mu;s</td><td>2,187.5242 &mu;s</td><td>87,857.617 &mu;s</td>
+</tr><tr><td>ParallelFor</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>?</td><td>100000</td><td>40,907.134 &mu;s</td><td>809.7704 &mu;s</td><td>1,672.3164 &mu;s</td><td>40,844.981 &mu;s</td>
+</tr><tr><td>ParallelOptimizedForSmallOperations</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>?</td><td>100000</td><td>42,104.066 &mu;s</td><td>1,035.8588 &mu;s</td><td>3,054.2530 &mu;s</td><td>41,518.236 &mu;s</td>
+</tr><tr><td>RegularFor</td><td>.NET 8.0</td><td>.NET 8.0</td><td>?</td><td>1000000</td><td>834,652.693 &mu;s</td><td>10,365.2782 &mu;s</td><td>9,188.5491 &mu;s</td><td>834,145.000 &mu;s</td>
+</tr><tr><td>ParallelFor</td><td>.NET 8.0</td><td>.NET 8.0</td><td>?</td><td>1000000</td><td>407,643.984 &mu;s</td><td>10,090.4472 &mu;s</td><td>29,751.9113 &mu;s</td><td>397,037.900 &mu;s</td>
+</tr><tr><td>ParallelOptimizedForSmallOperations</td><td>.NET 8.0</td><td>.NET 8.0</td><td>?</td><td>1000000</td><td>397,906.653 &mu;s</td><td>9,601.8748 &mu;s</td><td>28,311.3445 &mu;s</td><td>386,474.250 &mu;s</td>
+</tr><tr><td>RegularFor</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>?</td><td>1000000</td><td>2,661,995.667 &mu;s</td><td>32,773.7485 &mu;s</td><td>30,656.5847 &mu;s</td><td>2,652,550.200 &mu;s</td>
+</tr><tr><td>ParallelFor</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>?</td><td>1000000</td><td>987,643.568 &mu;s</td><td>36,715.8837 &mu;s</td><td>102,955.2743 &mu;s</td><td>940,712.000 &mu;s</td>
+</tr><tr><td>ParallelOptimizedForSmallOperations</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>?</td><td>1000000</td><td>985,306.952 &mu;s</td><td>27,129.6541 &mu;s</td><td>76,962.3132 &mu;s</td><td>954,986.300 &mu;s</td>
+</tr><tr><td>RegularFor</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>?</td><td>1000000</td><td>869,136.541 &mu;s</td><td>14,466.0714 &mu;s</td><td>14,855.5903 &mu;s</td><td>870,410.300 &mu;s</td>
+</tr><tr><td>ParallelFor</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>?</td><td>1000000</td><td>408,670.613 &mu;s</td><td>7,840.9413 &mu;s</td><td>8,715.1855 &mu;s</td><td>408,875.750 &mu;s</td>
+</tr><tr><td>ParallelOptimizedForSmallOperations</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>?</td><td>1000000</td><td>412,092.415 &mu;s</td><td>8,220.1488 &mu;s</td><td>11,251.8325 &mu;s</td><td>408,557.650 &mu;s</td>
+</tr></tbody></table>
+</body>
+</html>

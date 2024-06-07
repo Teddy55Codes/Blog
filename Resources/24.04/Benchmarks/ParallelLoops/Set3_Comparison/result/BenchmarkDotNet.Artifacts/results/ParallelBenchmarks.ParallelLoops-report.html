@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>ParallelBenchmarks.ParallelLoops-20240523-094911</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; text-align: right; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet v0.13.12, Windows 10 (10.0.19045.4291/22H2/2022Update)
+Intel Core i7-9750H CPU 2.60GHz, 1 CPU, 12 logical and 6 physical cores
+.NET SDK 9.0.100-preview.3.24204.13
+  [Host]               : .NET 8.0.4 (8.0.424.16909), X64 RyuJIT AVX2
+  .NET 8.0             : .NET 8.0.4 (8.0.424.16909), X64 RyuJIT AVX2
+  .NET Framework 4.8.1 : .NET Framework 4.8.1 (4.8.9232.0), X64 RyuJIT VectorSize=256
+  NativeAOT 8.0        : .NET 8.0.2, X64 NativeAOT AVX2
+</code></pre>
+<pre><code></code></pre>
+
+<table>
+<thead><tr><th>Method                       </th><th>Job           </th><th>Runtime       </th><th>iterations</th><th>Mean    </th><th>Error  </th><th>StdDev </th><th>Median  </th>
+</tr>
+</thead><tbody><tr><td>RegularFor</td><td>.NET 8.0</td><td>.NET 8.0</td><td>5</td><td>4.903 &mu;s</td><td>0.1398 &mu;s</td><td>0.4032 &mu;s</td><td>4.836 &mu;s</td>
+</tr><tr><td>ParallelFor</td><td>.NET 8.0</td><td>.NET 8.0</td><td>5</td><td>9.009 &mu;s</td><td>0.2107 &mu;s</td><td>0.6080 &mu;s</td><td>8.969 &mu;s</td>
+</tr><tr><td>ParallelForeach</td><td>.NET 8.0</td><td>.NET 8.0</td><td>5</td><td>9.286 &mu;s</td><td>0.1968 &mu;s</td><td>0.5709 &mu;s</td><td>9.427 &mu;s</td>
+</tr><tr><td>ParallelOptimizedForSmallOperations</td><td>.NET 8.0</td><td>.NET 8.0</td><td>5</td><td>9.327 &mu;s</td><td>0.1902 &mu;s</td><td>0.5579 &mu;s</td><td>9.489 &mu;s</td>
+</tr><tr><td>RegularFor</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>5</td><td>14.401 &mu;s</td><td>0.3834 &mu;s</td><td>1.1185 &mu;s</td><td>14.022 &mu;s</td>
+</tr><tr><td>ParallelFor</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>5</td><td>36.322 &mu;s</td><td>0.7886 &mu;s</td><td>2.3253 &mu;s</td><td>36.008 &mu;s</td>
+</tr><tr><td>ParallelForeach</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>5</td><td>43.142 &mu;s</td><td>0.8749 &mu;s</td><td>2.5383 &mu;s</td><td>42.921 &mu;s</td>
+</tr><tr><td>ParallelOptimizedForSmallOperations</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>5</td><td>36.931 &mu;s</td><td>0.7700 &mu;s</td><td>2.2705 &mu;s</td><td>36.787 &mu;s</td>
+</tr><tr><td>RegularFor</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>5</td><td>4.596 &mu;s</td><td>0.0771 &mu;s</td><td>0.0721 &mu;s</td><td>4.582 &mu;s</td>
+</tr><tr><td>ParallelFor</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>5</td><td>13.974 &mu;s</td><td>0.3755 &mu;s</td><td>1.1071 &mu;s</td><td>13.661 &mu;s</td>
+</tr><tr><td>ParallelForeach</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>5</td><td>14.731 &mu;s</td><td>0.4337 &mu;s</td><td>1.2787 &mu;s</td><td>14.635 &mu;s</td>
+</tr><tr><td>ParallelOptimizedForSmallOperations</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>5</td><td>13.185 &mu;s</td><td>0.3473 &mu;s</td><td>1.0130 &mu;s</td><td>13.137 &mu;s</td>
+</tr><tr><td>RegularFor</td><td>.NET 8.0</td><td>.NET 8.0</td><td>10</td><td>8.194 &mu;s</td><td>0.1342 &mu;s</td><td>0.1256 &mu;s</td><td>8.160 &mu;s</td>
+</tr><tr><td>ParallelFor</td><td>.NET 8.0</td><td>.NET 8.0</td><td>10</td><td>14.208 &mu;s</td><td>0.2756 &mu;s</td><td>0.3385 &mu;s</td><td>14.320 &mu;s</td>
+</tr><tr><td>ParallelForeach</td><td>.NET 8.0</td><td>.NET 8.0</td><td>10</td><td>13.341 &mu;s</td><td>0.2557 &mu;s</td><td>0.2625 &mu;s</td><td>13.288 &mu;s</td>
+</tr><tr><td>ParallelOptimizedForSmallOperations</td><td>.NET 8.0</td><td>.NET 8.0</td><td>10</td><td>13.446 &mu;s</td><td>0.2675 &mu;s</td><td>0.2628 &mu;s</td><td>13.421 &mu;s</td>
+</tr><tr><td>RegularFor</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>10</td><td>26.643 &mu;s</td><td>0.2841 &mu;s</td><td>0.2518 &mu;s</td><td>26.609 &mu;s</td>
+</tr><tr><td>ParallelFor</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>10</td><td>47.695 &mu;s</td><td>0.8076 &mu;s</td><td>0.7554 &mu;s</td><td>47.469 &mu;s</td>
+</tr><tr><td>ParallelForeach</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>10</td><td>49.521 &mu;s</td><td>0.8856 &mu;s</td><td>1.5276 &mu;s</td><td>48.852 &mu;s</td>
+</tr><tr><td>ParallelOptimizedForSmallOperations</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>10</td><td>44.364 &mu;s</td><td>0.7677 &mu;s</td><td>0.7181 &mu;s</td><td>44.412 &mu;s</td>
+</tr><tr><td>RegularFor</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>10</td><td>8.893 &mu;s</td><td>0.0884 &mu;s</td><td>0.0827 &mu;s</td><td>8.913 &mu;s</td>
+</tr><tr><td>ParallelFor</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>10</td><td>19.193 &mu;s</td><td>0.3119 &mu;s</td><td>0.3467 &mu;s</td><td>19.157 &mu;s</td>
+</tr><tr><td>ParallelForeach</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>10</td><td>20.028 &mu;s</td><td>0.3763 &mu;s</td><td>0.3336 &mu;s</td><td>19.947 &mu;s</td>
+</tr><tr><td>ParallelOptimizedForSmallOperations</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>10</td><td>22.367 &mu;s</td><td>0.3418 &mu;s</td><td>0.4069 &mu;s</td><td>22.227 &mu;s</td>
+</tr><tr><td>RegularFor</td><td>.NET 8.0</td><td>.NET 8.0</td><td>100</td><td>81.543 &mu;s</td><td>1.1852 &mu;s</td><td>1.1086 &mu;s</td><td>81.396 &mu;s</td>
+</tr><tr><td>ParallelFor</td><td>.NET 8.0</td><td>.NET 8.0</td><td>100</td><td>61.920 &mu;s</td><td>0.9637 &mu;s</td><td>0.8543 &mu;s</td><td>62.009 &mu;s</td>
+</tr><tr><td>ParallelForeach</td><td>.NET 8.0</td><td>.NET 8.0</td><td>100</td><td>65.235 &mu;s</td><td>1.2415 &mu;s</td><td>1.2750 &mu;s</td><td>65.331 &mu;s</td>
+</tr><tr><td>ParallelOptimizedForSmallOperations</td><td>.NET 8.0</td><td>.NET 8.0</td><td>100</td><td>58.899 &mu;s</td><td>1.1696 &mu;s</td><td>1.7506 &mu;s</td><td>58.753 &mu;s</td>
+</tr><tr><td>RegularFor</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>100</td><td>269.292 &mu;s</td><td>4.7190 &mu;s</td><td>4.4141 &mu;s</td><td>268.834 &mu;s</td>
+</tr><tr><td>ParallelFor</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>100</td><td>188.713 &mu;s</td><td>3.6680 &mu;s</td><td>4.5047 &mu;s</td><td>187.652 &mu;s</td>
+</tr><tr><td>ParallelForeach</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>100</td><td>176.195 &mu;s</td><td>3.4843 &mu;s</td><td>3.2593 &mu;s</td><td>175.476 &mu;s</td>
+</tr><tr><td>ParallelOptimizedForSmallOperations</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>100</td><td>153.998 &mu;s</td><td>3.0763 &mu;s</td><td>4.5092 &mu;s</td><td>154.162 &mu;s</td>
+</tr><tr><td>RegularFor</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>100</td><td>88.942 &mu;s</td><td>1.6420 &mu;s</td><td>1.4556 &mu;s</td><td>88.637 &mu;s</td>
+</tr><tr><td>ParallelFor</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>100</td><td>81.252 &mu;s</td><td>1.5922 &mu;s</td><td>1.4893 &mu;s</td><td>81.053 &mu;s</td>
+</tr><tr><td>ParallelForeach</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>100</td><td>80.525 &mu;s</td><td>1.5948 &mu;s</td><td>1.7064 &mu;s</td><td>79.950 &mu;s</td>
+</tr><tr><td>ParallelOptimizedForSmallOperations</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>100</td><td>77.468 &mu;s</td><td>1.5058 &mu;s</td><td>1.9579 &mu;s</td><td>76.642 &mu;s</td>
+</tr><tr><td>RegularFor</td><td>.NET 8.0</td><td>.NET 8.0</td><td>1000</td><td>789.667 &mu;s</td><td>15.6848 &mu;s</td><td>13.9042 &mu;s</td><td>789.237 &mu;s</td>
+</tr><tr><td>ParallelFor</td><td>.NET 8.0</td><td>.NET 8.0</td><td>1000</td><td>471.627 &mu;s</td><td>6.7590 &mu;s</td><td>6.3223 &mu;s</td><td>471.269 &mu;s</td>
+</tr><tr><td>ParallelForeach</td><td>.NET 8.0</td><td>.NET 8.0</td><td>1000</td><td>494.345 &mu;s</td><td>9.7527 &mu;s</td><td>13.9870 &mu;s</td><td>496.199 &mu;s</td>
+</tr><tr><td>ParallelOptimizedForSmallOperations</td><td>.NET 8.0</td><td>.NET 8.0</td><td>1000</td><td>485.132 &mu;s</td><td>12.9394 &mu;s</td><td>38.1520 &mu;s</td><td>473.892 &mu;s</td>
+</tr><tr><td>RegularFor</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>1000</td><td>2,763.108 &mu;s</td><td>53.7253 &mu;s</td><td>63.9562 &mu;s</td><td>2,761.874 &mu;s</td>
+</tr><tr><td>ParallelFor</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>1000</td><td>1,200.169 &mu;s</td><td>27.4373 &mu;s</td><td>80.8996 &mu;s</td><td>1,201.065 &mu;s</td>
+</tr><tr><td>ParallelForeach</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>1000</td><td>1,291.463 &mu;s</td><td>35.5370 &mu;s</td><td>104.7816 &mu;s</td><td>1,290.570 &mu;s</td>
+</tr><tr><td>ParallelOptimizedForSmallOperations</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>1000</td><td>1,316.123 &mu;s</td><td>27.0224 &mu;s</td><td>79.6761 &mu;s</td><td>1,326.712 &mu;s</td>
+</tr><tr><td>RegularFor</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>1000</td><td>900.788 &mu;s</td><td>15.2504 &mu;s</td><td>14.2652 &mu;s</td><td>895.258 &mu;s</td>
+</tr><tr><td>ParallelFor</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>1000</td><td>490.873 &mu;s</td><td>9.7447 &mu;s</td><td>21.5936 &mu;s</td><td>490.404 &mu;s</td>
+</tr><tr><td>ParallelForeach</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>1000</td><td>525.787 &mu;s</td><td>7.0183 &mu;s</td><td>5.8606 &mu;s</td><td>524.201 &mu;s</td>
+</tr><tr><td>ParallelOptimizedForSmallOperations</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>1000</td><td>502.640 &mu;s</td><td>9.8252 &mu;s</td><td>13.4489 &mu;s</td><td>499.184 &mu;s</td>
+</tr><tr><td>RegularFor</td><td>.NET 8.0</td><td>.NET 8.0</td><td>10000</td><td>8,517.197 &mu;s</td><td>68.4362 &mu;s</td><td>64.0152 &mu;s</td><td>8,524.839 &mu;s</td>
+</tr><tr><td>ParallelFor</td><td>.NET 8.0</td><td>.NET 8.0</td><td>10000</td><td>4,546.751 &mu;s</td><td>69.0836 &mu;s</td><td>57.6879 &mu;s</td><td>4,546.678 &mu;s</td>
+</tr><tr><td>ParallelForeach</td><td>.NET 8.0</td><td>.NET 8.0</td><td>10000</td><td>4,447.118 &mu;s</td><td>31.9638 &mu;s</td><td>24.9552 &mu;s</td><td>4,456.153 &mu;s</td>
+</tr><tr><td>ParallelOptimizedForSmallOperations</td><td>.NET 8.0</td><td>.NET 8.0</td><td>10000</td><td>4,551.887 &mu;s</td><td>56.6865 &mu;s</td><td>44.2571 &mu;s</td><td>4,564.664 &mu;s</td>
+</tr><tr><td>RegularFor</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>10000</td><td>28,929.225 &mu;s</td><td>418.8027 &mu;s</td><td>482.2938 &mu;s</td><td>28,757.547 &mu;s</td>
+</tr><tr><td>ParallelFor</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>10000</td><td>12,215.681 &mu;s</td><td>241.9349 &mu;s</td><td>278.6126 &mu;s</td><td>12,185.885 &mu;s</td>
+</tr><tr><td>ParallelForeach</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>10000</td><td>12,079.527 &mu;s</td><td>188.6557 &mu;s</td><td>147.2899 &mu;s</td><td>12,095.296 &mu;s</td>
+</tr><tr><td>ParallelOptimizedForSmallOperations</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>10000</td><td>11,625.082 &mu;s</td><td>231.0869 &mu;s</td><td>204.8525 &mu;s</td><td>11,615.434 &mu;s</td>
+</tr><tr><td>RegularFor</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>10000</td><td>9,069.664 &mu;s</td><td>93.0198 &mu;s</td><td>87.0107 &mu;s</td><td>9,062.316 &mu;s</td>
+</tr><tr><td>ParallelFor</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>10000</td><td>4,424.177 &mu;s</td><td>43.8436 &mu;s</td><td>34.2302 &mu;s</td><td>4,421.375 &mu;s</td>
+</tr><tr><td>ParallelForeach</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>10000</td><td>4,355.246 &mu;s</td><td>57.9974 &mu;s</td><td>48.4305 &mu;s</td><td>4,359.347 &mu;s</td>
+</tr><tr><td>ParallelOptimizedForSmallOperations</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>10000</td><td>4,516.652 &mu;s</td><td>86.9196 &mu;s</td><td>118.9765 &mu;s</td><td>4,486.559 &mu;s</td>
+</tr><tr><td>RegularFor</td><td>.NET 8.0</td><td>.NET 8.0</td><td>100000</td><td>106,127.273 &mu;s</td><td>2,043.0204 &mu;s</td><td>2,583.7666 &mu;s</td><td>106,393.420 &mu;s</td>
+</tr><tr><td>ParallelFor</td><td>.NET 8.0</td><td>.NET 8.0</td><td>100000</td><td>59,080.505 &mu;s</td><td>1,179.4977 &mu;s</td><td>1,836.3359 &mu;s</td><td>58,975.456 &mu;s</td>
+</tr><tr><td>ParallelForeach</td><td>.NET 8.0</td><td>.NET 8.0</td><td>100000</td><td>56,000.064 &mu;s</td><td>1,111.8819 &mu;s</td><td>2,509.7027 &mu;s</td><td>54,931.811 &mu;s</td>
+</tr><tr><td>ParallelOptimizedForSmallOperations</td><td>.NET 8.0</td><td>.NET 8.0</td><td>100000</td><td>59,960.314 &mu;s</td><td>1,090.9477 &mu;s</td><td>1,967.2038 &mu;s</td><td>60,163.244 &mu;s</td>
+</tr><tr><td>RegularFor</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>100000</td><td>307,794.681 &mu;s</td><td>5,927.1120 &mu;s</td><td>7,055.8052 &mu;s</td><td>306,772.550 &mu;s</td>
+</tr><tr><td>ParallelFor</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>100000</td><td>133,030.688 &mu;s</td><td>2,194.3579 &mu;s</td><td>2,052.6038 &mu;s</td><td>132,388.625 &mu;s</td>
+</tr><tr><td>ParallelForeach</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>100000</td><td>133,394.845 &mu;s</td><td>1,958.3055 &mu;s</td><td>1,735.9868 &mu;s</td><td>133,156.850 &mu;s</td>
+</tr><tr><td>ParallelOptimizedForSmallOperations</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>100000</td><td>135,173.220 &mu;s</td><td>2,611.3179 &mu;s</td><td>2,314.8653 &mu;s</td><td>134,684.438 &mu;s</td>
+</tr><tr><td>RegularFor</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>100000</td><td>112,426.312 &mu;s</td><td>2,215.5515 &mu;s</td><td>2,370.6153 &mu;s</td><td>112,347.480 &mu;s</td>
+</tr><tr><td>ParallelFor</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>100000</td><td>62,689.684 &mu;s</td><td>1,248.3877 &mu;s</td><td>1,486.1168 &mu;s</td><td>63,060.275 &mu;s</td>
+</tr><tr><td>ParallelForeach</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>100000</td><td>61,727.249 &mu;s</td><td>962.8730 &mu;s</td><td>853.5619 &mu;s</td><td>61,929.050 &mu;s</td>
+</tr><tr><td>ParallelOptimizedForSmallOperations</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>100000</td><td>60,140.962 &mu;s</td><td>1,177.4273 &mu;s</td><td>1,530.9881 &mu;s</td><td>60,173.806 &mu;s</td>
+</tr></tbody></table>
+</body>
+</html>

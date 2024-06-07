@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>Switching.PLINQSwitching-20240517-142234</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; text-align: right; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet v0.13.12, Windows 10 (10.0.19045.4291/22H2/2022Update)
+Intel Core i7-9750H CPU 2.60GHz, 1 CPU, 12 logical and 6 physical cores
+.NET SDK 9.0.100-preview.3.24204.13
+  [Host]               : .NET 8.0.4 (8.0.424.16909), X64 RyuJIT AVX2
+  .NET 8.0             : .NET 8.0.4 (8.0.424.16909), X64 RyuJIT AVX2
+  .NET Framework 4.8.1 : .NET Framework 4.8.1 (4.8.9232.0), X64 RyuJIT VectorSize=256
+  NativeAOT 8.0        : .NET 8.0.2, X64 NativeAOT AVX2
+</code></pre>
+<pre><code></code></pre>
+
+<table>
+<thead><tr><th>Method</th><th>Job           </th><th>Runtime       </th><th>EnumerableLength</th><th>Mean  </th><th>Error </th><th>StdDev</th><th>Median</th>
+</tr>
+</thead><tbody><tr><td>Switching</td><td>.NET 8.0</td><td>.NET 8.0</td><td>10000</td><td>328.5 &mu;s</td><td>5.86 &mu;s</td><td>5.75 &mu;s</td><td>327.6 &mu;s</td>
+</tr><tr><td>NoSwitching</td><td>.NET 8.0</td><td>.NET 8.0</td><td>10000</td><td>301.8 &mu;s</td><td>5.54 &mu;s</td><td>6.38 &mu;s</td><td>301.2 &mu;s</td>
+</tr><tr><td>Switching</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>10000</td><td>611.1 &mu;s</td><td>11.99 &mu;s</td><td>28.02 &mu;s</td><td>602.2 &mu;s</td>
+</tr><tr><td>NoSwitching</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>10000</td><td>613.8 &mu;s</td><td>12.16 &mu;s</td><td>26.43 &mu;s</td><td>612.8 &mu;s</td>
+</tr><tr><td>Switching</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>10000</td><td>353.5 &mu;s</td><td>19.94 &mu;s</td><td>57.86 &mu;s</td><td>337.6 &mu;s</td>
+</tr><tr><td>NoSwitching</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>10000</td><td>364.1 &mu;s</td><td>24.55 &mu;s</td><td>72.39 &mu;s</td><td>336.9 &mu;s</td>
+</tr><tr><td>Switching</td><td>.NET 8.0</td><td>.NET 8.0</td><td>100000</td><td>4,018.5 &mu;s</td><td>277.43 &mu;s</td><td>818.00 &mu;s</td><td>3,719.1 &mu;s</td>
+</tr><tr><td>NoSwitching</td><td>.NET 8.0</td><td>.NET 8.0</td><td>100000</td><td>3,460.8 &mu;s</td><td>78.40 &mu;s</td><td>215.95 &mu;s</td><td>3,399.5 &mu;s</td>
+</tr><tr><td>Switching</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>100000</td><td>6,712.1 &mu;s</td><td>282.41 &mu;s</td><td>810.30 &mu;s</td><td>6,373.9 &mu;s</td>
+</tr><tr><td>NoSwitching</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>100000</td><td>6,266.5 &mu;s</td><td>121.70 &mu;s</td><td>318.47 &mu;s</td><td>6,218.6 &mu;s</td>
+</tr><tr><td>Switching</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>100000</td><td>3,533.0 &mu;s</td><td>68.03 &mu;s</td><td>86.03 &mu;s</td><td>3,537.4 &mu;s</td>
+</tr><tr><td>NoSwitching</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>100000</td><td>3,605.9 &mu;s</td><td>74.69 &mu;s</td><td>217.89 &mu;s</td><td>3,560.4 &mu;s</td>
+</tr><tr><td>Switching</td><td>.NET 8.0</td><td>.NET 8.0</td><td>1000000</td><td>32,809.7 &mu;s</td><td>616.48 &mu;s</td><td>1,273.14 &mu;s</td><td>32,738.3 &mu;s</td>
+</tr><tr><td>NoSwitching</td><td>.NET 8.0</td><td>.NET 8.0</td><td>1000000</td><td>31,759.2 &mu;s</td><td>628.41 &mu;s</td><td>1,032.50 &mu;s</td><td>31,653.8 &mu;s</td>
+</tr><tr><td>Switching</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>1000000</td><td>65,161.0 &mu;s</td><td>2,466.39 &mu;s</td><td>6,875.30 &mu;s</td><td>62,024.6 &mu;s</td>
+</tr><tr><td>NoSwitching</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>1000000</td><td>60,081.0 &mu;s</td><td>1,191.47 &mu;s</td><td>2,808.43 &mu;s</td><td>59,656.6 &mu;s</td>
+</tr><tr><td>Switching</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>1000000</td><td>31,407.0 &mu;s</td><td>612.12 &mu;s</td><td>572.58 &mu;s</td><td>31,471.2 &mu;s</td>
+</tr><tr><td>NoSwitching</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>1000000</td><td>32,440.4 &mu;s</td><td>636.72 &mu;s</td><td>707.72 &mu;s</td><td>32,220.4 &mu;s</td>
+</tr><tr><td>Switching</td><td>.NET 8.0</td><td>.NET 8.0</td><td>10000000</td><td>328,634.5 &mu;s</td><td>4,354.28 &mu;s</td><td>3,636.02 &mu;s</td><td>328,169.5 &mu;s</td>
+</tr><tr><td>NoSwitching</td><td>.NET 8.0</td><td>.NET 8.0</td><td>10000000</td><td>343,483.8 &mu;s</td><td>5,978.03 &mu;s</td><td>5,591.86 &mu;s</td><td>342,004.8 &mu;s</td>
+</tr><tr><td>Switching</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>10000000</td><td>616,504.6 &mu;s</td><td>11,211.35 &mu;s</td><td>10,487.10 &mu;s</td><td>614,990.2 &mu;s</td>
+</tr><tr><td>NoSwitching</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>10000000</td><td>629,539.7 &mu;s</td><td>11,885.03 &mu;s</td><td>11,672.68 &mu;s</td><td>631,908.1 &mu;s</td>
+</tr><tr><td>Switching</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>10000000</td><td>324,316.1 &mu;s</td><td>6,250.77 &mu;s</td><td>10,093.84 &mu;s</td><td>321,715.0 &mu;s</td>
+</tr><tr><td>NoSwitching</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>10000000</td><td>338,257.6 &mu;s</td><td>6,717.52 &mu;s</td><td>12,113.08 &mu;s</td><td>335,863.0 &mu;s</td>
+</tr></tbody></table>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>PLINQBenchmarks.PLINQBenchmarks-20240517-154346</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; text-align: right; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet v0.13.12, Windows 10 (10.0.19045.4291/22H2/2022Update)
+Intel Core i7-9750H CPU 2.60GHz, 1 CPU, 12 logical and 6 physical cores
+.NET SDK 9.0.100-preview.3.24204.13
+  [Host]               : .NET 8.0.4 (8.0.424.16909), X64 RyuJIT AVX2
+  .NET 8.0             : .NET 8.0.4 (8.0.424.16909), X64 RyuJIT AVX2
+  .NET Framework 4.8.1 : .NET Framework 4.8.1 (4.8.9232.0), X64 RyuJIT VectorSize=256
+  NativeAOT 8.0        : .NET 8.0.2, X64 NativeAOT AVX2
+</code></pre>
+<pre><code></code></pre>
+
+<table>
+<thead><tr><th>Method    </th><th>Job           </th><th>Runtime       </th><th>iterations</th><th>Mean   </th><th>Error </th><th>StdDev </th><th>Median </th>
+</tr>
+</thead><tbody><tr><td>WithLINQ</td><td>.NET 8.0</td><td>.NET 8.0</td><td>1000</td><td>15.56 &mu;s</td><td>0.306 &mu;s</td><td>0.520 &mu;s</td><td>15.60 &mu;s</td>
+</tr><tr><td>WithPLINQ</td><td>.NET 8.0</td><td>.NET 8.0</td><td>1000</td><td>21.24 &mu;s</td><td>0.501 &mu;s</td><td>1.406 &mu;s</td><td>21.20 &mu;s</td>
+</tr><tr><td>WithOrderedPLINQ</td><td>.NET 8.0</td><td>.NET 8.0</td><td>1000</td><td>66.99 &mu;s</td><td>4.743 &mu;s</td><td>13.909 &mu;s</td><td>61.32 &mu;s</td>
+</tr><tr><td>WithLINQ</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>1000</td><td>29.21 &mu;s</td><td>0.880 &mu;s</td><td>2.333 &mu;s</td><td>28.47 &mu;s</td>
+</tr><tr><td>WithPLINQ</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>1000</td><td>305.61 &mu;s</td><td>7.051 &mu;s</td><td>20.678 &mu;s</td><td>304.14 &mu;s</td>
+</tr><tr><td>WithOrderedPLINQ</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>1000</td><td>435.42 &mu;s</td><td>8.663 &mu;s</td><td>24.435 &mu;s</td><td>432.30 &mu;s</td>
+</tr><tr><td>WithLINQ</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>1000</td><td>29.09 &mu;s</td><td>2.515 &mu;s</td><td>7.416 &mu;s</td><td>25.73 &mu;s</td>
+</tr><tr><td>WithPLINQ</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>1000</td><td>72.69 &mu;s</td><td>2.358 &mu;s</td><td>6.840 &mu;s</td><td>70.76 &mu;s</td>
+</tr><tr><td>WithOrderedPLINQ</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>1000</td><td>153.83 &mu;s</td><td>4.767 &mu;s</td><td>13.906 &mu;s</td><td>149.32 &mu;s</td>
+</tr><tr><td>WithLINQ</td><td>.NET 8.0</td><td>.NET 8.0</td><td>10000</td><td>334.82 &mu;s</td><td>6.555 &mu;s</td><td>16.202 &mu;s</td><td>331.72 &mu;s</td>
+</tr><tr><td>WithPLINQ</td><td>.NET 8.0</td><td>.NET 8.0</td><td>10000</td><td>224.82 &mu;s</td><td>8.006 &mu;s</td><td>23.227 &mu;s</td><td>223.34 &mu;s</td>
+</tr><tr><td>WithOrderedPLINQ</td><td>.NET 8.0</td><td>.NET 8.0</td><td>10000</td><td>433.16 &mu;s</td><td>21.772 &mu;s</td><td>64.196 &mu;s</td><td>433.54 &mu;s</td>
+</tr><tr><td>WithLINQ</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>10000</td><td>428.80 &mu;s</td><td>7.304 &mu;s</td><td>13.896 &mu;s</td><td>424.07 &mu;s</td>
+</tr><tr><td>WithPLINQ</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>10000</td><td>1,133.37 &mu;s</td><td>26.793 &mu;s</td><td>79.001 &mu;s</td><td>1,120.91 &mu;s</td>
+</tr><tr><td>WithOrderedPLINQ</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>10000</td><td>1,311.67 &mu;s</td><td>32.881 &mu;s</td><td>95.916 &mu;s</td><td>1,329.37 &mu;s</td>
+</tr><tr><td>WithLINQ</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>10000</td><td>376.44 &mu;s</td><td>3.139 &mu;s</td><td>2.621 &mu;s</td><td>375.79 &mu;s</td>
+</tr><tr><td>WithPLINQ</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>10000</td><td>262.96 &mu;s</td><td>10.311 &mu;s</td><td>30.404 &mu;s</td><td>262.60 &mu;s</td>
+</tr><tr><td>WithOrderedPLINQ</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>10000</td><td>334.03 &mu;s</td><td>12.012 &mu;s</td><td>35.417 &mu;s</td><td>329.75 &mu;s</td>
+</tr><tr><td>WithLINQ</td><td>.NET 8.0</td><td>.NET 8.0</td><td>100000</td><td>6,754.07 &mu;s</td><td>132.543 &mu;s</td><td>255.365 &mu;s</td><td>6,721.23 &mu;s</td>
+</tr><tr><td>WithPLINQ</td><td>.NET 8.0</td><td>.NET 8.0</td><td>100000</td><td>1,843.33 &mu;s</td><td>36.377 &mu;s</td><td>48.563 &mu;s</td><td>1,836.75 &mu;s</td>
+</tr><tr><td>WithOrderedPLINQ</td><td>.NET 8.0</td><td>.NET 8.0</td><td>100000</td><td>3,040.70 &mu;s</td><td>95.952 &mu;s</td><td>275.304 &mu;s</td><td>3,045.96 &mu;s</td>
+</tr><tr><td>WithLINQ</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>100000</td><td>8,035.14 &mu;s</td><td>250.001 &mu;s</td><td>733.210 &mu;s</td><td>7,831.65 &mu;s</td>
+</tr><tr><td>WithPLINQ</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>100000</td><td>4,765.94 &mu;s</td><td>164.495 &mu;s</td><td>485.018 &mu;s</td><td>4,774.22 &mu;s</td>
+</tr><tr><td>WithOrderedPLINQ</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>100000</td><td>5,904.86 &mu;s</td><td>164.470 &mu;s</td><td>484.943 &mu;s</td><td>6,021.04 &mu;s</td>
+</tr><tr><td>WithLINQ</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>100000</td><td>7,138.06 &mu;s</td><td>140.363 &mu;s</td><td>311.034 &mu;s</td><td>7,063.47 &mu;s</td>
+</tr><tr><td>WithPLINQ</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>100000</td><td>2,115.22 &mu;s</td><td>70.266 &mu;s</td><td>199.333 &mu;s</td><td>2,113.57 &mu;s</td>
+</tr><tr><td>WithOrderedPLINQ</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>100000</td><td>2,403.26 &mu;s</td><td>95.124 &mu;s</td><td>274.455 &mu;s</td><td>2,362.64 &mu;s</td>
+</tr><tr><td>WithLINQ</td><td>.NET 8.0</td><td>.NET 8.0</td><td>1000000</td><td>148,711.88 &mu;s</td><td>2,444.434 &mu;s</td><td>2,286.525 &mu;s</td><td>148,616.70 &mu;s</td>
+</tr><tr><td>WithPLINQ</td><td>.NET 8.0</td><td>.NET 8.0</td><td>1000000</td><td>39,863.54 &mu;s</td><td>1,769.443 &mu;s</td><td>5,019.614 &mu;s</td><td>39,276.95 &mu;s</td>
+</tr><tr><td>WithOrderedPLINQ</td><td>.NET 8.0</td><td>.NET 8.0</td><td>1000000</td><td>48,792.93 &mu;s</td><td>2,033.695 &mu;s</td><td>5,996.395 &mu;s</td><td>48,130.87 &mu;s</td>
+</tr><tr><td>WithLINQ</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>1000000</td><td>163,942.69 &mu;s</td><td>3,856.506 &mu;s</td><td>10,814.056 &mu;s</td><td>161,018.23 &mu;s</td>
+</tr><tr><td>WithPLINQ</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>1000000</td><td>49,919.07 &mu;s</td><td>1,300.465 &mu;s</td><td>3,834.450 &mu;s</td><td>48,826.74 &mu;s</td>
+</tr><tr><td>WithOrderedPLINQ</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>1000000</td><td>57,348.93 &mu;s</td><td>1,418.665 &mu;s</td><td>4,182.967 &mu;s</td><td>57,813.21 &mu;s</td>
+</tr><tr><td>WithLINQ</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>1000000</td><td>151,952.46 &mu;s</td><td>2,531.697 &mu;s</td><td>2,708.887 &mu;s</td><td>152,063.94 &mu;s</td>
+</tr><tr><td>WithPLINQ</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>1000000</td><td>39,872.16 &mu;s</td><td>720.675 &mu;s</td><td>674.119 &mu;s</td><td>39,921.46 &mu;s</td>
+</tr><tr><td>WithOrderedPLINQ</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>1000000</td><td>37,557.03 &mu;s</td><td>729.918 &mu;s</td><td>1,069.904 &mu;s</td><td>37,346.80 &mu;s</td>
+</tr></tbody></table>
+</body>
+</html>

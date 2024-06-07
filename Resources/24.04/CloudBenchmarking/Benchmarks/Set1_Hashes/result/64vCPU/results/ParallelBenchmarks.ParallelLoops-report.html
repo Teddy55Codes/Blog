@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>ParallelBenchmarks.ParallelLoops-20240520-155922</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; text-align: right; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet v0.13.12, Debian GNU/Linux 12 (bookworm) (container)
+AMD EPYC 7R32, 1 CPU, 64 logical and 32 physical cores
+.NET SDK 8.0.300
+  [Host]   : .NET 8.0.5 (8.0.524.21615), X64 RyuJIT AVX2
+  .NET 8.0 : .NET 8.0.5 (8.0.524.21615), X64 RyuJIT AVX2
+</code></pre>
+<pre><code>Job=.NET 8.0  Runtime=.NET 8.0  
+</code></pre>
+
+<table>
+<thead><tr><th>Method                       </th><th>iterations</th><th>hashType</th><th>Mean</th><th>Error</th><th>StdDev</th>
+</tr>
+</thead><tbody><tr><td>RegularFor</td><td>100000</td><td>HMACSHA512</td><td>625.26 ms</td><td>1.826 ms</td><td>1.619 ms</td>
+</tr><tr><td>ParallelFor</td><td>100000</td><td>HMACSHA512</td><td>98.18 ms</td><td>1.910 ms</td><td>2.484 ms</td>
+</tr><tr><td>ParallelOptimizedForSmallOperations</td><td>100000</td><td>HMACSHA512</td><td>103.10 ms</td><td>1.286 ms</td><td>1.203 ms</td>
+</tr><tr><td>RegularFor</td><td>100000</td><td>SHA512</td><td>249.93 ms</td><td>0.786 ms</td><td>0.656 ms</td>
+</tr><tr><td>ParallelFor</td><td>100000</td><td>SHA512</td><td>72.49 ms</td><td>0.286 ms</td><td>0.254 ms</td>
+</tr><tr><td>ParallelOptimizedForSmallOperations</td><td>100000</td><td>SHA512</td><td>72.48 ms</td><td>0.378 ms</td><td>0.316 ms</td>
+</tr><tr><td>RegularFor</td><td>100000</td><td>SHA256</td><td>220.87 ms</td><td>1.022 ms</td><td>0.956 ms</td>
+</tr><tr><td>ParallelFor</td><td>100000</td><td>SHA256</td><td>68.35 ms</td><td>0.459 ms</td><td>0.429 ms</td>
+</tr><tr><td>ParallelOptimizedForSmallOperations</td><td>100000</td><td>SHA256</td><td>70.04 ms</td><td>0.354 ms</td><td>0.314 ms</td>
+</tr><tr><td>RegularFor</td><td>100000</td><td>SHA1</td><td>224.94 ms</td><td>0.804 ms</td><td>0.712 ms</td>
+</tr><tr><td>ParallelFor</td><td>100000</td><td>SHA1</td><td>69.61 ms</td><td>0.380 ms</td><td>0.356 ms</td>
+</tr><tr><td>ParallelOptimizedForSmallOperations</td><td>100000</td><td>SHA1</td><td>70.27 ms</td><td>0.254 ms</td><td>0.212 ms</td>
+</tr><tr><td>RegularFor</td><td>100000</td><td>MD5</td><td>142.29 ms</td><td>0.360 ms</td><td>0.337 ms</td>
+</tr><tr><td>ParallelFor</td><td>100000</td><td>MD5</td><td>53.91 ms</td><td>0.271 ms</td><td>0.254 ms</td>
+</tr><tr><td>ParallelOptimizedForSmallOperations</td><td>100000</td><td>MD5</td><td>54.18 ms</td><td>0.414 ms</td><td>0.387 ms</td>
+</tr></tbody></table>
+</body>
+</html>

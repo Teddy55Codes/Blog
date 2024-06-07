@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>TPLBenchmarks.Benchmarks-20240526-135147</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; text-align: right; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet v0.13.12, Debian GNU/Linux 12 (bookworm) (container)
+Intel Xeon Platinum 8488C, 1 CPU, 2 logical cores and 1 physical core
+.NET SDK 8.0.300
+  [Host]   : .NET 8.0.5 (8.0.524.21615), X64 RyuJIT AVX-512F+CD+BW+DQ+VL+VBMI
+  .NET 8.0 : .NET 8.0.5 (8.0.524.21615), X64 RyuJIT AVX-512F+CD+BW+DQ+VL+VBMI
+</code></pre>
+<pre><code>Job=.NET 8.0  Runtime=.NET 8.0  
+</code></pre>
+
+<table>
+<thead><tr><th>Method                             </th><th>cost</th><th>Mean </th><th>Error</th><th>StdDev</th><th>Median</th>
+</tr>
+</thead><tbody><tr><td>BCryptWithLINQ</td><td>4</td><td>367.3 ms</td><td>0.62 ms</td><td>0.52 ms</td><td>367.4 ms</td>
+</tr><tr><td>BCryptWithPLINQ</td><td>4</td><td>207.0 ms</td><td>1.27 ms</td><td>1.12 ms</td><td>207.0 ms</td>
+</tr><tr><td>BCryptWithOrderedPLINQ</td><td>4</td><td>206.3 ms</td><td>1.22 ms</td><td>1.09 ms</td><td>206.1 ms</td>
+</tr><tr><td>BCryptWithRegularFor</td><td>4</td><td>367.7 ms</td><td>0.72 ms</td><td>0.64 ms</td><td>367.7 ms</td>
+</tr><tr><td>BCryptWithRegularForEach</td><td>4</td><td>367.1 ms</td><td>0.79 ms</td><td>0.74 ms</td><td>367.3 ms</td>
+</tr><tr><td>BCryptWithParallelFor</td><td>4</td><td>207.1 ms</td><td>0.81 ms</td><td>0.72 ms</td><td>207.1 ms</td>
+</tr><tr><td>BCryptWithParallelForEach</td><td>4</td><td>206.7 ms</td><td>0.87 ms</td><td>0.77 ms</td><td>206.7 ms</td>
+</tr><tr><td>BCryptParallelOptimizedForSmallOperations</td><td>4</td><td>206.3 ms</td><td>1.11 ms</td><td>0.98 ms</td><td>206.1 ms</td>
+</tr><tr><td>BCryptWithLINQ</td><td>6</td><td>1,407.7 ms</td><td>1.52 ms</td><td>1.35 ms</td><td>1,407.5 ms</td>
+</tr><tr><td>BCryptWithPLINQ</td><td>6</td><td>788.6 ms</td><td>4.94 ms</td><td>4.62 ms</td><td>788.1 ms</td>
+</tr><tr><td>BCryptWithOrderedPLINQ</td><td>6</td><td>784.9 ms</td><td>3.95 ms</td><td>3.50 ms</td><td>784.8 ms</td>
+</tr><tr><td>BCryptWithRegularFor</td><td>6</td><td>1,408.2 ms</td><td>2.39 ms</td><td>2.24 ms</td><td>1,407.4 ms</td>
+</tr><tr><td>BCryptWithRegularForEach</td><td>6</td><td>1,405.4 ms</td><td>1.10 ms</td><td>0.86 ms</td><td>1,405.7 ms</td>
+</tr><tr><td>BCryptWithParallelFor</td><td>6</td><td>794.6 ms</td><td>7.29 ms</td><td>6.82 ms</td><td>795.7 ms</td>
+</tr><tr><td>BCryptWithParallelForEach</td><td>6</td><td>789.4 ms</td><td>6.63 ms</td><td>6.20 ms</td><td>788.8 ms</td>
+</tr><tr><td>BCryptParallelOptimizedForSmallOperations</td><td>6</td><td>812.7 ms</td><td>16.14 ms</td><td>36.43 ms</td><td>789.1 ms</td>
+</tr><tr><td>BCryptWithLINQ</td><td>8</td><td>5,562.6 ms</td><td>3.22 ms</td><td>3.01 ms</td><td>5,562.1 ms</td>
+</tr><tr><td>BCryptWithPLINQ</td><td>8</td><td>3,103.8 ms</td><td>5.77 ms</td><td>5.40 ms</td><td>3,104.6 ms</td>
+</tr><tr><td>BCryptWithOrderedPLINQ</td><td>8</td><td>3,089.6 ms</td><td>6.09 ms</td><td>5.40 ms</td><td>3,089.6 ms</td>
+</tr><tr><td>BCryptWithRegularFor</td><td>8</td><td>5,579.6 ms</td><td>6.19 ms</td><td>5.79 ms</td><td>5,578.0 ms</td>
+</tr><tr><td>BCryptWithRegularForEach</td><td>8</td><td>5,570.4 ms</td><td>4.02 ms</td><td>3.56 ms</td><td>5,569.3 ms</td>
+</tr><tr><td>BCryptWithParallelFor</td><td>8</td><td>3,098.7 ms</td><td>10.43 ms</td><td>8.71 ms</td><td>3,095.7 ms</td>
+</tr><tr><td>BCryptWithParallelForEach</td><td>8</td><td>3,105.0 ms</td><td>21.51 ms</td><td>19.07 ms</td><td>3,095.8 ms</td>
+</tr><tr><td>BCryptParallelOptimizedForSmallOperations</td><td>8</td><td>3,117.4 ms</td><td>16.66 ms</td><td>13.01 ms</td><td>3,117.0 ms</td>
+</tr><tr><td>BCryptWithLINQ</td><td>10</td><td>22,228.1 ms</td><td>15.03 ms</td><td>14.05 ms</td><td>22,229.0 ms</td>
+</tr><tr><td>BCryptWithPLINQ</td><td>10</td><td>12,313.8 ms</td><td>8.12 ms</td><td>7.59 ms</td><td>12,314.1 ms</td>
+</tr><tr><td>BCryptWithOrderedPLINQ</td><td>10</td><td>12,316.8 ms</td><td>9.85 ms</td><td>9.21 ms</td><td>12,314.6 ms</td>
+</tr><tr><td>BCryptWithRegularFor</td><td>10</td><td>22,231.9 ms</td><td>9.56 ms</td><td>8.94 ms</td><td>22,231.9 ms</td>
+</tr><tr><td>BCryptWithRegularForEach</td><td>10</td><td>22,205.7 ms</td><td>12.97 ms</td><td>11.50 ms</td><td>22,207.7 ms</td>
+</tr><tr><td>BCryptWithParallelFor</td><td>10</td><td>12,432.1 ms</td><td>29.22 ms</td><td>22.82 ms</td><td>12,427.6 ms</td>
+</tr><tr><td>BCryptWithParallelForEach</td><td>10</td><td>12,362.3 ms</td><td>23.54 ms</td><td>19.66 ms</td><td>12,356.8 ms</td>
+</tr><tr><td>BCryptParallelOptimizedForSmallOperations</td><td>10</td><td>12,329.7 ms</td><td>7.91 ms</td><td>7.40 ms</td><td>12,331.3 ms</td>
+</tr></tbody></table>
+</body>
+</html>

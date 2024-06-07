@@ -1,0 +1,424 @@
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-boxplot.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-barplot.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-Switching-density.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-Switching-facetDensity.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-Switching-EnumerableLength=10000-density.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-Switching-EnumerableLength=10000-facetDensity.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-Switching-EnumerableLength=100000-density.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-Switching-EnumerableLength=100000-facetDensity.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-Switching-EnumerableLength=1000000-density.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-Switching-EnumerableLength=1000000-facetDensity.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-Switching-EnumerableLength=10000000-density.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-Switching-EnumerableLength=10000000-facetDensity.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-Switching-.NET 8.0 EnumerableLength=10000-timeline.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-Switching-.NET 8.0 EnumerableLength=10000-timelineSmooth.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-Switching-.NET 8.0 EnumerableLength=10000-cummean.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-Switching-.NET 8.0 EnumerableLength=10000-density.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-Switching-.NET Framework 4.8.1 EnumerableLength=10000-timeline.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-Switching-.NET Framework 4.8.1 EnumerableLength=10000-timelineSmooth.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-Switching-.NET Framework 4.8.1 EnumerableLength=10000-cummean.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-Switching-.NET Framework 4.8.1 EnumerableLength=10000-density.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-Switching-NativeAOT 8.0 EnumerableLength=10000-timeline.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-Switching-NativeAOT 8.0 EnumerableLength=10000-timelineSmooth.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-Switching-NativeAOT 8.0 EnumerableLength=10000-cummean.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-Switching-NativeAOT 8.0 EnumerableLength=10000-density.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-Switching-.NET 8.0 EnumerableLength=100000-timeline.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-Switching-.NET 8.0 EnumerableLength=100000-timelineSmooth.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-Switching-.NET 8.0 EnumerableLength=100000-cummean.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-Switching-.NET 8.0 EnumerableLength=100000-density.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-Switching-.NET Framework 4.8.1 EnumerableLength=100000-timeline.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-Switching-.NET Framework 4.8.1 EnumerableLength=100000-timelineSmooth.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-Switching-.NET Framework 4.8.1 EnumerableLength=100000-cummean.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-Switching-.NET Framework 4.8.1 EnumerableLength=100000-density.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-Switching-NativeAOT 8.0 EnumerableLength=100000-timeline.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-Switching-NativeAOT 8.0 EnumerableLength=100000-timelineSmooth.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-Switching-NativeAOT 8.0 EnumerableLength=100000-cummean.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-Switching-NativeAOT 8.0 EnumerableLength=100000-density.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-Switching-.NET 8.0 EnumerableLength=1000000-timeline.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-Switching-.NET 8.0 EnumerableLength=1000000-timelineSmooth.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-Switching-.NET 8.0 EnumerableLength=1000000-cummean.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-Switching-.NET 8.0 EnumerableLength=1000000-density.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-Switching-.NET Framework 4.8.1 EnumerableLength=1000000-timeline.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-Switching-.NET Framework 4.8.1 EnumerableLength=1000000-timelineSmooth.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-Switching-.NET Framework 4.8.1 EnumerableLength=1000000-cummean.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-Switching-.NET Framework 4.8.1 EnumerableLength=1000000-density.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-Switching-NativeAOT 8.0 EnumerableLength=1000000-timeline.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-Switching-NativeAOT 8.0 EnumerableLength=1000000-timelineSmooth.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-Switching-NativeAOT 8.0 EnumerableLength=1000000-cummean.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-Switching-NativeAOT 8.0 EnumerableLength=1000000-density.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-Switching-.NET 8.0 EnumerableLength=10000000-timeline.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-Switching-.NET 8.0 EnumerableLength=10000000-timelineSmooth.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-Switching-.NET 8.0 EnumerableLength=10000000-cummean.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-Switching-.NET 8.0 EnumerableLength=10000000-density.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-Switching-.NET Framework 4.8.1 EnumerableLength=10000000-timeline.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-Switching-.NET Framework 4.8.1 EnumerableLength=10000000-timelineSmooth.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-Switching-.NET Framework 4.8.1 EnumerableLength=10000000-cummean.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-Switching-.NET Framework 4.8.1 EnumerableLength=10000000-density.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-Switching-NativeAOT 8.0 EnumerableLength=10000000-timeline.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-Switching-NativeAOT 8.0 EnumerableLength=10000000-timelineSmooth.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-Switching-NativeAOT 8.0 EnumerableLength=10000000-cummean.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-Switching-NativeAOT 8.0 EnumerableLength=10000000-density.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-Switching-facetTimeline.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-Switching-facetTimelineSmooth.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-Switching-cummean.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-NoSwitching-density.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-NoSwitching-facetDensity.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-NoSwitching-EnumerableLength=10000-density.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-NoSwitching-EnumerableLength=10000-facetDensity.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-NoSwitching-EnumerableLength=100000-density.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-NoSwitching-EnumerableLength=100000-facetDensity.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-NoSwitching-EnumerableLength=1000000-density.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-NoSwitching-EnumerableLength=1000000-facetDensity.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-NoSwitching-EnumerableLength=10000000-density.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-NoSwitching-EnumerableLength=10000000-facetDensity.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-NoSwitching-.NET 8.0 EnumerableLength=10000-timeline.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-NoSwitching-.NET 8.0 EnumerableLength=10000-timelineSmooth.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-NoSwitching-.NET 8.0 EnumerableLength=10000-cummean.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-NoSwitching-.NET 8.0 EnumerableLength=10000-density.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-NoSwitching-.NET Framework 4.8.1 EnumerableLength=10000-timeline.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-NoSwitching-.NET Framework 4.8.1 EnumerableLength=10000-timelineSmooth.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-NoSwitching-.NET Framework 4.8.1 EnumerableLength=10000-cummean.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-NoSwitching-.NET Framework 4.8.1 EnumerableLength=10000-density.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-NoSwitching-NativeAOT 8.0 EnumerableLength=10000-timeline.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-NoSwitching-NativeAOT 8.0 EnumerableLength=10000-timelineSmooth.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-NoSwitching-NativeAOT 8.0 EnumerableLength=10000-cummean.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-NoSwitching-NativeAOT 8.0 EnumerableLength=10000-density.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-NoSwitching-.NET 8.0 EnumerableLength=100000-timeline.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-NoSwitching-.NET 8.0 EnumerableLength=100000-timelineSmooth.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-NoSwitching-.NET 8.0 EnumerableLength=100000-cummean.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-NoSwitching-.NET 8.0 EnumerableLength=100000-density.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-NoSwitching-.NET Framework 4.8.1 EnumerableLength=100000-timeline.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-NoSwitching-.NET Framework 4.8.1 EnumerableLength=100000-timelineSmooth.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-NoSwitching-.NET Framework 4.8.1 EnumerableLength=100000-cummean.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-NoSwitching-.NET Framework 4.8.1 EnumerableLength=100000-density.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-NoSwitching-NativeAOT 8.0 EnumerableLength=100000-timeline.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-NoSwitching-NativeAOT 8.0 EnumerableLength=100000-timelineSmooth.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-NoSwitching-NativeAOT 8.0 EnumerableLength=100000-cummean.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-NoSwitching-NativeAOT 8.0 EnumerableLength=100000-density.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-NoSwitching-.NET 8.0 EnumerableLength=1000000-timeline.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-NoSwitching-.NET 8.0 EnumerableLength=1000000-timelineSmooth.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-NoSwitching-.NET 8.0 EnumerableLength=1000000-cummean.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-NoSwitching-.NET 8.0 EnumerableLength=1000000-density.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-NoSwitching-.NET Framework 4.8.1 EnumerableLength=1000000-timeline.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-NoSwitching-.NET Framework 4.8.1 EnumerableLength=1000000-timelineSmooth.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-NoSwitching-.NET Framework 4.8.1 EnumerableLength=1000000-cummean.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-NoSwitching-.NET Framework 4.8.1 EnumerableLength=1000000-density.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-NoSwitching-NativeAOT 8.0 EnumerableLength=1000000-timeline.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-NoSwitching-NativeAOT 8.0 EnumerableLength=1000000-timelineSmooth.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-NoSwitching-NativeAOT 8.0 EnumerableLength=1000000-cummean.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-NoSwitching-NativeAOT 8.0 EnumerableLength=1000000-density.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-NoSwitching-.NET 8.0 EnumerableLength=10000000-timeline.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-NoSwitching-.NET 8.0 EnumerableLength=10000000-timelineSmooth.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-NoSwitching-.NET 8.0 EnumerableLength=10000000-cummean.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-NoSwitching-.NET 8.0 EnumerableLength=10000000-density.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-NoSwitching-.NET Framework 4.8.1 EnumerableLength=10000000-timeline.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-NoSwitching-.NET Framework 4.8.1 EnumerableLength=10000000-timelineSmooth.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-NoSwitching-.NET Framework 4.8.1 EnumerableLength=10000000-cummean.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-NoSwitching-.NET Framework 4.8.1 EnumerableLength=10000000-density.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-NoSwitching-NativeAOT 8.0 EnumerableLength=10000000-timeline.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-NoSwitching-NativeAOT 8.0 EnumerableLength=10000000-timelineSmooth.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-NoSwitching-NativeAOT 8.0 EnumerableLength=10000000-cummean.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-NoSwitching-NativeAOT 8.0 EnumerableLength=10000000-density.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-NoSwitching-facetTimeline.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-NoSwitching-facetTimelineSmooth.png ***
+------------------------------
+*** Plot: C:\ws\Lerndokumentation\Resources\24.04\Benchmarks\PLINQ\Set3_Switching\src\BenchmarkDotNet.Artifacts\results\Switching.PLINQSwitching-NoSwitching-cummean.png ***
+------------------------------
+Attache Paket: 'dplyr'
+Die folgenden Objekte sind maskiert von 'package:stats':
+    filter, lag
+Die folgenden Objekte sind maskiert von 'package:base':
+    intersect, setdiff, setequal, union
+Attache Paket: 'gdata'
+Die folgenden Objekte sind maskiert von 'package:dplyr':
+    combine, first, last, starts_with
+Das folgende Objekt ist maskiert 'package:stats':
+    nobs
+Das folgende Objekt ist maskiert 'package:utils':
+    object.size
+Das folgende Objekt ist maskiert 'package:base':
+    startsWith
+Attache Paket: 'tidyr'
+Das folgende Objekt ist maskiert 'package:gdata':
+    starts_with
+Attache Paket: 'gridExtra'
+Das folgende Objekt ist maskiert 'package:gdata':
+    combine
+Das folgende Objekt ist maskiert 'package:dplyr':
+    combine
+R.devices v2.17.2 (2024-01-29 13:30:11 UTC) successfully loaded. See ?R.devices for help.
+`summarise()` has grouped output by 'Target_Method'. You can override using the
+`.groups` argument.
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+`geom_smooth()` using method = 'loess' and formula = 'y ~ x'
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+`geom_smooth()` using method = 'loess' and formula = 'y ~ x'
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+`geom_smooth()` using method = 'loess' and formula = 'y ~ x'
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+`geom_smooth()` using method = 'loess' and formula = 'y ~ x'
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+`geom_smooth()` using method = 'loess' and formula = 'y ~ x'
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+`geom_smooth()` using method = 'loess' and formula = 'y ~ x'
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+`geom_smooth()` using method = 'loess' and formula = 'y ~ x'
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+`geom_smooth()` using method = 'loess' and formula = 'y ~ x'
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+`geom_smooth()` using method = 'loess' and formula = 'y ~ x'
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+`geom_smooth()` using method = 'loess' and formula = 'y ~ x'
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+`geom_smooth()` using method = 'loess' and formula = 'y ~ x'
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+`geom_smooth()` using method = 'loess' and formula = 'y ~ x'
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+`geom_smooth()` using method = 'loess' and formula = 'y ~ x'
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+`geom_smooth()` using method = 'loess' and formula = 'y ~ x'
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+`geom_smooth()` using method = 'loess' and formula = 'y ~ x'
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+`geom_smooth()` using method = 'loess' and formula = 'y ~ x'
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+`geom_smooth()` using method = 'loess' and formula = 'y ~ x'
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+`geom_smooth()` using method = 'loess' and formula = 'y ~ x'
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+`geom_smooth()` using method = 'loess' and formula = 'y ~ x'
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+`geom_smooth()` using method = 'loess' and formula = 'y ~ x'
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+`geom_smooth()` using method = 'loess' and formula = 'y ~ x'
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+`geom_smooth()` using method = 'loess' and formula = 'y ~ x'
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+`geom_smooth()` using method = 'loess' and formula = 'y ~ x'
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+`geom_smooth()` using method = 'loess' and formula = 'y ~ x'
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+`geom_smooth()` using method = 'loess' and formula = 'y ~ x'
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+`geom_smooth()` using method = 'loess' and formula = 'y ~ x'
+Saving 7 x 7 in image
+Es gab 50 oder mehr Warnungen (Anzeige der ersten 50 mit warnings())

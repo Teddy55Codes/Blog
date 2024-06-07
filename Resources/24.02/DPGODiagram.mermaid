@@ -1,0 +1,23 @@
+﻿flowchart
+    prestub(.NET Function) -->|Compilation| hasAO{"Marked with<br/>[AggressiveOpts]?"}
+    hasAO-->|Yes|tier1ao["JIT to <b><ins>Tier1</ins></b><br/><br/>(no dynamic profile data)"]
+    hasAO-->|No|hasR2R
+    hasR2R{"Is prejitted (R2R)?"} -->|No| tier000
+
+    tier000["JIT to <b><ins>Tier0</ins></b><br/><br/>(not optimized, not instrumented,<br/> with patchpoints)"]-->|Running...|ishot555
+    ishot555{"Is hot?<br/>(called >30 times)"}
+    ishot555-.->|No,<br/>keep running...|ishot555
+    ishot555-->|Yes|tier0
+
+    hasR2R -->|Yes| R2R
+    R2R["Use <b><ins>R2R</ins></b> code<br/><br/>(optimized, not instrumented,<br/>no patchpoints)"] -->|Running...|ishot1
+    ishot1{"Is hot?<br/>(called >30 times)"}-.->|No,<br/>keep running...|ishot1
+    ishot1--->|"Yes"|tier1inst
+
+    tier0["JIT to <b><ins>Tier0Instrumented</ins></b><br/><br/>(not optimized, instrumented,<br/> with patchpoints)"]-->|Running...|ishot5
+    tier1pgo2["JIT to <b><ins>Tier1</ins></b><br/><br/>(optimized with profile data)"]
+
+    tier1inst["JIT to <b><ins>Tier1Instrumented</ins></b><br/><br/>(optimized, instrumented, <br/>no patchpoints)"]
+    tier1inst-->|Running...|ishot5
+    ishot5{"Is hot?<br/>(called >30 times)"}-->|Yes|tier1pgo2
+    ishot5-.->|No,<br/>keep running...|ishot5

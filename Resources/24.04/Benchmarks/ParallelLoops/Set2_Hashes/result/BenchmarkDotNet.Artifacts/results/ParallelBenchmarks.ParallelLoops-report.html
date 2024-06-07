@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>ParallelBenchmarks.ParallelLoops-20240524-113959</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; text-align: right; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet v0.13.12, Windows 10 (10.0.19045.4291/22H2/2022Update)
+Intel Core i7-9750H CPU 2.60GHz, 1 CPU, 12 logical and 6 physical cores
+.NET SDK 9.0.100-preview.4.24267.66
+  [Host]               : .NET 8.0.4 (8.0.424.16909), X64 RyuJIT AVX2
+  .NET 8.0             : .NET 8.0.4 (8.0.424.16909), X64 RyuJIT AVX2
+  .NET Framework 4.8.1 : .NET Framework 4.8.1 (4.8.9232.0), X64 RyuJIT VectorSize=256
+  NativeAOT 8.0        : .NET 8.0.4, X64 NativeAOT AVX2
+</code></pre>
+<pre><code></code></pre>
+
+<table>
+<thead><tr><th>Method                       </th><th>Job           </th><th>Runtime       </th><th>hashType</th><th>Mean </th><th>Error</th><th>StdDev</th><th>Median</th>
+</tr>
+</thead><tbody><tr><td>RegularFor</td><td>.NET 8.0</td><td>.NET 8.0</td><td>HMACSHA512</td><td>370.58 ms</td><td>6.882 ms</td><td>17.393 ms</td><td>371.43 ms</td>
+</tr><tr><td>ParallelFor</td><td>.NET 8.0</td><td>.NET 8.0</td><td>HMACSHA512</td><td>153.90 ms</td><td>2.993 ms</td><td>4.292 ms</td><td>152.94 ms</td>
+</tr><tr><td>ParallelOptimizedForSmallOperations</td><td>.NET 8.0</td><td>.NET 8.0</td><td>HMACSHA512</td><td>153.82 ms</td><td>5.165 ms</td><td>15.147 ms</td><td>150.29 ms</td>
+</tr><tr><td>RegularFor</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>HMACSHA512</td><td>1,401.76 ms</td><td>28.508 ms</td><td>78.996 ms</td><td>1,374.38 ms</td>
+</tr><tr><td>ParallelFor</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>HMACSHA512</td><td>413.89 ms</td><td>7.300 ms</td><td>7.811 ms</td><td>414.82 ms</td>
+</tr><tr><td>ParallelOptimizedForSmallOperations</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>HMACSHA512</td><td>395.44 ms</td><td>7.845 ms</td><td>11.252 ms</td><td>395.69 ms</td>
+</tr><tr><td>RegularFor</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>HMACSHA512</td><td>347.13 ms</td><td>6.848 ms</td><td>10.038 ms</td><td>345.77 ms</td>
+</tr><tr><td>ParallelFor</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>HMACSHA512</td><td>155.15 ms</td><td>3.758 ms</td><td>10.599 ms</td><td>152.86 ms</td>
+</tr><tr><td>ParallelOptimizedForSmallOperations</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>HMACSHA512</td><td>162.59 ms</td><td>4.231 ms</td><td>11.794 ms</td><td>160.44 ms</td>
+</tr><tr><td>RegularFor</td><td>.NET 8.0</td><td>.NET 8.0</td><td>SHA512</td><td>210.14 ms</td><td>4.142 ms</td><td>7.255 ms</td><td>209.87 ms</td>
+</tr><tr><td>ParallelFor</td><td>.NET 8.0</td><td>.NET 8.0</td><td>SHA512</td><td>99.45 ms</td><td>4.027 ms</td><td>11.747 ms</td><td>96.55 ms</td>
+</tr><tr><td>ParallelOptimizedForSmallOperations</td><td>.NET 8.0</td><td>.NET 8.0</td><td>SHA512</td><td>90.82 ms</td><td>4.121 ms</td><td>12.021 ms</td><td>87.70 ms</td>
+</tr><tr><td>RegularFor</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>SHA512</td><td>822.11 ms</td><td>18.159 ms</td><td>50.016 ms</td><td>812.81 ms</td>
+</tr><tr><td>ParallelFor</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>SHA512</td><td>291.34 ms</td><td>9.892 ms</td><td>29.012 ms</td><td>286.22 ms</td>
+</tr><tr><td>ParallelOptimizedForSmallOperations</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>SHA512</td><td>315.21 ms</td><td>8.703 ms</td><td>25.388 ms</td><td>313.01 ms</td>
+</tr><tr><td>RegularFor</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>SHA512</td><td>264.85 ms</td><td>20.303 ms</td><td>59.864 ms</td><td>240.12 ms</td>
+</tr><tr><td>ParallelFor</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>SHA512</td><td>115.15 ms</td><td>5.179 ms</td><td>15.272 ms</td><td>118.23 ms</td>
+</tr><tr><td>ParallelOptimizedForSmallOperations</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>SHA512</td><td>113.09 ms</td><td>5.558 ms</td><td>16.387 ms</td><td>107.72 ms</td>
+</tr><tr><td>RegularFor</td><td>.NET 8.0</td><td>.NET 8.0</td><td>SHA256</td><td>310.48 ms</td><td>6.137 ms</td><td>9.554 ms</td><td>308.93 ms</td>
+</tr><tr><td>ParallelFor</td><td>.NET 8.0</td><td>.NET 8.0</td><td>SHA256</td><td>110.87 ms</td><td>2.202 ms</td><td>3.971 ms</td><td>110.40 ms</td>
+</tr><tr><td>ParallelOptimizedForSmallOperations</td><td>.NET 8.0</td><td>.NET 8.0</td><td>SHA256</td><td>110.51 ms</td><td>2.167 ms</td><td>3.038 ms</td><td>110.88 ms</td>
+</tr><tr><td>RegularFor</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>SHA256</td><td>1,199.39 ms</td><td>23.193 ms</td><td>34.714 ms</td><td>1,203.54 ms</td>
+</tr><tr><td>ParallelFor</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>SHA256</td><td>410.99 ms</td><td>7.236 ms</td><td>11.050 ms</td><td>411.28 ms</td>
+</tr><tr><td>ParallelOptimizedForSmallOperations</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>SHA256</td><td>385.04 ms</td><td>7.430 ms</td><td>9.397 ms</td><td>386.10 ms</td>
+</tr><tr><td>RegularFor</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>SHA256</td><td>325.61 ms</td><td>9.199 ms</td><td>26.688 ms</td><td>318.10 ms</td>
+</tr><tr><td>ParallelFor</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>SHA256</td><td>118.15 ms</td><td>2.321 ms</td><td>4.897 ms</td><td>117.98 ms</td>
+</tr><tr><td>ParallelOptimizedForSmallOperations</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>SHA256</td><td>126.23 ms</td><td>3.546 ms</td><td>10.116 ms</td><td>122.26 ms</td>
+</tr><tr><td>RegularFor</td><td>.NET 8.0</td><td>.NET 8.0</td><td>SHA1</td><td>163.43 ms</td><td>3.175 ms</td><td>4.849 ms</td><td>161.97 ms</td>
+</tr><tr><td>ParallelFor</td><td>.NET 8.0</td><td>.NET 8.0</td><td>SHA1</td><td>74.45 ms</td><td>1.377 ms</td><td>2.586 ms</td><td>74.03 ms</td>
+</tr><tr><td>ParallelOptimizedForSmallOperations</td><td>.NET 8.0</td><td>.NET 8.0</td><td>SHA1</td><td>75.54 ms</td><td>1.302 ms</td><td>1.017 ms</td><td>75.49 ms</td>
+</tr><tr><td>RegularFor</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>SHA1</td><td>437.06 ms</td><td>8.323 ms</td><td>7.785 ms</td><td>436.56 ms</td>
+</tr><tr><td>ParallelFor</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>SHA1</td><td>208.98 ms</td><td>5.669 ms</td><td>16.536 ms</td><td>208.18 ms</td>
+</tr><tr><td>ParallelOptimizedForSmallOperations</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>SHA1</td><td>217.98 ms</td><td>5.117 ms</td><td>15.007 ms</td><td>217.71 ms</td>
+</tr><tr><td>RegularFor</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>SHA1</td><td>178.42 ms</td><td>4.818 ms</td><td>13.511 ms</td><td>173.66 ms</td>
+</tr><tr><td>ParallelFor</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>SHA1</td><td>107.97 ms</td><td>4.397 ms</td><td>12.896 ms</td><td>105.34 ms</td>
+</tr><tr><td>ParallelOptimizedForSmallOperations</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>SHA1</td><td>91.16 ms</td><td>3.555 ms</td><td>10.313 ms</td><td>90.53 ms</td>
+</tr><tr><td>RegularFor</td><td>.NET 8.0</td><td>.NET 8.0</td><td>MD5</td><td>181.43 ms</td><td>7.021 ms</td><td>20.146 ms</td><td>174.79 ms</td>
+</tr><tr><td>ParallelFor</td><td>.NET 8.0</td><td>.NET 8.0</td><td>MD5</td><td>66.93 ms</td><td>2.172 ms</td><td>6.265 ms</td><td>65.78 ms</td>
+</tr><tr><td>ParallelOptimizedForSmallOperations</td><td>.NET 8.0</td><td>.NET 8.0</td><td>MD5</td><td>70.51 ms</td><td>2.980 ms</td><td>8.355 ms</td><td>69.79 ms</td>
+</tr><tr><td>RegularFor</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>MD5</td><td>817.03 ms</td><td>77.785 ms</td><td>225.667 ms</td><td>750.85 ms</td>
+</tr><tr><td>ParallelFor</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>MD5</td><td>246.95 ms</td><td>7.183 ms</td><td>21.180 ms</td><td>246.89 ms</td>
+</tr><tr><td>ParallelOptimizedForSmallOperations</td><td>.NET Framework 4.8.1</td><td>.NET Framework 4.8.1</td><td>MD5</td><td>265.73 ms</td><td>10.034 ms</td><td>29.109 ms</td><td>259.29 ms</td>
+</tr><tr><td>RegularFor</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>MD5</td><td>175.20 ms</td><td>4.257 ms</td><td>12.077 ms</td><td>174.53 ms</td>
+</tr><tr><td>ParallelFor</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>MD5</td><td>77.30 ms</td><td>2.837 ms</td><td>8.185 ms</td><td>74.82 ms</td>
+</tr><tr><td>ParallelOptimizedForSmallOperations</td><td>NativeAOT 8.0</td><td>NativeAOT 8.0</td><td>MD5</td><td>83.60 ms</td><td>3.411 ms</td><td>10.003 ms</td><td>81.17 ms</td>
+</tr></tbody></table>
+</body>
+</html>

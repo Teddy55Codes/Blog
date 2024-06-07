@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>ParallelBenchmarks.ParallelLoops-20240520-171045</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; text-align: right; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet v0.13.12, Debian GNU/Linux 12 (bookworm) (container)
+AMD EPYC 7R32, 1 CPU, 64 logical and 32 physical cores
+.NET SDK 8.0.300
+  [Host]   : .NET 8.0.5 (8.0.524.21615), X64 RyuJIT AVX2
+  .NET 8.0 : .NET 8.0.5 (8.0.524.21615), X64 RyuJIT AVX2
+</code></pre>
+<pre><code>Job=.NET 8.0  Runtime=.NET 8.0  
+</code></pre>
+
+<table>
+<thead><tr><th>Method                             </th><th>cost</th><th>iterations</th><th>Mean   </th><th>Error</th><th>StdDev</th>
+</tr>
+</thead><tbody><tr><td>RegularForBCrypt</td><td>4</td><td>300</td><td>386.077 ms</td><td>1.4262 ms</td><td>1.3341 ms</td>
+</tr><tr><td>ParallelForBCrypt</td><td>4</td><td>300</td><td>12.579 ms</td><td>0.0500 ms</td><td>0.0443 ms</td>
+</tr><tr><td>ParallelOptimizedForSmallOperationsBCrypt</td><td>4</td><td>300</td><td>9.272 ms</td><td>0.0624 ms</td><td>0.0583 ms</td>
+</tr><tr><td>RegularForBCrypt</td><td>6</td><td>300</td><td>1,479.718 ms</td><td>8.3493 ms</td><td>7.8099 ms</td>
+</tr><tr><td>ParallelForBCrypt</td><td>6</td><td>300</td><td>44.960 ms</td><td>0.6720 ms</td><td>0.6286 ms</td>
+</tr><tr><td>ParallelOptimizedForSmallOperationsBCrypt</td><td>6</td><td>300</td><td>31.881 ms</td><td>0.4802 ms</td><td>0.4257 ms</td>
+</tr><tr><td>RegularForBCrypt</td><td>8</td><td>300</td><td>5,866.950 ms</td><td>13.9014 ms</td><td>13.0034 ms</td>
+</tr><tr><td>ParallelForBCrypt</td><td>8</td><td>300</td><td>173.524 ms</td><td>1.7992 ms</td><td>1.6830 ms</td>
+</tr><tr><td>ParallelOptimizedForSmallOperationsBCrypt</td><td>8</td><td>300</td><td>119.266 ms</td><td>1.0565 ms</td><td>0.9882 ms</td>
+</tr><tr><td>RegularForBCrypt</td><td>10</td><td>300</td><td>23,353.418 ms</td><td>68.9948 ms</td><td>64.5377 ms</td>
+</tr><tr><td>ParallelForBCrypt</td><td>10</td><td>300</td><td>682.387 ms</td><td>3.0421 ms</td><td>2.8456 ms</td>
+</tr><tr><td>ParallelOptimizedForSmallOperationsBCrypt</td><td>10</td><td>300</td><td>466.278 ms</td><td>0.4057 ms</td><td>0.3596 ms</td>
+</tr></tbody></table>
+</body>
+</html>
