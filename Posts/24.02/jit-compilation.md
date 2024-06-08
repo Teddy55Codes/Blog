@@ -354,8 +354,8 @@ flowchart
     ishot5{"Is hot?<br/>(called >30 times)"}-->|Yes|tier1pgo2
     ishot5-.->|No,<br/>keep running...|ishot5
 ````
-*This diagram may not be rendered correctly on azure dev ops. If so, [this](https://github.com/dotnet/runtime/pull/70941) is the source of the diagram. 
-Update: GitHub apparently had an update in their frontend and the html tags in the mermaid diagram don't render there either, at least for now.*
+*This diagram is not rendered here. I have not yet implemented mermaid diagrams on my blog. If you want to view it online, [this](https://github.com/dotnet/runtime/pull/70941) is the source of the diagram. 
+Update: GitHub seems to have had an update to their frontend, and the html tags in the mermaid diagram aren't rendering there either, at least for now.*
 
 This diagram shows how dynamic PGO works in .NET 7+. 
 
