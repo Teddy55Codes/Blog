@@ -1,5 +1,6 @@
 ---
 title:  "The State Of Cross-platform .NET And How Mono Is Still Relevant"
+layout: default
 ---
 
 # The State Of Cross-platform .NET And How Mono Is Still Relevant

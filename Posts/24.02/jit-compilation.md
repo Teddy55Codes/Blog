@@ -1,5 +1,6 @@
 ---
 title:  "JIT Compilation"
+layout: default
 ---
 
 # JIT Compilation

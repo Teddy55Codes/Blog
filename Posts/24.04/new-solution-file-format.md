@@ -1,5 +1,6 @@
 ---
 title:  "New Solution File Format"
+layout: default
 ---
 
 # New Solution File Format

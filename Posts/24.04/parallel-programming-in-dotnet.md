@@ -1,5 +1,6 @@
 ---
 title:  "Parallel Programming In .NET"
+layout: default
 ---
 
 # Parallel Programming In .NET

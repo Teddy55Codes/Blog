@@ -1,5 +1,6 @@
 ---
 title:  "Memory Management In C# and .NET"
+layout: default
 ---
 
 # Memory Management In C# and .NET

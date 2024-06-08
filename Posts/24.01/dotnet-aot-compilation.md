@@ -1,10 +1,10 @@
 ---
 title:  ".NET AOT Compilation"
+layout: default
 ---
 
 # .NET AOT Compilation
 
-## Table Of Contents
 - [Intro](#intro)
 - [What is AOT Compilation](#what-is-aot-compilation)
 - [Pros and Cons of Having a Runtime](#pros-and-cons-of-having-a-runtime)
