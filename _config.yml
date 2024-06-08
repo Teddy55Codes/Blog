@@ -27,7 +27,7 @@ url: "https://teddy55.com" # the base hostname & protocol for your site, e.g. ht
 markdown: kramdown
 
 # Build settings
-remote_theme: jekyll-theme-teddy
+theme: jekyll-theme-teddy
 plugins:
   - jekyll-feed
 
