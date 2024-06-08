@@ -66,7 +66,7 @@ C# has automatic memory management. This is facilitated by both the compiler and
 First the compiler sets some rules these include:
 * Memory Type Safety\
   Memory type safety enforces access to memory for example that a private field can not be accessed outside its class or that memory held by an internal class can not be accessed from another assembly.
-* Compile time analysis\
+* Compile Time Analysis\
   Roslyn has some build in rules to avoid memory errors for example CS0165 (Use of unassigned local variable)
   an error that protects from accessing uninitialized variables.
 
@@ -259,7 +259,7 @@ static void StackExample()
 }
 ```
 In the memory analysis we can see this allocation in the unmanaged section:\
-![400KB stack allocation](../../Resources/24.03/MemoryAllocationShowcase/MemoryAllocationShowcaseStack.png)
+![400KB stack allocation](../../Resources/24.03/MemoryAllocationShowcase/MemoryAllocationShowcaseStack.png)\
 I don't know why the deallocation is not visible.
 
 #### Heap allocation
