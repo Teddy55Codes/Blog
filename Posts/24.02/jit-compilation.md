@@ -1,30 +1,8 @@
 ---
 title:  "JIT Compilation"
-layout: default
+layout: post
+toc: true
 ---
-
-# JIT Compilation
-
-- [Intro](#intro)
-- [What is JIT Compilation](#what-is-jit-compilation)
-- [History](#history)
-- [Bytecode](#bytecode)
-  - [.NET CIL](#net-cil)
-    - [.NET CIL Example](#net-cil-example)
-    - [Other Examples For Reference](#other-examples-for-reference)
-      - [Interacting With Classes](#interacting-with-classes)
-      - [Add Method](#add-method)
-    - [Common CIL Instructions](#common-cil-instructions)
-  - [Java Bytecode](#java-bytecode)
-    - [Java Bytecode Example](#java-bytecode-example)
-    - [Common Java Bytecode Instructions](#common-java-bytecode-instructions)
-  - [Differences Between CIL And Java Bytecode](#differences-between-cil-and-java-bytecode)
-- [.NET JIT Compiler](#net-jit-compiler)
-  - [Profile-Guided Optimization](#profile-guided-optimization)
-    - [Static PGO](#static-pgo)
-    - [Dynamic PGO](#dynamic-pgo)
-  - [C# -> CIL -> ASM](#c---cil---asm)
-- [Closing Notes](#closing-notes)
 
 ## Intro
 Last Month i wrote about ahead-of-time compilation. This Month i am writing about just-in-time compilation including a part about JIT bytecode. 

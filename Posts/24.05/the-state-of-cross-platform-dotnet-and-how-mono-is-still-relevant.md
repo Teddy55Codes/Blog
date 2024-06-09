@@ -1,22 +1,8 @@
 ---
 title:  "The State Of Cross-platform .NET And How Mono Is Still Relevant"
-layout: default
+layout: post
+toc: true
 ---
-
-# The State Of Cross-platform .NET And How Mono Is Still Relevant
-
-- [Intro](#intro)
-- [Terms](#terms)
-- [What Is Mono](#what-is-mono)
-  - [How Mono Came To Be](#how-mono-came-to-be)
-  - [Development Timeline](#development-timeline)
-  - [The State Of Mono](#the-state-of-mono)
-- [Mono AOT vs. NativeAOT](#mono-aot-vs-nativeaot)
-- [Mono In MAUI](#mono-in-maui)
-  - [MAUI On Android](#maui-on-android)
-  - [MAUI On IOS And Mac Catalyst](#maui-on-ios-and-mac-catalyst)
-- [Mono In Blazor](#mono-in-blazor)
-- [Closing Notes](#closing-notes)
 
 ## Intro
 Today it is easy to think that the .NET CoreCLR runs everywhere and has replaced Mono, but if that where true why does the architecture of MAUI look like this?

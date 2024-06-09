@@ -1,39 +1,8 @@
 ---
 title:  "Parallel Programming In .NET"
-layout: default
+layout: post
+toc: true
 ---
-
-# Parallel Programming In .NET
-
-- [What is Parallel Programming](#what-is-parallel-programming)
-- [Task Parallel Library (TPL)](#task-parallel-library-tpl)
-  - [Tasks](#tasks)
-  - [Parallel Loops](#parallel-loops)
-- [PLINQ (Parallel LINQ)](#plinq-parallel-linq)
-- [Benchmarks](#benchmarks)
-  - [Results](#results)
-    - [Accuracy Of Results](#accuracy-of-results)
-    - [Parallel Loop Benchmarks](#parallel-loop-benchmarks)
-      - [Parallel Loop Set 1 (BCrypt and SHA512)](#parallel-loop-set-1-bcrypt-and-sha512)
-      - [Parallel Loop Set 2 (Hashes from System.Security.Cryptography)](#parallel-loop-set-2-hashes-from-systemsecuritycryptography)
-      - [Parallel Loop Set 3 (Comparison parallel loops)](#parallel-loop-set-3-comparison-parallel-loops)
-    - [PLINQ Benchmarks](#plinq-benchmarks)
-      - [PLINQ Set 1 (calculating Primes)](#plinq-set-1-calculating-primes)
-      - [PLINQ Set 2 (Hashes from System.Security.Cryptography)](#plinq-set-2-hashes-from-systemsecuritycryptography)
-      - [PLINQ Set 3 (cost of switching between LINQ and PLINQ)](#plinq-set-3-cost-of-switching-between-linq-and-plinq)
-  - [Benchmarking In The Cloud](#benchmarking-in-the-cloud)
-    - [Why Benchmark In The Cloud](#why-benchmark-in-the-cloud)
-    - [Running The Benchmarks](#running-the-benchmarks)
-    - [Selecting A Cloud Provider](#selecting-a-cloud-provider)
-      - [Google Cloud](#google-cloud)
-      - [Azure](#azure)
-      - [Amazon Web Services](#amazon-web-services)
-    - [Cloud Benchmarking Results](#cloud-benchmarking-results)
-      - [Cloud Benchmarking Set 1 (Hashes from System.Security.Cryptography)](#cloud-benchmarking-set-1-hashes-from-systemsecuritycryptography)
-      - [Cloud Benchmarking Set 2 (BCrypt)](#cloud-benchmarking-set-2-bcrypt)
-      - [Cloud Benchmarking Set 3 (Comparing different Loops)](#cloud-benchmarking-set-3-comparing-different-loops)
-    - [Cost Of Running The Benchmarks On AWS](#cost-of-running-the-benchmarks-on-aws)
-- [Closing Notes](#closing-notes)
 
 ## What is Parallel Programming
 Today even lower-end machines have multiple CPU threads. By making use of them we can drastically improve the performance of CPU bound tasks.

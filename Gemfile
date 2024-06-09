@@ -10,10 +10,11 @@ source "https://rubygems.org"
 # gem "jekyll", "~> 4.3.3"
 gem "github-pages", "~> 231", group: :jekyll_plugins
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
-gem "jekyll-theme-teddy", "~> 0.3.0"
+gem "jekyll-theme-teddy", "~> 0.4.1"
 # If you have any plugins, put them here!
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.12"
+  gem "jekyll-toc", "~> 0.19.0"
 end
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem

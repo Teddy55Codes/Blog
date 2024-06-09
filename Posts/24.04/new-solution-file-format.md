@@ -1,14 +1,8 @@
 ---
 title:  "New Solution File Format"
-layout: default
+layout: post
+toc: true
 ---
-
-# New Solution File Format
-
-- [Intro](#intro)
-- [Solution Files Are A Pain!](#solution-files-are-a-pain)
-- [Configurations](#configurations)
-- [Availability](#availability)
 
 ## Intro
 There is a very exciting change coming to .NET solution files which i am super excited about.  

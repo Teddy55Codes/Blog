@@ -1,10 +1,9 @@
 ---
-title: Home
-layout: default
+title: Teddy's Developer Blog
+subtitle: Monthly posts about C# and .NET
+layout: home
 ---
 
-
-# Developer Blog
 This is my developer blog where i write about topics that interest me at the moment.
 It usually follows a monthly cycle, but sometimes there are smaller extra posts.
 

@@ -1,29 +1,8 @@
 ---
 title:  ".NET AOT Compilation"
-layout: default
+layout: post
+toc: true
 ---
-
-# .NET AOT Compilation
-
-- [Intro](#intro)
-- [What is AOT Compilation](#what-is-aot-compilation)
-- [Pros and Cons of Having a Runtime](#pros-and-cons-of-having-a-runtime)
-- [Advantages of AOT Compilation](#advantages-of-aot-compilation)
-  - [Startup Time](#startup-time)
-  - [Interoperability](#interoperability)
-- [Availability](#availability)
-- [Limitations](#limitations)
-- [How To do AOT Compilation](#how-to-do-aot-compilation)
-  - [Set up The ASP.NET Web API (AOT) Template](#set-up-the-aspnet-web-api-aot-template)
-- [AOT Configurations](#aot-configurations)
-  - [Size or Speed](#size-or-speed)
-  - [Trimming](#trimming)
-    - [TrimmerRemoveSymbols](#trimmerremovesymbols)
-    - [DebuggerSupport](#debuggersupport)
-    - [UseNativeHttpHandler](#usenativehttphandler)
-    - [StackTraceSupport (.NET 8+)](#stacktracesupport-net-8)
-- [My Experience](#my-experience)
-- [Closing Notes](#closing-notes)
 
 ## Intro
 This Month i was interested in AOT Compilation in .NET. 

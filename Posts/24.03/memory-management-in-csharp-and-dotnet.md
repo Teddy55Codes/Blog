@@ -1,32 +1,8 @@
 ---
 title:  "Memory Management In C# and .NET"
-layout: default
+layout: post
+toc: true
 ---
-
-# Memory Management In C# and .NET
-
-- [Memory Safety](#memory-safety)
-  - [Memory Safety Overview](#memory-safety-overview)
-  - [How C# Handles Memory Safety](#how-c-handles-memory-safety)
-- [How .NET Manages Memory](#how-net-manages-memory)
-  - [Stack Memory](#stack-memory)
-  - [Heap Memory](#heap-memory)
-    - [Difference Server And Workstation Garbage Collector](#difference-server-and-workstation-garbage-collector)
-    - [Small Object Heap](#small-object-heap)
-    - [Large Object Heap](#large-object-heap)
-    - [Pinned Object Heap](#pinned-object-heap)
-      - [What Are Pinned Objects](#what-are-pinned-objects)
-    - [Frozen Object Heap / NonGC Heap](#frozen-object-heap--nongc-heap)
-  - [Memory space visualization](#memory-space-visualization)
-  - [Memory Analysis](#memory-analysis)
-    - [Stack allocation](#stack-allocation)
-    - [Heap allocation](#heap-allocation)
-      - [SOH](#soh)
-      - [LOH](#loh)
-      - [POH](#poh)
-      - [FOH](#foh)
-    - [Conclusion](#conclusion)
-- [Closing Notes](#closing-notes)
 
 ## Memory Safety
 C# is a memory safe language. That means it protects the programmer (at least to some extent) from causing memory bugs like:
