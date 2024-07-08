@@ -16,7 +16,7 @@ So let's take a better look at the state of cross platform .NET and how the Mono
 To differentiate between "regular" .NET and Mono i will call "regular" .NET **MS .NET** when it is not clear which is being referenced.
 (Yes both are owned by Microsoft but Mono was only acquired.)
 
-When i use the term MS .NET i'm referring to the combination of the [.NET runtime](https://github.com/dotnet/runtime), the [Roslyn compiler](https://github.com/dotnet/roslyn) and the [MSBuild build tool](https://github.com/dotnet/msbuild). 
+When i use the term MS .NET i'm referring to the combination of the [.NET runtime](https://github.com/dotnet/runtime), the [Roslyn compiler](https://github.com/dotnet/roslyn), the [SDK](https://github.com/dotnet/sdk) and the [MSBuild build tool](https://github.com/dotnet/msbuild).
 
 ## What Is Mono
 Mono is an opensource implementation of .NET Framework which follows the [ECMA-335 (Common Language Infrastructure)](https://ecma-international.org/publications-and-standards/standards/ecma-335/) standard.
@@ -49,26 +49,18 @@ Some highlights in the development of Mono.
 For a more complete list see [Mono version history on Wikipedia](https://en.wikipedia.org/wiki/Mono_(software)#Version_history_2) and [Mono releases](https://www.mono-project.com/docs/about-mono/releases/).
 
 ### The State Of Mono
-One thing you might notice is the [Mono development timeline](#development-timeline) is that it ends in 2019.
-This is because in the last 5 years there has not been any major development in Mono. This is reflected in the contribution graph for the [Mono GitHub repository](https://github.com/mono/mono). 
+One thing you might notice is that the [Mono development timeline](#development-timeline) basically ends in 2019.
+This is because Mono as a standalone project has not seen any major development after that. This is reflected in the contribution graph for the [Mono GitHub repository](https://github.com/mono/mono).
+This however does not mean development on Mono stopped. Mono was actually merged into MS .NET. For example the Mono runtime now lives under [src/mono](https://github.com/dotnet/runtime/tree/main/src/mono) on the [.NET runtime GitHub repository](https://github.com/dotnet/runtime).
 
-![Mono contributions over time](../../Resources/24.05/Mono/MonoContributersGraphWithDotnetReleases.png)
-
-I added the release dates of .NET Core 1.0 and .NET 5.0. 
-We can see that as .NET 5 was developed and released Mono development stagnated significantly.
-
-So if Mono has not seen any significant development in 5 years why is it still used?
-There are a few reasons: 
-* Mono has an interpreter which MS .NET does not have. 
+So why was Mono merged int MS .NET and not abandoned?
+There are a few reasons:
+* Mono has an interpreter which MS .NET does not have.
 * Mono's AOT compiler
 * Xamarin.Forms
 * Different supported platforms
 
-Although it is clear that Mono as a standalone project is basically dead.
-Mono is still relevant via its components that have been integrated into MS .NET.
-
-I think Mono gave the .NET ecosystem a huge boost. 
-It brought a lot of innovations to the table that we still rely on.
+As we can see, Mono is still relevant and has its own merits, even if it doesn't really exist as a standalone project anymore.
 
 ## Mono AOT vs. NativeAOT
 There are 2 main technologies for compiling .NET ahead-of-time, the Mono AOT compiler and the new NativeAOT compiler from MS .NET.
@@ -102,9 +94,8 @@ Let's go back to the original question of why MAUI uses Mono.
 ### MAUI On Android
 MAUIs support for Android builds on top of [Xamarin.Forms](https://github.com/xamarin/Xamarin.Forms). 
 Support for Xamarin.Forms has ended on May 1, 2024, but it lives on in its successors. 
-Android support in MAUI, AvaloniaUI and the UNO Platform is based on Xamarin.Forms. 
-Although in need to admit that it was a bit off a fuck you move from microsoft to stop supporting Xamarin.Farms already.
-MAUI is in my opinion not yet stable enough to replace it. 
+Android support in MAUI, AvaloniaUI and the UNO Platform is based on Xamarin.Forms.
+Although i need to admit that it was a bit off a "fuck you" move from microsoft to stop supporting Xamarin.Farms while MAUI is, at least in my opinion not yet stable enough to replace it.
 
 Since MAUI's Android support is based on Xamarin.Forms, which is a Mono project, Mono is used for Android.
 
@@ -124,6 +115,6 @@ It is used to make wasm packets smaller, which reduces website load times.
 
 ## Closing Notes
 I had to keep this post a bit shorter to catch back up with my monthly schedule. 
-I hope the post was still interesting to read. It was certainty interesting to research and find out where Mono is still used and why.
+I hope the post was still interesting to read. It was certainty interesting to see how Mono evolved over the years.
 
 I hope you enjoyed this shorter post and as always thanks for reading :) 
