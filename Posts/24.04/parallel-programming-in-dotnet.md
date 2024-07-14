@@ -432,7 +432,7 @@ I feel like it could have something todo with running on 2 CPUs or that with all
 However, i found it cool to see that even when running with 192 threads across 2 CPUs, performance gains stayed stable for more expensive workload (all with cost >= 6).
 
 #### Cost Of Running The Benchmarks On AWS
-Running VMs on AWS is obviously not free. So how much did the hole thing cost me?
+The VMs i ran for these benchmarks far exceeded what is included in the free tier. So how much did the hole thing cost me?
 
 ![AWS Cost](../../Resources/24.04/CloudBenchmarking/AWSCost.png)
 
