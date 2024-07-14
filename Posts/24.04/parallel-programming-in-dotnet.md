@@ -440,7 +440,7 @@ The total cost comes to `20.60$`. About `8$` of that is just for the one time i 
 This instance has an hourly costs of a whopping `9$`.
 
 ## Closing Notes
-This is the largest post i have made so far. Something i did expect is to learn a bit of R. I used it to create the graphics. Honestly, i never expected to program anything in R. 
+This is the largest post i have made so far. Something i didn't expect, is to learn a bit of R. I used it to create the graphics. Honestly, i never expected to program anything in R. 
 But R was perfect for this. I sometimes needed to tweak benchmarks, if i had to redraw the graphics every time i probably would have given up on making them.
 
 I found it impressive how well the .NET TPL performed with very high amounts of threads. 
