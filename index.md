@@ -14,6 +14,8 @@ Currently most of the content for these posts comes from my monthly apprenticesh
 ---
 
 ## Posts
+- June 2024
+  - [Quantum Computing With Q#](Posts/24.06/quantum-computing-with-qsharp)
 - May 2024
   - [The State Of Cross-platform .NET And How Mono Is Still Relevant](Posts/24.05/the-state-of-cross-platform-dotnet-and-how-mono-is-still-relevant)
 - April 2024
