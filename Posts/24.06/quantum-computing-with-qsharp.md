@@ -820,7 +820,7 @@ Here $\alpha$ and $\beta$ are complex numbers. $\alpha$ represents how "close" t
 So, a qubit that is in state 0 would be represented by the vector $\left\lceil\begin{matrix}1 \\ 0\end{matrix}\right\rceil$ and a qubit in state 1 by the vector $\left\lceil\begin{matrix}0 \\ 1\end{matrix}\right\rceil$.
 
 ### Dirac Notation
-Dirac notation is a shorthand notation for states of qubits. In Dirac notation, vectors are denoted by the symbols bra and ket. For example the qubit state 0 becomes $\lvert 0 \rangle$. \
+Dirac notation is a shorthand notation for states of qubits. In Dirac notation, vectors are denoted by the symbols bra and ket. For example the qubit state 0 becomes $\lvert 0 \rangle$.
 
 *Ket*
 
