@@ -1168,6 +1168,12 @@ It ended up being a bit challenging, but the struggle was 100% worth it. Because
 This project also introduced me to additional topics like the [polar coordinate system](https://en.wikipedia.org/wiki/Polar_coordinate_system) and [Euler's formula](https://en.wikipedia.org/wiki/Euler%27s_formula). If you are interested in my implementation.
 The source code for the project is available on my GitHub under [Teddy55Codes/BlochSphere](https://github.com/Teddy55Codes/BlochSphere).
 
+<div id="blochsphere"></div>
+<script src="../../Resources/24.06/InteractiveBlochSphere/interactive-bloch-sphere-packed-v0.2.js"></script>
+<script>
+new InteractiveBlochSphere.InteractiveBlochSphere(document.getElementById("blochsphere"));
+</script>
+
 ## Teleportation
 The [no-cloning theorem](https://en.wikipedia.org/wiki/No-cloning_theorem) states that it is impossible to clone a qubit. 
 That means that we can't just copy a qubit like we can with regular bits. The way we move qubits in quantum computing is via teleportation.
