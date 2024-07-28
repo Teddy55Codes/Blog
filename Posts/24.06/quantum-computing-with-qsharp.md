@@ -1385,7 +1385,7 @@ This is the reason you do multiple shots even when the result should always be t
 As of writing, Microsoft is giving every new user \\$500 worth of "Azure Quantum Credits" for each quantum provider which can be used for 6 months after creating your first Azure Quantum Workspace. 
 Running my script on the Quantinuum H1 cost 7.11 "Azure Quantum Credits" which translates to \\$89.
 
-# Closing Notes
+## Closing Notes
 This month i yet again went completely over board which yet again caused a huge delay. I'm not sure if i will ever learn from my mistakes.
 Next month i will write about Webassembly. I hope i can finish that one with less then a month delay.
 
