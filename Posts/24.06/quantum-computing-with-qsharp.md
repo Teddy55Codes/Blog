@@ -1384,3 +1384,15 @@ This month i yet again went completely over board which yet again caused a huge 
 Next month i will write about Webassembly. I hope i can finish that one with less then a month delay.
 
 As always i hope you enjoyed reading this months post. :)
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$']],
+    processEscapes: true
+  },
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
