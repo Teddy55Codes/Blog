@@ -1269,9 +1269,9 @@ Most of the time when you run your quantum program you do it on a simulator. Thi
 3. With simulators, you can break the rules. In a simulator nothing is stopping you from directly read and write the state of a qubit. 
 4. In a simulator it is also possible to use a debugger which is immensely helpful.
 
-### Getting Started With the QDK (Q# Simulation)
-To get started with Q# development you need the Azure Quantum Development Kit sort QDK. 
-The easiest way to get the QDK is via the vs code plugin. Here is a step by step guid:
+### Setting Up The QDK
+To get started with Q# development, you need the Azure Quantum Development Kit, or QDK for short.
+The easiest way to get the QDK is via the vs code plugin. Here is a step-by-step guide:
 
 1. Get the QDK by adding the [QDK extension](https://marketplace.visualstudio.com/items?itemName=quantum.qsharp-lang-vscode) to your vs code. 
 2. Create a file with the extension "qs". 
