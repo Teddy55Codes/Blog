@@ -12,7 +12,7 @@ The goal i set myself for this topic is to teleport a qubit and understand, at l
 The reason i specifically chose the goal of teleporting a qubit is simply for the bragging rights of having done real life teleportation.
 We will later go into why teleportation in quantum mechanics is not what we commonly think of as teleportation.
 
-My main source for this topic is the tutorial section on https://microsoft.github.io/qsharp/.
+My main source for this topic is the tutorial section on [https://microsoft.github.io/qsharp/](https://microsoft.github.io/qsharp/).
 Because, i know this may be hard to believe, but i don't have a degree in quantum mechanics.
 
 ## Some Math To Get Started
@@ -437,7 +437,7 @@ A matrix is unitary when its inverse is equal to its adjoint: $U^{-1} = U^{\dagg
 That is, an $n \cdot n$ square matrix $U$ is unitary only if $UU^{\dagger} = U^{\dagger} U = I_n$.
 
 This one took me a bit to understand. ^^\
-Let's go through the steps to calculate if a matrix is unitary:
+Let's go through the steps to calculate if a matrix is unitary.
 
 The matrix to check:
 
@@ -820,7 +820,8 @@ Here $\alpha$ and $\beta$ are complex numbers. $\alpha$ represents how "close" t
 So, a qubit that is in state 0 would be represented by the vector $\left\lceil\begin{matrix}1 \\ 0\end{matrix}\right\rceil$ and a qubit in state 1 by the vector $\left\lceil\begin{matrix}0 \\ 1\end{matrix}\right\rceil$.
 
 ### Dirac Notation
-Dirac notation is a shorthand notation for states of qubits. In Dirac notation, vectors are denoted by the symbols bra and ket. For example the qubit state 0 becomes $\lvert 0 \rangle$.
+Dirac notation is a shorthand notation for states of qubits. In Dirac notation, vectors are denoted by the symbols bra and ket. 
+For example the qubit state 0 becomes $\lvert 0 \rangle$.
 
 *Ket*
 
@@ -972,7 +973,7 @@ X \lvert 0 \rangle =
 \lvert 1 \rangle
 $$
 
-This is similar to hoe the not gate in boolean algebra works:
+This is similar to how the not gate in boolean algebra works:
 
 $$
 \lnot X
@@ -1186,7 +1187,7 @@ Here is the circuit for such a teleportation.
 {% endraw %}
 
 To explain this a bit further we take the scenario of Alice wanting to send a message to Bob.
-The circuit required for this uses 3 qubits. On line one we have the message qubit (qMessage), on line two we have Alice's qubit (qAlice), and on the last line we have Bob's qubit (qBob).
+The circuit required for teleportation uses 3 qubits. On line one we have the message qubit (qMessage), on line two we have Alice's qubit (qAlice), and on the last line we have Bob's qubit (qBob).
 
 1. Entangle qAlice and qBob. This is done with an H and a CNOT gate where qAlice is the control.
 2. qMessage is entangled with qAlice.
@@ -1195,7 +1196,7 @@ The circuit required for this uses 3 qubits. On line one we have the message qub
 5. The 2 regular bits can now be used to recreate the state of qMessage
 
 Did you notice that in order to reconstruct qMessage the 2 regular bits where required? 
-This is the reason i said that quantum teleportation is not what we usually under stand as teleportation.
+This is the reason i said that quantum teleportation is not what we usually understand as teleportation.
 Because we need the result of the measurement we can not actually transport information faster than usual.
 
 ## Superdense Coding
@@ -1343,7 +1344,7 @@ As mentioned [before](#qdk-target-profiles) not all quantum computers can run al
 Because i want to run a teleportation and teleportation requires mid-circuit measurements i need to choose a quantum computer that supports the QIR Adaptive RI profile. 
 This already narrows the selection down to only 2. The [Quantinuum H1](https://www.quantinuum.com/hardware/h1) and the [Quantinuum H2](https://www.quantinuum.com/hardware/h2). 
 
-Now because i am using free credits i only have the H1 available the H2 is only for the highest subscription tier.
+Now because i am using free credits i only have access to the H1, the H2 is only available on the highest [Quantinuum subscription tiers](https://learn.microsoft.com/en-us/azure/quantum/pricing?tabs=tabid-AQcredits%2Ctabid-AQcreditsPasqal%2Ctabid-AQcreditsQ%2Ctabid-AQcreditsRigetti#quantinuum) which as of writing this are \\$135,000 and \\$185,000 a month!
 
 ### Teleporting ":3"
 I wrote a Q# script which encodes text into qubits, teleports them, and decodes the text again. Saying it like this makes my code sound way too reasonable. 
@@ -1354,13 +1355,13 @@ To understand why my code only exists for bragging rights let's first look at th
 [Link](https://algassert.com/quirk#circuit={"cols":[[1,1,"H"],[1,1,"•",1,1,1,"X"],["…","…","…","…","…","…","…"],["Counting2"],["Measure","Measure"],["~msg"],["Chance","Chance"],["~enc"],[1,"•","X"],["•",1,"Z"],[1,1,1,"~send"],[1,1,1,"H"],[1,1,1,"•",1,"X"],[1,1,"•","X"],[1,1,"H"],[1,1,"Measure","Measure"],[1,1,1,"•",1,"X"],[1,1,"•",1,1,"Z"],[1,1,1,1,1,"~dec"],[1,1,1,1,1,"•","X"],[1,1,1,1,1,"H"],[1,1,1,1,1,"Measure","Measure"],[1,1,1,1,1,"~msg"],[1,1,1,1,1,"Chance","Chance"]],"gates":[{"id":"~msg","name":"message","matrix":"{{1,0,0,0},{0,1,0,0},{0,0,1,0},{0,0,0,1}}"},{"id":"~enc","name":"encode","matrix":"{{1,0,0,0},{0,1,0,0},{0,0,1,0},{0,0,0,1}}"},{"id":"~send","name":"send","matrix":"{{1,0,0,0},{0,1,0,0},{0,0,1,0},{0,0,0,1}}"},{"id":"~dec","name":"decode","matrix":"{{1,0,0,0},{0,1,0,0},{0,0,1,0},{0,0,0,1}}"}]})
 {% endraw %}
 
-As the name suggests it is superdense coding using teleportation. So instead of a switch gate to transport the qubit teleportation is used.
+As the name suggests it is superdense coding using teleportation. So instead of using a switch gate to transport the qubit, teleportation is used.
 This is super unnecessary and just requires more qubits to do the same thing, but now i can say i teleported ":3". 
 For the source code and a more detailed explanation you can go checkout the [GitHub repository](https://github.com/Teddy55Codes/superdense-coding-with-teleportation) for the script.
 
 ### Result
 So how did i teleport ":3"? If you remember from the [superdense coding](#superdense-coding) section, superdense coding allows us to transport 2 regular bits with 1 qubit.
-And because my script is just superdense coding with extra steps it works the same here. ":3" in ASCII is 00111010 00110011.
+And because my script is just superdense coding with extra steps it works the same here. ":3" in binary ASCII is 00111010 00110011.
 The scripts output is the result of the teleportation. So if everything worked correctly we should get that as the output.
 
 I ran the script for 10 shots. This means the script is run 10 times.
@@ -1387,9 +1388,9 @@ Running my script on the Quantinuum H1 cost 7.11 "Azure Quantum Credits" which t
 
 ## Closing Notes
 This month i yet again went completely over board which yet again caused a huge delay. I'm not sure if i will ever learn from my mistakes.
-Next month i will write about Webassembly. I hope i can finish that one with less then a month delay.
+Next month i will write about Webassembly. I hope i can finish that one with less than a month of delay.
 
-As always i hope you enjoyed reading this months post. :)
+As always i hope you enjoyed reading this month's post. :)
 
 <script>
 MathJax = {
