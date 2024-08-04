@@ -815,9 +815,9 @@ If you went through the entire math section let me applaud you. It's a lot, but 
 
 ## The Qubit
 Regular computers work with bits which have the state 1 and 0. Quantum computers work with qubits, which can be 0, 1 or any state in between.
-The state of a qubit is represented by a complex vector of size 2: $\left\lceil\begin{matrix}\alpha \\ \beta\end{matrix}\right\rceil$
+The state of a qubit is represented by a complex vector of size 2: $\left\lceil\begin{matrix}\alpha \\\ \beta\end{matrix}\right\rceil$
 Here $\alpha$ and $\beta$ are complex numbers. $\alpha$ represents how "close" the qubit is to state 0, and $\beta$ represents how "close" the qubit is to state 1.
-So, a qubit that is in state 0 would be represented by the vector $\left\lceil\begin{matrix}1 \\ 0\end{matrix}\right\rceil$ and a qubit in state 1 by the vector $\left\lceil\begin{matrix}0 \\ 1\end{matrix}\right\rceil$.
+So, a qubit that is in state 0 would be represented by the vector $\left\lceil\begin{matrix}1 \\\ 0\end{matrix}\right\rceil$ and a qubit in state 1 by the vector $\left\lceil\begin{matrix}0 \\\ 1\end{matrix}\right\rceil$.
 
 ### Dirac Notation
 Dirac notation is a shorthand notation for states of qubits. In Dirac notation, vectors are denoted by the symbols bra and ket. 
