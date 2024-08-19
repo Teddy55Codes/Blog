@@ -26,7 +26,7 @@ url: "https://teddy55.com" # the base hostname & protocol for your site, e.g. ht
 # jekyll-theme-teddy config
 source_repository_url: "https://github.com/Teddy55Codes/Blog"
 source_repository_url_path_prefix: "blob/main"
-latest_post: "Posts/24.06/quantum-computing-with-qsharp"
+latest_post: "Posts/24.07/unions-are-coming-to-csharp"
 
 markdown: kramdown
 

@@ -14,6 +14,8 @@ Currently most of the content for these posts comes from my monthly apprenticesh
 ---
 
 ## Posts
+- July 2024
+  - [Unions ARE Coming To C#](Posts/24.07/unions-are-coming-to-csharp)
 - June 2024
   - [Quantum Computing With Q#](Posts/24.06/quantum-computing-with-qsharp)
 - May 2024
