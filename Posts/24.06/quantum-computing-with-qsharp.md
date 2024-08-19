@@ -195,10 +195,12 @@ Another unusual thing is that matrix multiplication is not commutative, meaning 
 
 ##### Invert A Matrix
 Not all matrices are invertible. A matrix is invertible when the following is true:
+
 $$
 AA^{-1} = A^{-1}A = 
 I_n
 $$
+
 $I$ is the [identity matrix](https://en.wikipedia.org/wiki/Identity_matrix) with $n$ columns and rows.
 The identity matrix is best explained with an example:
 
