@@ -5,7 +5,7 @@ toc: true
 ---
 
 ## Intro
-It as long been a meme in the .NET community that Unions will never come to C#.
+It has long been a meme in the .NET community that Unions will never come to C#.
 It is a long requested feature in C# as it was part of F# from the start (2005). But at long last, there will be unions in C#.
 Mads Torgersen teased the feature at NDC Sydney 2024 in his [what's next in C# talk](https://www.youtube.com/watch?v=l44Y6lNmNZ0), and now we finally have a proposal.
 Let us take a look at the [current proposal on cshaplang](https://github.com/dotnet/csharplang/blob/main/proposals/TypeUnions.md).
