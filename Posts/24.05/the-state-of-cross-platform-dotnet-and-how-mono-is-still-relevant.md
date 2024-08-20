@@ -7,7 +7,7 @@ toc: true
 ## Intro
 Today it is easy to think that the .NET CoreCLR runs everywhere and has replaced Mono, but if that where true why does the architecture of MAUI look like this?
 
-![Architecture MAUI](../../Resources/24.05/Mono/ArchitectureDiagram.Mauipng.png)
+![Architecture MAUI](../../Resources/24.05/Mono/ArchitectureDiagramMaui.png)
 
 As we can see here the Mono runtime is used for all platforms besides Windows.
 So let's take a better look at the state of cross platform .NET and how the Mono and the CoreCLR runtimes differ in there cross-platform support.
