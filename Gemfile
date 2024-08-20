@@ -10,7 +10,7 @@ source "https://rubygems.org"
 # gem "jekyll", "~> 4.3.3"
 gem "github-pages", "~> 231", group: :jekyll_plugins
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
-gem "jekyll-theme-teddy", "~> 0.4.1"
+gem "jekyll-theme-teddy", "~> 0.5.0"
 # If you have any plugins, put them here!
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.12"
