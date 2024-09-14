@@ -111,6 +111,7 @@ Starting from .NET 8 release is the default configuration for publish.
 2. Install necessary tools.
 
    To be able to do AOT compilation we need some extra tools. Here is how to install them on your platform.
+
    **On Windows:**\
    The easiest way to get the required tools on windows is by installing the "Desktop development with C++" package in the Visual Studio Installer.
 
