@@ -43,7 +43,7 @@ We have discussed the pros and cons of having a runtime. Now how can AOT compila
 AOT compilation can drastically reduce startup time. 
 This is because the CLR itself also has a startup time and only after the CLR has started can your application start. 
 At which point your code also has to get JIT compiled and only after all that will your first line of code get executed.
-For the ASPNET API template the average startup times are 350ms for regular compilation and only 45ms for AOT compilation in the benchmark in [this article](https://andrewlock.net/exploring-the-dotnet-8-preview-the-minimal-api-aot-template/).
+For the ASP.NET API template the average startup times are 350ms for regular compilation and only 45ms for AOT compilation in the benchmark in [this article](https://andrewlock.net/exploring-the-dotnet-8-preview-the-minimal-api-aot-template/).
 This is a very extreme example. The extra 300ms obviously make less of a difference when your application needs 5s to start.
 In conclusion, applications that have a short startup time by themselves profit the most by removing the JIT compilation step.
 This makes AOT compilation a great choice for deployments such as [AWS Lambda functions](https://docs.aws.amazon.com/lambda/latest/dg/dotnet-native-aot.html) or [Kubernetes](https://kubernetes.io/), as nodes have reduced startup time.
@@ -54,8 +54,8 @@ Being compiled to native code makes it a lot easier for other languages to use C
 
 ## Availability
 Support for AOT compilation was [moved from experimental in .NET 7 preview 2](https://devblogs.microsoft.com/dotnet/announcing-dotnet-7-preview-2/). But in .NET 7 support for AOT was limited to console apps and class libraries.\
-In .NET 8 this support was expanded and also includes support for many ASPNET application types. 
-More about ASPNET AOT compatibility and performance can be found [here](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/native-aot?view=aspnetcore-8.0).
+In .NET 8 this support was expanded and also includes support for many ASP.NET application types. 
+More about ASP.NET AOT compatibility and performance can be found [here](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/native-aot?view=aspnetcore-8.0).
 In .NET 8 AOT compilation can also be used in some UI Frameworks.
 [Avalonia UI](https://www.avaloniaui.net/) and the [Uno Platform](https://platform.uno/) both support AOT compilation.
 AOT was also mentioned in the [WPF Roadmap 2023](https://github.com/dotnet/wpf/blob/main/roadmap.md) as a long term goal. 
