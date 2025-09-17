@@ -4,6 +4,14 @@ subtitle: Monthly posts about C# and .NET
 layout: home
 posts: [
   {
+    "image": "Resources/25.09/csharp-logo.png",
+    "image-alt": "To logo of the C# programming language.",
+    "link": "Posts/25.09/niche-csharp-features",
+    "title": "Niche C# Features",
+    "description": "A list of niche C# features divided in 4 levels, from Bootcamp Graduate up to Senior Dev.",
+    "footer-text": "September 2025"
+  },
+  {
     "image": "Resources/24.07/TypeUnionProposal.png",
     "image-alt": "Type Union proposal screen shot",
     "link": "Posts/24.07/unions-are-coming-to-csharp",
